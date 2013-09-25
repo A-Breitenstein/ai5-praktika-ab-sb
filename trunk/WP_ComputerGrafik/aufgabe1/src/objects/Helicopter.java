@@ -37,7 +37,7 @@ public class Helicopter {
 
 
 
-    private Helicopter(Vector3f pos) {
+    private Helicopter(Vector3f pos, Color spotColor) {
         this.pos = pos;
 
         Transform3D t = new Transform3D();
@@ -47,23 +47,23 @@ public class Helicopter {
 
 
         helicopter = new TransformGroup();
-        Sphere cockpit = new Sphere(2f,AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Sphere cockpit = new Sphere(2f,AppearanceHelper.getAppearance(new Color(130, 178, 237), new Color(130, 178, 237)));
         helicopter.addChild(cockpit);
 
 
-        Box kufe1 = new Box(3f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Box kufe1 = new Box(3f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(60, 50, 47), new Color(60, 50, 47)));
         t.setTranslation(new Vector3f(0,-1.8f,-1f));
         tmpGroup = new TransformGroup(t);
         tmpGroup.addChild(kufe1);
         helicopter.addChild(tmpGroup);
 
-        Box kufe2 = new Box(3f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Box kufe2 = new Box(3f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(60, 50, 47), new Color(60, 50, 47)));
         t.setTranslation(new Vector3f(0,-1.8f,1f));
         tmpGroup = new TransformGroup(t);
         tmpGroup.addChild(kufe2);
         helicopter.addChild(tmpGroup);
 
-        Box heck = new Box(4f, 0.3f, 0.3f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Box heck = new Box(4f, 0.3f, 0.3f, AppearanceHelper.getAppearance(new Color(30, 35, 65), new Color(30, 35, 65)));
         t.setTranslation(new Vector3f(4f,0.3f,0));
         tmpGroup = new TransformGroup(t);
         tmpGroup.addChild(heck);
@@ -72,10 +72,10 @@ public class Helicopter {
         t.setTranslation(new Vector3f(7f,0.3f,-0.3f));
         heckRotor = new TransformGroup(t);
 
-        Box heckRotor1 = new Box(0.2f, 1f, 0.2f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Box heckRotor1 = new Box(0.2f, 1f, 0.2f, AppearanceHelper.getAppearance(new Color(232, 235, 237), new Color(237, 47, 47)));
         heckRotor.addChild(heckRotor1);
 
-        Box heckRotor2 = new Box(1f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Box heckRotor2 = new Box(1f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(232, 235, 237), new Color(237, 47, 47)));
         heckRotor.addChild(heckRotor2);
 
         helicopter.addChild(heckRotor);
@@ -83,10 +83,10 @@ public class Helicopter {
         t.setTranslation(new Vector3f(0,2.05f,0));
         rotor = new TransformGroup(t);
 
-        Box Rotor1 = new Box(4f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Box Rotor1 = new Box(4f, 0.2f, 0.2f, AppearanceHelper.getAppearance(new Color(18, 37, 38), new Color(18, 37, 38)));
         rotor.addChild(Rotor1);
 
-        Box Rotor2 = new Box(0.2f, 0.2f, 4f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
+        Box Rotor2 = new Box(0.2f, 0.2f, 4f, AppearanceHelper.getAppearance(new Color(18, 37, 38), new Color(18, 37, 38)));
         rotor.addChild(Rotor2);
 
         helicopter.addChild(rotor);
@@ -99,7 +99,7 @@ public class Helicopter {
 
         DirectionalLight light1 = new DirectionalLight();
         light1.setDirection(new Vector3f(0, -15, 0));
-        light1.setColor(new Color3f(new Color(251, 238, 94)));
+        light1.setColor(new Color3f(spotColor));
         light1.setInfluencingBounds(new BoundingSphere(new Point3d(-3, -10, 0.0), 12.0));
         helicopter.addChild(light1);
 
@@ -165,8 +165,8 @@ public class Helicopter {
 
     }
 
-    public static Helicopter create(Vector3f pos) {
-        return new Helicopter(pos);
+    public static Helicopter create(Vector3f pos, Color spotColor) {
+        return new Helicopter(pos, spotColor);
     }
 
     public Group getGroup() {

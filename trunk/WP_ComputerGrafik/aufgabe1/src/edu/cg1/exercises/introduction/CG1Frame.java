@@ -148,7 +148,8 @@ public class CG1Frame extends JFrame {
         scene.addChild(Tree.create(new Vector3f(10,0,0),0.8f,0.1f,1.4f).getGroup());
         scene.addChild(Ground.create(new Vector3f(0,0,0),50f,50f).getGroup());
         scene.addChild(Tree.plantTrees(750,99,99));
-        scene.addChild(Helicopter.create(new Vector3f(20f,15f,0f)).getGroup());
+        scene.addChild(Helicopter.create(new Vector3f(20f,15f,0f), new Color(255, 245, 48)).getGroup());
+        scene.addChild(Helicopter.create(new Vector3f(30f,25f,20f), new Color(242, 84, 99)).getGroup());
 
 
 
