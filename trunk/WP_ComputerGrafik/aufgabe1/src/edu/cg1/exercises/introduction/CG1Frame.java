@@ -104,12 +104,12 @@ public class CG1Frame extends JFrame {
                 new Point3d(0.0, 0.0, 0.0), 1500.0));
         scene.addChild(light);
 
-        DirectionalLight light1 = new DirectionalLight();
-        light1.setDirection(new Vector3f(0,-10,0));
-        light1.setColor(new Color3f(new Color(251, 248, 52)));
-        light1.setInfluencingBounds(new BoundingSphere(
-                new Point3d(0.0, 0.0, 0.0), 12.0));
-        scene.addChild(light1);
+//        DirectionalLight light1 = new DirectionalLight();
+//        light1.setDirection(new Vector3f(0,-10,0));
+//        light1.setColor(new Color3f(new Color(251, 248, 52)));
+//        light1.setInfluencingBounds(new BoundingSphere(
+//                new Point3d(0.0, 0.0, 0.0), 12.0));
+//        scene.addChild(light1);
 
 
 
@@ -148,7 +148,7 @@ public class CG1Frame extends JFrame {
         scene.addChild(Tree.create(new Vector3f(10,0,0),0.8f,0.1f,1.4f).getGroup());
         scene.addChild(Ground.create(new Vector3f(0,0,0),25f,25f).getGroup());
         scene.addChild(Tree.plantTrees(250,49,49));
-        scene.addChild(Helicopter.create(new Vector3f(0f,15f,0f)).getGroup());
+        scene.addChild(Helicopter.create(new Vector3f(20f,15f,0f)).getGroup());
 
 
 

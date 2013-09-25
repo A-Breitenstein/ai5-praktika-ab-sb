@@ -4,12 +4,8 @@ import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Sphere;
 import edu.cg1.exercises.introduction.AppearanceHelper;
 
-import javax.media.j3d.Group;
-import javax.media.j3d.Transform3D;
-import javax.media.j3d.TransformGroup;
-import javax.vecmath.Matrix3f;
-import javax.vecmath.Matrix4f;
-import javax.vecmath.Vector3f;
+import javax.media.j3d.*;
+import javax.vecmath.*;
 import java.awt.*;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -30,12 +26,13 @@ public class Helicopter {
     float heckRotorAngle = 0;
 
 
-    float y_rotation = 80;
+    float y_rotation = 10;
     float speed = 15f;
-
+    TransformGroup world;
     TransformGroup helicopter;
     TransformGroup heckRotor;
     TransformGroup rotor;
+
 
 
 
@@ -45,10 +42,11 @@ public class Helicopter {
 
         Transform3D t = new Transform3D();
         t.setTranslation(pos);
-        helicopter = new TransformGroup(t);
+        world = new TransformGroup(t);
         TransformGroup tmpGroup;
 
 
+        helicopter = new TransformGroup();
         Sphere cockpit = new Sphere(2f,AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
         helicopter.addChild(cockpit);
 
@@ -91,19 +89,29 @@ public class Helicopter {
         Box Rotor2 = new Box(0.2f, 0.2f, 4f, AppearanceHelper.getAppearance(new Color(71, 237, 36), new Color(71, 237, 36)));
         rotor.addChild(Rotor2);
 
+        helicopter.addChild(rotor);
+        world.addChild(helicopter);
+
         rotor.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
         heckRotor.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
         helicopter.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
+        world.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
 
-        helicopter.addChild(rotor);
-
-
+        DirectionalLight light1 = new DirectionalLight();
+        light1.setDirection(new Vector3f(-5,-10,0));
+        light1.setColor(new Color3f(new Color(251, 248, 52)));
+        light1.setInfluencingBounds(new BoundingSphere(
+                new Point3d(-3, -8, 0.0), 12.0));
+        helicopter.addChild(light1);
 
 
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
+            long lastExecution = 0;
             @Override
             public void run() {
+                lastExecution = System.currentTimeMillis();
+
                 Transform3D transformation = new Transform3D();
 
                 rotor.getTransform(transformation);
@@ -130,20 +138,27 @@ public class Helicopter {
                     heckRotorAngle = 0;
 
                 helicopter.getTransform(transformation);
+                double radian_angle = y_rotation *0.05 * 3.1415f / 180;
                 transformation.get(pos);
-                transformation.setTranslation(new Vector3f(0, 0, 0));
-                transformation.rotY(y_rotation * 3.1415f / 180);
-                float x_diff = (float)Math.sin(y_rotation * 3.1415f / 180)*speed;
-                float z_diff = (float)Math.cos(y_rotation * 3.1415f / 180)*speed;
-                pos.setX(pos.getX()+x_diff);
-                pos.setZ(pos.getZ() + z_diff);
+                transformation.rotY(radian_angle+ (-90 * 3.1415f / 180));
                 transformation.setTranslation(pos);
                 helicopter.setTransform(transformation);
-                y_rotation++;
-                if(y_rotation > 360)
-                    y_rotation = 0;
-                Matrix3f m3 =  new Matrix3f();
 
+                world.getTransform(transformation);
+                double cos_a=Math.cos(radian_angle);
+                double sin_a=Math.sin(radian_angle);
+
+                Matrix4d m4_rotationYmitTranslation =  new Matrix4d(cos_a,0,sin_a,0,0,1,0,0,- sin_a,0,cos_a,0,0,0,0,1);
+                Matrix4d m4_old = new Matrix4d();
+                transformation.get(m4_old);
+                m4_rotationYmitTranslation.mul(m4_old);
+                transformation.set(m4_rotationYmitTranslation);
+
+                world.setTransform(transformation);
+//                y_rotation++;
+//                if(y_rotation > 360) {
+//                    y_rotation = 0;
+//                }
             }
         }, 10, 10);
         // Innere Klasse zum Verarbeiten der Timer-Ereignisse
@@ -156,7 +171,7 @@ public class Helicopter {
     }
 
     public Group getGroup() {
-        return helicopter;
+        return world;
     }
 
 
