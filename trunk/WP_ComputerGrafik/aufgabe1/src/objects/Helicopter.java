@@ -98,10 +98,9 @@ public class Helicopter {
         world.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
 
         DirectionalLight light1 = new DirectionalLight();
-        light1.setDirection(new Vector3f(-5,-10,0));
-        light1.setColor(new Color3f(new Color(251, 248, 52)));
-        light1.setInfluencingBounds(new BoundingSphere(
-                new Point3d(-3, -8, 0.0), 12.0));
+        light1.setDirection(new Vector3f(0, -15, 0));
+        light1.setColor(new Color3f(new Color(251, 238, 94)));
+        light1.setInfluencingBounds(new BoundingSphere(new Point3d(-3, -10, 0.0), 12.0));
         helicopter.addChild(light1);
 
 
@@ -117,8 +116,8 @@ public class Helicopter {
                 rotor.getTransform(transformation);
                 Vector3f pos = new Vector3f();
                 transformation.get(pos);
-                transformation.setTranslation(new Vector3f(0,0,0));
-                transformation.rotY(rotorAngle*3.1415f / 180);
+                transformation.setTranslation(new Vector3f(0, 0, 0));
+                transformation.rotY(rotorAngle * 3.1415f / 180);
                 transformation.setTranslation(pos);
                 rotor.setTransform(transformation);
                 rotorAngle+=2;
