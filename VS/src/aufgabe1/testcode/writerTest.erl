@@ -9,7 +9,7 @@ another(Str) ->
   io:format(Str).
 
 say() ->
-  Str="Hallo",
+  Str = "Hallo",
   another(Str).
 
 
