@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode/demoMSGQ.erl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode/demoRemote.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/praktikum.iml" afterPath="$PROJECT_DIR$/praktikum.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe1/server.erl" afterPath="$PROJECT_DIR$/src/aufgabe1/server.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="praktikum.iws" />
@@ -12,6 +16,7 @@
     <file path="/server.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380235302646" ignored="false" />
     <file path="/writer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380234001753" ignored="false" />
     <file path="/Dummy.txt" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380235717432" ignored="false" />
+    <file path="/Erlang Console" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380552840827" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,16 +85,16 @@
       <file leaf-file-name="server.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe1/server.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="20" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="20" column="28" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readerTest.erl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="readerTest.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="21" selection-start="116" selection-end="116" vertical-scroll-proportion="0.52674896">
+            <state line="7" column="27" selection-start="105" selection-end="106" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +103,34 @@
       <file leaf-file-name="serverTest.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/serverTest.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="10" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+            <state line="8" column="27" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demoMSGQ.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoMSGQ.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="59" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demoRemote.erl" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoRemote.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="10" selection-start="404" selection-end="404" vertical-scroll-proportion="0.5875576">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Readme.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="19" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -151,9 +183,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="738" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -241,6 +274,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="democode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -249,19 +304,20 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.13049267" />
     <property name="options.splitter.main.proportions" value="0.13411568" />
     <property name="options.lastSelected" value="preferences.pluginManager" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Programme/database/h2/h2-2013-07-28/h2/bin/h2-1.3.173.jar" />
+    <property name="last_opened_file_path" value="Z:/../../Programme/database/h2/h2-2013-07-28/h2/bin/h2-1.3.173.jar" />
     <property name="project.structure.side.proportion" value="0.15170279" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -269,11 +325,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="Z:\BAI-5\VS\src\aufgabe1\democode" />
       <recent name="D:\Alex\HAW\AI-5\VS\praktikum\src\aufgabe1" />
       <recent name="D:\Alex\HAW\AI-5\VS\praktikum\src\aufgabe1\testcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Erlang Application.Praktikum">
+  <component name="RunManager" selected="Erlang Console.Test">
     <configuration default="false" name="server.hallo" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application" temporary="true">
       <module name="praktikum" />
       <option name="moduleAndFunction" value="server hallo" />
@@ -295,7 +352,7 @@
     <configuration default="true" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
       <module name="" />
       <option name="moduleAndFunction" value="" />
-      <option name="name" value="Erlang Application" />
+      <option name="name" value="Erlang" />
       <option name="params" value="" />
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
@@ -308,21 +365,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="ErlangUnitRunConfigurationType" factoryName="Erlang Eunit">
-      <module name="" />
-      <option name="name" value="Erlang" />
-      <option name="saveOutputToFile" value="false" />
-      <option name="showConsoleOnStdErr" value="false" />
-      <option name="showConsoleOnStdOut" value="false" />
-      <option name="functionNames">
-        <set />
-      </option>
-      <option name="kind" value="MODULE" />
-      <option name="moduleNames">
-        <set />
-      </option>
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -381,6 +423,16 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="" />
+      <option name="consoleArgs" value="" />
+      <option name="name" value="Erlang Shell" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -402,16 +454,10 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Praktikum" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
+    <configuration default="false" name="demoMSGQ" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
       <module name="praktikum" />
-      <option name="moduleAndFunction" value="readerTest test" />
-      <option name="name" value="Praktikum" />
+      <option name="moduleAndFunction" value="demoMSGQ start" />
+      <option name="name" value="demoMSGQ" />
       <option name="params" value="" />
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
@@ -420,15 +466,49 @@
       <ConfigurationWrapper RunnerId="ErlangRunner" />
       <method />
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Erlang Application.Praktikum" />
-      <item index="1" class="java.lang.String" itemvalue="Erlang Application.server.hallo" />
+    <configuration default="false" name="demoRemote" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application">
+      <module name="praktikum" />
+      <option name="moduleAndFunction" value="demoRemote start" />
+      <option name="name" value="demoRemote" />
+      <option name="params" value="zummsel" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <RunnerSettings RunnerId="ErlangRunner" />
+      <ConfigurationWrapper RunnerId="ErlangRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Console" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-(s)name wk -setcookie zummsel" />
+      <option name="name" value="Console" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Test" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="" />
+      <option name="consoleArgs" value="-(s)name wk -setcookie zummsel" />
+      <option name="name" value="Test" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Erlang Application.demoMSGQ" />
+      <item index="1" class="java.lang.String" itemvalue="Erlang Application.demoRemote" />
+      <item index="2" class="java.lang.String" itemvalue="Erlang Application.server.hallo" />
+      <item index="3" class="java.lang.String" itemvalue="Erlang Console.Console" />
+      <item index="4" class="java.lang.String" itemvalue="Erlang Console.Test" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Erlang Application.server.hallo" />
-      </list>
-    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -458,20 +538,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS" />
-          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS" />
+          <option name="myVcsRoot" value="Z:\BAI-5\VS" />
+          <option name="myCopyRoot" value="Z:\BAI-5\VS" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS\.idea" />
-          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS\.idea" />
+          <option name="myVcsRoot" value="Z:\BAI-5\VS\.idea" />
+          <option name="myCopyRoot" value="Z:\BAI-5\VS\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS" />
-          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS" />
+          <option name="myVcsRoot" value="Z:\BAI-5\VS" />
+          <option name="myCopyRoot" value="Z:\BAI-5\VS" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -490,34 +570,34 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="738" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5755396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33093524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14198287" sideWeight="0.523322" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47667804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959743" sideWeight="0.5215827" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47841728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5755396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -582,28 +662,11 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/writer.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/serverTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/writerTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="61" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="17" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
@@ -660,9 +723,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/serverTest.erl">
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/reader.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="10" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+        <state line="3" column="12" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="27" selection-start="105" selection-end="106" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -674,23 +744,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/serverTest.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="27" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="19" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoMSGQ.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="59" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe1/server.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+        <state line="20" column="28" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/reader.erl">
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoRemote.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="21" selection-start="116" selection-end="116" vertical-scroll-proportion="0.52674896">
+        <state line="15" column="10" selection-start="404" selection-end="404" vertical-scroll-proportion="0.5875576">
           <folding />
         </state>
       </provider>
@@ -704,7 +788,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.15170279" />
               </list>
             </option>
           </splitter-proportions>
@@ -712,11 +796,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Erlang</last-edited>
+          <last-edited>Erlang (praktikum)|Erlang</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.15170279" />
               </list>
             </option>
           </splitter-proportions>
@@ -727,7 +811,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.15170279" />
               </list>
             </option>
           </splitter-proportions>
@@ -735,11 +819,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>Erlang R14B03</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.15170279" />
               </list>
             </option>
           </splitter-proportions>
@@ -747,7 +831,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>praktikum</last-edited>
+          <last-edited>Erlang|praktikum</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -774,7 +858,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.15170279" />
               </list>
             </option>
           </splitter-proportions>
