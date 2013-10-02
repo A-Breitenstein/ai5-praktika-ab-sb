@@ -23,10 +23,6 @@
 doStartUp() ->
   ServerPid = spawn(fun() -> doStartUp([]) end),
     register(tipOfTheDaymessageServer,ServerPid),
-  debugOutput("ServerPID",ServerPid),
-  pman:start(),
-  net_kernel:start([messageServer, shortnames]),
-  debugOutput("node()",node()),
   ServerPid
 .
 doStartUp(Args) ->
@@ -51,7 +47,7 @@ doStartUp(Args) ->
           MaxIdleTimeServer_TimerRef = erlang:start_timer(ST,self(),shutdownTimeout),
 
           %%(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID)
-          serverLoop(dict:new(),queue:new(),queue:new(),ST,MaxIdleTimeServer_TimerRef,CT,MMC,0);
+          serverLoop([],[],[],ST,MaxIdleTimeServer_TimerRef,CT,MMC,0);
         false -> io:format(" reason :~p\n", ["Configfile values arent ok!"])
 
       end;
@@ -77,108 +73,54 @@ get_value_of(Key, [{Key, Value} | _Tail]) ->
 get_value_of(Key, [{_Other, _Value} | Tail]) ->
   get_value_of(Key, Tail).
 
-checkValueAvailable(List) ->
- 0
-;
-checkValueAvailable([]) ->
- 0
-.
 
-%% Clients Map [{rechnerId,{lastRequestedMessage,timeoutTimer}}]
-%% DeliveryQueue [{}]
-
-
-
-max(Maxima,[]) -> Maxima;
-max(Maxima, [Item,Rest])->
-
-  {_SenderID_, _Zeit_, _Nachricht_, MessageID} = Item,
-
-  case Maxima < MessageID of
-    true -> max(MessageID,Rest);
-    flase -> max(Maxima,Rest)
-  end
-.
-
-getItem(NewHBQ, HighestDQID) ->
-  Find = fun(Item) ->
-    {_SenderID_, _Zeit_, _Nachricht_, MessageID} = Item,
-     HighestDQID =:= MessageID
-  end,
-
-  queue:filter(Find,NewHBQ)
-.
-
-addMessagesToDQ(NewHBQ, DeliveryQueue,MaxDQSize) ->
-  HighestDQID = max(0,queue:to_list(DeliveryQueue)),
-
-
-  case queue:is_empty(getItem(NewHBQ,HighestDQID+1)) of
-    true -> 0;%ErstelleFehlerMessage->packInBagTillGap
-    false -> 0%packInBagTillGap
-  end
-
-
-.
-
-
-que_adjustment(NewHBQ, DeliveryQueue, MaxDQSize) ->
-
-
-  case queue:len(NewHBQ)>(MaxDQSize*0.5) of
-    true-> addMessagesToDQ(NewHBQ, DeliveryQueue, MaxDQSize);
-    false->0
-
-  end
-.
-
-%% serverLoop(Clients,DeliveryQueue,HoldbackQueue,Msg) ->
+%% DeliveryQueue(sortedlist)  :: [{ElemNr,{ID,Msg,DeliveryTime}}]
+%% HoldbackQueue(sortedlist) :: [{ElemNr,{ID,Msg,ReceiveTime}}]
+%% Clients :: [{RechnerID,{lastSendedMessageID,TimerRef}}]
 serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID) ->
   receive
     {From,{getMsgId,RechnerID}} ->
       debugOutput("getMsgId called",From),
       NewMsgID = MsgID + 1,
-      {From,RechnerID} ! {getMsgId,NewMsgID},
       debugOutput("send getMsgId ",[{From,RechnerID},{getMsgId,NewMsgID}]),
       serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,NewMsgID);
 
-
-    {From,{dropMsg,SenderID, Zeit, Nachricht,MessageID}}->
-      debugOutput("dropMsg called",From),
-
-      NewHBQ = addMesseageToHBQ(HoldbackQueue, SenderID, Zeit, Nachricht,MessageID),
-      debugOutput("NewHBQ",NewHBQ),
-%%       ACK der Message
-      {From,RechnerID} ! {dropMsg,MessageID},
-      que_adjustment(NewHBQ, DeliveryQueue, MaxDQSize),
-      serverLoop(Clients,DeliveryQueue,NewHBQ,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
-
     {From,{getMsg,RechnerID}} ->
       debugOutput("getMsg called",From),
+
+      LastSendedMessageID = getLastMessageOfClient(Clients,RechnerID),
+
+      %% kann -1 liefern wenn liste leer ist
+      HighestMessageID = werkzeug:maxNrSL(DeliveryQueue),
+      case LastSendedMessageID < HighestMessageID of
+        true ->
+          {Nr,{_Nr,Msg,_DeliveryTime}} = werkzeug:findSL(DeliveryQueue,LastSendedMessageID + 1),
+          {From,RechnerID} ! {getMsg,LastSendedMessageID + 1, Msg};
+        false -> {From,RechnerID} ! {getMsg,-1, "dummy message ..."}
+      end,
       serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
 
-    {timeout,ClientTimerRef,clientTimeout} -> 0;
-    {timeout,ServerTimerRef,shutdownTimeout} -> debugOutput("server timeout",[]);
+{From,{dropMsg,SenderID, Zeit, Nachricht,MessageID}}->
+debugOutput("dropMsg called",From),
 
-    ANY -> debugOutput("server recived ",ANY)
-  end
+NewHBQ = addMesseageToHBQ(HoldbackQueue, SenderID, Zeit, Nachricht,MessageID),
+debugOutput("NewHBQ",NewHBQ),
+%%       ACK der Message
+{From,RechnerID} ! {dropMsg,MessageID},
+que_adjustment(NewHBQ, DeliveryQueue, MaxDQSize),
+serverLoop(Clients,DeliveryQueue,NewHBQ,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
+
+{timeout,ClientTimerRef,clientTimeout} -> 0;
+{timeout,ServerTimerRef,shutdownTimeout} -> debugOutput("server timeout",[]);
+
+ANY -> debugOutput("server recived ",ANY)
+end
 .
 debugOutput(MSG,ANY) ->
   io:format("debug output: ~p :: ~p\n", [MSG,ANY])
 .
 
-addMesseageToHBQ(HoldbackQueue, SenderID, Zeit, Nachricht, MessageID) ->
 
-  ContainsID = fun(Item) -> {SenderID_, Zeit_, Nachricht_, MessageID_} = Item,
-    MessageID =:= MessageID_
-  end,
-
-  case  queue:is_empty(queue:filter(ContainsID,HoldbackQueue)) of
-    false ->  NEW = HoldbackQueue;
-    true -> NEW = queue:in({SenderID, Zeit, Nachricht, MessageID},HoldbackQueue)
-  end,
-  NEW
-.
 
 
 refreshTimer(TimerRef,TimeInMsec,Msg) ->
