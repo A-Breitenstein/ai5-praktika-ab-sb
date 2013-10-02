@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode/demoMSGQ.erl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/democode/demoRemote.erl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/spammer.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt" afterPath="$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe1/messageServer.erl" afterPath="$PROJECT_DIR$/src/aufgabe1/messageServer.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/praktikum.iml" afterPath="$PROJECT_DIR$/praktikum.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="praktikum.iws" />
@@ -15,8 +13,10 @@
     <file path="/reader.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380234012712" ignored="false" />
     <file path="/server.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380235302646" ignored="false" />
     <file path="/writer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380234001753" ignored="false" />
-    <file path="/Dummy.txt" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380235717432" ignored="false" />
-    <file path="/Erlang Console" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380552840827" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380725192857" ignored="false" />
+    <file path="/Erlang Console" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380720406801" ignored="false" />
+    <file path="/messageServer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380724885297" ignored="false" />
+    <file path="/spammer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380707073575" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,64 +91,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readerTest.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="27" selection-start="105" selection-end="106" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serverTest.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/serverTest.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="27" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="demoMSGQ.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoMSGQ.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="59" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+            <state line="4" column="44" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demoRemote.erl" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="demoRemote.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoRemote.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="10" selection-start="404" selection-end="404" vertical-scroll-proportion="0.5875576">
+            <state line="3" column="52" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Readme.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="messageServer.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe1/messageServer.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="26" selection-start="3391" selection-end="3391" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spammer.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe1/spammer.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="0" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="erlang.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://S:/erl5.8.4/lib/erts-5.8.4/src/erlang.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="428" column="62" selection-start="12468" selection-end="12482" vertical-scroll-proportion="-4.16">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://S:/erl5.8.4/lib/kernel-2.14.4/src/auth.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="118" column="46" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Readme.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="19" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="writerTest.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/writerTest.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="10" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reader.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aufgabe1/reader.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="12" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="54" column="83" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.92975205">
               <folding />
             </state>
           </provider>
@@ -158,6 +158,15 @@
         <entry file="file://$PROJECT_DIR$/src/aufgabe1/writer.erl">
           <provider selected="true" editor-type-id="text-editor">
             <state line="7" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reader.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe1/reader.erl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="12" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -179,6 +188,9 @@
         <option value="$PROJECT_DIR$/src/aufgabe1/writer.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe1/testcode/writerTest.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe1/server.erl" />
+        <option value="$PROJECT_DIR$/src/aufgabe1/spammer.erl" />
+        <option value="$PROJECT_DIR$/src/aufgabe1/messageServer.erl" />
+        <option value="$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt" />
       </list>
     </option>
   </component>
@@ -216,6 +228,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,7 +312,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,11 +342,135 @@
       <recent name="D:\Alex\HAW\AI-5\VS\praktikum\src\aufgabe1\testcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Erlang Console.Test">
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="svn" revision="23">Z:\BAI-5\VS\src\aufgabe1\messageServer.erl</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
+  <component name="RunManager" selected="Erlang Console.sender_console2">
     <configuration default="false" name="server.hallo" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application" temporary="true">
       <module name="praktikum" />
       <option name="moduleAndFunction" value="server hallo" />
       <option name="name" value="server.hallo" />
+      <option name="params" value="" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <RunnerSettings RunnerId="ErlangRunner" />
+      <ConfigurationWrapper RunnerId="ErlangRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="messageServer.doStartUp" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application" temporary="true">
+      <module name="praktikum" />
+      <option name="moduleAndFunction" value="messageServer doStartUp" />
+      <option name="name" value="messageServer.doStartUp" />
       <option name="params" value="" />
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
@@ -478,10 +614,10 @@
       <ConfigurationWrapper RunnerId="ErlangRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="Console" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+    <configuration default="false" name="server_console" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
       <module name="praktikum" />
-      <option name="consoleArgs" value="-(s)name wk -setcookie zummsel" />
-      <option name="name" value="Console" />
+      <option name="consoleArgs" value="-sname messageServer -setcookie zummsel" />
+      <option name="name" value="server_console" />
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
@@ -502,13 +638,45 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="5">
+    <configuration default="false" name="sender_console" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-sname client -setcookie zummsel" />
+      <option name="name" value="sender_console" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="sender_console2" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-sname client2 -setcookie zummsel" />
+      <option name="name" value="sender_console2" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Erlang Application.demoMSGQ" />
       <item index="1" class="java.lang.String" itemvalue="Erlang Application.demoRemote" />
       <item index="2" class="java.lang.String" itemvalue="Erlang Application.server.hallo" />
-      <item index="3" class="java.lang.String" itemvalue="Erlang Console.Console" />
-      <item index="4" class="java.lang.String" itemvalue="Erlang Console.Test" />
+      <item index="3" class="java.lang.String" itemvalue="Erlang Application.messageServer.doStartUp" />
+      <item index="4" class="java.lang.String" itemvalue="Erlang Console.server_console" />
+      <item index="5" class="java.lang.String" itemvalue="Erlang Console.Test" />
+      <item index="6" class="java.lang.String" itemvalue="Erlang Console.sender_console" />
+      <item index="7" class="java.lang.String" itemvalue="Erlang Console.sender_console2" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Erlang Application.messageServer.doStartUp" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -566,11 +734,15 @@
       <created>1380235728395</created>
       <updated>1380235728395</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1380553630124</created>
+      <updated>1380553630124</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -580,14 +752,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33093524" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14198287" sideWeight="0.523322" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47667804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14198287" sideWeight="0.5802048" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41979522" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -667,41 +839,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/serverTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/writerTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="61" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="17" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/serverTest.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="43" selection-end="43" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/writerTest.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="39" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
@@ -712,13 +849,6 @@
     <entry file="file://$PROJECT_DIR$/src/aufgabe1/testcode/readerTest.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="17" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/writer.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -751,20 +881,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="19" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoMSGQ.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="59" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe1/server.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="28" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
@@ -772,9 +888,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoMSGQ.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="44" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/erl5.8.4/lib/kernel-2.14.4/src/auth.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="46" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://S:/erl5.8.4/lib/erts-5.8.4/src/erlang.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="428" column="62" selection-start="12468" selection-end="12482" vertical-scroll-proportion="-4.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/demoRemote.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="404" selection-end="404" vertical-scroll-proportion="0.5875576">
+        <state line="3" column="52" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serverconfig.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/writer.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/spammer.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="430" selection-end="430" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/messageServer.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="26" selection-start="3391" selection-end="3391" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/democode/Readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="83" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.92975205">
           <folding />
         </state>
       </provider>
