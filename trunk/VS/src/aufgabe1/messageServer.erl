@@ -47,7 +47,8 @@ doStartUp(Args) ->
           MaxIdleTimeServer_TimerRef = erlang:start_timer(ST,self(),shutdownTimeout),
 
           %%(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID)
-          serverLoop([],[],[],ST,MaxIdleTimeServer_TimerRef,CT,MMC,0);
+          serverLoop([],[{12,{12,"Text qwe 121212,",12331}},{11,{11,"Text qwe 8888,",1111}},{10,{10,"Text qwe 101019,",12331}}]
+            ,[],ST,MaxIdleTimeServer_TimerRef,CT,MMC,0);
         false -> io:format(" reason :~p\n", ["Configfile values arent ok!"])
 
       end;
@@ -73,10 +74,46 @@ get_value_of(Key, [{Key, Value} | _Tail]) ->
 get_value_of(Key, [{_Other, _Value} | Tail]) ->
   get_value_of(Key, Tail).
 
+getLastMessageOfClient(Clients, RechnerID) ->
+8.
+
+setLastMessageOfClient(Clients, RechnerID, NewLastSendedMessageID) ->
+  0.
+addMesseageToHBQ(HoldbackQueue, MsgID, Msg, ReceiveTime) ->
+  erlang:error(not_implemented).
 
 %% DeliveryQueue(sortedlist)  :: [{ElemNr,{ID,Msg,DeliveryTime}}]
 %% HoldbackQueue(sortedlist) :: [{ElemNr,{ID,Msg,ReceiveTime}}]
 %% Clients :: [{RechnerID,{lastSendedMessageID,TimerRef}}]
+
+sendMessage(From,Client, DeliveryQueue ) ->
+  %%%% Wir kennen den Client
+  {RechnerID,{LastSendedMessageID,TimerRef}} = Client,
+  HighestMessageID = werkzeug:maxNrSL(DeliveryQueue),
+  LowestMessageID = werkzeug:minNrSL(DeliveryQueue),
+
+  case LastSendedMessageID < HighestMessageID andalso HighestMessageID >= 0 of
+    %%% es gibt mindestens eine neue Message
+    true ->
+      case LastSendedMessageID >= LowestMessageID of
+        true ->
+          {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findSL(DeliveryQueue,LastSendedMessageID + 1);
+        false ->
+          {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findSL(DeliveryQueue,LowestMessageID)
+      end,
+
+      {From,RechnerID} ! {getMsg,ID, Msg,(HighestMessageID-ID) > 0},
+      debugOutput("send Message",{getMsg,ID, Msg,(HighestMessageID-ID) > 0}),
+      {RechnerID,{ID,TimerRef}};
+
+    %%% es keine neuen  Messages
+    false ->
+      {From,RechnerID} ! {getMsg,-1, "dummy message ..."},
+      debugOutput("send Message",{getMsg,-1, "dummy message ..."}),
+      {RechnerID,{LastSendedMessageID,TimerRef}}
+  end
+.
+
 serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID) ->
   receive
     {From,{getMsgId,RechnerID}} ->
@@ -85,41 +122,46 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
       debugOutput("send getMsgId ",[{From,RechnerID},{getMsgId,NewMsgID}]),
       serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,NewMsgID);
 
+
+    %%% mit {tipOfTheDaymessageServer,'messageServer@Sven-PC'} ! {eval_loop,{getMsg,node()}}. aufrufen
+    %%% bei aktuellem Setup funktioniert es
     {From,{getMsg,RechnerID}} ->
       debugOutput("getMsg called",From),
-
-      LastSendedMessageID = getLastMessageOfClient(Clients,RechnerID),
-
-      %% kann -1 liefern wenn liste leer ist
-      HighestMessageID = werkzeug:maxNrSL(DeliveryQueue),
-      case LastSendedMessageID < HighestMessageID of
-        true ->
-          {Nr,{_Nr,Msg,_DeliveryTime}} = werkzeug:findSL(DeliveryQueue,LastSendedMessageID + 1),
-          {From,RechnerID} ! {getMsg,LastSendedMessageID + 1, Msg};
-        false -> {From,RechnerID} ! {getMsg,-1, "dummy message ..."}
+      debugOutput("current Client",werkzeug:findSL(Clients,RechnerID)),
+      case werkzeug:findSL(Clients,RechnerID) of
+          %%%% Wir kennen den Client noch nicht !
+          {-1,nok} ->
+              Client = sendMessage(From,{RechnerID,{-1, erlang:start_timer(ClientTimeout,self(),clientTimeout)}},DeliveryQueue),
+              NewClients = werkzeug:pushSL(Clients,Client);
+          %%% Wir kennen den Client !
+          {RechnerID,{LastSendedMessageID,TimerRef}} ->
+              NewTimerRef = refreshTimer(TimerRef,ClientTimeout,clientTimeout),
+              Client = sendMessage(From,{RechnerID,{LastSendedMessageID,NewTimerRef}},DeliveryQueue),
+              NewClients = werkzeug:pushSL(lists:filter(fun(Item)-> {ItemRechnerID,{_MsgID,_TimerRef}} = Item,  RechnerID =/= ItemRechnerID end,Clients),Client)
       end,
-      serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
+      debugOutput("updated Client",Client),
+      serverLoop(NewClients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
 
-{From,{dropMsg,SenderID, Zeit, Nachricht,MessageID}}->
-debugOutput("dropMsg called",From),
 
-NewHBQ = addMesseageToHBQ(HoldbackQueue, SenderID, Zeit, Nachricht,MessageID),
-debugOutput("NewHBQ",NewHBQ),
-%%       ACK der Message
-{From,RechnerID} ! {dropMsg,MessageID},
-que_adjustment(NewHBQ, DeliveryQueue, MaxDQSize),
-serverLoop(Clients,DeliveryQueue,NewHBQ,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
+    {From,{dropMsg,SenderID, AbsendeZeit, Msg,MsgID}}->
+      debugOutput("dropMsg called",From),
 
-{timeout,ClientTimerRef,clientTimeout} -> 0;
-{timeout,ServerTimerRef,shutdownTimeout} -> debugOutput("server timeout",[]);
+      NewHBQ = addMesseageToHBQ(HoldbackQueue, MsgID, Msg, time()),
+      serverLoop(Clients,DeliveryQueue,NewHBQ,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
 
-ANY -> debugOutput("server recived ",ANY)
-end
+    {timeout,ClientTimerRef,clientTimeout} ->
+      debugOutput("client timeout",ClientTimerRef),
+      NewClients = lists:filter(fun(Item)-> {_RechnerID,{_MsgID,TimerRef}} = Item, TimerRef =/= ClientTimerRef end,Clients),
+      serverLoop(NewClients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
+    {timeout,ServerTimerRef,shutdownTimeout} ->
+      debugOutput("server timeout",[]);
+
+    ANY -> debugOutput("server recived ",ANY)
+  end
 .
 debugOutput(MSG,ANY) ->
   io:format("debug output: ~p :: ~p\n", [MSG,ANY])
 .
-
 
 
 
