@@ -1,0 +1,52 @@
+Server
+1.
+- Messages werden vom Server eindeutig durchnummeriert ( start bei 1) 
+- Client holt sich eine MessageID vom Server
+
+2.
+-Messages sollen in zusammenhängender Reihenfolge angezeigt werden
+-Messages können verloren gehen bzw in nicht sortierter Reihenfolge eintreffen
+-Deliveryqueue enthält die Messages in richtiger Reihenfolge
+-Die queue größe kann maximal N Messages beinhalten
+-Holdbackqueue enthält Messages die nicht ausgelierfert werden dürfen
+3.
+-Beim eintragen der Messages in die Holdbackqueue wird ihnen ein Zeitstemple gegeben (Empfangszeit)
+-Beim eintragen der Messages in die Deliveryqueue wird ihnen ein Zeitstemple gegeben (Übertragungszeit)
+4.
+-Ein Client bekommt auf Anfrage EINE ihm noch nicht ausgelieferte Message aus
+ der DeliveryQueue ( beginnend mit der kleinsten ID)
+-Dem Client wird durch ein flag mitgeteilt das es noch weitere abrufbare Messages gibt
+-Die ID der Message wird mit dem Text an den Client geschickt
+-Sind keine Messages zum abrufen da, sendet der Server eine Dummy Message
+
+5.
+-Ein LESE Client, der seit X sec keine Message Requested hat wird vom Server vergessen
+-Nach ablauf seiner X sec wird er wie ein neuer Client behandelt
+
+6.
+-Wenn die Holdbackqueue zur hälfte der größe der DeliveryQueue gefüllt ist,
+
+7.
+- Wenn der Server X sec nichts zutun hat, dann beendet er sich
+
+8.
+- Als ADTs sind nur Listen erlaubt
+- Maximal 2 Prozesse + Einem zum loggen
+- Die steuernden Werte sind in einer config Datei anzugeben
+- Der Server muss mit register(name,ServerPid) beim Erlang DNS angemeldet werden
+
+
+Client
+
+9.
+- Redakteur Client sendet in X sec abständen eine Message zum Server, die 
+seinen Namen Praktikumsgruppe und die Teamnummer beinhalten sowie die Systemzeit
+- Zwischen dem Anfordern der MessageID und dem Absenden der Message wird X sec gewartet
+10.
+- Alle 5 Messages wird die Wartezeit um 50%(min. 1sec) per zufall vergrößert oder
+verkleinert, die Zeit darf nicht unter 2 sec rutschen
+11.
+- Der Redaktuer Client fragt nach 5 Messages eine MEssageID ab die er verfallen lässt d.h. keine Message sendet
+- dies ist im Log zuvermerken
+
+12.
