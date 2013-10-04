@@ -31,9 +31,9 @@ doStartUp(Args) ->
   ConfigFile = file:consult(DefaultConfigFile),
   case ConfigFile of
   {ok,ConfigList} ->
-      ServerTimeout = get_value_of(serverTimeout,ConfigList),
-      ClientTimeout = get_value_of(clientTimeout,ConfigList),
-      MaxMessageCount = get_value_of(maxMessageCount,ConfigList),
+      ServerTimeout = werkzeug:get_config_value(serverTimeout,ConfigList),
+      ClientTimeout = werkzeug:get_config_value(clientTimeout,ConfigList),
+      MaxMessageCount = werkzeug:get_config_value(maxMessageCount,ConfigList),
 
       {ok,ST} = ServerTimeout,
       {ok,CT} = ClientTimeout,
@@ -67,20 +67,6 @@ defaultServerSetup(FileName) ->
   InitConfig = "{serverTimeout, 400000}.\n{clientTimeout, 12000}.\n{maxMessageCount, 125}.\n",
   file:write_file(FileName, InitConfig, [append])
 .
-%%%%  aus der BA_Erlang von Klauck entnommen
-get_value_of(_Key, []) ->
-  {error, not_found};
-get_value_of(Key, [{Key, Value} | _Tail]) ->
-  {ok, Value};
-get_value_of(Key, [{_Other, _Value} | Tail]) ->
-  get_value_of(Key, Tail).
-
-addMesseageToHBQ(HoldbackQueue, MsgID, Msg, ReceiveTime) ->
-  erlang:error(not_implemented).
-
-
-
-
 
 sendMessage(From,Client, DeliveryQueue ) ->
   %%%% Wir kennen den Client
@@ -98,14 +84,14 @@ sendMessage(From,Client, DeliveryQueue ) ->
           {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findSL(DeliveryQueue,LowestMessageID)
       end,
 
-      {From,RechnerID} ! {getMsg,ID, Msg,(HighestMessageID-ID) > 0},
-      debugOutput(lists:concat(["sending Message to ",RechnerID,"  ",getMsg,ID, Msg,(HighestMessageID-ID) > 0])," "),
+      {From,RechnerID} ! {tipOfTheDaymessageServer,{reply,ID, Msg,not((HighestMessageID-ID) > 0)}},
+      debugOutput(lists:concat(["sending Message to ",RechnerID,"  ",reply,ID, Msg,not((HighestMessageID-ID) > 0)])," "),
       {RechnerID,{ID,TimerRef}};
 
     %%% es keine neuen  Messages
     false ->
-      {From,RechnerID} ! {getMsg,-1, "dummy message ..."},
-      debugOutput(lists:concat(["sending Dummy Message to ",RechnerID,"  ",getMsg,-1, " dummy message ..."]),""),
+      {From,RechnerID} ! {tipOfTheDaymessageServer,{reply,-1, "dummy message ...",true}},
+      debugOutput(lists:concat(["sending Dummy Message to ",RechnerID,"  ",reply,-1, " dummy message ..."]),""),
       {RechnerID,{LastSendedMessageID,TimerRef}}
   end
 .
@@ -121,19 +107,18 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
   receive
 
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% get MessageID %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    {From,{getMsgId,RechnerID}} ->
+    {From,{getmsgid,RechnerID}} ->
       debugOutput(lists:concat([" getMessageID called by ",From," on ",RechnerID]),""),
-      NewMsgID = MsgID + 1,
-      {From,RechnerID} ! {getMsgId,NewMsgID},
-      debugOutput(lists:concat([" send MessageID ",NewMsgID," to ",RechnerID]),""),
+      {From,RechnerID} ! {tipOfTheDaymessageServer,{nid,MsgID}},
+      debugOutput(lists:concat([" send MessageID ",MsgID," to ",RechnerID]),""),
       NewMaxIdleTimeServer_TimerRef = refreshTimer(MaxIdleTimeServer_TimerRef,MaxIdleTimeServer,shutdownTimeout),
-      serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,NewMaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,NewMsgID);
+      serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,NewMaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID+1);
 
 
     %%%%%%%%%%%%%%%%%%%%%%%% get message %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     %%% mit {tipOfTheDaymessageServer,'messageServer@Sven-PC'} ! {eval_loop,{getMsg,node()}}. aufrufen
     %%% bei aktuellem Setup funktioniert es
-    {From,{getMsg,RechnerID}} ->
+    {From,{getmessages,RechnerID}} ->
       debugOutput(lists:concat([" getMessage called by ",From," on ",RechnerID]),""),
 
       debugOutput(" current Client ",werkzeug:findSL(Clients,RechnerID)),
@@ -154,15 +139,15 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
 
     %%%%%%%%%%%%%%%%%%%%%%%%% drop Message %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%     {From,{qwe123,SenderID,AbsendeZeit,{Msg,MessageID}}} ->
-    {From,{dropMsg,SenderID,AbsendeZeit,MsgBlock}} ->
+    {From,{dropmessage,MsgBlock}} ->
       {Msg,MessageID} = MsgBlock,
-      debugOutput(" dropMsg called",SenderID),
+      debugOutput(" dropMsg called",MsgBlock),
 
       case lists:any(fun(Item) -> {ElemNr,Elem} = Item,MessageID =:= ElemNr end,HoldbackQueue)of
         true-> NewHBQ = HoldbackQueue,
-          debugOutput('Message already in Holdbackqueue : ',[MessageID,' ',SenderID])  ;
+          debugOutput('Message already in Holdbackqueue : ',MessageID)  ;
         false-> NewHBQ = werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,Msg,time()}}),
-          debugOutput('Message has been pushed into Holdbackqueue : ',[MessageID,' ',SenderID])
+          debugOutput('Message has been pushed into Holdbackqueue : ',MessageID)
       end,
 
       case werkzeug:lengthSL(NewHBQ) > (MaxDQSize * 0.5) of
