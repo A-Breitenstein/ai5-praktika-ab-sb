@@ -6,11 +6,8 @@ import javax.persistence.OneToOne;
 import java.io.Serializable;
 
 /**
- * Created with IntelliJ IDEA.
- * User: Akatsuki
  * Date: 04.10.13
  * Time: 16:54
- * To change this template use File | Settings | File Templates.
  */
 @Entity
 public class Bankkonto implements Serializable{
@@ -24,4 +21,28 @@ public class Bankkonto implements Serializable{
     public Bankkonto() {
     }
 
+    private Bankkonto(String IBAN, Kunde kunde) {
+        this.IBAN = IBAN;
+        this.kunde = kunde;
+    }
+
+    public static Bankkonto create(String IBAN, Kunde kunde) {
+        return new Bankkonto(IBAN, kunde);
+    }
+
+    public String getIBAN() {
+        return IBAN;
+    }
+
+    public void setIBAN(String IBAN) {
+        this.IBAN = IBAN;
+    }
+
+    public Kunde getKunde() {
+        return kunde;
+    }
+
+    public void setKunde(Kunde kunde) {
+        this.kunde = kunde;
+    }
 }
