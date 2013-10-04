@@ -4,14 +4,14 @@ Server
 - Client holt sich eine MessageID vom Server
 
 2.
--Messages sollen in zusammenhängender Reihenfolge angezeigt werden
--Messages können verloren gehen bzw in nicht sortierter Reihenfolge eintreffen
--Deliveryqueue enthält die Messages in richtiger Reihenfolge
--Die queue größe kann maximal N Messages beinhalten
--Holdbackqueue enthält Messages die nicht ausgelierfert werden dürfen
+-Messages sollen in zusammenh?ngender Reihenfolge angezeigt werden
+-Messages k?nnen verloren gehen bzw in nicht sortierter Reihenfolge eintreffen
+-Deliveryqueue enth?lt die Messages in richtiger Reihenfolge
+-Die queue gr??e kann maximal N Messages beinhalten
+-Holdbackqueue enth?lt Messages die nicht ausgelierfert werden d?rfen
 3.
 -Beim eintragen der Messages in die Holdbackqueue wird ihnen ein Zeitstemple gegeben (Empfangszeit)
--Beim eintragen der Messages in die Deliveryqueue wird ihnen ein Zeitstemple gegeben (Übertragungszeit)
+-Beim eintragen der Messages in die Deliveryqueue wird ihnen ein Zeitstemple gegeben (?bertragungszeit)
 4.
 -Ein Client bekommt auf Anfrage EINE ihm noch nicht ausgelieferte Message aus
  der DeliveryQueue ( beginnend mit der kleinsten ID)
@@ -24,7 +24,7 @@ Server
 -Nach ablauf seiner X sec wird er wie ein neuer Client behandelt
 
 6.
--Wenn die Holdbackqueue zur hälfte der größe der DeliveryQueue gefüllt ist,
+-Wenn die Holdbackqueue zur h?lfte der gr??e der DeliveryQueue gef?llt ist,
 
 7.
 - Wenn der Server X sec nichts zutun hat, dann beendet er sich
@@ -39,14 +39,22 @@ Server
 Client
 
 9.
-- Redakteur Client sendet in X sec abständen eine Message zum Server, die 
+- Redakteur Client sendet in X sec abst?nden eine Message zum Server, die 
 seinen Namen Praktikumsgruppe und die Teamnummer beinhalten sowie die Systemzeit
 - Zwischen dem Anfordern der MessageID und dem Absenden der Message wird X sec gewartet
 10.
-- Alle 5 Messages wird die Wartezeit um 50%(min. 1sec) per zufall vergrößert oder
+- Alle 5 Messages wird die Wartezeit um 50%(min. 1sec) per zufall vergr??ert oder
 verkleinert, die Zeit darf nicht unter 2 sec rutschen
 11.
-- Der Redaktuer Client fragt nach 5 Messages eine MEssageID ab die er verfallen lässt d.h. keine Message sendet
+- Der Redaktuer Client fragt nach 5 Messages eine MEssageID ab die er verfallen l?sst d.h. keine Message sendet
 - dies ist im Log zuvermerken
 
 12.
+
+
+
+
+Wenn Holdbackqueue Anzahl  mehr als Hälfte an Nachrichten enthaelt,
+, wenn eine Lücke besteht, diese Lücke zwischen Deliveryqueue und Holdbackqueue mit genau einer Fehlernachricht geschlossen,
+Es werden keine weiteren Lücken innerhalb der Holdbackqueue gefüllt,
+In dem Sinne wird die Holdbackqueue nur bis zur nächsten Lücke geleert.

@@ -10,7 +10,7 @@
 -author("Sven").
 
 %% API
--export([doStartUp/1,doStartUp/0]).
+-export([doStartUp/1,doStartUp/0,sammelBisZurLuecke/1]).
 
 
 %% VERTEILTES ERLANG(for shorties mit nodes):
@@ -45,8 +45,8 @@ doStartUp(Args) ->
           werkzeug:logging(LogFileName,lists:concat(["+++ server started ",werkzeug:timeMilliSecond()," +++"])),
 
           %%(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID)
-          serverLoop([],[{12,{12,"Text qwe 121212,",12331}},{11,{11,"Text qwe 11111,",1111}},{10,{10,"Text qwe 101019,",12331}}]
-            ,[],ST,MaxIdleTimeServer_TimerRef,CT,MMC,1);
+          %% [{12,{12,"Text qwe 121212,",12331}},{11,{11,"Text qwe 11111,",1111}},{10,{10,"Text qwe 101019,",12331}}]
+          serverLoop([],[],[],ST,MaxIdleTimeServer_TimerRef,CT,MMC,1);
 
         false ->
           werkzeug:logging(LogFileName,"Configfile values arent ok!")
@@ -78,9 +78,9 @@ get_value_of(Key, [{_Other, _Value} | Tail]) ->
 addMesseageToHBQ(HoldbackQueue, MsgID, Msg, ReceiveTime) ->
   erlang:error(not_implemented).
 
-%% DeliveryQueue(sortedlist)  :: [{ElemNr,{ID,Msg,DeliveryTime}}]
-%% HoldbackQueue(sortedlist) :: [{ElemNr,{ID,Msg,ReceiveTime}}]
-%% Clients :: [{RechnerID,{lastSendedMessageID,TimerRef}}]
+
+
+
 
 sendMessage(From,Client, DeliveryQueue ) ->
   %%%% Wir kennen den Client
@@ -109,6 +109,13 @@ sendMessage(From,Client, DeliveryQueue ) ->
       {RechnerID,{LastSendedMessageID,TimerRef}}
   end
 .
+
+
+
+
+%% DeliveryQueue(sortedlist)  :: [{ElemNr,{ID,Msg,DeliveryTime}}]
+%% HoldbackQueue(sortedlist) :: [{ElemNr,{ID,Msg,ReceiveTime}}]
+%% Clients :: [{RechnerID,{lastSendedMessageID,TimerRef}}]
 
 serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID) ->
   receive
@@ -146,18 +153,61 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
       serverLoop(NewClients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,NewMaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
 
     %%%%%%%%%%%%%%%%%%%%%%%%% drop Message %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    {From,{dropMsg,SenderID, AbsendeZeit, Msg,MsgID}}->
-      debugOutput(" dropMsg called",From),
+%%     {From,{qwe123,SenderID,AbsendeZeit,{Msg,MessageID}}} ->
+    {From,{dropMsg,SenderID,AbsendeZeit,MsgBlock}} ->
+      {Msg,MessageID} = MsgBlock,
+      debugOutput(" dropMsg called",SenderID),
 
-      NewHBQ = addMesseageToHBQ(HoldbackQueue, MsgID, Msg, time()),
+      case lists:any(fun(Item) -> {ElemNr,Elem} = Item,MessageID =:= ElemNr end,HoldbackQueue)of
+        true-> NewHBQ = HoldbackQueue,
+          debugOutput('Message already in Holdbackqueue : ',[MessageID,' ',SenderID])  ;
+        false-> NewHBQ = werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,Msg,time()}}),
+          debugOutput('Message has been pushed into Holdbackqueue : ',[MessageID,' ',SenderID])
+      end,
 
+      case werkzeug:lengthSL(NewHBQ) > (MaxDQSize * 0.5) of
+        true ->
+          Test_HighestMessageID_DQ = werkzeug:maxNrSL(DeliveryQueue) ,
+          case Test_HighestMessageID_DQ < 0  of
+            true -> SuccessorOf_HighestMessageID_DQ = 1;
+            false -> SuccessorOf_HighestMessageID_DQ = Test_HighestMessageID_DQ + 1
+          end,
+          debugOutput(werkzeug:list2String(['Successor of Highest MessageID of DQ',SuccessorOf_HighestMessageID_DQ]),""),
+%%           debugOutput(">>>>>>>>>>>>>>>>>>>>Liste NewHBQ: ", NewHBQ),
+          LowestHBQ_Elem = werkzeug:findSL(NewHBQ,werkzeug:minNrSL(NewHBQ)),
+%%           debugOutput(">>>>>>>>>>>>>>>>>>>>LowestHBQ_Elem: ", LowestHBQ_Elem),
+          %%{ElemNr,{ID,Msg,ReceiveTime}}]
+          {ElemNr,_Elem} = LowestHBQ_Elem,
+          PredessorOfElemNr = ElemNr -1,
+          debugOutput(werkzeug:list2String(['Predessor of Lowest Elem of HBQ ',PredessorOfElemNr]),""),
+          case (ElemNr - SuccessorOf_HighestMessageID_DQ ) > 1 of
+            true->
+              debugOutput(werkzeug:list2String(['Gap found : Fehlernachricht fuer Nachrichtennummern ',SuccessorOf_HighestMessageID_DQ,' bis ',PredessorOfElemNr,' um '])," "),
+              NewDQ = werkzeug:pushSL(DeliveryQueue,{PredessorOfElemNr,{PredessorOfElemNr,werkzeug:list2String(['Fehlernachricht fuer Nachrichtennummern ',SuccessorOf_HighestMessageID_DQ,' bis ',PredessorOfElemNr,' um ']),werkzeug:timeMilliSecond()}}),
+              {GatheredMessages,_Index,NewNewHBQ} = sammelBisZurLuecke(NewHBQ),
+              debugOutput(werkzeug:list2String(['GatheredMessags : ',GatheredMessages,' NewNewHBQ :',NewNewHBQ,' um '])," "),
+              NewDeliveryQueue = lists:sublist(lists:append(GatheredMessages,NewDQ),MaxDQSize)
+          ;
+            false -> {GatheredMessages,_Index,NewNewHBQ} = sammelBisZurLuecke(NewHBQ),
+              debugOutput(werkzeug:list2String(['no Gap found :GatheredMessags : ',GatheredMessages,' NewNewHBQ :',NewNewHBQ,' um '])," "),
+              NewDeliveryQueue = lists:sublist(lists:append(GatheredMessages,DeliveryQueue),MaxDQSize)
+          end,
+
+
+          debugOutput('NewDeliveryQueue ',NewDeliveryQueue)
+      ;
+
+        false ->
+          debugOutput(werkzeug:list2String(['NewHBQ filled by ',werkzeug:lengthSL(NewHBQ) / (MaxDQSize)*100, ' % ']),""),
+          NewNewHBQ = NewHBQ, NewDeliveryQueue = DeliveryQueue
+      end,
 
 
       NewMaxIdleTimeServer_TimerRef = refreshTimer(MaxIdleTimeServer_TimerRef,MaxIdleTimeServer,shutdownTimeout),
-      serverLoop(Clients,DeliveryQueue,NewHBQ,MaxIdleTimeServer,NewMaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
+      serverLoop(Clients,NewDeliveryQueue,NewNewHBQ,MaxIdleTimeServer,NewMaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID);
 
 
-    %%%%%%%%%%%%%%%%%%%%%%% TIMEOUTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%% TIMEOUTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     {timeout,ClientTimerRef,clientTimeout} ->
       debugOutput(" client timeout",ClientTimerRef),
       NewClients = lists:filter(fun(Item)-> {_RechnerID,{_MsgID,TimerRef}} = Item, TimerRef =/= ClientTimerRef end,Clients),
@@ -167,8 +217,9 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
       debugOutput(" server timeout",""),
       werkzeug:logstop();
 
-    %%%%%%%%%%%%%%%%%%%%%%%% RELIEVE ANY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    ANY -> debugOutput(" server recived ",ANY)
+  %%%%%%%%%%%%%%%%%%%%%%%% RELIEVE ANY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    ANY -> debugOutput(" server recived ",ANY),
+      serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID)
   end
 .
 debugOutput(MSG,ANY) ->
@@ -176,7 +227,25 @@ debugOutput(MSG,ANY) ->
 .
 
 
+%%sammelBisZurLuecke([{7,{1,qwe,qwe}},{5,{qwe,qwe,qwe}},{2,{qwe,qwe,qwe}},{1,{qwe,qwe,qwe}}]) => {[{2,{qwe,qwe,qwe}},{1,{qwe,qwe,qwe}}],7, [{7,{1,qwe,qwe}},{5,{qwe,qwe,qwe}}]}
+sammelBisZurLuecke(HoldbackQueue) ->
 
+  lists:foldr(fun(Item,Accu) ->
+    {ElemNr,{ID,Msg,ReceiveTime}} = Item,
+    {GatheredItems,Index,NewHBQ} = Accu,
+%%      debugOutput(werkzeug:list2String(["index: ",Index," ElemNr ",ElemNr]),""),
+    case Index =:= ElemNr of
+      true->
+        NewItem = {ElemNr,{ID,Msg,['DeliveryTime: ',time(), ' ReciveTime: ',ReceiveTime]}},
+        NewGatheredItems =  werkzeug:pushSL(GatheredItems,NewItem),
+        AccuOut = {NewGatheredItems,ElemNr+1,NewHBQ};
+      false->
+        NewNewHBQ = werkzeug:pushSL(NewHBQ,Item),
+        AccuOut = {GatheredItems,Index,NewNewHBQ}
+    end
+
+  end,{[],werkzeug:minNrSL(HoldbackQueue),[]},HoldbackQueue)
+.
 refreshTimer(TimerRef,TimeInMsec,Msg) ->
   Text = werkzeug:list2String(['refreshing Timer' ,TimerRef,' ',Msg,' ',TimeInMsec,'ms']),
   debugOutput(Text," "),
