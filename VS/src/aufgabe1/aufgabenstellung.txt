@@ -24,7 +24,10 @@ Server
 -Nach ablauf seiner X sec wird er wie ein neuer Client behandelt
 
 6.
--Wenn die Holdbackqueue zur h?lfte der gr??e der DeliveryQueue gef?llt ist,
+-Wenn Holdbackqueue Anzahl  mehr als Hï¿½lfte an Nachrichten enthaelt,
+wenn eine Lï¿½cke besteht, diese Lï¿½cke zwischen Deliveryqueue und Holdbackqueue mit genau einer Fehlernachricht geschlossen,
+Es werden keine weiteren Lï¿½cken innerhalb der Holdbackqueue gefï¿½llt,
+In dem Sinne wird die Holdbackqueue nur bis zur nï¿½chsten Lï¿½cke geleert.
 
 7.
 - Wenn der Server X sec nichts zutun hat, dann beendet er sich
@@ -54,7 +57,3 @@ verkleinert, die Zeit darf nicht unter 2 sec rutschen
 
 
 
-Wenn Holdbackqueue Anzahl  mehr als Hälfte an Nachrichten enthaelt,
-, wenn eine Lücke besteht, diese Lücke zwischen Deliveryqueue und Holdbackqueue mit genau einer Fehlernachricht geschlossen,
-Es werden keine weiteren Lücken innerhalb der Holdbackqueue gefüllt,
-In dem Sinne wird die Holdbackqueue nur bis zur nächsten Lücke geleert.
