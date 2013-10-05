@@ -140,7 +140,7 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
     %%%%%%%%%%%%%%%%%%%%%%%%% drop Message %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%     {From,{qwe123,SenderID,AbsendeZeit,{Msg,MessageID}}} ->
     {From,{dropmessage,MsgBlock}} ->
-      {Msg,MessageID} = MsgBlock,
+      {MessageID,Msg} = MsgBlock,
       debugOutput(" dropMsg called",MsgBlock),
 
       case lists:any(fun(Item) -> {ElemNr,Elem} = Item,MessageID =:= ElemNr end,HoldbackQueue)of
@@ -158,9 +158,9 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
             false -> SuccessorOf_HighestMessageID_DQ = Test_HighestMessageID_DQ + 1
           end,
           debugOutput(werkzeug:list2String(['Successor of Highest MessageID of DQ',SuccessorOf_HighestMessageID_DQ]),""),
-%%           debugOutput(">>>>>>>>>>>>>>>>>>>>Liste NewHBQ: ", NewHBQ),
+          debugOutput(">>>>>>>>>>>>>>>>>>>>Liste NewHBQ: ", NewHBQ),
           LowestHBQ_Elem = werkzeug:findSL(NewHBQ,werkzeug:minNrSL(NewHBQ)),
-%%           debugOutput(">>>>>>>>>>>>>>>>>>>>LowestHBQ_Elem: ", LowestHBQ_Elem),
+          debugOutput(">>>>>>>>>>>>>>>>>>>>LowestHBQ_Elem: ", LowestHBQ_Elem),
           %%{ElemNr,{ID,Msg,ReceiveTime}}]
           {ElemNr,_Elem} = LowestHBQ_Elem,
           PredessorOfElemNr = ElemNr -1,
