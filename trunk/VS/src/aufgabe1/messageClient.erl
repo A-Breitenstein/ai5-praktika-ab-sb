@@ -41,7 +41,7 @@ doStartUp() ->
           LifeTime_TimerRef = erlang:start_timer(LT,self(),lifeTime),
           werkzeug:logging(LogFileName,lists:concat(["+++ client started ",werkzeug:timeMilliSecond()," +++"])),
 
-          clientLoop(ServerID,SI,0,LT);
+          clientLoop(writer,ServerID,SI,SI,{0,[]},LT);
 
         false ->
            werkzeug:logging(LogFileName,"Configfile values arent ok!")
@@ -64,27 +64,95 @@ defaultClientSetup(FileName) ->
   file:write_file(FileName, InitConfig, [append])
 .
 
-clientLoop(ServerID, SendeIntervall, OutgoingMessagesCount, LifeTime) ->
+%% clientLoop(ServerID, SendeIntervall, OutgoingMessagesCount, LifeTime) ->
+%%   ServerID ! {messageClient,{getmsgid,node()}},
+%%
+%%   debugOutput(werkzeug:list2String(["clientLoop called: ServerID ",ServerID," SendeIntervall ",SendeIntervall," OutgoingMessagesCount ",OutgoingMessagesCount," LifeTime ",LifeTime]),""),
+%%   timer:sleep(SendeIntervall),
+%%
+%%   receive
+%%     %%%%%%%%%%%%%%%%%%%%%%%% GetMessages %%%%%%%%%%%%%%%%%%%%%%%%%
+%%     {From,{reply,Number,Nachricht,Terminated}} -> 0;
+%%
+%%     %%%%%%%%%%%%%%%%%%%%%%% GetMessageID %%%%%%%%%%%%%%%%%%%%%%
+%%     {From,{nid, Number}} ->
+%%       Msg = lists:concat([node(),"-VSP/04-Gruppe 1- ID:",Number," Hier kann ihr Text stehn!  Sendezeit: ",werkzeug:timeMilliSecond()]),
+%%       ServerID ! {messageClient,{dropmessage,{Number,Msg}}}
+%%     ;
+%%
+%%
+%%     %%%%%%%%%%%%%%%%%%%%%%% TIMEOUTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     {timeout,LifeTime_TimerRef,lifeTime} -> 0
+%%   end
+%% .
+
+
+
+clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime) ->
   ServerID ! {messageClient,{getmsgid,node()}},
-
-  debugOutput(werkzeug:list2String(["clientLoop called: ServerID ",ServerID," SendeIntervall ",SendeIntervall," OutgoingMessagesCount ",OutgoingMessagesCount," LifeTime ",LifeTime]),""),
+  debugOutput(lists:concat(["MessageID angefordert!,  ",werkzeug:timeMilliSecond()]),""),
   timer:sleep(SendeIntervall),
-
   receive
-    %%%%%%%%%%%%%%%%%%%%%%%% GetMessages %%%%%%%%%%%%%%%%%%%%%%%%%
-    {From,{reply,Number,Nachricht,Terminated}} -> 0;
+    {From,{nid, Number}} when OutgoingCount < 5 ->
+      Msg = lists:concat([node(),"-VSP/04-Gruppe 1- ID:",Number," Hier kann ihr Text stehn! Client OUT: ",werkzeug:timeMilliSecond()]),
+      debugOutput(Msg,""),
+      NewSendedMessages = werkzeug:pushSL(SendedMessages,{Number,{Number,Msg}}),
+      ServerID ! {messageClient,{dropmessage,{Number,Msg}}},
+      clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount+1,NewSendedMessages},LifeTime);
 
-    %%%%%%%%%%%%%%%%%%%%%%% GetMessageID %%%%%%%%%%%%%%%%%%%%%%
-    {From,{nid, Number}} ->
-      Msg = lists:concat([node(),"-VSP/04-Gruppe 1- ID:",Number," Hier kann ihr Text stehn!  Sendezeit: ",werkzeug:timeMilliSecond()]),
-      ServerID ! {messageClient,{dropmessage,{Number,Msg}}}
-    ;
+    {From,{nid, Number}} when 5 == OutgoingCount ->
+        debugOutput(lists:concat([Number,"te_Nachricht um ",werkzeug:timeMilliSecond(), " vergessen zu senden ******"]),""),
+        clientLoop(reader,ServerID,SendeIntervall,getNewSendeIntervall(SendeIntervall,CurrentSendeIntervall),{0,SendedMessages},LifeTime);
+
+    {timeout,LifeTime_TimerRef,lifeTime} ->
+      debugOutput(lists:concat(["+++++ shutting client down ++++++++ ",werkzeug:timeMilliSecond() ]),"")
+  end
+;
+clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime) ->
+  ServerID ! {messageClient,{getmessages,node()}},
+  debugOutput(lists:concat(["Message angefordert!,   ",werkzeug:timeMilliSecond()]),""),
+  receive
+    {From,{reply,ID, MSG,true}}  ->
+      clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime)
+  ;
+    {From,{reply,ID, MSG,false}} ->
+      case werkzeug:findSL(SendedMessages,ID) of
+      %%% die eingegangene message ist nicht von diesem client gesendet wurden
+        {-1,nok} ->
+          debugOutput(MSG,"");
+      %%% dieser client hat die message gesendet
+        {ID,{ID,MSG}} ->
+          debugOutput(lists:concat([MSG," +++++++++++ Client IN: ",werkzeug:timeMilliSecond()]),"")
+      end,
+      clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime);
 
 
-    %%%%%%%%%%%%%%%%%%%%%%% TIMEOUTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    {timeout,LifeTime_TimerRef,lifeTime} -> 0
+    {timeout,LifeTime_TimerRef,lifeTime} ->
+      debugOutput(lists:concat(["+++++ shutting client down ++++++++ ",werkzeug:timeMilliSecond() ]),"")
+
+
+  end
+
+.
+
+getNewSendeIntervall(SendeIntervall,CurrentSendeIntervall) ->
+  case random:uniform(2) of
+    1 -> NewIntervall =   CurrentSendeIntervall + SendeIntervall*0.5 ;
+    2 -> NewIntervall =   CurrentSendeIntervall - SendeIntervall*0.5
+  end,
+
+  case NewIntervall < 2000 of
+    true -> 2000;
+    false ->
+      case NewIntervall > (2* SendeIntervall) of
+        true -> SendeIntervall;
+        false -> NewIntervall
+      end
+
   end
 .
+
+
 
 debugOutput(MSG,ANY) ->
   werkzeug:logging(lists:concat([node(),".log"]),werkzeug:list2String([MSG,ANY]))
