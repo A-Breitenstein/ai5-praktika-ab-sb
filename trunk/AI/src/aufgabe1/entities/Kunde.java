@@ -1,9 +1,6 @@
 package aufgabe1.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Set;
 
@@ -20,9 +17,10 @@ public class Kunde implements Serializable{
     private String nachname;
 
     @OneToOne
+    @PrimaryKeyJoinColumn
     private Bankkonto bankkonto;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private Set<Kinokarte> kinokarten;
 
     public Kunde() {

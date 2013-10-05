@@ -1,5 +1,6 @@
 package aufgabe1.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -18,20 +19,16 @@ public class Kinosaal implements Serializable{
 
     private int size;
 
-    @OneToMany
-    private Set<Kinokarte> kinokarten;
-
     public Kinosaal() {
     }
 
-    private Kinosaal(int saalNr, int size, Set<Kinokarte> kinokarten) {
+    private Kinosaal(int saalNr, int size) {
         SaalNr = saalNr;
         this.size = size;
-        this.kinokarten = kinokarten;
     }
 
-    public static Kinosaal create(int saalNr, int size, Set<Kinokarte> kinokarten) {
-        return new Kinosaal(saalNr, size, kinokarten);
+    public static Kinosaal create(int saalNr, int size) {
+        return new Kinosaal(saalNr, size);
     }
 
     public int getSaalNr() {
@@ -50,12 +47,5 @@ public class Kinosaal implements Serializable{
         this.size = size;
     }
 
-    public Set<Kinokarte> getKinokarten() {
-        return kinokarten;
-    }
-
-    public void setKinokarten(Set<Kinokarte> kinokarten) {
-        this.kinokarten = kinokarten;
-    }
 }
 
