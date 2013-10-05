@@ -1,8 +1,6 @@
 package aufgabe1.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -15,19 +13,18 @@ public class Bankkonto implements Serializable{
     @Id
     private String IBAN;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Kunde kunde;
 
     public Bankkonto() {
     }
 
-    private Bankkonto(String IBAN, Kunde kunde) {
+    private Bankkonto(String IBAN) {
         this.IBAN = IBAN;
-        this.kunde = kunde;
     }
 
-    public static Bankkonto create(String IBAN, Kunde kunde) {
-        return new Bankkonto(IBAN, kunde);
+    public static Bankkonto create(String IBAN) {
+        return new Bankkonto(IBAN);
     }
 
     public String getIBAN() {
@@ -36,13 +33,5 @@ public class Bankkonto implements Serializable{
 
     public void setIBAN(String IBAN) {
         this.IBAN = IBAN;
-    }
-
-    public Kunde getKunde() {
-        return kunde;
-    }
-
-    public void setKunde(Kunde kunde) {
-        this.kunde = kunde;
     }
 }

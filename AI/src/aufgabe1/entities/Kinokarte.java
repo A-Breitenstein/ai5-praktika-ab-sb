@@ -1,6 +1,7 @@
 package aufgabe1.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
@@ -13,10 +14,8 @@ import java.io.Serializable;
 public class Kinokarte implements Serializable{
 
     @Id
+    @GeneratedValue
     private int barcode;
-
-    @ManyToOne
-    private Kunde kunde;
 
     @ManyToOne
     private Kinosaal kinosaal;
@@ -24,14 +23,12 @@ public class Kinokarte implements Serializable{
     public Kinokarte() {
     }
 
-    private Kinokarte(int barcode, Kunde kunde, Kinosaal kinosaal) {
-        this.barcode = barcode;
-        this.kunde = kunde;
+    private Kinokarte(Kinosaal kinosaal) {
         this.kinosaal = kinosaal;
     }
 
-    public static Kinokarte create(int barcode, Kunde kunde, Kinosaal kinosaal) {
-        return new Kinokarte(barcode, kunde, kinosaal);
+    public static Kinokarte create(Kinosaal kinosaal) {
+        return new Kinokarte(kinosaal);
     }
 
     public int getBarcode() {
@@ -40,14 +37,6 @@ public class Kinokarte implements Serializable{
 
     public void setBarcode(int barcode) {
         this.barcode = barcode;
-    }
-
-    public Kunde getKunde() {
-        return kunde;
-    }
-
-    public void setKunde(Kunde kunde) {
-        this.kunde = kunde;
     }
 
     public Kinosaal getKinosaal() {
