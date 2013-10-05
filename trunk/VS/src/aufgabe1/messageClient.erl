@@ -30,18 +30,20 @@ doStartUp() ->
       LifeTime = werkzeug:get_config_value(lifetime,ConfigList),
       Server = werkzeug:get_config_value(serverid,ConfigList),
       SendeIntervall = werkzeug:get_config_value(sendeintervall,ConfigList),
+      MessagesIntervall = werkzeug:get_config_value(messagesperintervall,ConfigList),
 
 
       {ok,LT} = LifeTime,
       {ok,ServerID} = Server,
       {ok,SI} = SendeIntervall,
+      {ok,MI} = MessagesIntervall,
       %% sind alle eingelesenen werte OK ?
-      case lists:all(fun(Item)-> {OK,_Val} = Item,OK =:= ok end,[LifeTime,Server,SendeIntervall]) of
+      case lists:all(fun(Item)-> {OK,_Val} = Item,OK =:= ok end,[LifeTime,Server,SendeIntervall,MessagesIntervall]) of
         true ->
           LifeTime_TimerRef = erlang:start_timer(LT,self(),lifeTime),
           werkzeug:logging(LogFileName,lists:concat(["+++ client started ",werkzeug:timeMilliSecond()," +++"])),
 
-          clientLoop(writer,ServerID,SI,SI,{0,[]},LT);
+          clientLoop(writer,ServerID,SI,SI,{0,[]},LT,MI);
 
         false ->
            werkzeug:logging(LogFileName,"Configfile values arent ok!")
@@ -60,7 +62,7 @@ doStartUp() ->
 
 defaultClientSetup(FileName) ->
 
-  InitConfig =  "{clients, 9}.\n{lifetime, 90000}.\n{serverid, {tipOfTheDaymessageServer,'messageServer@Sven-PC'}}.\n{sendeintervall, 5000}.\n",
+  InitConfig =  "{clients, 9}.\n{lifetime, 90000}.\n{serverid, {tipOfTheDaymessageServer,'messageServer@Sven-PC'}}.\n{sendeintervall, 5000}.\n{messagesperintervall, 5}.\n",
   file:write_file(FileName, InitConfig, [append])
 .
 
@@ -88,32 +90,32 @@ defaultClientSetup(FileName) ->
 
 
 
-clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime) ->
+clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime,MessagesPerIntervall) ->
   ServerID ! {messageClient,{getmsgid,node()}},
   debugOutput(lists:concat(["MessageID angefordert!,  ",werkzeug:timeMilliSecond()]),""),
   timer:sleep(SendeIntervall),
   receive
-    {From,{nid, Number}} when OutgoingCount < 5 ->
+    {From,{nid, Number}} when OutgoingCount < MessagesPerIntervall ->
       Msg = lists:concat([node(),"-VSP/04-Gruppe 1- ID:",Number," Hier kann ihr Text stehn! Client OUT: ",werkzeug:timeMilliSecond()]),
       debugOutput(Msg,""),
       NewSendedMessages = werkzeug:pushSL(SendedMessages,{Number,{Number,Msg}}),
       ServerID ! {messageClient,{dropmessage,{Number,Msg}}},
-      clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount+1,NewSendedMessages},LifeTime);
+      clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount+1,NewSendedMessages},LifeTime,MessagesPerIntervall);
 
-    {From,{nid, Number}} when 5 == OutgoingCount ->
+    {From,{nid, Number}} when MessagesPerIntervall == OutgoingCount ->
         debugOutput(lists:concat([Number,"te_Nachricht um ",werkzeug:timeMilliSecond(), " vergessen zu senden ******"]),""),
-        clientLoop(reader,ServerID,SendeIntervall,getNewSendeIntervall(SendeIntervall,CurrentSendeIntervall),{0,SendedMessages},LifeTime);
+        clientLoop(reader,ServerID,SendeIntervall,getNewSendeIntervall(SendeIntervall,CurrentSendeIntervall),{0,SendedMessages},LifeTime,MessagesPerIntervall);
 
     {timeout,LifeTime_TimerRef,lifeTime} ->
       debugOutput(lists:concat(["+++++ shutting client down ++++++++ ",werkzeug:timeMilliSecond() ]),"")
   end
 ;
-clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime) ->
+clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime,MessagesPerIntervall) ->
   ServerID ! {messageClient,{getmessages,node()}},
   debugOutput(lists:concat(["Message angefordert!,   ",werkzeug:timeMilliSecond()]),""),
   receive
     {From,{reply,ID, MSG,true}}  ->
-      clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime)
+      clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime,MessagesPerIntervall)
   ;
     {From,{reply,ID, MSG,false}} ->
       case werkzeug:findSL(SendedMessages,ID) of
@@ -121,10 +123,11 @@ clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,S
         {-1,nok} ->
           debugOutput(MSG,"");
       %%% dieser client hat die message gesendet
-        {ID,{ID,MSG}} ->
-          debugOutput(lists:concat([MSG," +++++++++++ Client IN: ",werkzeug:timeMilliSecond()]),"")
+        {ID,{ID,_Message}} ->
+          debugOutput(lists:concat([MSG," +++++++++++ Client IN: ",werkzeug:timeMilliSecond()]),"");
+        ANY -> debugOutput("case lol ... ",ANY)
       end,
-      clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime);
+      clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime,MessagesPerIntervall);
 
 
     {timeout,LifeTime_TimerRef,lifeTime} ->

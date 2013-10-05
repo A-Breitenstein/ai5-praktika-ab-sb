@@ -79,19 +79,19 @@ sendMessage(From,Client, DeliveryQueue ) ->
     true ->
       case LastSendedMessageID >= LowestMessageID of
         true ->
-          {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findSL(DeliveryQueue,LastSendedMessageID + 1);
+          {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findneSL(DeliveryQueue,LastSendedMessageID + 1);
         false ->
-          {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findSL(DeliveryQueue,LowestMessageID)
+          {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findneSL(DeliveryQueue,LowestMessageID)
       end,
 
-      {From,RechnerID} ! {tipOfTheDaymessageServer,{reply,ID, Msg,not((HighestMessageID-ID) > 0)}},
-      debugOutput(lists:concat(["sending Message to ",RechnerID,"  ",reply,ID, Msg,not((HighestMessageID-ID) > 0)])," "),
+      {From,RechnerID} ! {tipOfTheDaymessageServer,{reply,ID, lists:concat([Msg,"  SERVER OUT: ",werkzeug:timeMilliSecond()]),not((HighestMessageID-ID) > 0)}},
+      debugOutput(lists:concat(["sending Message to ",RechnerID,"  ",reply,"  ",ID, "  ", lists:concat([Msg,"  SERVER OUT: ",werkzeug:timeMilliSecond()])," ",not((HighestMessageID-ID) > 0)])," "),
       {RechnerID,{ID,TimerRef}};
 
     %%% es keine neuen  Messages
     false ->
       {From,RechnerID} ! {tipOfTheDaymessageServer,{reply,-1, "dummy message ...",true}},
-      debugOutput(lists:concat(["sending Dummy Message to ",RechnerID,"  ",reply,-1, " dummy message ..."]),""),
+      debugOutput(lists:concat(["sending Dummy Message to ",RechnerID,"  ",reply," ",-1, " dummy message ..."]),""),
       {RechnerID,{LastSendedMessageID,TimerRef}}
   end
 .
@@ -146,7 +146,7 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
       case lists:any(fun(Item) -> {ElemNr,Elem} = Item,MessageID =:= ElemNr end,HoldbackQueue)of
         true-> NewHBQ = HoldbackQueue,
           debugOutput('Message already in Holdbackqueue : ',MessageID)  ;
-        false-> NewHBQ = werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,Msg,time()}}),
+        false-> NewHBQ = werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,lists:concat([Msg," IN HBQ: ",werkzeug:timeMilliSecond()]),time()}}),
           debugOutput('Message has been pushed into Holdbackqueue : ',MessageID)
       end,
 
@@ -158,14 +158,14 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
             false -> SuccessorOf_HighestMessageID_DQ = Test_HighestMessageID_DQ + 1
           end,
           debugOutput(werkzeug:list2String(['Successor of Highest MessageID of DQ',SuccessorOf_HighestMessageID_DQ]),""),
-          debugOutput(">>>>>>>>>>>>>>>>>>>>Liste NewHBQ: ", NewHBQ),
+%%           debugOutput(">>>>>>>>>>>>>>>>>>>>Liste NewHBQ: ", NewHBQ),
           LowestHBQ_Elem = werkzeug:findSL(NewHBQ,werkzeug:minNrSL(NewHBQ)),
-          debugOutput(">>>>>>>>>>>>>>>>>>>>LowestHBQ_Elem: ", LowestHBQ_Elem),
+%%           debugOutput(">>>>>>>>>>>>>>>>>>>>LowestHBQ_Elem: ", LowestHBQ_Elem),
           %%{ElemNr,{ID,Msg,ReceiveTime}}]
           {ElemNr,_Elem} = LowestHBQ_Elem,
           PredessorOfElemNr = ElemNr -1,
           debugOutput(werkzeug:list2String(['Predessor of Lowest Elem of HBQ ',PredessorOfElemNr]),""),
-          case (ElemNr - SuccessorOf_HighestMessageID_DQ ) > 1 of
+          case (ElemNr - SuccessorOf_HighestMessageID_DQ ) > 0 of
             true->
               debugOutput(werkzeug:list2String(['Gap found : Fehlernachricht fuer Nachrichtennummern ',SuccessorOf_HighestMessageID_DQ,' bis ',PredessorOfElemNr,' um '])," "),
               NewDQ = werkzeug:pushSL(DeliveryQueue,{PredessorOfElemNr,{PredessorOfElemNr,werkzeug:list2String(['Fehlernachricht fuer Nachrichtennummern ',SuccessorOf_HighestMessageID_DQ,' bis ',PredessorOfElemNr,' um ']),werkzeug:timeMilliSecond()}}),
@@ -221,7 +221,7 @@ sammelBisZurLuecke(HoldbackQueue) ->
 %%      debugOutput(werkzeug:list2String(["index: ",Index," ElemNr ",ElemNr]),""),
     case Index =:= ElemNr of
       true->
-        NewItem = {ElemNr,{ID,Msg,['DeliveryTime: ',time(), ' ReciveTime: ',ReceiveTime]}},
+        NewItem = {ElemNr,{ID,lists:concat([Msg,"   IN DQ:  ",werkzeug:timeMilliSecond()]),['DeliveryTime: ',time(), ' ReciveTime: ',ReceiveTime]}},
         NewGatheredItems =  werkzeug:pushSL(GatheredItems,NewItem),
         AccuOut = {NewGatheredItems,ElemNr+1,NewHBQ};
       false->
