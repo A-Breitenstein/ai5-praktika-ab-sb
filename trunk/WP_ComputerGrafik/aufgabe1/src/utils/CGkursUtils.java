@@ -1,6 +1,7 @@
 package utils;
 
 import javax.media.j3d.Transform3D;
+import javax.vecmath.Matrix4d;
 import javax.vecmath.Vector3f;
 
 /**
@@ -45,5 +46,21 @@ public class CGkursUtils{
         transform3D.setTranslation(pos);
 
         return transform3D;
+    }
+
+    public static void rotateYMatrix4d(double angleInRadian, Transform3D transform3D) {
+        double cos_a=Math.cos(angleInRadian);
+        double sin_a=Math.sin(angleInRadian);
+
+        Matrix4d m4_rotationYmitTranslation =  new Matrix4d(
+                                                            cos_a,      0,  sin_a,  0,
+                                                            0,          1,  0,      0,
+                                                            - sin_a,    0,  cos_a,  0,
+                                                            0,          0,  0,      1
+                                                            );
+        Matrix4d m4_old = new Matrix4d();
+        transform3D.get(m4_old);
+        m4_rotationYmitTranslation.mul(m4_old);
+        transform3D.set(m4_rotationYmitTranslation);
     }
 }
