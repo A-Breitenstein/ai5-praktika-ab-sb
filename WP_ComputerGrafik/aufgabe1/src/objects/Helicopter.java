@@ -3,6 +3,7 @@ package objects;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Sphere;
 import edu.cg1.exercises.introduction.AppearanceHelper;
+import utils.CGkursUtils;
 
 import javax.media.j3d.*;
 import javax.vecmath.*;
@@ -114,11 +115,9 @@ public class Helicopter {
                 Transform3D transformation = new Transform3D();
 
                 rotor.getTransform(transformation);
-                Vector3f pos = new Vector3f();
-                transformation.get(pos);
-                transformation.setTranslation(new Vector3f(0, 0, 0));
-                transformation.rotY(rotorAngle * 3.1415f / 180);
-                transformation.setTranslation(pos);
+
+                CGkursUtils.rotateY(rotorAngle, transformation);
+
                 rotor.setTransform(transformation);
                 rotorAngle+=2;
                 if(rotorAngle > 360)
@@ -126,18 +125,18 @@ public class Helicopter {
 
 
                 heckRotor.getTransform(transformation);
-                pos = new Vector3f();
-                transformation.get(pos);
-                transformation.setTranslation(new Vector3f(0, 0, 0));
-                transformation.rotZ(heckRotorAngle * 3.1415f / 180);
-                transformation.setTranslation(pos);
+
+                CGkursUtils.rotateZ(heckRotorAngle, transformation);
+
                 heckRotor.setTransform(transformation);
                 heckRotorAngle+=3;
                 if(heckRotorAngle > 360)
                     heckRotorAngle = 0;
 
                 helicopter.getTransform(transformation);
-                double radian_angle = y_rotation *0.05 * 3.1415f / 180;
+                double radian_angle = CGkursUtils.degreeToRadian(y_rotation *0.05);
+
+                Vector3f pos = new Vector3f();
                 transformation.get(pos);
                 transformation.rotY(radian_angle+ (-90 * 3.1415f / 180));
                 transformation.setTranslation(pos);
