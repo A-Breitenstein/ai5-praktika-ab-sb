@@ -20,12 +20,9 @@ import java.util.TimerTask;
  */
 public class Helicopter {
     Vector3f pos;
-    Vector3f orientation;
-    Vector3f rotation;
 
     float rotorAngle = 0;
     float heckRotorAngle = 0;
-
 
     float y_rotation = 10;
     float speed = 15f;
@@ -116,6 +113,7 @@ public class Helicopter {
 
                 rotor.getTransform(transformation);
 
+                //>>>>>>>>>>>>>>>>>>>>>>>>>>>CGkursUtils
                 CGkursUtils.rotateY(rotorAngle, transformation);
 
                 rotor.setTransform(transformation);
@@ -126,6 +124,7 @@ public class Helicopter {
 
                 heckRotor.getTransform(transformation);
 
+                //>>>>>>>>>>>>>>>>>>>>>>>>>>>CGkursUtils
                 CGkursUtils.rotateZ(heckRotorAngle, transformation);
 
                 heckRotor.setTransform(transformation);
@@ -136,32 +135,19 @@ public class Helicopter {
                 helicopter.getTransform(transformation);
                 double radian_angle = CGkursUtils.degreeToRadian(y_rotation *0.05);
 
-                Vector3f pos = new Vector3f();
-                transformation.get(pos);
-                transformation.rotY(radian_angle+ (-90 * 3.1415f / 180));
-                transformation.setTranslation(pos);
+                //>>>>>>>>>>>>>>>>>>>>>>>>>>>CGkursUtils
+                CGkursUtils.rotateY(CGkursUtils.radianToDegree(radian_angle) - 90, transformation);
+
                 helicopter.setTransform(transformation);
 
                 world.getTransform(transformation);
-                double cos_a=Math.cos(radian_angle);
-                double sin_a=Math.sin(radian_angle);
-
-                Matrix4d m4_rotationYmitTranslation =  new Matrix4d(cos_a,0,sin_a,0,0,1,0,0,- sin_a,0,cos_a,0,0,0,0,1);
-                Matrix4d m4_old = new Matrix4d();
-                transformation.get(m4_old);
-                m4_rotationYmitTranslation.mul(m4_old);
-                transformation.set(m4_rotationYmitTranslation);
+                //>>>>>>>>>>>>>>>>>>>>>>>>>>>CGkursUtils
+                CGkursUtils.rotateYMatrix4d(radian_angle, transformation);
 
                 world.setTransform(transformation);
-//                y_rotation++;
-//                if(y_rotation > 360) {
-//                    y_rotation = 0;
-//                }
             }
         }, 10, 10);
         // Innere Klasse zum Verarbeiten der Timer-Ereignisse
-
-
     }
 
     public static Helicopter create(Vector3f pos, Color spotColor) {
