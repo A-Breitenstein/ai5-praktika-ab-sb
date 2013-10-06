@@ -16,11 +16,10 @@ public class Kunde implements Serializable{
 
     private String nachname;
 
-    @OneToOne
-    @PrimaryKeyJoinColumn
+    @OneToOne(cascade = CascadeType.ALL)
     private Bankkonto bankkonto;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Kinokarte> kinokarten;
 
     public Kunde() {
@@ -67,5 +66,15 @@ public class Kunde implements Serializable{
 
     public void setKinokarten(Set<Kinokarte> kinokarten) {
         this.kinokarten = kinokarten;
+    }
+
+    @Override
+    public String toString() {
+        return "Kunde{" +
+                "kdnr=" + kdnr +
+                ", nachname='" + nachname + '\'' +
+                ", bankkonto=" + bankkonto +
+                ", kinokarten=" + kinokarten +
+                '}';
     }
 }

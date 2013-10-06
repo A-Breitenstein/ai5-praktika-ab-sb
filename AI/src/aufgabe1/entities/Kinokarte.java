@@ -1,9 +1,6 @@
 package aufgabe1.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -17,7 +14,7 @@ public class Kinokarte implements Serializable{
     @GeneratedValue
     private int barcode;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Kinosaal kinosaal;
 
     public Kinokarte() {
