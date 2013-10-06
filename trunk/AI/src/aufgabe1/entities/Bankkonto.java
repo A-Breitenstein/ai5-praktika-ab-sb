@@ -11,10 +11,10 @@ import java.io.Serializable;
 public class Bankkonto implements Serializable{
 
     @Id
-    private String IBAN;
+    @GeneratedValue
+    private int id;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Kunde kunde;
+    private String IBAN;
 
     public Bankkonto() {
     }
@@ -33,5 +33,13 @@ public class Bankkonto implements Serializable{
 
     public void setIBAN(String IBAN) {
         this.IBAN = IBAN;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
