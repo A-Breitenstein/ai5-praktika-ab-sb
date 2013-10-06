@@ -4,7 +4,6 @@ import aufgabe1.entities.Bankkonto;
 import aufgabe1.entities.Kinokarte;
 import aufgabe1.entities.Kinosaal;
 import aufgabe1.entities.Kunde;
-import aufgabe1.manager.KinosaalManager;
 import aufgabe1.manager.KundeCriteria;
 import aufgabe1.manager.KundeManager;
 
@@ -21,9 +20,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         //CREATE KUNDE + KINOSAAL + sowie Karten und Bankkonto
-//        createKundeTest();
+        createKundeTest();
 
         //KUNDE - KONTAINER
         Kunde kunde;
@@ -39,7 +37,7 @@ public class Main {
 //        kunde = retreiveKunde(String.valueOf("HahaMann"));
 
         //DELETE KUNDE
-        deleteKunde(String.valueOf("HahaMann"));
+//        deleteKunde(String.valueOf("HahaMann"));
 
     }
 

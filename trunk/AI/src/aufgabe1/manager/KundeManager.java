@@ -4,7 +4,6 @@ import aufgabe1.entities.Kunde;
 import aufgabe1.persistence.PersistenceUtilsA1;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -19,7 +18,6 @@ import java.util.List;
 public class KundeManager {
 
     private static EntityManager entityManager;
-
 
     public static void create(Kunde kunde) {
         entityManager = PersistenceUtilsA1.createEntityManager();
