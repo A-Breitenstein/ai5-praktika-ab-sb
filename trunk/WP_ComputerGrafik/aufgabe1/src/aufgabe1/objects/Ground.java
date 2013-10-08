@@ -1,10 +1,9 @@
-package objects;
+package aufgabe1.objects;
 
 
 import com.sun.j3d.utils.geometry.Box;
-import edu.cg1.exercises.introduction.AppearanceHelper;
+import aufgabe1.grundgeruest.AppearanceHelper;
 
-import javax.media.j3d.Appearance;
 import javax.media.j3d.Group;
 import javax.media.j3d.Transform3D;
 import javax.media.j3d.TransformGroup;
@@ -29,8 +28,7 @@ public class Ground {
         Transform3D t = new Transform3D();
         t.setTranslation(pos);
         group = new TransformGroup(t);
-        plane = new Box(length,0,width, AppearanceHelper.getAppearance(new Color(71, 237, 36),new Color(71, 237, 36)));
-
+        plane = new Box(length,0,width, AppearanceHelper.getAppearance(new Color(26, 123, 36),new Color(248, 247, 255)));
         group.addChild(plane);
 
     }

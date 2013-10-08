@@ -3,24 +3,27 @@
  * Hochschule für Angewandte Wissenschaften (HAW), Hamburg
  * Lecture demo program.
  */
-package edu.cg1.exercises.introduction;
+package aufgabe2.grundgeruest;
 
-import javax.swing.JFrame;
-import javax.vecmath.Color3f;
-import javax.vecmath.Point3d;
-import javax.vecmath.Point3f;
-import javax.vecmath.Vector3f;
-
+import aufgabe1.objects.Ground;
+import aufgabe1.objects.Helicopter;
+import aufgabe1.objects.Tree;
+import aufgabe2.MeshShapeFactory;
+import aufgabe2.triangle.ITriangleMesh;
+import aufgabe2.triangle.TriangleMesh;
+import aufgabe2.triangle.TriangleMeshFactory;
 import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Cylinder;
 import com.sun.j3d.utils.geometry.Sphere;
-import com.sun.j3d.utils.universe.*;
-import objects.Ground;
-import objects.Helicopter;
-import objects.Tree;
+import com.sun.j3d.utils.universe.SimpleUniverse;
 
 import javax.media.j3d.*;
+import javax.swing.*;
+import javax.vecmath.Color3f;
+import javax.vecmath.Point3d;
+import javax.vecmath.Point3f;
+import javax.vecmath.Vector3f;
 import java.awt.*;
 
 /**
@@ -95,13 +98,14 @@ public class CG1Frame extends JFrame {
 //        addPointLight(new Point3f(1, 20, 1));
 //        addDirectionalLight(new Vector3f(0, 0, 1));
 
-        AmbientLight light = new AmbientLight();
+        PointLight light = new PointLight();
+        light.setPosition(new Point3f(0.f,15.f,10.f));
         light.setEnable(true);
-        light.setColor(new Color3f(new Color(245, 244, 40)));
+        light.setColor(new Color3f(new Color(238, 245, 245)));
         light.setCapability(AmbientLight.ALLOW_STATE_WRITE);
         light.setCapability(AmbientLight.ALLOW_COLOR_WRITE);
         light.setInfluencingBounds(new BoundingSphere(
-                new Point3d(0.0, 0.0, 0.0), 1500.0));
+                new Point3d(0.f,15.f,10.f), 1500.0));
         scene.addChild(light);
 
 //        DirectionalLight light1 = new DirectionalLight();
@@ -112,7 +116,6 @@ public class CG1Frame extends JFrame {
 //        scene.addChild(light1);
 
 
-
     }
 
     void addPointLight(Point3f position) {
@@ -120,7 +123,7 @@ public class CG1Frame extends JFrame {
         light.setPosition(position);
         light.setColor(new Color3f(1, 1, 1));
         light.setInfluencingBounds(new BoundingSphere(
-                new Point3d(0.0, 100, 0.0), 1000.0));
+                new Point3d(0.0, 900, 0.0), 500.0));
         scene.addChild(light);
     }
 
@@ -137,21 +140,19 @@ public class CG1Frame extends JFrame {
     /**
      * Create the default scene graph.
      */
-    protected void createSceneGraph() { 
-        // Example object
-        // scene.addChild(createBox());
-
+    protected void createSceneGraph() {
         // Add a coordinate system to the scene.
-        // scene.addChild(createCoordinateSystem());
-
-        scene.addChild(Tree.create(new Vector3f(1,0,0),0.8f,0.1f,1.4f).getGroup());
-        scene.addChild(Tree.create(new Vector3f(10,0,0),0.8f,0.1f,1.4f).getGroup());
-        scene.addChild(Ground.create(new Vector3f(0,0,0),50f,50f).getGroup());
-        scene.addChild(Tree.plantTrees(750,99,99));
-        scene.addChild(Helicopter.create(new Vector3f(20f,15f,0f), new Color(255, 245, 48)).getGroup());
-        scene.addChild(Helicopter.create(new Vector3f(30f,25f,20f), new Color(242, 84, 99)).getGroup());
-
-
+        scene.addChild(createCoordinateSystem());
+        ITriangleMesh mesh = TriangleMesh.create();
+        TriangleMeshFactory.createSphere(mesh);
+//        TriangleMeshFactory.createTriangle(mesh);
+        Transform3D scale = new Transform3D();
+        Shape3D shape = MeshShapeFactory.createMeshShape(mesh);
+        scale.setScale(1);
+        TransformGroup tg = new TransformGroup(scale);
+        tg.addChild(shape);
+        AppearanceHelper.setColor(shape,new Color3f(new Color(31, 178, 255)));
+        scene.addChild(tg);
 
         // Assemble scene
         scene.compile();
@@ -172,7 +173,7 @@ public class CG1Frame extends JFrame {
     }
     /**
      * Create a group to represent the coordinate system.
-     * 
+     *
      * @return
      */
     protected Node createCoordinateSystem() {

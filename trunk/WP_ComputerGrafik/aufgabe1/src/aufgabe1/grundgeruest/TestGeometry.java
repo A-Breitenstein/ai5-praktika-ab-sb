@@ -3,7 +3,7 @@
  * Hochschule für Angewandte Wissenschaften (HAW), Hamburg
  * Lecture demo program.
  */
-package edu.cg1.exercises.introduction;
+package aufgabe1.grundgeruest;
 
 import javax.media.j3d.TriangleArray;
 

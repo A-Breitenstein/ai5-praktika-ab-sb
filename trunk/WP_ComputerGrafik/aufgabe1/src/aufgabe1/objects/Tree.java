@@ -1,15 +1,12 @@
-package objects;
+package aufgabe1.objects;
 
 import com.sun.j3d.utils.geometry.Cylinder;
 import com.sun.j3d.utils.geometry.Sphere;
-import edu.cg1.exercises.introduction.AppearanceHelper;
+import aufgabe1.grundgeruest.AppearanceHelper;
 
 import javax.media.j3d.Group;
 import javax.media.j3d.Transform3D;
 import javax.media.j3d.TransformGroup;
-import javax.vecmath.Color3f;
-import javax.vecmath.Point3f;
-import javax.vecmath.Vector3d;
 import javax.vecmath.Vector3f;
 import java.awt.*;
 import java.util.HashMap;
