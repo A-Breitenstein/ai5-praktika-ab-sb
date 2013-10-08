@@ -1,8 +1,8 @@
-package objects;
+package aufgabe1.objects;
 
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Sphere;
-import edu.cg1.exercises.introduction.AppearanceHelper;
+import aufgabe1.grundgeruest.AppearanceHelper;
 import utils.CGkursUtils;
 
 import javax.media.j3d.*;
