@@ -143,10 +143,13 @@ serverLoop(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServ
       {MessageID,Msg} = MsgBlock,
       debugOutput(" dropMsg called",MsgBlock),
 
+      %% Incoming Message already in Holdbackqueue?
       case lists:any(fun(Item) -> {ElemNr,Elem} = Item,MessageID =:= ElemNr end,HoldbackQueue)of
-        true-> NewHBQ = HoldbackQueue,
+        true->
+          NewHBQ = HoldbackQueue,
           debugOutput('Message already in Holdbackqueue : ',MessageID)  ;
-        false-> NewHBQ = werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,lists:concat([Msg," IN HBQ: ",werkzeug:timeMilliSecond()]),time()}}),
+        false->
+          NewHBQ = werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,lists:concat([Msg," IN HBQ: ",werkzeug:timeMilliSecond()]),time()}}),
           debugOutput('Message has been pushed into Holdbackqueue : ',MessageID)
       end,
 
