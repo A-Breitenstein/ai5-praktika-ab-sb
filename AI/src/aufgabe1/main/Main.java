@@ -4,8 +4,9 @@ import aufgabe1.entities.Bankkonto;
 import aufgabe1.entities.Kinokarte;
 import aufgabe1.entities.Kinosaal;
 import aufgabe1.entities.Kunde;
-import aufgabe1.manager.KundeCriteria;
-import aufgabe1.manager.KundeManager;
+import aufgabe1.manager.kunde.KundeManager;
+import aufgabe1.manager.kunde.KundeQuery;
+import aufgabe1.manager.kunde.KundeQueryBuilder;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -21,29 +22,32 @@ public class Main {
     public static void main(String[] args) {
 
         //CREATE KUNDE + KINOSAAL + sowie Karten und Bankkonto
-        createKundeTest();
+//        createKundeTest();
 
         //KUNDE - KONTAINER
         Kunde kunde;
 
 
         // RETRIEVE KUNDE
-//        kunde = retreiveKunde(String.valueOf("Kartenmann"));
+//        crud = retreiveKunde(String.valueOf("Kartenmann"));
 
         //UPDATE KUNDE-NACHNAME
-//        updateKundeToHahaMann(kunde);
+//        updateKundeToHahaMann(crud);
 
         //RETRIEVE KUNDE-HahaMann
-//        kunde = retreiveKunde(String.valueOf("HahaMann"));
+        kunde = retreiveKunde(String.valueOf("HahaMann"));
 
         //DELETE KUNDE
-//        deleteKunde(String.valueOf("HahaMann"));
+        deleteKunde(String.valueOf("HahaMann"));
 
     }
 
     private static void deleteKunde(String nachname) {
-        KundeCriteria kundeCriteria = KundeCriteria.create(nachname);
-        KundeManager.delete(kundeCriteria);
+
+        KundeQueryBuilder kundeQueryBuilder = KundeManager.getQueryBuilder();
+        KundeQuery kundeQuery = kundeQueryBuilder.withLastname(nachname).createQuery();
+
+        KundeManager.delete(kundeQuery);
     }
 
     private static void updateKundeToHahaMann(Kunde kunde) {
@@ -52,9 +56,10 @@ public class Main {
     }
 
     private static Kunde retreiveKunde(String nachname) {
-        KundeCriteria kundeCriteria = KundeCriteria.create(nachname);
+        KundeQueryBuilder kundeQueryBuilder = KundeManager.getQueryBuilder();
+        KundeQuery kundeQuery = kundeQueryBuilder.withLastname(nachname).createQuery();
 
-        List<Kunde> kundeList = KundeManager.find(kundeCriteria);
+        List<Kunde> kundeList = KundeManager.find(kundeQuery);
 //
         for (Kunde kunde : kundeList) {
             System.out.println(kunde);
@@ -80,7 +85,7 @@ public class Main {
 
         Bankkonto bankkonto = Bankkonto.create(String.valueOf("GB29 NWBK 6016 1331 9268 19"));
 
-        Kunde kunde = Kunde.create(1, String.valueOf("Kartenmann"), bankkonto, kinokarten);
+        Kunde kunde = Kunde.create(String.valueOf("Kartenmann"), bankkonto, kinokarten);
 
         KundeManager.create(kunde);
     }

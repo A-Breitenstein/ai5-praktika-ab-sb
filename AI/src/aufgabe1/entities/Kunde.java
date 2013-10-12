@@ -12,6 +12,7 @@ import java.util.Set;
 public class Kunde implements Serializable{
 
     @Id
+    @GeneratedValue
     private int kdnr;
 
     private String nachname;
@@ -25,15 +26,14 @@ public class Kunde implements Serializable{
     public Kunde() {
     }
 
-    private Kunde(int kdnr, String nachname, Bankkonto bankkonto, Set<Kinokarte> kinokarten) {
-        this.kdnr = kdnr;
+    private Kunde(String nachname, Bankkonto bankkonto, Set<Kinokarte> kinokarten) {
         this.nachname = nachname;
         this.bankkonto = bankkonto;
         this.kinokarten = kinokarten;
     }
 
-    public static Kunde create(int kdnr, String nachname, Bankkonto bankkonto, Set<Kinokarte> kinokarten) {
-        return new Kunde(kdnr, nachname, bankkonto, kinokarten);
+    public static Kunde create(String nachname, Bankkonto bankkonto, Set<Kinokarte> kinokarten) {
+        return new Kunde(nachname, bankkonto, kinokarten);
     }
 
     public int getKdnr() {
