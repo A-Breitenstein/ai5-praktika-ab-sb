@@ -1,0 +1,97 @@
+09-29 10:28:51 jdbc[2]: null
+org.h2.message.DbException: Die Datenbank-Verbindung wurde nicht explizit geschlossen (jetzt in der Müllabfuhr)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:171)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:116)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:90)
+	at org.h2.Driver.connect(Driver.java:73)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:655)
+	at org.h2.server.web.WebApp.login(WebApp.java:900)
+	at org.h2.server.web.WebApp.process(WebApp.java:205)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:164)
+	at org.h2.server.web.WebThread.process(WebThread.java:138)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.h2.jdbc.JdbcSQLException: Die Datenbank-Verbindung wurde nicht explizit geschlossen (jetzt in der Müllabfuhr)
+The connection was not closed by the application and is garbage collected [90018-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	... 14 more
+09-29 10:46:36 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO CUSTOMER (0[*], ""hallo"") "; erwartet "identifier"
+Syntax error in SQL statement "INSERT INTO CUSTOMER (0[*], ""hallo"") "; expected "identifier"; SQL statement:
+insert into customer (0, "hallo") [42001-172]
+09-29 10:46:46 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO CUSTOMER (ID, NAME) (0[*], ""hallo"") "; erwartet "(, SELECT, FROM"
+Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME) (0[*], ""hallo"") "; expected "(, SELECT, FROM"; SQL statement:
+insert into customer (id, name) (0, "hallo") [42001-172]
+09-29 10:47:04 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO CUSTOMER (ID, NAME) (0[*], HALLO) "; erwartet "(, SELECT, FROM"
+Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME) (0[*], HALLO) "; expected "(, SELECT, FROM"; SQL statement:
+insert into customer (id, name) (0, hallo) [42001-172]
+09-29 10:47:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO CUSTOMER (ID, NAME) (0[*], 'hallo') "; erwartet "(, SELECT, FROM"
+Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME) (0[*], 'hallo') "; expected "(, SELECT, FROM"; SQL statement:
+insert into customer (id, name) (0, 'hallo') [42001-172]
+09-29 10:47:23 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO CUSTOMER (ID, NAME) (0[*], 'hallo') "; erwartet "(, SELECT, FROM"
+Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME) (0[*], 'hallo') "; expected "(, SELECT, FROM"; SQL statement:
+insert into customer (id, name) (0, 'hallo') [42001-172]
+09-29 10:47:24 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "INSERT INTO CUSTOMER (ID, NAME) (0[*], 'hallo') "; erwartet "(, SELECT, FROM"
+Syntax error in SQL statement "INSERT INTO CUSTOMER (ID, NAME) (0[*], 'hallo') "; expected "(, SELECT, FROM"; SQL statement:
+insert into customer (id, name) (0, 'hallo') [42001-172]
+09-29 10:48:18 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Feld "hallo" nicht gefunden
+Column "hallo" not found; SQL statement:
+INSERT INTO CUSTOMER ( ID , NAME ) values (0, "hallo") [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:237)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+09-29 10:48:32 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Feld "HALLO" nicht gefunden
+Column "HALLO" not found; SQL statement:
+INSERT INTO CUSTOMER ( ID , NAME ) values (0, hallo) [42122-172]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:144)
+	at org.h2.command.dml.Insert.prepare(Insert.java:237)
+	at org.h2.command.Parser.prepareCommand(Parser.java:219)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1138)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:167)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:155)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1316)
+	at org.h2.server.web.WebApp.query(WebApp.java:1005)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:967)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:954)
+	at org.h2.server.web.WebThread.process(WebThread.java:167)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.lang.Thread.run(Unknown Source)
+10-01 19:17:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "DROP CUSTOMER[*] "; erwartet "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"
+Syntax error in SQL statement "DROP CUSTOMER[*] "; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"; SQL statement:
+drop customer [42001-172]
+10-01 19:17:31 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "DROP CUSTOMER[*] "; erwartet "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"
+Syntax error in SQL statement "DROP CUSTOMER[*] "; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, VIEW, ROLE, ALIAS, SCHEMA, ALL, DOMAIN, TYPE, DATATYPE, AGGREGATE"; SQL statement:
+drop customer [42001-172]

@@ -42,4 +42,12 @@ public class Bankkonto implements Serializable{
     public void setId(int id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Bankkonto{" +
+                "id=" + id +
+                ", IBAN='" + IBAN + '\'' +
+                '}';
+    }
 }

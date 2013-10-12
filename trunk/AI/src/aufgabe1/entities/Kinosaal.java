@@ -47,5 +47,12 @@ public class Kinosaal implements Serializable{
         this.size = size;
     }
 
+    @Override
+    public String toString() {
+        return "Kinosaal{" +
+                "SaalNr=" + SaalNr +
+                ", size=" + size +
+                '}';
+    }
 }
 

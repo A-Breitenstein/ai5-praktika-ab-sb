@@ -14,7 +14,7 @@ public class Kinokarte implements Serializable{
     @GeneratedValue
     private int barcode;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.PERSIST)
     private Kinosaal kinosaal;
 
     public Kinokarte() {
@@ -42,5 +42,13 @@ public class Kinokarte implements Serializable{
 
     public void setKinosaal(Kinosaal kinosaal) {
         this.kinosaal = kinosaal;
+    }
+
+    @Override
+    public String toString() {
+        return "Kinokarte{" +
+                "barcode=" + barcode +
+                ", kinosaal=" + kinosaal +
+                '}';
     }
 }
