@@ -29,7 +29,7 @@ Entfernter Aufruf:
 
 
 {tipOfTheDaymessageServer,messageServer@PIGPEN} ! {eval_loop,{getMsgId,node()}}.
-
+{tipOfTheDaymessageServer,'messageServer@Sven-PC'} ! {eval_loop,{getMsgId,node()}}.
 
 
 dQ: 1,2,3,4,5,6,7    << 8,9  >>>> 8 bis 9 fehlt
