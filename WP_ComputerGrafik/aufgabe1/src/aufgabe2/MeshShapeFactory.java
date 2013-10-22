@@ -26,18 +26,15 @@ public class MeshShapeFactory {
             Triangle triangle = mesh.getTriangle(triangleIndex);
             triangleArray.setCoordinates(coordinateIndex,new Point3d[]{mesh.getVertex(triangle.a),mesh.getVertex(triangle.b),mesh.getVertex(triangle.c)});
             triangleArray.setNormals(coordinateIndex, new Vector3f[]{triangle.normal,triangle.normal,triangle.normal});
-
-            /*
-            triangleArray.setCoordinate(coordinateIndex,mesh.getVertex(triangle.a));
-            triangleArray.setCoordinate(coordinateIndex+1,mesh.getVertex(triangle.b));
-            triangleArray.setCoordinate(coordinateIndex+2,mesh.getVertex(triangle.c));
-            triangleArray.setNormal(coordinateIndex,triangle.normal);
-            triangleArray.setNormal(coordinateIndex+1,triangle.normal);
-            triangleArray.setNormal(coordinateIndex+2,triangle.normal);
-            */
+            //triangleArray.setNormals(coordinateIndex, new Vector3f[]{n(mesh.getVertex(triangle.a)),n(mesh.getVertex(triangle.b)),n(mesh.getVertex(triangle.c))});
         }
 
         shape.setGeometry(triangleArray);
         return shape;
+    }
+    private static Vector3f n(Point3d p) {
+       Vector3f tmp =  new Vector3f(p);
+        tmp.normalize();
+        return tmp;
     }
 }

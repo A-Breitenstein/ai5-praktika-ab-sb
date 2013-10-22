@@ -54,7 +54,7 @@ public class TriangleMeshFactory {
 
         mesh.clear();
 
-        int resolution = 500;
+        int resolution = 20;
         double radius = 2;
 
         // Iterate horizontally.
