@@ -1,0 +1,176 @@
+Koordinator-ko@Brummpa-KLC Startzeit: 01.12 15:48:31,150| mit PID <0.37.0>
+Koordinator-ko@Brummpa-KLC Startzeit: 01.12 15:49:23,500| mit PID <0.42.0>
+Koordinator-ko@Brummpa-KLC Startzeit: 01.12 15:49:50,700| mit PID <0.51.0>
+koordinator.cfg gelesen...
+Nameservice gebunden...
+beim Namensdienst registriert.
+lokal registriert...
+getsteeringval: <9527.37.0> (0).
+hello: 488312 (3).
+hello: 488212 (2).
+hello: 488112 (1).
+getsteeringval: <9531.37.0> (0).
+hello: 48823 (3).
+hello: 48833 (2).
+hello: 48813 (1).
+getsteeringval: <9527.37.0> (0).
+hello: 488311 (3).
+hello: 488211 (2).
+hello: 488111 (1).
+getsteeringval: <9531.37.0> (0).
+hello: 48832 (3).
+hello: 48822 (2).
+hello: 48812 (1).
+Anmeldefrist für ggT-Prozesse abgelaufen. Vermisst werden aktuell 0 ggT-Prozesse.
+ggT-Prozess 488312 (488312) auf ggTs@Brummpa gebunden.
+ggT-Prozess 488212 (488212) auf ggTs@Brummpa gebunden.
+ggT-Prozess 488112 (488112) auf ggTs@Brummpa gebunden.
+ggT-Prozess 48823 (48823) auf ggT@Brummpa gebunden.
+ggT-Prozess 48833 (48833) auf ggT@Brummpa gebunden.
+ggT-Prozess 48813 (48813) auf ggT@Brummpa gebunden.
+ggT-Prozess 488311 (488311) auf ggTs@Brummpa gebunden.
+ggT-Prozess 488211 (488211) auf ggTs@Brummpa gebunden.
+ggT-Prozess 488111 (488111) auf ggTs@Brummpa gebunden.
+ggT-Prozess 48832 (48832) auf ggT@Brummpa gebunden.
+ggT-Prozess 48822 (48822) auf ggT@Brummpa gebunden.
+ggT-Prozess 48812 (48812) auf ggT@Brummpa gebunden.
+Alle ggT-Prozesse gebunden.
+Alle ggT-Prozesse über Nachbarn informiert.
+Ring wird/wurde erstellt, Koordinator geht in den Zustand 'Bereit für Berechnung'.
+ggT-Prozess 48832 (ggT@Brummpa) über linken (48813) und rechten (488312) Nachbarn informiert.
+ggT-Prozess 488312 (ggTs@Brummpa) über linken (48832) und rechten (48823) Nachbarn informiert.
+ggT-Prozess 48823 (ggT@Brummpa) über linken (488312) und rechten (488212) Nachbarn informiert.
+ggT-Prozess 488212 (ggTs@Brummpa) über linken (48823) und rechten (488311) Nachbarn informiert.
+ggT-Prozess 488311 (ggTs@Brummpa) über linken (488212) und rechten (48822) Nachbarn informiert.
+ggT-Prozess 48822 (ggT@Brummpa) über linken (488311) und rechten (488211) Nachbarn informiert.
+ggT-Prozess 488211 (ggTs@Brummpa) über linken (48822) und rechten (488112) Nachbarn informiert.
+ggT-Prozess 488112 (ggTs@Brummpa) über linken (488211) und rechten (48833) Nachbarn informiert.
+ggT-Prozess 48833 (ggT@Brummpa) über linken (488112) und rechten (48812) Nachbarn informiert.
+ggT-Prozess 48812 (ggT@Brummpa) über linken (48833) und rechten (488111) Nachbarn informiert.
+ggT-Prozess 488111 (ggTs@Brummpa) über linken (48812) und rechten (48813) Nachbarn informiert.
+ggT-Prozess 48813 (ggT@Brummpa) über linken (488111) und rechten (48832) Nachbarn informiert.
+toggle des Koordinators um 01.12 15:50:14,779|:0 zu 1.
+Beginne eine neue ggT-Berechnung mit Ziel 7.
+ggT-Prozess 488312 (ggTs@Brummpa) initiales Mi 53444391 gesendet.
+ggT-Prozess 488212 (ggTs@Brummpa) initiales Mi 365444079 gesendet.
+ggT-Prozess 488112 (ggTs@Brummpa) initiales Mi 165165 gesendet.
+ggT-Prozess 48823 (ggT@Brummpa) initiales Mi 17474457 gesendet.
+ggT-Prozess 48833 (ggT@Brummpa) initiales Mi 1554964556145 gesendet.
+ggT-Prozess 48813 (ggT@Brummpa) initiales Mi 137011 gesendet.
+ggT-Prozess 488311 (ggTs@Brummpa) initiales Mi 260897175 gesendet.
+ggT-Prozess 488211 (ggTs@Brummpa) initiales Mi 525 gesendet.
+ggT-Prozess 488111 (ggTs@Brummpa) initiales Mi 5005 gesendet.
+ggT-Prozess 48832 (ggT@Brummpa) initiales Mi 589743 gesendet.
+ggT-Prozess 48822 (ggT@Brummpa) initiales Mi 225225 gesendet.
+ggT-Prozess 48812 (ggT@Brummpa) initiales Mi 30555525 gesendet.
+Allen ggT-Prozessen ein initiales Mi gesendet.
+ggT-Prozess 48832 (ggT@Brummpa) startendes y 23154859 gesendet.
+ggT-Prozess 48812 (ggT@Brummpa) startendes y 11011 gesendet.
+Allen ausgewählten ggT-Prozessen ein y gesendet.
+488211 meldet Terminierung mit ggT 525 um "01.12 15:50:26,560|" (01.12 15:50:26,560|).
+488112 meldet falsche Terminierung mit ggT 165165 um "01.12 15:50:26,560|" (01.12 15:50:26,560|,525).
+488111 meldet falsche Terminierung mit ggT 5005 um "01.12 15:50:26,560|" (01.12 15:50:26,560|,525).
+488212 meldet falsche Terminierung mit ggT 365444079 um "01.12 15:50:26,720|" (01.12 15:50:26,720|,525).
+488312 meldet falsche Terminierung mit ggT 53444391 um "01.12 15:50:26,720|" (01.12 15:50:26,720|,525).
+488311 meldet falsche Terminierung mit ggT 260897175 um "01.12 15:50:26,720|" (01.12 15:50:26,720|,525).
+488111 meldet neues Mi 280 um "01.12 15:50:28,720|" (01.12 15:50:28,720|).
+488112 meldet neues Mi 315 um "01.12 15:50:28,720|" (01.12 15:50:28,720|).
+488311 meldet neues Mi 525 um "01.12 15:50:28,870|" (01.12 15:50:28,870|).
+488312 meldet neues Mi 441 um "01.12 15:50:28,870|" (01.12 15:50:28,870|).
+488212 meldet neues Mi 504 um "01.12 15:50:28,870|" (01.12 15:50:28,870|).
+48833 meldet neues Mi 105 um "01.12 15:50:30,870|" (01.12 15:50:30,870|).
+48813 meldet neues Mi 91 um "01.12 15:50:30,870|" (01.12 15:50:30,870|).
+48812 meldet neues Mi 245 um "01.12 15:50:30,870|" (01.12 15:50:30,870|).
+488211 meldet neues Mi 210 um "01.12 15:50:30,870|" (01.12 15:50:30,870|).
+48823 meldet neues Mi 273 um "01.12 15:50:30,029|" (01.12 15:50:30,029|).
+488311 meldet neues Mi 21 um "01.12 15:50:30,029|" (01.12 15:50:30,030|).
+48832 meldet neues Mi 126 um "01.12 15:50:30,030|" (01.12 15:50:30,030|).
+48822 meldet neues Mi 525 um "01.12 15:50:30,030|" (01.12 15:50:30,030|).
+48812 meldet neues Mi 35 um "01.12 15:50:32,029|" (01.12 15:50:32,029|).
+488111 meldet neues Mi 7 um "01.12 15:50:32,029|" (01.12 15:50:32,030|).
+488112 meldet neues Mi 105 um "01.12 15:50:32,030|" (01.12 15:50:32,030|).
+488312 meldet neues Mi 168 um "01.12 15:50:32,179|" (01.12 15:50:32,179|).
+488212 meldet neues Mi 21 um "01.12 15:50:32,180|" (01.12 15:50:32,180|).
+48822 meldet neues Mi 105 um "01.12 15:50:32,179|" (01.12 15:50:32,180|).
+48832 meldet neues Mi 35 um "01.12 15:50:32,180|" (01.12 15:50:32,180|).
+48813 meldet neues Mi 7 um "01.12 15:50:34,179|" (01.12 15:50:34,179|).
+488211 meldet neues Mi 105 um "01.12 15:50:34,180|" (01.12 15:50:34,180|).
+48812 meldet neues Mi 7 um "01.12 15:50:34,180|" (01.12 15:50:34,180|).
+48833 meldet neues Mi 35 um "01.12 15:50:34,180|" (01.12 15:50:34,180|).
+48823 meldet neues Mi 105 um "01.12 15:50:34,339|" (01.12 15:50:34,339|).
+48822 meldet neues Mi 21 um "01.12 15:50:34,340|" (01.12 15:50:34,340|).
+488312 meldet neues Mi 42 um "01.12 15:50:34,340|" (01.12 15:50:34,340|).
+48833 meldet neues Mi 7 um "01.12 15:50:36,340|" (01.12 15:50:36,339|).
+48832 meldet neues Mi 7 um "01.12 15:50:36,340|" (01.12 15:50:36,340|).
+488211 meldet neues Mi 21 um "01.12 15:50:36,500|" (01.12 15:50:36,500|).
+488312 meldet neues Mi 7 um "01.12 15:50:36,500|" (01.12 15:50:36,500|).
+488112 meldet neues Mi 35 um "01.12 15:50:36,500|" (01.12 15:50:36,500|).
+48823 meldet neues Mi 21 um "01.12 15:50:36,500|" (01.12 15:50:36,500|).
+48823 meldet neues Mi 7 um "01.12 15:50:38,650|" (01.12 15:50:38,650|).
+488112 meldet neues Mi 7 um "01.12 15:50:38,650|" (01.12 15:50:38,650|).
+488212 meldet neues Mi 7 um "01.12 15:50:40,810|" (01.12 15:50:40,810|).
+488211 meldet neues Mi 7 um "01.12 15:50:40,810|" (01.12 15:50:40,970|).
+48822 meldet neues Mi 7 um "01.12 15:50:42,120|" (01.12 15:50:42,120|).
+488311 meldet neues Mi 7 um "01.12 15:50:42,120|" (01.12 15:50:42,120|).
+48822 meldet Terminierung mit ggT 7 um "01.12 15:50:45,590|" (01.12 15:50:45,589|).
+488211 meldet Terminierung mit ggT 7 um "01.12 15:50:45,589|" (01.12 15:50:45,590|).
+488212 meldet Terminierung mit ggT 7 um "01.12 15:50:45,590|" (01.12 15:50:45,590|).
+488311 meldet Terminierung mit ggT 7 um "01.12 15:50:45,590|" (01.12 15:50:45,590|).
+toggle des Koordinators um 01.12 15:50:54,589|:1 zu 0.
+Beginne eine neue ggT-Berechnung mit Ziel 5.
+ggT-Prozess 488312 (ggTs@Brummpa) initiales Mi 38174565 gesendet.
+ggT-Prozess 488212 (ggTs@Brummpa) initiales Mi 261031485 gesendet.
+ggT-Prozess 488112 (ggTs@Brummpa) initiales Mi 117975 gesendet.
+ggT-Prozess 48823 (ggT@Brummpa) initiales Mi 12481755 gesendet.
+ggT-Prozess 48833 (ggT@Brummpa) initiales Mi 1110688968675 gesendet.
+ggT-Prozess 48813 (ggT@Brummpa) initiales Mi 97865 gesendet.
+ggT-Prozess 488311 (ggTs@Brummpa) initiales Mi 186355125 gesendet.
+ggT-Prozess 488211 (ggTs@Brummpa) initiales Mi 375 gesendet.
+ggT-Prozess 488111 (ggTs@Brummpa) initiales Mi 3575 gesendet.
+ggT-Prozess 48832 (ggT@Brummpa) initiales Mi 421245 gesendet.
+ggT-Prozess 48822 (ggT@Brummpa) initiales Mi 160875 gesendet.
+ggT-Prozess 48812 (ggT@Brummpa) initiales Mi 21825375 gesendet.
+Allen ggT-Prozessen ein initiales Mi gesendet.
+ggT-Prozess 48832 (ggT@Brummpa) startendes y 16539185 gesendet.
+ggT-Prozess 48812 (ggT@Brummpa) startendes y 7865 gesendet.
+Allen ausgewählten ggT-Prozessen ein y gesendet.
+488312 meldet Terminierung mit ggT 38174565 um "01.12 15:51:02,340|" (01.12 15:51:02,339|).
+488212 meldet falsche Terminierung mit ggT 261031485 um "01.12 15:51:02,500|" (01.12 15:51:02,500|,38174565).
+488311 meldet falsche Terminierung mit ggT 186355125 um "01.12 15:51:02,500|" (01.12 15:51:02,650|,38174565).
+488211 meldet Terminierung mit ggT 375 um "01.12 15:51:02,500|" (01.12 15:51:02,650|).
+488112 meldet falsche Terminierung mit ggT 117975 um "01.12 15:51:02,500|" (01.12 15:51:02,650|,375).
+488111 meldet falsche Terminierung mit ggT 3575 um "01.12 15:51:02,500|" (01.12 15:51:02,650|,375).
+48832 meldet falsche Terminierung mit ggT 421245 um "01.12 15:51:02,340|" (01.12 15:51:02,810|,375).
+48823 meldet falsche Terminierung mit ggT 12481755 um "01.12 15:51:02,340|" (01.12 15:51:02,810|,375).
+48822 meldet falsche Terminierung mit ggT 160875 um "01.12 15:51:02,500|" (01.12 15:51:02,810|,375).
+48833 meldet falsche Terminierung mit ggT 1110688968675 um "01.12 15:51:02,500|" (01.12 15:51:02,810|,375).
+48812 meldet falsche Terminierung mit ggT 21825375 um "01.12 15:51:02,500|" (01.12 15:51:02,810|,375).
+48813 meldet falsche Terminierung mit ggT 97865 um "01.12 15:51:02,500|" (01.12 15:51:02,810|,375).
+ggT-Prozess 488312 (ggTs@Brummpa) aktuelles Mi 38174565 (01.12 15:51:34,529|).
+ggT-Prozess 488212 (ggTs@Brummpa) aktuelles Mi 261031485 (01.12 15:51:34,530|).
+ggT-Prozess 488112 (ggTs@Brummpa) aktuelles Mi 117975 (01.12 15:51:34,530|).
+ggT-Prozess 48823 (ggT@Brummpa) aktuelles Mi 12481755 (01.12 15:51:34,530|).
+ggT-Prozess 48833 (ggT@Brummpa) aktuelles Mi 1110688968675 (01.12 15:51:34,530|).
+ggT-Prozess 48813 (ggT@Brummpa) aktuelles Mi 97865 (01.12 15:51:34,530|).
+ggT-Prozess 488311 (ggTs@Brummpa) aktuelles Mi 186355125 (01.12 15:51:34,530|).
+ggT-Prozess 488211 (ggTs@Brummpa) aktuelles Mi 375 (01.12 15:51:34,530|).
+ggT-Prozess 488111 (ggTs@Brummpa) aktuelles Mi 3575 (01.12 15:51:34,530|).
+ggT-Prozess 48832 (ggT@Brummpa) aktuelles Mi 421245 (01.12 15:51:34,530|).
+ggT-Prozess 48822 (ggT@Brummpa) aktuelles Mi 160875 (01.12 15:51:34,530|).
+ggT-Prozess 48812 (ggT@Brummpa) aktuelles Mi 21825375 (01.12 15:51:34,530|).
+Von allen ggT-Prozessen das aktuelle Mi erfragt.
+ggT-Prozess 488312 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 488212 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 488112 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 48823 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 48833 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 48813 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 488311 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 488211 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 488111 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 48832 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 48822 ist lebendig (01.12 15:51:44,720|).
+ggT-Prozess 48812 ist lebendig (01.12 15:51:44,720|).
+Alle ggT-Prozesse auf Lebendigkeit geprüft.
+Allen ggT-Prozessen ein 'kill' gesendet.
+Downtime: 01.12 15:51:49,279| vom Koordinator chef

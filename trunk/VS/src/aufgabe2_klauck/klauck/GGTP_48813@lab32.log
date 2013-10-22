@@ -1,0 +1,49 @@
+488311 Startzeit: 01.12 15:49:58,499| mit PID <0.75.0> auf ggTs@Brummpa
+beim Namensdienst und auf Node lokal registriert.
+beim Koordinator gemeldet.
+Linker Nachbar 488212 (488212) gebunden.
+Rechter Nachbar 48822 (48822) gebunden.
+setpm: 260897175.
+488311: initiiere eine Terminierungsabstimmung (260897175). 01.12 15:50:26,400|
+488311: stimme ab (488212): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,400|
+488311: stimme ab (488312): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,400|
+488311: stimme ab (488111): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,400|
+488311: stimme ab (488112): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,400|
+488311: stimme ab (488211): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,400|
+488311: stimme ab (48823): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,560|
+488311: stimme ab (48832): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,560|
+488311: stimme ab (48813): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,560|
+488311: stimme ab (48812): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,720|
+488311: stimme ab (48833): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:26,720|
+488311: stimme ab (488311): Koordinator 1te Terminierung gemeldet mit 260897175. 01.12 15:50:26,720|
+sendy: 525 (260897175); berechnet als neues Mi 525. 01.12 15:50:28,870|
+sendy: 504 (525); berechnet als neues Mi 21. 01.12 15:50:30,029|
+sendy: 525 (21); keine Berechnung.
+sendy: 21 (21); keine Berechnung.
+488311: stimme ab (488212): mit >NEIN< gestimmt und ignoriert.
+sendy: 105 (21); keine Berechnung.
+sendy: 21 (21); keine Berechnung.
+488311: initiiere eine Terminierungsabstimmung (21). 01.12 15:50:37,500|
+sendy: 7 (21); berechnet als neues Mi 7. 01.12 15:50:42,120|
+488311: stimme ab (488212): mit >NEIN< gestimmt und ignoriert.
+sendy: 7 (7); keine Berechnung.
+488311: initiiere eine Terminierungsabstimmung (7). 01.12 15:50:45,280|
+488311: stimme ab (488212): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:45,280|
+488311: stimme ab (488211): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:45,430|
+488311: stimme ab (48822): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:50:45,430|
+488311: stimme ab (488311): Koordinator 2te Terminierung gemeldet mit 7. 01.12 15:50:45,590|
+setpm: 186355125.
+488311: initiiere eine Terminierungsabstimmung (186355125). 01.12 15:51:02,030|
+488311: stimme ab (488212): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,030|
+488311: stimme ab (48823): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,030|
+488311: stimme ab (488312): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,030|
+488311: stimme ab (48832): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,030|
+488311: stimme ab (48813): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,500|
+488311: stimme ab (488111): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,500|
+488311: stimme ab (48812): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,500|
+488311: stimme ab (48833): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,500|
+488311: stimme ab (488112): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,500|
+488311: stimme ab (488211): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,500|
+488311: stimme ab (48822): mit >JA< gestimmt und weitergeleitet (Code 2). 01.12 15:51:02,500|
+488311: stimme ab (488311): Koordinator 3te Terminierung gemeldet mit 186355125. 01.12 15:51:02,500|
+Downtime: 01.12 15:51:49,280| vom Client 488311
