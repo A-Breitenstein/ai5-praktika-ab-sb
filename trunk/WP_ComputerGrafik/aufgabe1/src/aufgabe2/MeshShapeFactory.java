@@ -26,7 +26,7 @@ public class MeshShapeFactory {
             Triangle triangle = mesh.getTriangle(triangleIndex);
             triangleArray.setCoordinates(coordinateIndex,new Point3d[]{mesh.getVertex(triangle.a),mesh.getVertex(triangle.b),mesh.getVertex(triangle.c)});
             triangleArray.setNormals(coordinateIndex, new Vector3f[]{triangle.normal,triangle.normal,triangle.normal});
-            //triangleArray.setNormals(coordinateIndex, new Vector3f[]{n(mesh.getVertex(triangle.a)),n(mesh.getVertex(triangle.b)),n(mesh.getVertex(triangle.c))});
+//            triangleArray.setNormals(coordinateIndex, new Vector3f[]{n(mesh.getVertex(triangle.a)),n(mesh.getVertex(triangle.b)),n(mesh.getVertex(triangle.c))});
         }
 
         shape.setGeometry(triangleArray);
