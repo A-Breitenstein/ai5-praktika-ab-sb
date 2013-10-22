@@ -16,7 +16,7 @@ public class TriangleMesh implements ITriangleMesh {
     List<Triangle> triangleList;
     List<Point3d> point3dList;
 
-    private TriangleMesh() {
+    public TriangleMesh() {
         triangleList = new ArrayList<Triangle>();
         point3dList = new ArrayList<Point3d>();
     }
