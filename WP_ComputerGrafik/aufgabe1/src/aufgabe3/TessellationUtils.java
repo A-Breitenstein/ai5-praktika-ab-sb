@@ -42,10 +42,12 @@ public class TessellationUtils {
         return points;
     }
 
-    public static Shape3D create(ImplicitFunction3D func) {
+    public static Shape3D create(int dimension,int start,int end,ImplicitFunction3D func) {
+        if(start >= end) throw new IllegalArgumentException("start muss kleiner als end sein!");
+        if(dimension < 10) throw new IllegalArgumentException("so gehts nicht!");
+
         TriangleMesh triangleMesh = TriangleMesh.create();
-        int dimension = 25;
-        Point3d[][][] points = createCubeVolume(dimension , -2, 2);
+        Point3d[][][] points = createCubeVolume(dimension , start, end);
         Point3d[] tmp_points = new Point3d[8];
         double[] values = new double[8];
 
@@ -115,21 +117,23 @@ public class TessellationUtils {
                 * alpha = v1 / (v2 - v1)
                 * */
 
-                alpha = values[pointAIndex] / (values[pointBIndex] - values[pointAIndex]);
+                alpha = -values[pointAIndex] / (values[pointBIndex] - values[pointAIndex]);
 
-                //pointA.scale(1-alpha);
-                //pointB.scale(alpha);
+                pointA.scale(1-alpha);
+                pointB.scale(alpha);
 
                 resultPoint = new Point3d();
                 resultPoint.add(pointA);
                 resultPoint.add(pointB);
-                resultPoint.scale(0.5);
+//                resultPoint.scale(0.5);
                 triangleMesh.addVertex(resultPoint);
             }
         }
     }
 
-    private static int kantenAufKnoten[][] = {{0, 1}, {1, 2}, {2, 3}, {3, 0}, {4, 5}, {5, 6}, {6, 7}, {7, 4}, {0, 4}, {1, 5}, {2, 6}, {3, 7}};
+//    private static int kantenAufKnoten[][] = {{0, 1}, {1, 2}, {2, 3}, {3, 0}, {4, 5}, {5, 6}, {6, 7}, {7, 4}, {0, 4}, {1, 5}, {2, 6}, {3, 7}};
+    private static int kantenAufKnoten[][] = {{0, 1}, {1, 2}, {2, 3}, {3, 0}, {4, 5}, {5, 6}, {6, 7}, {7, 4}, {0, 4}, {1, 5}, {3, 7},{2, 6} };
+
     private static int faces[] = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
             -1, -1, -1, -1, 0, 8, 3, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
             -1, -1, 0, 1, 9, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1,

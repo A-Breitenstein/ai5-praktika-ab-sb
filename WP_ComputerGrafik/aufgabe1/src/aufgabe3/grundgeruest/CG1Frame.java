@@ -148,12 +148,12 @@ public class CG1Frame extends JFrame {
 
         Transform3D scale = new Transform3D();
 //        Shape3D shape = TessellationUtils.createTriangles(
-//                new Point3d[]{new Point3d(1,-1,1),new Point3d(3,-1,1),new Point3d(3,1,1),new Point3d(1,1,1),
-//                              new Point3d(1,-1,-1),new Point3d(3,-1,-1),new Point3d(3,1,-1),new Point3d(1,1,-1)},
+//                new Point3d[]{new Point3d(0,0,0),new Point3d(1,0,0),new Point3d(1,1,0),new Point3d(0,1,0),
+//                              new Point3d(0,0,1),new Point3d(1,0,1),new Point3d(1,1,1),new Point3d(0,1,1)},
 //                 new double[]{0,1,0,0,0,0,0,0}
 //        );
-//        Shape3D shape = TessellationUtils.create(new Torus(.5,.25));
-        Shape3D shape = TessellationUtils.create(new aufgabe3.Sphere(0.7));
+//        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(1,.5));
+        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
