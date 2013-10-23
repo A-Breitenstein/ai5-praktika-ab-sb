@@ -54,11 +54,15 @@ loop(NodeName,EdgeManagerADT,State,Logfilename,FragmentLevel,FragmentID)->
                   Receiver = global:whereis_name(TargetNodeName),
                   werkzeug:logging(Logfilename,lists:concat([werkzeug:timeMilliSecond()," init 0 aufgerufen und connect versand, message: ",werkzeug:list2String([{connect,0,{Weight,NodeName,TargetNodeName}}])," \n"])),
                   Receiver ! {NodeName,{connect,0,{Weight,NodeName,TargetNodeName}}},
-                  loop(NodeName,EdgeManagerADT,found,Logfilename,0,FragmentID);
-           {nok,ANY} ->
-             werkzeug:logging(Logfilename,lists:concat([werkzeug:timeMilliSecond(),"nix gefunden im EdgeManagerADT \n"]))
-          end
 
+
+            NewState = found,
+            loop(NodeName,EdgeManagerADT,NewState,Logfilename,0,FragmentID);
+            {nok,ANY} ->
+                  werkzeug:logging(Logfilename,lists:concat([werkzeug:timeMilliSecond(),"nix gefunden im EdgeManagerADT \n"])),
+                  NewState = erros
+          end,
+    loop(NodeName,EdgeManagerADT,NewState,Logfilename,FragmentLevel,FragmentID)
     ;
     {initiate,Level,FragName,NodeState,Edge}  ->
           edgeManager:findNextBasic()
@@ -69,7 +73,22 @@ loop(NodeName,EdgeManagerADT,State,Logfilename,FragmentLevel,FragmentID)->
     {reject,Edge} -> 0;
     {report,Weight,Edge} -> 0;
     {changeroot,Edge} -> 0;
-    {connect,Level,Edge} when Level =:= FragmentLevel -> 0;
+    {connect,Level,Edge} when Level =:= FragmentLevel ->
+      NewLevel = FragmentLevel + 1,
+      {NewFragmentID, Nodex, Nodey} = Edge,
+      case Nodex =:= NodeName of
+        true ->0;
+        false ->0
+      end,
+
+      Receiver = global:whereis_name(TargetNodeName),
+      werkzeug:logging(Logfilename,lists:concat([werkzeug:timeMilliSecond()," init 0 aufgerufen und connect versand, message: ",werkzeug:list2String([{connect,0,{Weight,NodeName,TargetNodeName}}])," \n"])),
+      Receiver ! {NodeName,{connect,0,{Weight,NodeName,TargetNodeName}}},
+
+
+
+      loop(NodeName,EdgeManagerADT,NewState,Logfilename,NewLevel,NewFragmentID)
+      ;
     {connect,Level,Edge} when Level < FragmentLevel -> 0;
     {connect,Level,Edge} when Level > FragmentLevel -> 0;
     ANY ->
