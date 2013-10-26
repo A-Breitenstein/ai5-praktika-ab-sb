@@ -10,7 +10,7 @@
 -author("abg628").
 
 %% API
--export([convertToEdgeManagerADT/1, findNextBasic/1, setEdgeState/3, availableOfState/2, isInState/3, findNext/2, getTargetNodeName/2]).
+-export([convertToEdgeManagerADT/1, findNextBasic/1, setEdgeState/3, availableOfState/2, isInState/3, findNext/2, getTargetNodeName/2, getAllBranchEdgesExceptThisOne/2]).
 
 %%EdgeManagerADT :: {[{Weight,{Nodename,basic}}]}
 %% [{7,{node7,basic}},{8,{node8,basic}},{2,{node2,basic}},{4,{node4,basic}}]
@@ -57,7 +57,7 @@ getTargetNodeName({Nodex,Nodey},NodeName) ->
 isInState(EdgeManagerADT, Edge, State) ->
   {ExtendedAdjacentNodes} = EdgeManagerADT,
   {Weight, {NodeName, TargetState}} = Edge,
-  FilterNodes = lists:filter(fun({AccWeight, {AccNodename, AccTyp}}) -> AccWeight == Weight and AccNodename == NodeName and AccTyp =:= State end, ExtendedAdjacentNodes),
+  FilterNodes = lists:filter(fun({AccWeight, {AccNodename, AccTyp}}) -> AccWeight == Weight andalso AccNodename == NodeName andalso AccTyp =:= State end, ExtendedAdjacentNodes),
 
   werkzeug:lengthSL(FilterNodes) =:= 1
   .
@@ -67,6 +67,16 @@ availableOfState(EdgeManagerADT, TargetState) ->
   lists:any(fun({_Weight, {_Nodename, ItemState}}) -> ItemState =:= TargetState end, ExtendedAdjacentNodes)
 .
 
-
+getAllBranchEdgesExceptThisOne(EdgeManagerADT,Edge) ->
+  {Weight,{TargetNodeName,_}} = Edge,
+  {ExtendedAdjacentNodes} = EdgeManagerADT,
+  lists:filter(fun({ItemWeight,ItemTargetName,ItemState})->
+                TargetNodeName =/= ItemTargetName andalso ItemState == branch
+               end,ExtendedAdjacentNodes)
+.
+toString(EdgeManagerADT) ->
+  {ExtendedAdjacentNodes} = EdgeManagerADT,
+  werkzeug:list2String(ExtendedAdjacentNodes)
+.
 
 
