@@ -222,7 +222,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
                   TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NodeManagerADT)),
                   NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT,{Weight,{TargetNodeName,""}},branch),
                   messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT),nodeManager:getFragment(NodeManagerADT),nodeManager:getState(NodeManagerADT),{Weight,Nodex,Nodey}),
-                  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level",nodeManager:getLevel(NodeManagerADT)," fragmentname ",nodeManager:getFragment(NodeManagerADT)," state ",nodeManager:getState(NodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
+                  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)," fragmentid ",nodeManager:getFragment(NodeManagerADT)," state ",nodeManager:getState(NodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
                   case nodeManager:isInState(NodeManagerADT,find) of
                     true ->
                       NewNodeManagerADT = nodeManager:setFindCount(NodeManagerADT,nodeManager:getFindCount(NodeManagerADT)+1),
@@ -242,7 +242,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 
                   false ->
                           messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT)+1,Weight,find,{Weight,Nodex,Nodey}),
-                          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)+1," fragmentname ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
+                          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
                 end,
                 loop(NodeManagerADT,EdgeManagerADT,Logfilename);
 
