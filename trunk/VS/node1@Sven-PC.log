@@ -1,0 +1,14 @@
++++ node1 started 27.10 15:46:44,028| +++
+27.10 15:46:44,106|NodeManagerADT: NodeManagerADT on Node node1 currentState sleeping FragmentID null Level null BestWeight null Findcount null BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:44,106|EdgeManagerADT: Adjacent Nodes: [{3,{node4,basic}},{1,{node0,basic}}]
+27.10 15:46:54,371|received message: [{connect,0,{1,node0,node1}}] in sleeping state 
+27.10 15:46:54,371|wakeup called: 
+27.10 15:46:54,371|connect sended to: node0 [0,{1,node1,node0}]
+27.10 15:46:54,371|NodeManagerADT: NodeManagerADT on Node node1 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,371|EdgeManagerADT: Adjacent Nodes: [{3,{node4,basic}},{1,{node0,branch}}]
+27.10 15:46:54,371|received message: [{initiate,1,1,find,{1,node1,node0}}]
+27.10 15:46:54,371|NodeManagerADT Updated: NodeManagerADT on Node node1 currentState find FragmentID 1 Level 1 BestWeight 1000000 Findcount 0 BestEdge [null] InBranch [{1,node1,node0}] TestEdge [null]
+27.10 15:46:54,371|test called: 
+27.10 15:46:54,371|test sended to: node4 [1,1,{3,node1,node4}]
+27.10 15:46:54,371|NodeManagerADT: NodeManagerADT on Node node1 currentState find FragmentID 1 Level 1 BestWeight 1000000 Findcount 0 BestEdge [null] InBranch [{1,node1,node0}] TestEdge [{3,{node4,basic}}]
+27.10 15:46:54,371|EdgeManagerADT: Adjacent Nodes: [{3,{node4,basic}},{1,{node0,branch}}]

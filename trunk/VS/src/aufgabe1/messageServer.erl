@@ -32,13 +32,13 @@ doStartUp() ->
     {nok,fileNotFound} -> configFileLoader:defaultServerSetup(DefaultConfigFile),doStartUp();
     {ok,{ST,CT,MaxDQSize,PN}}->
       MaxIdleTimeServer_TimerRef = erlang:start_timer(ST,self(),shutdownTimeout),
-      werkzeug:logging(LogFileName,lists:concat(["+++ server started ",werkzeug:timeMilliSecond()," +++"])),
+      werkzeug:logging(LogFileName,lists:concat(["+++ server started ", werkzeug:timeMilliSecond()," +++"])),
       queueManagerAsync:start(MaxDQSize),
       %%serverlopp(Clients,DeliveryQueue,HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID,Processname)
       ServerPid = spawn(fun() -> serverLoop([],[],[],ST,MaxIdleTimeServer_TimerRef,CT,MaxDQSize,1,PN) end),
       register(PN,ServerPid),
       ServerPid;
-    {nok,ErrMsg} ->werkzeug:logging(LogFileName,ErrMsg)
+    {nok,ErrMsg} -> werkzeug:logging(LogFileName,ErrMsg)
   end
 
 .
@@ -129,7 +129,7 @@ serverLoop(Clients,DeliveryQueue,_unUsed_HoldbackQueue,MaxIdleTimeServer,MaxIdle
       werkzeug:logstop(),queueManagerAsync:stop();
 
     {dqUpdated,NewDQ} ->
-      debugOutput(list_to_atom(lists:concat(["received updated deliveryqueue from queueManagerAsync index range: ",werkzeug:minNrSL(NewDQ),"  to ",werkzeug:maxNrSL(NewDQ)," , Length ",werkzeug:lengthSL(NewDQ)])),""),
+      debugOutput(list_to_atom(lists:concat(["received updated deliveryqueue from queueManagerAsync index range: ", werkzeug:minNrSL(NewDQ),"  to ", werkzeug:maxNrSL(NewDQ)," , Length ", werkzeug:lengthSL(NewDQ)])),""),
       serverLoop(Clients,NewDQ,_unUsed_HoldbackQueue,MaxIdleTimeServer,MaxIdleTimeServer_TimerRef,ClientTimeout,MaxDQSize,MsgID,ProcessName);
 
   %%%%%%%%%%%%%%%%%%%%%%%% RELIEVE ANY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,7 +138,7 @@ serverLoop(Clients,DeliveryQueue,_unUsed_HoldbackQueue,MaxIdleTimeServer,MaxIdle
   end
 .
 debugOutput(MSG,ANY) ->
-  werkzeug:logging(lists:concat([node(),".log"]),werkzeug:list2String([MSG,ANY]))
+  werkzeug:logging(lists:concat([node(),".log"]), werkzeug:list2String([MSG,ANY]))
 .
 
 

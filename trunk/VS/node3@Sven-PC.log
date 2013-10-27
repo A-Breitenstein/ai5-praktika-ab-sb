@@ -1,0 +1,3 @@
++++ node3 started 27.10 15:46:46,827| +++
+27.10 15:46:46,906|NodeManagerADT: NodeManagerADT on Node node3 currentState sleeping FragmentID null Level null BestWeight null Findcount null BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:46,906|EdgeManagerADT: Adjacent Nodes: [{9,{node6,basic}},{7,{node2,basic}},{6,{node5,basic}}]

@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe2/messages.erl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe2/nodeManager.erl" />
+    <list default="true" readonly="true" id="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" name="Default" comment="logs und fixes">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node0@Sven-PC.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node1@Sven-PC.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node2@Sven-PC.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node3@Sven-PC.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node4@Sven-PC.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node5@Sven-PC.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node6@Sven-PC.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe1/werkzeug.erl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/aufgabe2/werkzeug.erl" />
+      <change type="DELETED" beforePath="C:\Users\Sven\IdeaProjects\VS\src\aufgabe2\nameServiceManager_a2.erl" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe2_klauck/coordinator.erl" afterPath="$PROJECT_DIR$/src/aufgabe2_klauck/coordinator.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe2/edgeManager.erl" afterPath="$PROJECT_DIR$/src/aufgabe2/edgeManager.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe1/messageClient.erl" afterPath="$PROJECT_DIR$/src/aufgabe1/messageClient.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe1/messageServer.erl" afterPath="$PROJECT_DIR$/src/aufgabe1/messageServer.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe2/messages.erl" afterPath="$PROJECT_DIR$/src/aufgabe2/messages.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe2_klauck/klauck/nameservice.erl" afterPath="$PROJECT_DIR$/src/aufgabe2_klauck/klauck/nameservice.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe2/node.erl" afterPath="$PROJECT_DIR$/src/aufgabe2/node.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe2/nodeManager.erl" afterPath="$PROJECT_DIR$/src/aufgabe2/nodeManager.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/praktikum.iml" afterPath="$PROJECT_DIR$/praktikum.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe1/queueManager.erl" afterPath="$PROJECT_DIR$/src/aufgabe1/queueManager.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/aufgabe2_klauck/klauck/werkzeug.erl" afterPath="$PROJECT_DIR$/src/aufgabe2_klauck/klauck/werkzeug.erl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/klauck/werkzeug.erl" afterPath="$PROJECT_DIR$/src/klauck/werkzeug.erl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="praktikum.iws" />
@@ -13,8 +31,8 @@
     <file path="/reader.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380234012712" ignored="false" />
     <file path="/server.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380235302646" ignored="false" />
     <file path="/writer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380234001753" ignored="false" />
-    <file path="/Dummy.txt" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382609304205" ignored="false" />
-    <file path="/Erlang Console" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382534412076" ignored="false" />
+    <file path="/Dummy.txt" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382885243819" ignored="false" />
+    <file path="/Erlang Console" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382885214960" ignored="false" />
     <file path="/messageServer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382106457094" ignored="false" />
     <file path="/spammer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1380707073575" ignored="false" />
     <file path="/werkzeug.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382517802775" ignored="false" />
@@ -34,11 +52,17 @@
     <file path="$PROJECT_DIR$/../computergrafikwp/aufgabe1/src/aufgabe2/MeshShapeFactory.java" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382464945643" ignored="false" />
     <file path="/node0.cfg" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382527875219" ignored="false" />
     <file path="/configLoader_a2.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382518663959" ignored="false" />
-    <file path="/node.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382609222900" ignored="false" />
+    <file path="/node.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382882839694" ignored="false" />
     <file path="/nameServiceManager_a2.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382520022336" ignored="false" />
     <file path="/clientconfig.cfg" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382524800803" ignored="false" />
-    <file path="/edgeManager.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382608907376" ignored="false" />
-    <file path="/nodeManager.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382604336348" ignored="false" />
+    <file path="/edgeManager.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382878485062" ignored="false" />
+    <file path="/nodeManager.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382880891944" ignored="false" />
+    <file path="/messages.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382877744760" ignored="false" />
+    <file path="$PROJECT_DIR$/vsp-04-team1-breitenstein-bartel/src/utils/werkzeug.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382873781782" ignored="false" />
+    <file path="$PROJECT_DIR$/vsp-04-team1-breitenstein-bartel/src/client/messageClient.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382873763970" ignored="false" />
+    <file path="$PROJECT_DIR$/vsp-04-team1-breitenstein-bartel/src/server/queueManager.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382873763970" ignored="false" />
+    <file path="$PROJECT_DIR$/vsp-04-team1-breitenstein-bartel/src/server/messageServer.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382873763970" ignored="false" />
+    <file path="/startUpCode.erl" changelist="b7a29ffc-dfaf-4505-848b-9fa6d73fc0ca" time="1382875538879" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +82,7 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -94,7 +119,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -116,7 +140,7 @@
       <file leaf-file-name="node.erl" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/aufgabe2/node.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="98" selection-start="4045" selection-end="4045" vertical-scroll-proportion="0.9655172">
+            <state line="98" column="14" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.5420354">
               <folding />
             </state>
           </provider>
@@ -125,7 +149,7 @@
       <file leaf-file-name="messages.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe2/messages.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="19" column="10" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,16 +158,7 @@
       <file leaf-file-name="nodeManager.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe2/nodeManager.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="51" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node1.cfg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node1.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
+            <state line="90" column="44" selection-start="4265" selection-end="4265" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -152,43 +167,25 @@
       <file leaf-file-name="edgeManager.erl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/aufgabe2/edgeManager.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="119" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lists.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://S:/erl5.8.4/lib/stdlib-1.17.4/src/lists.erl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1165" column="50" selection-start="29657" selection-end="29657" vertical-scroll-proportion="0.0">
+            <state line="76" column="20" selection-start="3187" selection-end="3187" vertical-scroll-proportion="-22.96">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="werkzeug.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/klauck/werkzeug.erl">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe1/werkzeug.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="228" column="0" selection-start="7517" selection-end="7517" vertical-scroll-proportion="0.0">
+            <state line="9" column="19" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nameServiceManager_a2.erl" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/aufgabe2/nameServiceManager_a2.erl">
+      <file leaf-file-name="werkzeug.erl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/aufgabe2/werkzeug.erl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="node0.cfg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node0.cfg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="9" selection-start="0" selection-end="51" vertical-scroll-proportion="0.0">
+            <state line="11" column="88" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -204,10 +201,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/aufgabe1/messageServer.erl" />
-        <option value="$PROJECT_DIR$/src/aufgabe1/configFileLoader.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe1/messageClient.erl" />
-        <option value="$PROJECT_DIR$/src/klauck/werkzeug.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe2/node0.cfg" />
         <option value="$PROJECT_DIR$/src/aufgabe2/configLoader_a2.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe2/nameServiceManager.erl" />
@@ -216,18 +210,24 @@
         <option value="$PROJECT_DIR$/clientconfig.cfg" />
         <option value="$PROJECT_DIR$/node0.cfg" />
         <option value="$PROJECT_DIR$/node1.cfg" />
-        <option value="$PROJECT_DIR$/src/aufgabe2/nodeManager.erl" />
+        <option value="$PROJECT_DIR$/src/aufgabe2/werkzeug.erl" />
+        <option value="$PROJECT_DIR$/src/klauck/werkzeug.erl" />
+        <option value="$PROJECT_DIR$/src/aufgabe2/startUpCode.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe2/messages.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe2/edgeManager.erl" />
+        <option value="$PROJECT_DIR$/src/aufgabe2/nodeManager.erl" />
         <option value="$PROJECT_DIR$/src/aufgabe2/node.erl" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1672" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1696" />
-    <option name="height" value="1066" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -257,6 +257,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -345,8 +347,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,6 +397,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Sven\IdeaProjects\VS\src\aufgabe1" />
+      <recent name="C:\Users\Sven\IdeaProjects\VS\src\aufgabe2" />
       <recent name="Z:\BAI-5\VS\src\aufgabe2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -407,7 +409,7 @@
       <recent name="D:\Alex\HAW\AI-5\VS\praktikum\src\aufgabe1" />
     </key>
   </component>
-  <component name="RunManager" selected="Erlang Console.node1">
+  <component name="RunManager" selected="Erlang Console.node6">
     <configuration default="false" name="server.hallo" type="ErlangApplicationRunConfiguration" factoryName="Erlang Application" temporary="true">
       <module name="praktikum" />
       <option name="erlFlags" value="" />
@@ -603,7 +605,7 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -634,24 +636,84 @@
     </configuration>
     <configuration default="false" name="node0" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
       <module name="praktikum" />
-      <option name="consoleArgs" value="-sname node0 -setcookie zummsel -run node start -configfilename node0.cfg -nodenameservice nns@BOROMIR" />
+      <option name="consoleArgs" value="-sname node0 -setcookie zummsel -run node start -configfilename node0.cfg -nodenameservice nns@Sven-PC" />
       <option name="name" value="node0" />
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="false" name="node1" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
       <module name="praktikum" />
-      <option name="consoleArgs" value="-sname node1 -setcookie zummsel -run node start -configfilename node1.cfg -nodenameservice nns@BOROMIR" />
+      <option name="consoleArgs" value="-sname node1 -setcookie zummsel -run node start -configfilename node1.cfg -nodenameservice nns@Sven-PC" />
       <option name="name" value="node1" />
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="node2" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-sname node2 -setcookie zummsel -run node start -configfilename node2.cfg -nodenameservice nns@Sven-PC" />
+      <option name="name" value="node2" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="node3" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-sname node3 -setcookie zummsel -run node start -configfilename node3.cfg -nodenameservice nns@Sven-PC" />
+      <option name="name" value="node3" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="node4" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-sname node4 -setcookie zummsel -run node start -configfilename node4.cfg -nodenameservice nns@Sven-PC" />
+      <option name="name" value="node4" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="node5" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-sname node5 -setcookie zummsel -run node start -configfilename node5.cfg -nodenameservice nns@Sven-PC" />
+      <option name="name" value="node5" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="node6" type="ErlangConsoleRunConfigurationType" factoryName="Erlang Console">
+      <module name="praktikum" />
+      <option name="consoleArgs" value="-sname node6 -setcookie zummsel -run node start -configfilename node6.cfg -nodenameservice nns@Sven-PC" />
+      <option name="name" value="node6" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -663,24 +725,29 @@
       <option name="saveOutputToFile" value="false" />
       <option name="showConsoleOnStdErr" value="false" />
       <option name="showConsoleOnStdOut" value="false" />
-      <option name="workingDirPath" value="Z:\BAI-5\VS" />
+      <option name="workingDirPath" value="C:\Users\Sven\IdeaProjects\VS" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="12">
+    <list size="17">
       <item index="0" class="java.lang.String" itemvalue="Erlang Application.demoMSGQ" />
       <item index="1" class="java.lang.String" itemvalue="Erlang Application.demoRemote" />
-      <item index="2" class="java.lang.String" itemvalue="Erlang Console.server_console" />
-      <item index="3" class="java.lang.String" itemvalue="Erlang Console.Test" />
-      <item index="4" class="java.lang.String" itemvalue="Erlang Console.sender_console" />
-      <item index="5" class="java.lang.String" itemvalue="Erlang Console.sender_console2" />
-      <item index="6" class="java.lang.String" itemvalue="Erlang Console.sender_console3" />
-      <item index="7" class="java.lang.String" itemvalue="Erlang Console.node0" />
-      <item index="8" class="java.lang.String" itemvalue="Erlang Console.node1" />
-      <item index="9" class="java.lang.String" itemvalue="Erlang Console.nns" />
-      <item index="10" class="java.lang.String" itemvalue="Erlang Application.server.hallo" />
-      <item index="11" class="java.lang.String" itemvalue="Erlang Application.messageServer.doStartUp" />
+      <item index="2" class="java.lang.String" itemvalue="Erlang Application.server.hallo" />
+      <item index="3" class="java.lang.String" itemvalue="Erlang Application.messageServer.doStartUp" />
+      <item index="4" class="java.lang.String" itemvalue="Erlang Console.server_console" />
+      <item index="5" class="java.lang.String" itemvalue="Erlang Console.Test" />
+      <item index="6" class="java.lang.String" itemvalue="Erlang Console.sender_console" />
+      <item index="7" class="java.lang.String" itemvalue="Erlang Console.sender_console2" />
+      <item index="8" class="java.lang.String" itemvalue="Erlang Console.sender_console3" />
+      <item index="9" class="java.lang.String" itemvalue="Erlang Console.node0" />
+      <item index="10" class="java.lang.String" itemvalue="Erlang Console.node1" />
+      <item index="11" class="java.lang.String" itemvalue="Erlang Console.node2" />
+      <item index="12" class="java.lang.String" itemvalue="Erlang Console.node3" />
+      <item index="13" class="java.lang.String" itemvalue="Erlang Console.node4" />
+      <item index="14" class="java.lang.String" itemvalue="Erlang Console.node5" />
+      <item index="15" class="java.lang.String" itemvalue="Erlang Console.node6" />
+      <item index="16" class="java.lang.String" itemvalue="Erlang Console.nns" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -716,20 +783,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="Z:\BAI-5\VS" />
-          <option name="myCopyRoot" value="Z:\BAI-5\VS" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\VS" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\VS" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="Z:\BAI-5\VS\.idea" />
-          <option name="myCopyRoot" value="Z:\BAI-5\VS\.idea" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\VS\.idea" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\VS\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="Z:\BAI-5\VS" />
-          <option name="myCopyRoot" value="Z:\BAI-5\VS" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\VS" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\VS" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -780,7 +847,11 @@
       <created>1382537147130</created>
       <updated>1382537147130</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="soweit fertig implementiert, alle compile errors gefixt, noch keinen testlauf durchgeführt">
+      <created>1382812103108</created>
+      <updated>1382812103108</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -804,36 +875,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1672" y="-8" width="1696" height="1066" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57508343" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30657747" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33779263" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46376812" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16053511" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5250836" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5819398" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24296206" sideWeight="0.6809681" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59300184" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14887941" sideWeight="0.57525086" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42474917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="1772" y="92" width="1496" height="866" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44827586" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.57508343" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19562715" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3190319" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -879,7 +950,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="wtf, aber echt mal + bauchweh&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="logs und fixes" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -902,6 +973,8 @@
     <MESSAGE value="mit 2 clients getestet funzt...&#10;&#10;" />
     <MESSAGE value="init&#10;&#10;" />
     <MESSAGE value="wtf, aber echt mal + bauchweh&#10;" />
+    <MESSAGE value="soweit fertig implementiert, alle compile errors gefixt, noch keinen testlauf durchgeführt" />
+    <MESSAGE value="logs und fixes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -913,18 +986,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/clientconfig.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="126" selection-end="126" vertical-scroll-proportion="0.16314779" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/messageServer.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1220" selection-end="1220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe2_klauck/nameServiceManager.erl">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="102" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.032629557" />
@@ -951,11 +1012,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe2/nameServiceManager_a2.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
+    <entry file="file://$PROJECT_DIR$/node0.cfg">
+      <provider editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="0" selection-end="51" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node1.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="12" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe2/configLoader_a2.erl">
@@ -965,58 +1034,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node0.cfg">
+    <entry file="file://$PROJECT_DIR$/src/aufgabe1/werkzeug.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="0" selection-end="51" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node1.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
+        <state line="9" column="19" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/klauck/werkzeug.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="228" column="0" selection-start="7517" selection-end="7517" vertical-scroll-proportion="0.0">
+        <state line="34" column="20" selection-start="1289" selection-end="1289" vertical-scroll-proportion="0.30988592">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://S:/erl5.8.4/lib/stdlib-1.17.4/src/lists.erl">
+    <entry file="file://$PROJECT_DIR$/src/aufgabe2/werkzeug.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1165" column="50" selection-start="29657" selection-end="29657" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/aufgabe2/nodeManager.erl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="51" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
+        <state line="11" column="88" selection-start="437" selection-end="437" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe2/edgeManager.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="119" selection-start="2330" selection-end="2330" vertical-scroll-proportion="0.0">
+        <state line="76" column="20" selection-start="3187" selection-end="3187" vertical-scroll-proportion="-22.96">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe2/messages.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="19" column="10" selection-start="654" selection-end="654" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aufgabe2/nodeManager.erl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="44" selection-start="4265" selection-end="4265" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aufgabe2/node.erl">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="98" selection-start="4045" selection-end="4045" vertical-scroll-proportion="0.9655172">
+        <state line="98" column="14" selection-start="4690" selection-end="4690" vertical-scroll-proportion="0.5420354">
           <folding />
         </state>
       </provider>
@@ -1078,7 +1140,6 @@
             <option name="proportions">
               <list>
                 <option value="0.15170279" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

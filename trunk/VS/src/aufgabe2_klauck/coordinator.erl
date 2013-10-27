@@ -22,12 +22,12 @@ start() ->
     {nok,configFileNotOK} ->       werkzeug:logging(LogFileName,"delete config file");
     {nok,fileNotFound} -> configLoader:createDefaultCoordinatorConfig(DefaultConfigFile),start();
     {ok,{AZ,TZ,GGTN,NSNode,NSName,KN,KO}}->
-      werkzeug:logging(LogFileName,lists:concat(["+++ coordinator started ",werkzeug:timeMilliSecond()," +++"])),
+      werkzeug:logging(LogFileName,lists:concat(["+++ coordinator started ", werkzeug:timeMilliSecond()," +++"])),
 
       CoordinatorPid = spawn(fun() -> loop(initial,[],AZ,TZ,GGTN,NSNode,NSName,KN,KO,0) end),
       register(KN,CoordinatorPid),
       CoordinatorPid;
-    {nok,ErrMsg} ->werkzeug:logging(LogFileName,ErrMsg)
+    {nok,ErrMsg} -> werkzeug:logging(LogFileName,ErrMsg)
   end
 .
 

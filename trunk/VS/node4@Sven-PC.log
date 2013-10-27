@@ -1,0 +1,12 @@
++++ node4 started 27.10 15:46:48,157| +++
+27.10 15:46:48,221|NodeManagerADT: NodeManagerADT on Node node4 currentState sleeping FragmentID null Level null BestWeight null Findcount null BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:48,221|EdgeManagerADT: Adjacent Nodes: [{3,{node1,basic}},{2,{node6,basic}}]
+27.10 15:46:54,367|received message: [{test,1,1,{3,node1,node4}}] in sleeping state 
+27.10 15:46:54,367|wakeup called: 
+27.10 15:46:54,367|connect sended to: node6 [0,{2,node4,node6}]
+27.10 15:46:54,367|NodeManagerADT: NodeManagerADT on Node node4 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,367|EdgeManagerADT: Adjacent Nodes: [{3,{node1,basic}},{2,{node6,branch}}]
+27.10 15:46:54,367|received message: [{connect,0,{2,node6,node4}}] with Level >= NodeLevel 
+27.10 15:46:54,367|initiate sended to: node6 with level 1 fragmentname 2 state find edge [{2,node6,node4}]
+27.10 15:46:54,367|NodeManagerADT: NodeManagerADT on Node node4 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,367|EdgeManagerADT: Adjacent Nodes: [{3,{node1,basic}},{2,{node6,branch}}]

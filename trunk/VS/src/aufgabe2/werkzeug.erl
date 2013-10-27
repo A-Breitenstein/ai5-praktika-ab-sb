@@ -33,8 +33,7 @@ logging(Datei,Inhalt) -> Known = erlang:whereis(logklc),
 								 erlang:register(logklc,PIDlogklc);
 								_NotUndef -> ok
 						end,
-							  logklc ! {Datei,lists:concat([werkzeug:timeMilliSecond(),Inhalt,"\r\n"])},
-%%                 logklc ! {Datei,Inhalt},
+                logklc ! {Datei,Inhalt},
 						ok.
 
 logstop( ) -> 	Known = erlang:whereis(logklc),

@@ -1,0 +1,1651 @@
++++ node0 started 27.10 15:46:42,336| +++
+27.10 15:46:42,508|NodeManagerADT: NodeManagerADT on Node node0 currentState sleeping FragmentID null Level null BestWeight null Findcount null BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:42,508|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,basic}}]
+27.10 15:46:54,359|received message: [{test,0,0,0}] in sleeping state 
+27.10 15:46:54,360|wakeup called: 
+27.10 15:46:54,375|connect sended to: node1 [0,{1,node0,node1}]
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{connect,0,{1,node1,node0}}] with Level >= NodeLevel 
+27.10 15:46:54,376|initiate sended to: node1 with level 1 fragmentname 1 state find edge [{1,node1,node0}]
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,376|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,376|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,376|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,376|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,391|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,392|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,392|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,392|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,392|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,407|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,407|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,407|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,407|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]
+27.10 15:46:54,423|EdgeManagerADT: Adjacent Nodes: [{8,{node2,basic}},{4,{node6,basic}},{1,{node1,branch}}]
+27.10 15:46:54,423|received message: [{test,1,2,{4,node6,node0}}] with Level > NodeLevel 
+27.10 15:46:54,423|placeing received message on end of queue: [{test,1,2,{4,node6,node0}}] 
+27.10 15:46:54,423|NodeManagerADT: NodeManagerADT on Node node0 currentState found FragmentID null Level 0 BestWeight null Findcount 0 BestEdge [null] InBranch [null] TestEdge [null]

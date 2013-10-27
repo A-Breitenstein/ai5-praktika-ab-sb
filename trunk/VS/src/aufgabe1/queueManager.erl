@@ -29,7 +29,7 @@ getMessage(DeliveryQueue,LastSendedMessageID) ->
           {Nr,{ID,Msg,_DeliveryTime}} = werkzeug:findneSL(DeliveryQueue,LowestMessageID)
       end,
 
-     {ok,ID,{reply,ID, lists:concat([Msg,"  SERVER OUT: ",werkzeug:timeMilliSecond()]),not((HighestMessageID-ID) > 0)}};
+     {ok,ID,{reply,ID, lists:concat([Msg,"  SERVER OUT: ", werkzeug:timeMilliSecond()]),not((HighestMessageID-ID) > 0)}};
 
   %%% es keine neuen  Messages
     false ->
@@ -49,7 +49,7 @@ enqueueIn(HoldbackQueue,MsgBlock) ->
       HoldbackQueue;
     false->
       werkzeug:logging(lists:concat([node(),".log"]),lists:concat(['Message has been pushed into Holdbackqueue : ',MessageID])),
-      werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,lists:concat([Msg," IN HBQ: ",werkzeug:timeMilliSecond()]),time()}})
+      werkzeug:pushSL(HoldbackQueue,{MessageID,{MessageID,lists:concat([Msg," IN HBQ: ", werkzeug:timeMilliSecond()]),time()}})
   end
 .
 
@@ -67,7 +67,7 @@ updateDeliveryQueueIfNecessary(DeliveryQueue,NewHBQ,MaxDQSize) ->
       werkzeug:logging(lists:concat([node(),".log"]),lists:concat(['Successor of Highest MessageID of DQ',SuccessorOf_HighestMessageID_DQ])),
 
 %%           debugOutput(">>>>>>>>>>>>>>>>>>>>Liste NewHBQ: ", NewHBQ),
-      LowestHBQ_Elem = werkzeug:findSL(NewHBQ,werkzeug:minNrSL(NewHBQ)),
+      LowestHBQ_Elem = werkzeug:findSL(NewHBQ, werkzeug:minNrSL(NewHBQ)),
 %%           debugOutput(">>>>>>>>>>>>>>>>>>>>LowestHBQ_Elem: ", LowestHBQ_Elem),
       %%{ElemNr,{ID,Msg,ReceiveTime}}]
       {ElemNr,_Elem} = LowestHBQ_Elem,
@@ -76,19 +76,19 @@ updateDeliveryQueueIfNecessary(DeliveryQueue,NewHBQ,MaxDQSize) ->
       case (ElemNr - SuccessorOf_HighestMessageID_DQ ) > 0 of
         true->
           werkzeug:logging(lists:concat([node(),".log"]),lists:concat(['Gap found : Fehlernachricht fuer Nachrichtennummern ',SuccessorOf_HighestMessageID_DQ,' bis ',PredessorOfElemNr,' um '])),
-          NewDQ = werkzeug:pushSL(DeliveryQueue,{PredessorOfElemNr,{PredessorOfElemNr,werkzeug:list2String(['Fehlernachricht fuer Nachrichtennummern ',SuccessorOf_HighestMessageID_DQ,' bis ',PredessorOfElemNr,' um ']),werkzeug:timeMilliSecond()}}),
+          NewDQ = werkzeug:pushSL(DeliveryQueue,{PredessorOfElemNr,{PredessorOfElemNr, werkzeug:list2String(['Fehlernachricht fuer Nachrichtennummern ',SuccessorOf_HighestMessageID_DQ,' bis ',PredessorOfElemNr,' um ']), werkzeug:timeMilliSecond()}}),
           {GatheredMessages,_Index,NewNewHBQ} = sammelBisZurLuecke(NewHBQ),
-          werkzeug:logging(lists:concat([node(),".log"]),werkzeug:list2String(['GatheredMessags : ',GatheredMessages,' NewNewHBQ :',NewNewHBQ,' um '])),
+          werkzeug:logging(lists:concat([node(),".log"]), werkzeug:list2String(['GatheredMessags : ',GatheredMessages,' NewNewHBQ :',NewNewHBQ,' um '])),
           NewDeliveryQueue = lists:sublist(lists:append(GatheredMessages,NewDQ),MaxDQSize)
       ;
         false ->
           {GatheredMessages,_Index,NewNewHBQ} = sammelBisZurLuecke(NewHBQ),
-          werkzeug:logging(lists:concat([node(),".log"]),werkzeug:list2String(['no Gap found :GatheredMessags : ',GatheredMessages,' NewNewHBQ :',NewNewHBQ,' um '])),
+          werkzeug:logging(lists:concat([node(),".log"]), werkzeug:list2String(['no Gap found :GatheredMessags : ',GatheredMessages,' NewNewHBQ :',NewNewHBQ,' um '])),
           NewDeliveryQueue = lists:sublist(lists:append(GatheredMessages,DeliveryQueue),MaxDQSize)
       end,
 
       Updated = true,
-      werkzeug:logging(lists:concat([node(),".log"]),werkzeug:list2String(['NewDeliveryQueue ',NewDeliveryQueue]));
+      werkzeug:logging(lists:concat([node(),".log"]), werkzeug:list2String(['NewDeliveryQueue ',NewDeliveryQueue]));
 
     false ->
       werkzeug:logging(lists:concat([node(),".log"]),lists:concat(['NewHBQ filled by ',round(werkzeug:lengthSL(NewHBQ) / (MaxDQSize)*100), ' % '])),
@@ -112,7 +112,7 @@ sammelBisZurLuecke(HoldbackQueue) ->
 %%      debugOutput(werkzeug:list2String(["index: ",Index," ElemNr ",ElemNr]),""),
     case Index =:= ElemNr of
       true->
-        NewItem = {ElemNr,{ID,lists:concat([Msg,"   IN DQ:  ",werkzeug:timeMilliSecond()]),['DeliveryTime: ',time(), ' ReciveTime: ',ReceiveTime]}},
+        NewItem = {ElemNr,{ID,lists:concat([Msg,"   IN DQ:  ", werkzeug:timeMilliSecond()]),['DeliveryTime: ',time(), ' ReciveTime: ',ReceiveTime]}},
         NewGatheredItems =  werkzeug:pushSL(GatheredItems,NewItem),
         AccuOut = {NewGatheredItems,ElemNr+1,NewHBQ};
       false->
@@ -120,5 +120,5 @@ sammelBisZurLuecke(HoldbackQueue) ->
         AccuOut = {GatheredItems,Index,NewNewHBQ}
     end
 
-  end,{[],werkzeug:minNrSL(HoldbackQueue),[]},HoldbackQueue)
+  end,{[], werkzeug:minNrSL(HoldbackQueue),[]},HoldbackQueue)
 .
