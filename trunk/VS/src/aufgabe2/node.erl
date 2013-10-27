@@ -69,7 +69,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 
       MyNodeName = nodeManager:getNodeName(NewNodeManagerADT),
       TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},MyNodeName),
-      NewFindCount =lists:foldl(fun({ItemWeight,ItemTargetNodeName,_},Accu)->
+      NewFindCount =lists:foldl(fun({ItemWeight,{ItemTargetNodeName,_}},Accu)->
                           messages:sendInitiate(TargetNodeName,Level,FragName,NodeState,{ItemWeight,MyNodeName,ItemTargetNodeName}),
                           case NodeState == find of
                             true-> Accu +1;
@@ -87,52 +87,100 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
       loop(NewNewNewNodeManagerADT,NewEdgeMangerADT,Logfilename);
 
 
+    {test,Level,FragName,{Weight,Nodex,Nodey}} ->
+                  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{test, Level, FragName, {Weight,Nodex,Nodey}} ]) ,"\n"])),
+
+                  case nodeManager:isInState(NodeManagerADT,sleeping)of
+                    true->
+                          {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename);
+                    false->
+                          NewNodeManagerADT = NodeManagerADT,
+                          NewEdgeManagerADT = EdgeManagerADT
+                  end,
+
+                 case Level > nodeManager:getLevel(NewNodeManagerADT) of
+                   true->
+                           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"test case with Level > NodeLevel \n"])),
+                           messages:enqueue(nodeManager:getNodeName(NewNodeManagerADT),{test,Level,FragName,{Weight,Nodex,Nodey}}),
+                           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"placeing received message on end of queue: ", werkzeug:list2String([{test, Level, FragName, {Weight,Nodex,Nodey}} ]) ," \n"])),
+                           loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
+                   false->
+                           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"test case with Level <= NodeLevel \n"])),
+                           TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NewNodeManagerADT)),
+                           case FragName =/= nodeManager:getFragment(NewNodeManagerADT) of
+                             true ->
+                                       messages:sendAccept(TargetNodeName,{Weight,Nodex,Nodey}),
+                                       werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Accept sended to: ",TargetNodeName," with Edge ",werkzeug:list2String([{Weight,Nodex,Nodey}]),"\n"])),
+                                       loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
+                             false ->
+                                      case edgeManager:isInState(NewEdgeManagerADT,{Weight,{TargetNodeName,""}},basic) of
+                                            true ->
+                                              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Edge marked as rejected ! ",werkzeug:list2String([{Weight,TargetNodeName}]),"\n"])),
+                                              NewNewEdgeManagerADT = edgeManager:setEdgeState(NewEdgeManagerADT,{Weight,{TargetNodeName,""}},rejected);
+                                            false ->
+                                              NewNewEdgeManagerADT = NewEdgeManagerADT
+                                      end,
+
+                                     {TestEdgeWeight,{TestEdgeNodeName,_}} = nodeManager:getTestEdge(NewNodeManagerADT),
+                                     case TestEdgeNodeName =/= TargetNodeName andalso TestEdgeWeight =/= Weight of
+                                       true ->
+                                             messages:sendReject(TargetNodeName,{Weight,Nodex,Nodey}),
+                                             werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Rejected sended to: ",TargetNodeName, " on edge",werkzeug:list2String([{Weight,Nodex,Nodey}]),"\n"])),
+                                             loop(NewNodeManagerADT,NewNewEdgeManagerADT,Logfilename);
+                                       false->
+                                             {NewNewNodeManagerADT,NewNewNewEdgeManagerADT} = test(NewNodeManagerADT,NewNewEdgeManagerADT,Logfilename),
+                                             loop(NewNewNodeManagerADT,NewNewNewEdgeManagerADT,Logfilename)
+                                     end
+
+                           end
+
+
+                 end;
 
 
 
-
-    {test, Level, FragName, Edge} when IS_SLEEPING ->
-                werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{test, Level, FragName, Edge} ]) ," in sleeping state \n"])),
-                {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename),
-                loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
-
-
-    {test,Level,FragName,Edge} when Level > NODE_LEVEL ->
-                werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{test, Level, FragName, Edge} ]) ," with Level > NodeLevel \n"])),
-                messages:enqueue(nodeManager:getNodeName(NodeManagerADT),{test,Level,FragName,Edge}),
-                werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"placeing received message on end of queue: ", werkzeug:list2String([{test, Level, FragName, Edge} ]) ," \n"])),
-                loop(NodeManagerADT,EdgeManagerADT,Logfilename);
-
-
-    {test,Level,FragName,{Weight,Nodex,Nodey}} when Level =< NODE_LEVEL ->
-              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{test, Level, FragName, {Weight,Nodex,Nodey}} ]) ," with Level <= NodeLevel \n"])),
-
-              TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NodeManagerADT)),
-              case FragName =/= nodeManager:getFragment(NodeManagerADT) of
-                true -> messages:sendAccept(TargetNodeName,{Weight,Nodex,Nodey}),
-                        werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Accept sended to: ",TargetNodeName," with Edge ",{Weight,Nodex,Nodey},"\n"])),
-                        NewNodeManagerADT = NodeManagerADT,
-                        NewNewEdgeManagerADT = EdgeManagerADT;
-
-                false -> case edgeManager:isInState(EdgeManagerADT,{Weight,{TargetNodeName,""}},basic) of
-                            true ->
-                              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Edge marked as rejected ! ",{Weight,TargetNodeName},"\n"])),
-                              NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT,{Weight,{TargetNodeName,""}},rejected);
-                            false -> NewEdgeManagerADT = EdgeManagerADT
-                         end,
-
-                        {TestEdgeWeight,TestEdgeNodeName,_} = nodeManager:getTestEdge(NodeManagerADT),
-                        case TestEdgeNodeName =/= TargetNodeName andalso TestEdgeWeight =/= Weight of
-                          true -> messages:sendReject(TargetNodeName,{Weight,Nodex,Nodey}),
-                                  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Rejected sended to: ",TargetNodeName, " on edge",{Weight,Nodex,Nodey},"\n"])),
-                                  NewNodeManagerADT = NodeManagerADT,
-                                  NewNewEdgeManagerADT = NewEdgeManagerADT;
-                          false-> {NewNodeManagerADT,NewNewEdgeManagerADT} = test(NodeManagerADT,NewEdgeManagerADT,Logfilename)
-                        end
-
-              end,
-
-              loop(NewNodeManagerADT,NewNewEdgeManagerADT,Logfilename);
+%%     {test, Level, FragName, Edge} when IS_SLEEPING ->
+%%                 werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{test, Level, FragName, Edge} ]) ," in sleeping state \n"])),
+%%                 {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename),
+%%                 loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
+%%
+%%
+%%     {test,Level,FragName,Edge} when Level > NODE_LEVEL ->
+%%                 werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{test, Level, FragName, Edge} ]) ," with Level > NodeLevel \n"])),
+%%                 messages:enqueue(nodeManager:getNodeName(NodeManagerADT),{test,Level,FragName,Edge}),
+%%                 werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"placeing received message on end of queue: ", werkzeug:list2String([{test, Level, FragName, Edge} ]) ," \n"])),
+%%                 loop(NodeManagerADT,EdgeManagerADT,Logfilename);
+%%
+%%
+%%     {test,Level,FragName,{Weight,Nodex,Nodey}} when Level =< NODE_LEVEL ->
+%%               werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{test, Level, FragName, {Weight,Nodex,Nodey}} ]) ," with Level <= NodeLevel \n"])),
+%%
+%%               TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NodeManagerADT)),
+%%               case FragName =/= nodeManager:getFragment(NodeManagerADT) of
+%%                 true -> messages:sendAccept(TargetNodeName,{Weight,Nodex,Nodey}),
+%%                         werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Accept sended to: ",TargetNodeName," with Edge ",{Weight,Nodex,Nodey},"\n"])),
+%%                         NewNodeManagerADT = NodeManagerADT,
+%%                         NewNewEdgeManagerADT = EdgeManagerADT;
+%%
+%%                 false -> case edgeManager:isInState(EdgeManagerADT,{Weight,{TargetNodeName,""}},basic) of
+%%                             true ->
+%%                               werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Edge marked as rejected ! ",{Weight,TargetNodeName},"\n"])),
+%%                               NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT,{Weight,{TargetNodeName,""}},rejected);
+%%                             false -> NewEdgeManagerADT = EdgeManagerADT
+%%                          end,
+%%
+%%                         {TestEdgeWeight,TestEdgeNodeName,_} = nodeManager:getTestEdge(NodeManagerADT),
+%%                         case TestEdgeNodeName =/= TargetNodeName andalso TestEdgeWeight =/= Weight of
+%%                           true -> messages:sendReject(TargetNodeName,{Weight,Nodex,Nodey}),
+%%                                   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Rejected sended to: ",TargetNodeName, " on edge",{Weight,Nodex,Nodey},"\n"])),
+%%                                   NewNodeManagerADT = NodeManagerADT,
+%%                                   NewNewEdgeManagerADT = NewEdgeManagerADT;
+%%                           false-> {NewNodeManagerADT,NewNewEdgeManagerADT} = test(NodeManagerADT,NewEdgeManagerADT,Logfilename)
+%%                         end
+%%
+%%               end,
+%%
+%%               loop(NewNodeManagerADT,NewNewEdgeManagerADT,Logfilename);
 
 
 
@@ -210,43 +258,92 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 
 
 
-    {connect, Level, Edge} when  IS_SLEEPING ->
-                        werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level, Edge}]) ," in sleeping state \n"])),
-                        {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename),
-                        loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
+    {connect, Level,{Weight,Nodex,Nodey}} ->
+      werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level, {Weight,Nodex,Nodey}}]) ,"\n"])),
+      case nodeManager:isInState(NodeManagerADT,sleeping)of
+        true->
+          {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename);
+        false->
+          NewNodeManagerADT = NodeManagerADT,
+          NewEdgeManagerADT = EdgeManagerADT
+      end,
+
+      case Level < nodeManager:getLevel(NewNodeManagerADT) of
+        true->
+          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect case with Level < NodeLevel \n"])),
+
+          TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NewNodeManagerADT)),
+          NewNewEdgeManagerADT = edgeManager:setEdgeState(NewEdgeManagerADT,{Weight,{TargetNodeName,""}},branch),
+          messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NewNodeManagerADT),nodeManager:getFragment(NewNodeManagerADT),nodeManager:getState(NewNodeManagerADT),{Weight,Nodex,Nodey}),
+          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)," fragmentid ",nodeManager:getFragment(NewNodeManagerADT)," state ",nodeManager:getState(NewNodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
+          case nodeManager:isInState(NewNodeManagerADT,find) of
+            true ->
+              NewNewNodeManagerADT = nodeManager:setFindCount(NewNodeManagerADT,nodeManager:getFindCount(NewNodeManagerADT)+1),
+              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"findcount updated: ",nodeManager:getFindCount(NewNewNodeManagerADT),"\n"]));
+            false -> NewNewNodeManagerADT = NewNodeManagerADT
+          end,
+          loop(NewNewNodeManagerADT,NewNewEdgeManagerADT,Logfilename);
+
+        false->
+          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect case with Level >= NodeLevel \n"])),
+
+          MyNodeName = nodeManager:getNodeName(NewNodeManagerADT),
+          TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},MyNodeName),
+          case edgeManager:isInState(NewEdgeManagerADT,{Weight,{TargetNodeName, "" }},basic) of
+            true -> messages:enqueue(MyNodeName,{connect,Level,{Weight,Nodex,Nodey}}),
+              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Connect message placed at the end of queue ", werkzeug:list2String([{connect,Level,{Weight,Nodex,Nodey}}]) ,"\n"]));
+
+            false ->
+              messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NewNodeManagerADT)+1,Weight,find,{Weight,Nodex,Nodey}),
+              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
+          end,
+          loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename)
+      end;
 
 
 
-    {connect, Level,{Weight,Nodex,Nodey}} when Level < NODE_LEVEL ->
-                  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level,{Weight,Nodex,Nodey}}]) ," with Level < NodeLevel \n"])),
-                  TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NodeManagerADT)),
-                  NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT,{Weight,{TargetNodeName,""}},branch),
-                  messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT),nodeManager:getFragment(NodeManagerADT),nodeManager:getState(NodeManagerADT),{Weight,Nodex,Nodey}),
-                  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)," fragmentid ",nodeManager:getFragment(NodeManagerADT)," state ",nodeManager:getState(NodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
-                  case nodeManager:isInState(NodeManagerADT,find) of
-                    true ->
-                      NewNodeManagerADT = nodeManager:setFindCount(NodeManagerADT,nodeManager:getFindCount(NodeManagerADT)+1),
-                      werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"findcount updated: ",nodeManager:getFindCount(NodeManagerADT),"\n"]));
-                      false -> NewNodeManagerADT = NodeManagerADT
-                  end,
-                 loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
-
-    {connect, Level, {Weight,Nodex,Nodey}} when Level >= NODE_LEVEL ->
-                werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level,{Weight,Nodex,Nodey}}]) ," with Level >= NodeLevel \n"])),
-
-                MyNodeName = nodeManager:getNodeName(NodeManagerADT),
-                TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},MyNodeName),
-                case edgeManager:isInState(EdgeManagerADT,{Weight,{TargetNodeName, "" }},basic) of
-                  true -> messages:enqueue(MyNodeName,{connect,Level,{Weight,Nodex,Nodey}}),
-                          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Connect message placed at the end of queue ", werkzeug:list2String([{connect,Level,{Weight,Nodex,Nodey}}]) ,"\n"]));
-
-                  false ->
-                          messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT)+1,Weight,find,{Weight,Nodex,Nodey}),
-                          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
-                end,
-                loop(NodeManagerADT,EdgeManagerADT,Logfilename);
 
 
+%%     {connect, Level, Edge} when  IS_SLEEPING ->
+%%                         werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level, Edge}]) ," in sleeping state \n"])),
+%%                         {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename),
+%%                         loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
+%%
+%%
+%%
+%%     {connect, Level,{Weight,Nodex,Nodey}} when Level < NODE_LEVEL ->
+%%                   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level,{Weight,Nodex,Nodey}}]) ," with Level < NodeLevel \n"])),
+%%                   TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NodeManagerADT)),
+%%                   NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT,{Weight,{TargetNodeName,""}},branch),
+%%                   messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT),nodeManager:getFragment(NodeManagerADT),nodeManager:getState(NodeManagerADT),{Weight,Nodex,Nodey}),
+%%                   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)," fragmentid ",nodeManager:getFragment(NodeManagerADT)," state ",nodeManager:getState(NodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
+%%                   case nodeManager:isInState(NodeManagerADT,find) of
+%%                     true ->
+%%                       NewNodeManagerADT = nodeManager:setFindCount(NodeManagerADT,nodeManager:getFindCount(NodeManagerADT)+1),
+%%                       werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"findcount updated: ",nodeManager:getFindCount(NodeManagerADT),"\n"]));
+%%                       false -> NewNodeManagerADT = NodeManagerADT
+%%                   end,
+%%                  loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
+%%
+%%     {connect, Level, {Weight,Nodex,Nodey}} when Level >= NODE_LEVEL ->
+%%                 werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level,{Weight,Nodex,Nodey}}]) ," with Level >= NodeLevel \n"])),
+%%
+%%                 MyNodeName = nodeManager:getNodeName(NodeManagerADT),
+%%                 TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},MyNodeName),
+%%                 case edgeManager:isInState(EdgeManagerADT,{Weight,{TargetNodeName, "" }},basic) of
+%%                   true -> messages:enqueue(MyNodeName,{connect,Level,{Weight,Nodex,Nodey}}),
+%%                           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Connect message placed at the end of queue ", werkzeug:list2String([{connect,Level,{Weight,Nodex,Nodey}}]) ,"\n"]));
+%%
+%%                   false ->
+%%                           messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT)+1,Weight,find,{Weight,Nodex,Nodey}),
+%%                           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
+%%                 end,
+%%                 loop(NodeManagerADT,EdgeManagerADT,Logfilename);
+
+    wakeup ->
+              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: wakeup \n "])),
+              {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename),
+              loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename);
     ANY ->
       werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(), "received anything:  ", werkzeug:list2String([ANY]), " \n"])),
       loop(NodeManagerADT,EdgeManagerADT,Logfilename)
@@ -275,7 +372,7 @@ changeRoot(NodeManagerADT,EdgeManagerADT,Logfilename) ->
 
 
 report(NodeManagerADT,Logfilename) ->
-%%   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"report called: \n"])),
+  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"report called: \n"])),
   case nodeManager:getFindCount(NodeManagerADT) == 0 andalso nodeManager:getTestEdge(NodeManagerADT) == null of
     true ->
       InBranchEgde = nodeManager:getInBranch(NodeManagerADT),
