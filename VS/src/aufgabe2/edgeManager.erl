@@ -10,7 +10,7 @@
 -author("abg628").
 
 %% API
--export([convertToEdgeManagerADT/1, findNextBasic/1, setEdgeState/3, availableOfState/2, isInState/3, findNext/2, getTargetNodeName/2, getAllBranchEdgesExceptThisOne/2]).
+-export([convertToEdgeManagerADT/1, findNextBasic/1, setEdgeState/3, availableOfState/2, isInState/3, findNext/2, getTargetNodeName/2, getAllBranchEdgesExceptThisOne/2, toString/1]).
 
 %%EdgeManagerADT :: {[{Weight,{Nodename,basic}}]}
 %% [{7,{node7,basic}},{8,{node8,basic}},{2,{node2,basic}},{4,{node4,basic}}]
@@ -70,13 +70,16 @@ availableOfState(EdgeManagerADT, TargetState) ->
 getAllBranchEdgesExceptThisOne(EdgeManagerADT,Edge) ->
   {Weight,{TargetNodeName,_}} = Edge,
   {ExtendedAdjacentNodes} = EdgeManagerADT,
-  lists:filter(fun({ItemWeight,ItemTargetName,ItemState})->
+  Result = lists:filter(fun({ItemWeight,{ItemTargetName,ItemState}})->
                 TargetNodeName =/= ItemTargetName andalso ItemState == branch
-               end,ExtendedAdjacentNodes)
+               end,ExtendedAdjacentNodes),
+%%   io:format("getAllBranchEdgesExceotThisOne() filter result: ~p",[Result]),
+  Result
+
 .
 toString(EdgeManagerADT) ->
   {ExtendedAdjacentNodes} = EdgeManagerADT,
-  werkzeug:list2String(ExtendedAdjacentNodes)
+  lists:concat(["Adjacent Nodes: ",werkzeug:list2String(ExtendedAdjacentNodes)])
 .
 
 

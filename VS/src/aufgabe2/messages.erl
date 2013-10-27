@@ -10,11 +10,13 @@
 -author("abg628").
 
 %% API
--export([sendConnect/3, sendInitiate/5, enqueue/2, sendReport/3]).
+-export([sendConnect/3, sendInitiate/5, enqueue/2, sendReport/3, sendAccept/2,
+         sendTest/4, sendChangeRoot/2, sendReject/2]).
 
 %% Enqueues the given MSG in NodeNames process messagequeue
 enqueue(NodeName,MSG) ->
   Node = global:whereis_name(NodeName),
+%%   io:format ("Trying to send ~p message to Node ~p ( ~p )~n", [MSG,NodeName,Node]),
   Node ! MSG
 .
 
@@ -32,4 +34,15 @@ sendReport(TargetNodeName,BestWeight,BestEdge) ->
 .
 sendAccept(TargetNodeName,Edge)->
   enqueue(TargetNodeName,{accept,Edge})
+.
+
+sendTest(TargetNodeName,Level,Fragment,Edge)->
+  enqueue(TargetNodeName,{test,Level,Fragment,Edge})
+.
+
+sendChangeRoot(TargetNodeName,Edge)->
+  enqueue(TargetNodeName,{changeroot,Edge})
+.
+sendReject(TargetNodeName,Edge)->
+  enqueue(TargetNodeName,{reject,Edge})
 .

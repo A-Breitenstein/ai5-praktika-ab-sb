@@ -123,9 +123,9 @@ to_String(Etwas) ->
 list2String([]) ->
 	lists:concat(["[ ]"]);	
 list2String([Head]) ->
-	lists:concat(["[",werkzeug:to_String(Head),"]"]);	
+	lists:concat(["[", werkzeug:to_String(Head),"]"]);
 list2String([Head|Tail]) ->
-	lists:concat(["[",werkzeug:to_String(Head),",",list2Stringrek(Tail)]).	
+	lists:concat(["[", werkzeug:to_String(Head),",",list2Stringrek(Tail)]).
 list2Stringrek([Head]) ->
 	lists:concat([werkzeug:to_String(Head),"]"]);	
 list2Stringrek([Head|Tail]) ->

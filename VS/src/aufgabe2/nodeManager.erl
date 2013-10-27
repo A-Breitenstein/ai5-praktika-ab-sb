@@ -88,7 +88,7 @@ setBestWeight(NodeManagerADT, NewBestWeight) ->
 %% setter InBranch
 setInBranch(NodeManagerADT, NewInBranch) ->
   {State,Fragment,Level,BestWeight,InBranch,FindCount,NodeName,BestEdge,TestEdge} = NodeManagerADT,
-  {State,Fragment,Level,BestWeight,InBranch,FindCount,NodeName,BestEdge,TestEdge}
+  {State,Fragment,Level,BestWeight,NewInBranch,FindCount,NodeName,BestEdge,TestEdge}
 .
 
 %% setter FindCount

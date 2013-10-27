@@ -33,7 +33,7 @@ spawnClients(ClientCount,Params) ->
   LogFileName = lists:concat([Name,node(),".log"]),
 
   ClientPID = spawn(fun() ->
-    werkzeug:logging(LogFileName,lists:concat(["+++ client started ",werkzeug:timeMilliSecond()," +++"])),
+    werkzeug:logging(LogFileName,lists:concat(["+++ client started ", werkzeug:timeMilliSecond()," +++"])),
     erlang:start_timer(LT,self(),lifeTime),
     clientLoop(writer,ServerID,SI,SI,{0,[]},LT,MI,Name,LogFileName)
   end),
@@ -44,28 +44,28 @@ spawnClients(ClientCount,Params) ->
 
 clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime,MessagesPerIntervall,ProcessName,Logfilename) ->
   ServerID ! {ProcessName,{getmsgid,node()}},
-  werkzeug:logging(Logfilename,list_to_atom(lists:concat(["++++++ MessageID angefordert! +++++,  ",werkzeug:timeMilliSecond(),"   currentSendeIntervall in ms: ",round(CurrentSendeIntervall)]))),
+  werkzeug:logging(Logfilename,list_to_atom(lists:concat(["++++++ MessageID angefordert! +++++,  ", werkzeug:timeMilliSecond(),"   currentSendeIntervall in ms: ",round(CurrentSendeIntervall)]))),
   timer:sleep(round(CurrentSendeIntervall)),
   receive
     {From,{nid, Number}} when OutgoingCount < MessagesPerIntervall ->
-      Msg = lists:concat([ProcessName,node(),"-VSP/04-Gruppe 1- ID:",Number," Hier kann ihr Text stehn! Client OUT: ",werkzeug:timeMilliSecond()]),
+      Msg = lists:concat([ProcessName,node(),"-VSP/04-Gruppe 1- ID:",Number," Hier kann ihr Text stehn! Client OUT: ", werkzeug:timeMilliSecond()]),
       werkzeug:logging(Logfilename,list_to_atom(Msg)),
       NewSendedMessages = werkzeug:pushSL(SendedMessages,{Number,{Number,Msg}}),
       ServerID ! {ProcessName,{dropmessage,{Number,Msg}}},
       clientLoop(writer,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount+1,NewSendedMessages},LifeTime,MessagesPerIntervall,ProcessName,Logfilename);
 
     {From,{nid, Number}} when MessagesPerIntervall == OutgoingCount ->
-        werkzeug:logging(Logfilename,list_to_atom(lists:concat([Number,"te_Nachricht um ",werkzeug:timeMilliSecond(), " vergessen zu senden ******"]))),
+        werkzeug:logging(Logfilename,list_to_atom(lists:concat([Number,"te_Nachricht um ", werkzeug:timeMilliSecond(), " vergessen zu senden ******"]))),
         clientLoop(reader,ServerID,SendeIntervall,getNewSendeIntervall(SendeIntervall,CurrentSendeIntervall),{0,SendedMessages},LifeTime,MessagesPerIntervall,ProcessName,Logfilename);
 
     {timeout,LifeTime_TimerRef,lifeTime} ->
-      werkzeug:logging(Logfilename,list_to_atom(lists:concat(["+++++ shutting client down ++++++++ ",werkzeug:timeMilliSecond()])))
+      werkzeug:logging(Logfilename,list_to_atom(lists:concat(["+++++ shutting client down ++++++++ ", werkzeug:timeMilliSecond()])))
 
   end
 ;
 clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime,MessagesPerIntervall,ProcessName,Logfilename) ->
   ServerID ! {ProcessName,{getmessages,node()}},
-  werkzeug:logging(Logfilename,list_to_atom(lists:concat(["******* Message angefordert! *******  ",werkzeug:timeMilliSecond()]))),
+  werkzeug:logging(Logfilename,list_to_atom(lists:concat(["******* Message angefordert! *******  ", werkzeug:timeMilliSecond()]))),
 
   receive
     {From,{reply,ID, MSG,true}}  ->
@@ -78,13 +78,13 @@ clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,S
           werkzeug:logging(Logfilename,list_to_atom(MSG));
       %%% dieser client hat die message gesendet
         {ID,{ID,_Message}} ->
-          werkzeug:logging(Logfilename,list_to_atom(lists:concat([MSG," +++++++++++ Client IN: ",werkzeug:timeMilliSecond()])))
+          werkzeug:logging(Logfilename,list_to_atom(lists:concat([MSG," +++++++++++ Client IN: ", werkzeug:timeMilliSecond()])))
       end,
       clientLoop(reader,ServerID,SendeIntervall,CurrentSendeIntervall,{OutgoingCount,SendedMessages},LifeTime,MessagesPerIntervall,ProcessName,Logfilename);
 
 
     {timeout,LifeTime_TimerRef,lifeTime} ->
-      werkzeug:logging(Logfilename,list_to_atom(lists:concat(["+++++ shutting client down ++++++++ ",werkzeug:timeMilliSecond()])))
+      werkzeug:logging(Logfilename,list_to_atom(lists:concat(["+++++ shutting client down ++++++++ ", werkzeug:timeMilliSecond()])))
 
   end
 
