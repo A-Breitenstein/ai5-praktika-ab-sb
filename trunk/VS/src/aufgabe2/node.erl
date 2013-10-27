@@ -260,6 +260,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 
     {connect, Level,{Weight,Nodex,Nodey}} ->
       werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{connect, Level, {Weight,Nodex,Nodey}}]) ,"\n"])),
+      %Wenn sich der Status der Node 'sleeping' entpricht, führe 'wakeup'-prozedur aus
       case nodeManager:isInState(NodeManagerADT,sleeping)of
         true->
           {NewNodeManagerADT, NewEdgeManagerADT} = wakeUp(NodeManagerADT,EdgeManagerADT,Logfilename);
@@ -268,16 +269,25 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
           NewEdgeManagerADT = EdgeManagerADT
       end,
 
+      % Ist das Level kleiner als das NodeLevel?
       case Level < nodeManager:getLevel(NewNodeManagerADT) of
         true->
           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect case with Level < NodeLevel \n"])),
 
+          %Hole den Zielknoten anhand der Kante k, auf der das connect geschickt wurde
           TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NewNodeManagerADT)),
+
+          %Setze den Status der Kante k auf 'branch'
           NewNewEdgeManagerADT = edgeManager:setEdgeState(NewEdgeManagerADT,{Weight,{TargetNodeName,""}},branch),
+
+          %Sende initiate auf der Kante k, an den Zielknoten
           messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NewNodeManagerADT),nodeManager:getFragment(NewNodeManagerADT),nodeManager:getState(NewNodeManagerADT),{Weight,Nodex,Nodey}),
           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)," fragmentid ",nodeManager:getFragment(NewNodeManagerADT)," state ",nodeManager:getState(NewNodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
+
+          %Wenn sich der Knoten im Status 'find' befindet
           case nodeManager:isInState(NewNodeManagerADT,find) of
             true ->
+              %erhöhe den findcount um 1
               NewNewNodeManagerADT = nodeManager:setFindCount(NewNodeManagerADT,nodeManager:getFindCount(NewNodeManagerADT)+1),
               werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"findcount updated: ",nodeManager:getFindCount(NewNewNodeManagerADT),"\n"]));
             false -> NewNewNodeManagerADT = NewNodeManagerADT
@@ -289,10 +299,15 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 
           MyNodeName = nodeManager:getNodeName(NewNodeManagerADT),
           TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},MyNodeName),
+
+          %Sonst, Wenn der Status der Kante k 'basic' ist
           case edgeManager:isInState(NewEdgeManagerADT,{Weight,{TargetNodeName, "" }},basic) of
+
+            %Stelle die Nachricht ans Ende der Nachrichtenschlange(Sendung an sich selbst)
             true -> messages:enqueue(MyNodeName,{connect,Level,{Weight,Nodex,Nodey}}),
               werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"Connect message placed at the end of queue ", werkzeug:list2String([{connect,Level,{Weight,Nodex,Nodey}}]) ,"\n"]));
 
+            %Sonst sende ein initiate mit dem Nodelevel+1 aauf der Kante k an den Zielknoten
             false ->
               messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NewNodeManagerADT)+1,Weight,find,{Weight,Nodex,Nodey}),
               werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
@@ -407,11 +422,20 @@ test(NodeMangerADT, EdgeManagerADT,Logfilename) ->
 
 wakeUp(NodeManagerADT, EdgeManagerADT,Logfilename) ->
   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"wakeup called: \n"])),
+
+  %hole nächste adjazente Kante mit kleinstem Gewicht
   {ok,AKMG} = edgeManager:findNextBasic(EdgeManagerADT),
+
+  %Setze Kantestatus auf 'branch'
   NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT, AKMG, branch),
+
+  %Setze den Status der Node auf 'found' und setze den Findcount auf '0'
   NewNodeManagerADT = nodeManager:initNodeManagerADT(NodeManagerADT),
+
+  %SEnde ein Connect(0) auf der Kante 'AKMG'
   {Weight, {TargetNodeName, State}} = AKMG,
   messages:sendConnect(TargetNodeName,0, {Weight, nodeManager:getNodeName(NodeManagerADT), TargetNodeName}),
+
   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect sended to: ",TargetNodeName," ", werkzeug:list2String([0, {Weight, nodeManager:getNodeName(NodeManagerADT), TargetNodeName}]) ,"\n"])),
   {NewNodeManagerADT, NewEdgeManagerADT}
 .
