@@ -70,7 +70,8 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
       MyNodeName = nodeManager:getNodeName(NewNodeManagerADT),
       TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},MyNodeName),
       NewFindCount =lists:foldl(fun({ItemWeight,{ItemTargetNodeName,_}},Accu)->
-                          messages:sendInitiate(TargetNodeName,Level,FragName,NodeState,{ItemWeight,MyNodeName,ItemTargetNodeName}),
+                          messages:sendInitiate(ItemTargetNodeName,Level,FragName,NodeState,{ItemWeight,MyNodeName,ItemTargetNodeName}),
+                          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),":initiate sended ",werkzeug:list2String([Level,FragName,NodeState,{ItemWeight,MyNodeName,ItemTargetNodeName}]) ,"\n"])),
                           case NodeState == find of
                             true-> Accu +1;
                             false-> Accu
@@ -193,7 +194,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
                                                 werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"setBestEdge and BestWeight : ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
 
                                                  NewNewNodeManagerADT = nodeManager:setBestEdge(
-                                                                              nodeManager:setBestWeight(NodeManagerADT,
+                                                                              nodeManager:setBestWeight(NewNodeManagerADT,
                                                                               Weight),
                                                                          {Weight,Nodex,Nodey});
                                         false -> NewNewNodeManagerADT = NewNodeManagerADT
@@ -245,8 +246,10 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
                                                  loop(NodeManagerADT,NewEdgeManagerADT,Logfilename);
                                           false when BestWeight==ReportedWeight andalso BestWeight == 1000000  ->
                                             0,
-                                            werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"++++++++++++ HALT +++++++ BestWeight and ReportedWeight: ",BestWeight, werkzeug:list2String([{report,ReportedWeight,{Weight,Nodex,Nodey}}]) ,"\n"]))
+                                            werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"++++++++++++ HALT +++++++ BestWeight and ReportedWeight: ",BestWeight, werkzeug:list2String([{report,ReportedWeight,{Weight,Nodex,Nodey}}]) ,"\n"]));
                                           %% halt...
+                                          false -> werkzeug:logging(Logfilename,"+++++++hier stimmt was nicht ?+++++++")
+%%                                                    loop(NodeManagerADT,EdgeManagerADT,Logfilename)
                                         end
 
                         end
