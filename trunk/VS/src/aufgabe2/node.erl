@@ -122,7 +122,13 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
                                               NewNewEdgeManagerADT = NewEdgeManagerADT
                                       end,
 
-                                     {TestEdgeWeight,{TestEdgeNodeName,_}} = nodeManager:getTestEdge(NewNodeManagerADT),
+                                      case nodeManager:getTestEdge(NewNodeManagerADT) of
+                                        {TestEdgeWeight,{TestEdgeNodeName,_}} -> 0;
+                                        null -> TestEdgeWeight = 1000000,TestEdgeNodeName = null
+                                      end,
+
+%%                                      {TestEdgeWeight,{TestEdgeNodeName,_}} = nodeManager:getTestEdge(NewNodeManagerADT),
+
                                      case TestEdgeNodeName =/= TargetNodeName andalso TestEdgeWeight =/= Weight of
                                        true ->
                                              messages:sendReject(TargetNodeName,{Weight,Nodex,Nodey}),
@@ -214,7 +220,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
                false-> NewEdgeManagerADT = EdgeManagerADT
              end,
              {NewNodeManagerADT,NewNewEdgeManagerADT} = test(NodeManagerADT,NewEdgeManagerADT,Logfilename),
-             loop(NodeManagerADT,NewNewEdgeManagerADT,Logfilename);
+             loop(NewNodeManagerADT,NewNewEdgeManagerADT,Logfilename);
 
     {report, ReportedWeight, {Weight,Nodex,Nodey}} ->
               werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"received message: ", werkzeug:list2String([{report, ReportedWeight, {Weight,Nodex,Nodey}}]) ,"\n"])),
@@ -242,14 +248,16 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
                                  loop(NodeManagerADT,EdgeManagerADT,Logfilename);
                                 false-> BestWeight = nodeManager:getBestWeight(NodeManagerADT),
                                       case BestWeight < ReportedWeight of
-                                          true-> NewEdgeManagerADT = changeRoot(NodeManagerADT,EdgeManagerADT,Logfilename),
-                                                 loop(NodeManagerADT,NewEdgeManagerADT,Logfilename);
+                                          true->
+                                                werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"BestWeight < ReportedWeight", werkzeug:list2String([{report,ReportedWeight,{Weight,Nodex,Nodey}}]) ,"\n"])),
+                                                NewEdgeManagerADT = changeRoot(NodeManagerADT,EdgeManagerADT,Logfilename),
+                                                loop(NodeManagerADT,NewEdgeManagerADT,Logfilename);
                                           false when BestWeight==ReportedWeight andalso BestWeight == 1000000  ->
                                             0,
                                             werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"++++++++++++ HALT +++++++ BestWeight and ReportedWeight: ",BestWeight, werkzeug:list2String([{report,ReportedWeight,{Weight,Nodex,Nodey}}]) ,"\n"]));
                                           %% halt...
-                                          false -> werkzeug:logging(Logfilename,"+++++++hier stimmt was nicht ?+++++++")
-%%                                                    loop(NodeManagerADT,EdgeManagerADT,Logfilename)
+                                          false -> %werkzeug:logging(Logfilename,"+++++++hier stimmt was nicht ?+++++++\n"),
+                                                   loop(NodeManagerADT,EdgeManagerADT,Logfilename)
                                         end
 
                         end
@@ -285,7 +293,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 
           %Sende initiate auf der Kante k, an den Zielknoten
           messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NewNodeManagerADT),nodeManager:getFragment(NewNodeManagerADT),nodeManager:getState(NewNodeManagerADT),{Weight,Nodex,Nodey}),
-          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)," fragmentid ",nodeManager:getFragment(NewNodeManagerADT)," state ",nodeManager:getState(NewNodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
+          werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate send to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)," fragmentid ",nodeManager:getFragment(NewNodeManagerADT)," state ",nodeManager:getState(NewNodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
 
           %Wenn sich der Knoten im Status 'find' befindet
           case nodeManager:isInState(NewNodeManagerADT,find) of
@@ -313,7 +321,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
             %Sonst sende ein initiate mit dem Nodelevel+1 aauf der Kante k an den Zielknoten
             false ->
               messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NewNodeManagerADT)+1,Weight,find,{Weight,Nodex,Nodey}),
-              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
+              werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate send to: ",TargetNodeName," with level ",nodeManager:getLevel(NewNodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
           end,
           loop(NewNodeManagerADT,NewEdgeManagerADT,Logfilename)
       end;
@@ -334,7 +342,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 %%                   TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NodeManagerADT)),
 %%                   NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT,{Weight,{TargetNodeName,""}},branch),
 %%                   messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT),nodeManager:getFragment(NodeManagerADT),nodeManager:getState(NodeManagerADT),{Weight,Nodex,Nodey}),
-%%                   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)," fragmentid ",nodeManager:getFragment(NodeManagerADT)," state ",nodeManager:getState(NodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
+%%                   werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate send to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)," fragmentid ",nodeManager:getFragment(NodeManagerADT)," state ",nodeManager:getState(NodeManagerADT)," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"])),
 %%                   case nodeManager:isInState(NodeManagerADT,find) of
 %%                     true ->
 %%                       NewNodeManagerADT = nodeManager:setFindCount(NodeManagerADT,nodeManager:getFindCount(NodeManagerADT)+1),
@@ -354,7 +362,7 @@ loop(NodeManagerADT, EdgeManagerADT, Logfilename) ->
 %%
 %%                   false ->
 %%                           messages:sendInitiate(TargetNodeName,nodeManager:getLevel(NodeManagerADT)+1,Weight,find,{Weight,Nodex,Nodey}),
-%%                           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate sended to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
+%%                           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"initiate send to: ",TargetNodeName," with level ",nodeManager:getLevel(NodeManagerADT)+1," fragmentid ",Weight," state ",find," edge ", werkzeug:list2String([{Weight,Nodex,Nodey}]) ,"\n"]))
 %%                 end,
 %%                 loop(NodeManagerADT,EdgeManagerADT,Logfilename);
 
@@ -377,11 +385,11 @@ changeRoot(NodeManagerADT,EdgeManagerADT,Logfilename) ->
   TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},MyNodeName),
   case edgeManager:isInState(EdgeManagerADT,{Weight,{TargetNodeName,""}},branch) of
     true-> messages:sendChangeRoot(TargetNodeName,{Weight,Nodex,Nodey}),
-           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"changeroot sended to: ",TargetNodeName," ", werkzeug:list2String([{changeroot,{Weight,Nodex,Nodey}}]) ,"\n"])),
+           werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"changeroot send to: ",TargetNodeName," ", werkzeug:list2String([{changeroot,{Weight,Nodex,Nodey}}]) ,"\n"])),
            NewEdgeManagerADT = EdgeManagerADT;
 
     false-> messages:sendConnect(TargetNodeName,nodeManager:getLevel(NodeManagerADT),{Weight,Nodex,Nodey}),
-            werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect sended to: ",TargetNodeName," ", werkzeug:list2String([{connect,nodeManager:getLevel(NodeManagerADT),{Weight,Nodex,Nodey}}]) ,"\n"])),
+            werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect send to: ",TargetNodeName," ", werkzeug:list2String([{connect,nodeManager:getLevel(NodeManagerADT),{Weight,Nodex,Nodey}}]) ,"\n"])),
             NewEdgeManagerADT = edgeManager:setEdgeState(EdgeManagerADT,{Weight,{TargetNodeName,""}},branch)
   end,
   NewEdgeManagerADT
@@ -397,7 +405,7 @@ report(NodeManagerADT,Logfilename) ->
       {Weight,Nodex,Nodey} = InBranchEgde,
       TargetNodeName = edgeManager:getTargetNodeName({Nodex,Nodey},nodeManager:getNodeName(NodeManagerADT)),
       messages:sendReport(TargetNodeName,nodeManager:getBestWeight(NodeManagerADT),InBranchEgde),
-      werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"test sended to: ",TargetNodeName," ", werkzeug:list2String([nodeManager:getBestWeight(NodeManagerADT),InBranchEgde]) ,"\n"])),
+      werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"report send to: ",TargetNodeName," ", werkzeug:list2String([nodeManager:getBestWeight(NodeManagerADT),InBranchEgde]) ,"\n"])),
       nodeManager:setState(NodeManagerADT,found);
     false -> NodeManagerADT
   end
@@ -413,12 +421,13 @@ test(NodeMangerADT, EdgeManagerADT,Logfilename) ->
               nodeManager:getLevel(NewNodeManagerADT),
               nodeManager:getFragment(NewNodeManagerADT),
               {Weight,nodeManager:getNodeName(NewNodeManagerADT),TargetNodeName}),
-      werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"test sended to: ",TargetNodeName," ", werkzeug:list2String([nodeManager:getLevel(NewNodeManagerADT),nodeManager:getFragment(NewNodeManagerADT),{Weight,nodeManager:getNodeName(NewNodeManagerADT),TargetNodeName}]) ,"\n"])),
+      werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"test send to: ",TargetNodeName," ", werkzeug:list2String([nodeManager:getLevel(NewNodeManagerADT),nodeManager:getFragment(NewNodeManagerADT),{Weight,nodeManager:getNodeName(NewNodeManagerADT),TargetNodeName}]) ,"\n"])),
       {NewNodeManagerADT,EdgeManagerADT};
 
     false ->
       NewNodeManagerADT = nodeManager:setTestEdge(NodeMangerADT,null),
       werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"testedge reseted \n"])),
+      werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"report call from test \n"])),
       {report(NewNodeManagerADT,Logfilename),EdgeManagerADT}
   end
 .
@@ -439,6 +448,6 @@ wakeUp(NodeManagerADT, EdgeManagerADT,Logfilename) ->
   {Weight, {TargetNodeName, State}} = AKMG,
   messages:sendConnect(TargetNodeName,0, {Weight, nodeManager:getNodeName(NodeManagerADT), TargetNodeName}),
 
-  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect sended to: ",TargetNodeName," ", werkzeug:list2String([0, {Weight, nodeManager:getNodeName(NodeManagerADT), TargetNodeName}]) ,"\n"])),
+  werkzeug:logging(Logfilename, lists:concat([werkzeug:timeMilliSecond(),"connect send to: ",TargetNodeName," ", werkzeug:list2String([0, {Weight, nodeManager:getNodeName(NodeManagerADT), TargetNodeName}]) ,"\n"])),
   {NewNodeManagerADT, NewEdgeManagerADT}
 .
