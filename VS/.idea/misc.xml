@@ -5,7 +5,7 @@
     <entry_points version="2.0" />
   </component>
   <component name="IdProvider" IDEtalkID="70B1AE78BB0F2BC9B2676E44B5C540F2" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Erlang R16B02 (1)" project-jdk-type="Erlang SDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Erlang R14B03" project-jdk-type="Erlang SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="SvnBranchConfigurationManager">
