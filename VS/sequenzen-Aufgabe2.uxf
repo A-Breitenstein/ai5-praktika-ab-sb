@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="11.5.1">
-  <zoom_level>5</zoom_level>
+  <zoom_level>1</zoom_level>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>140</x>
-      <y>260</y>
-      <w>50</w>
-      <h>15</h>
+      <x>36</x>
+      <y>342</y>
+      <w>10</w>
+      <h>3</h>
     </coordinates>
     <panel_attributes>_:Instance_</panel_attributes>
     <additional_attributes/>
@@ -15,10 +15,10 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>70</x>
-      <y>260</y>
-      <w>50</w>
-      <h>15</h>
+      <x>22</x>
+      <y>342</y>
+      <w>10</w>
+      <h>3</h>
     </coordinates>
     <panel_attributes>_:Instance_</panel_attributes>
     <additional_attributes/>
@@ -27,9 +27,9 @@
     <type>com.umlet.element.Class</type>
     <coordinates>
       <x>10</x>
-      <y>260</y>
-      <w>50</w>
-      <h>15</h>
+      <y>342</y>
+      <w>10</w>
+      <h>3</h>
     </coordinates>
     <panel_attributes>_:Instance_</panel_attributes>
     <additional_attributes/>
@@ -37,43 +37,43 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>20</x>
-      <y>260</y>
-      <w>25</w>
-      <h>295</h>
+      <x>12</x>
+      <y>342</y>
+      <w>4</w>
+      <h>58</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;285</additional_attributes>
+    <additional_attributes>3;3;3;57</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>80</x>
-      <y>260</y>
-      <w>25</w>
-      <h>295</h>
+      <x>24</x>
+      <y>342</y>
+      <w>4</w>
+      <h>58</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;285</additional_attributes>
+    <additional_attributes>3;3;3;57</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>150</x>
-      <y>260</y>
-      <w>25</w>
-      <h>295</h>
+      <x>38</x>
+      <y>342</y>
+      <w>4</w>
+      <h>58</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;285</additional_attributes>
+    <additional_attributes>3;3;3;57</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.InteractionFrame</type>
     <coordinates>
-      <x>0</x>
-      <y>220</y>
-      <w>245</w>
-      <h>35</h>
+      <x>8</x>
+      <y>334</y>
+      <w>49</w>
+      <h>7</h>
     </coordinates>
     <panel_attributes>Wakeup</panel_attributes>
     <additional_attributes/>
@@ -81,87 +81,10 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>570</x>
-      <y>575</y>
-      <w>50</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:Instance_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>500</x>
-      <y>575</y>
-      <w>50</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:Instance_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>440</x>
-      <y>575</y>
-      <w>50</w>
-      <h>15</h>
-    </coordinates>
-    <panel_attributes>_:Instance_</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>450</x>
-      <y>575</y>
-      <w>25</w>
-      <h>295</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;285</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>510</x>
-      <y>575</y>
-      <w>25</w>
-      <h>295</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;285</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>580</x>
-      <y>575</y>
-      <w>24</w>
-      <h>294</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;285</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.custom.InteractionFrame</type>
-    <coordinates>
-      <x>430</x>
-      <y>535</y>
-      <w>245</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>Initiate</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <type>com.umlet.element.Class</type>
-    <coordinates>
-      <x>470</x>
-      <y>290</y>
-      <w>50</w>
-      <h>15</h>
+      <x>102</x>
+      <y>348</y>
+      <w>10</w>
+      <h>3</h>
     </coordinates>
     <panel_attributes>_:Node(n)_</panel_attributes>
     <additional_attributes/>
@@ -169,10 +92,10 @@
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>615</x>
-      <y>290</y>
-      <w>50</w>
-      <h>15</h>
+      <x>131</x>
+      <y>348</y>
+      <w>10</w>
+      <h>3</h>
     </coordinates>
     <panel_attributes>_:Node(n+1)_</panel_attributes>
     <additional_attributes/>
@@ -180,32 +103,32 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>480</x>
-      <y>290</y>
-      <w>25</w>
-      <h>35</h>
+      <x>104</x>
+      <y>348</y>
+      <w>4</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;25</additional_attributes>
+    <additional_attributes>3;3;3;5</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>625</x>
-      <y>290</y>
-      <w>24</w>
-      <h>49</h>
+      <x>133</x>
+      <y>348</y>
+      <w>4</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;40</additional_attributes>
+    <additional_attributes>3;3;3;8</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>635</x>
-      <y>330</y>
-      <w>10</w>
-      <h>20</h>
+      <x>135</x>
+      <y>356</y>
+      <w>2</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -213,22 +136,22 @@
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>370</x>
-      <y>290</y>
-      <w>130</w>
-      <h>35</h>
+      <x>82</x>
+      <y>349</y>
+      <w>25</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 Wakeup</panel_attributes>
-    <additional_attributes>120;25;15;25</additional_attributes>
+    <additional_attributes>24;4;3;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>490</x>
-      <y>315</y>
-      <w>10</w>
-      <h>20</h>
+      <x>106</x>
+      <y>353</y>
+      <w>2</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -236,68 +159,68 @@ Wakeup</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>485</x>
-      <y>305</y>
-      <w>159</w>
-      <h>35</h>
+      <x>105</x>
+      <y>352</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {connect,0,AKMG}</panel_attributes>
-    <additional_attributes>150;25;15;25</additional_attributes>
+    <additional_attributes>30;4;3;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>625</x>
-      <y>335</y>
-      <w>24</w>
-      <h>44</h>
+      <x>133</x>
+      <y>357</y>
+      <w>4</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;35</additional_attributes>
+    <additional_attributes>3;3;3;7</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>480</x>
-      <y>320</y>
-      <w>25</w>
-      <h>40</h>
+      <x>104</x>
+      <y>354</y>
+      <w>4</w>
+      <h>7</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;30</additional_attributes>
+    <additional_attributes>3;3;3;6</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>420</x>
-      <y>300</y>
-      <w>80</w>
-      <h>40</h>
+      <x>94</x>
+      <y>351</y>
+      <w>13</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Wakeup</panel_attributes>
-    <additional_attributes>70;30;30;30;30;20;70;20</additional_attributes>
+    <additional_attributes>12;5;4;5;4;3;12;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>485</x>
-      <y>325</y>
-      <w>159</w>
-      <h>35</h>
+      <x>105</x>
+      <y>356</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {connect,0,AKMG}</panel_attributes>
-    <additional_attributes>15;25;150;25</additional_attributes>
+    <additional_attributes>3;4;30;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.InteractionFrame</type>
     <coordinates>
-      <x>420</x>
-      <y>245</y>
-      <w>245</w>
-      <h>35</h>
+      <x>92</x>
+      <y>339</y>
+      <w>49</w>
+      <h>7</h>
     </coordinates>
     <panel_attributes>Wakeup: Verbindung von zwei Level 0 Knoten anhand ihrer minimalen Kante </panel_attributes>
     <additional_attributes/>
@@ -305,10 +228,10 @@ Wakeup</panel_attributes>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>490</x>
-      <y>350</y>
-      <w>10</w>
-      <h>20</h>
+      <x>106</x>
+      <y>360</y>
+      <w>2</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -316,33 +239,33 @@ Wakeup</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>480</x>
-      <y>355</y>
-      <w>25</w>
-      <h>45</h>
+      <x>104</x>
+      <y>361</y>
+      <w>4</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;35</additional_attributes>
+    <additional_attributes>3;3;3;7</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>420</x>
-      <y>340</y>
-      <w>80</w>
-      <h>40</h>
+      <x>94</x>
+      <y>358</y>
+      <w>13</w>
+      <h>7</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Connect</panel_attributes>
-    <additional_attributes>70;30;30;30;30;15;70;15</additional_attributes>
+    <additional_attributes>12;6;4;6;4;3;12;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>635</x>
-      <y>370</y>
-      <w>10</w>
-      <h>30</h>
+      <x>135</x>
+      <y>364</y>
+      <w>2</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -350,34 +273,34 @@ Connect</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>485</x>
-      <y>345</y>
-      <w>159</w>
-      <h>35</h>
+      <x>105</x>
+      <y>360</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {initiate,1,Weight(AKMG),find,AKMG}</panel_attributes>
-    <additional_attributes>150;25;15;25</additional_attributes>
+    <additional_attributes>30;4;3;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>485</x>
-      <y>365</y>
-      <w>159</w>
-      <h>35</h>
+      <x>105</x>
+      <y>364</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {initiate,1,Weight(AKMG),find,AKMG}</panel_attributes>
-    <additional_attributes>15;25;150;25</additional_attributes>
+    <additional_attributes>3;4;30;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>490</x>
-      <y>390</y>
-      <w>10</w>
-      <h>25</h>
+      <x>106</x>
+      <y>368</y>
+      <w>2</w>
+      <h>5</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -385,92 +308,92 @@ Connect</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>630</x>
-      <y>355</y>
-      <w>68</w>
-      <h>39</h>
+      <x>134</x>
+      <y>362</y>
+      <w>12</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Initiate</panel_attributes>
-    <additional_attributes>15;30;45;30;45;20;15;20</additional_attributes>
+    <additional_attributes>3;5;9;5;9;3;3;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>630</x>
-      <y>315</y>
-      <w>85</w>
-      <h>39</h>
+      <x>134</x>
+      <y>354</y>
+      <w>15</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Wakeup &amp; Connect</panel_attributes>
-    <additional_attributes>15;30;45;30;45;20;15;20</additional_attributes>
+    <additional_attributes>3;5;9;5;9;3;3;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>425</x>
-      <y>375</y>
-      <w>75</w>
-      <h>40</h>
+      <x>94</x>
+      <y>366</y>
+      <w>13</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Initiate</panel_attributes>
-    <additional_attributes>65;30;25;30;25;20;65;20</additional_attributes>
+    <additional_attributes>12;5;4;5;4;3;12;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>625</x>
-      <y>385</y>
-      <w>24</w>
-      <h>54</h>
+      <x>133</x>
+      <y>367</y>
+      <w>4</w>
+      <h>10</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;45</additional_attributes>
+    <additional_attributes>3;3;3;9</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>480</x>
-      <y>400</y>
-      <w>25</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;30</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>370</x>
-      <y>390</y>
-      <w>130</w>
-      <h>35</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;
-test(nextAKMG)</panel_attributes>
-    <additional_attributes>15;25;120;25</additional_attributes>
-  </element>
-  <element>
-    <type>com.umlet.element.Relation</type>
-    <coordinates>
-      <x>630</x>
+      <x>104</x>
       <y>370</y>
-      <w>114</w>
-      <h>35</h>
+      <w>4</w>
+      <h>7</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;6</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>82</x>
+      <y>369</y>
+      <w>25</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 test(nextAKMG)</panel_attributes>
-    <additional_attributes>105;25;15;25</additional_attributes>
+    <additional_attributes>3;4;24;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>134</x>
+      <y>365</y>
+      <w>22</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+test(nextAKMG)</panel_attributes>
+    <additional_attributes>21;4;3;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>460</x>
-      <y>45</y>
-      <w>50</w>
-      <h>15</h>
+      <x>100</x>
+      <y>299</y>
+      <w>10</w>
+      <h>3</h>
     </coordinates>
     <panel_attributes>_:Node(n)_</panel_attributes>
     <additional_attributes/>
@@ -478,10 +401,10 @@ test(nextAKMG)</panel_attributes>
   <element>
     <type>com.umlet.element.Class</type>
     <coordinates>
-      <x>605</x>
-      <y>45</y>
-      <w>50</w>
-      <h>15</h>
+      <x>129</x>
+      <y>299</y>
+      <w>10</w>
+      <h>3</h>
     </coordinates>
     <panel_attributes>_:Node(n+1)_</panel_attributes>
     <additional_attributes/>
@@ -489,32 +412,32 @@ test(nextAKMG)</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>470</x>
-      <y>45</y>
-      <w>20</w>
-      <h>30</h>
+      <x>102</x>
+      <y>299</y>
+      <w>4</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;25</additional_attributes>
+    <additional_attributes>3;3;3;5</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>615</x>
-      <y>45</y>
-      <w>20</w>
-      <h>45</h>
+      <x>131</x>
+      <y>299</y>
+      <w>4</w>
+      <h>9</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;40</additional_attributes>
+    <additional_attributes>3;3;3;8</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>625</x>
-      <y>85</y>
-      <w>10</w>
-      <h>20</h>
+      <x>133</x>
+      <y>307</y>
+      <w>2</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -522,22 +445,22 @@ test(nextAKMG)</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>45</y>
-      <w>125</w>
-      <h>35</h>
+      <x>80</x>
+      <y>300</y>
+      <w>25</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 Wakeup</panel_attributes>
-    <additional_attributes>120;25;15;25</additional_attributes>
+    <additional_attributes>24;4;3;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>480</x>
-      <y>70</y>
-      <w>10</w>
-      <h>20</h>
+      <x>104</x>
+      <y>304</y>
+      <w>2</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -545,68 +468,68 @@ Wakeup</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>475</x>
-      <y>60</y>
-      <w>155</w>
-      <h>35</h>
+      <x>103</x>
+      <y>303</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {connect,0,AKMG}</panel_attributes>
-    <additional_attributes>150;25;15;25</additional_attributes>
+    <additional_attributes>30;4;3;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>615</x>
-      <y>90</y>
-      <w>24</w>
-      <h>44</h>
+      <x>131</x>
+      <y>308</y>
+      <w>4</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;35</additional_attributes>
+    <additional_attributes>3;3;3;7</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>470</x>
-      <y>75</y>
-      <w>20</w>
-      <h>35</h>
+      <x>102</x>
+      <y>305</y>
+      <w>4</w>
+      <h>7</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;30</additional_attributes>
+    <additional_attributes>3;3;3;6</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>410</x>
-      <y>55</y>
-      <w>75</w>
-      <h>35</h>
+      <x>92</x>
+      <y>302</y>
+      <w>13</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Wakeup</panel_attributes>
-    <additional_attributes>70;30;30;30;30;20;70;20</additional_attributes>
+    <additional_attributes>12;5;4;5;4;3;12;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>475</x>
-      <y>80</y>
-      <w>155</w>
-      <h>35</h>
+      <x>103</x>
+      <y>307</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {connect,0,AKMG}</panel_attributes>
-    <additional_attributes>15;25;150;25</additional_attributes>
+    <additional_attributes>3;4;30;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.InteractionFrame</type>
     <coordinates>
-      <x>410</x>
-      <y>0</y>
-      <w>245</w>
-      <h>35</h>
+      <x>90</x>
+      <y>290</y>
+      <w>49</w>
+      <h>7</h>
     </coordinates>
     <panel_attributes>Connect</panel_attributes>
     <additional_attributes/>
@@ -614,10 +537,10 @@ Wakeup</panel_attributes>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>480</x>
-      <y>105</y>
-      <w>10</w>
-      <h>20</h>
+      <x>104</x>
+      <y>311</y>
+      <w>2</w>
+      <h>4</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -625,33 +548,33 @@ Wakeup</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>470</x>
-      <y>110</y>
-      <w>25</w>
-      <h>45</h>
+      <x>102</x>
+      <y>312</y>
+      <w>4</w>
+      <h>8</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;35</additional_attributes>
+    <additional_attributes>3;3;3;7</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>410</x>
-      <y>95</y>
-      <w>80</w>
-      <h>40</h>
+      <x>92</x>
+      <y>309</y>
+      <w>13</w>
+      <h>7</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Connect</panel_attributes>
-    <additional_attributes>70;30;30;30;30;15;70;15</additional_attributes>
+    <additional_attributes>12;6;4;6;4;3;12;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>625</x>
-      <y>125</y>
-      <w>10</w>
-      <h>30</h>
+      <x>133</x>
+      <y>315</y>
+      <w>2</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -659,34 +582,34 @@ Connect</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>475</x>
-      <y>100</y>
-      <w>159</w>
-      <h>35</h>
+      <x>103</x>
+      <y>311</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {initiate,1,Weight(AKMG),find,AKMG}</panel_attributes>
-    <additional_attributes>150;25;15;25</additional_attributes>
+    <additional_attributes>30;4;3;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>475</x>
-      <y>120</y>
-      <w>159</w>
-      <h>35</h>
+      <x>103</x>
+      <y>315</y>
+      <w>31</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
 {initiate,1,Weight(AKMG),find,AKMG}</panel_attributes>
-    <additional_attributes>15;25;150;25</additional_attributes>
+    <additional_attributes>3;4;30;4</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.custom.SeqObjectActive</type>
     <coordinates>
-      <x>480</x>
-      <y>145</y>
-      <w>10</w>
-      <h>25</h>
+      <x>104</x>
+      <y>319</y>
+      <w>2</w>
+      <h>5</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes/>
@@ -694,93 +617,599 @@ Connect</panel_attributes>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>620</x>
-      <y>110</y>
-      <w>68</w>
-      <h>39</h>
+      <x>132</x>
+      <y>313</y>
+      <w>12</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Initiate</panel_attributes>
-    <additional_attributes>15;30;45;30;45;20;15;20</additional_attributes>
+    <additional_attributes>3;5;9;5;9;3;3;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>620</x>
-      <y>70</y>
-      <w>85</w>
-      <h>35</h>
+      <x>132</x>
+      <y>305</y>
+      <w>15</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Wakeup &amp; Connect</panel_attributes>
-    <additional_attributes>15;30;45;30;45;20;15;20</additional_attributes>
+    <additional_attributes>3;5;9;5;9;3;3;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>415</x>
-      <y>130</y>
-      <w>75</w>
-      <h>40</h>
+      <x>92</x>
+      <y>317</y>
+      <w>13</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 Initiate</panel_attributes>
-    <additional_attributes>65;30;25;30;25;20;65;20</additional_attributes>
+    <additional_attributes>12;5;4;5;4;3;12;3</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>615</x>
-      <y>140</y>
-      <w>24</w>
-      <h>54</h>
+      <x>131</x>
+      <y>318</y>
+      <w>4</w>
+      <h>10</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;45</additional_attributes>
+    <additional_attributes>3;3;3;9</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>470</x>
-      <y>155</y>
+      <x>102</x>
+      <y>321</y>
+      <w>4</w>
+      <h>7</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;6</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>320</y>
       <w>25</w>
-      <h>40</h>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+test(nextAKMG)</panel_attributes>
+    <additional_attributes>3;4;24;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>132</x>
+      <y>316</y>
+      <w>22</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+test(nextAKMG)</panel_attributes>
+    <additional_attributes>21;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>295</x>
+      <y>432</y>
+      <w>10</w>
+      <h>3</h>
+    </coordinates>
+    <panel_attributes>_EdgeManager_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>272</x>
+      <y>432</y>
+      <w>10</w>
+      <h>3</h>
+    </coordinates>
+    <panel_attributes>_NodeManager_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>238</x>
+      <y>432</y>
+      <w>10</w>
+      <h>3</h>
+    </coordinates>
+    <panel_attributes>_:Node[n]_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>239</x>
+      <y>432</y>
+      <w>4</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>15;15;15;30</additional_attributes>
+    <additional_attributes>3;3;3;5</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>360</x>
-      <y>145</y>
-      <w>130</w>
-      <h>35</h>
+      <x>273</x>
+      <y>432</y>
+      <w>4</w>
+      <h>17</h>
     </coordinates>
-    <panel_attributes>lt=&lt;
-test(nextAKMG)</panel_attributes>
-    <additional_attributes>15;25;120;25</additional_attributes>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;16</additional_attributes>
   </element>
   <element>
     <type>com.umlet.element.Relation</type>
     <coordinates>
-      <x>620</x>
-      <y>125</y>
-      <w>114</w>
-      <h>35</h>
+      <x>297</x>
+      <y>432</y>
+      <w>4</w>
+      <h>43</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;42</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>182</x>
+      <y>412</y>
+      <w>131</w>
+      <h>92</h>
+    </coordinates>
+    <panel_attributes>Response von Test Message</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Note</type>
+    <coordinates>
+      <x>207</x>
+      <y>418</y>
+      <w>30</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>NM_ADT = NodeManagerADT
+EM_ADT = EdgeManagerADT
+Node[n], stellt irgendeine Node dar</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>200</x>
+      <y>433</y>
+      <w>42</w>
+      <h>6</h>
     </coordinates>
     <panel_attributes>lt=&lt;
-test(nextAKMG)</panel_attributes>
-    <additional_attributes>105;25;15;25</additional_attributes>
+{test,Level,FragName, Edge = {Weight,Nodex,Nodey}}</panel_attributes>
+    <additional_attributes>41;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>241</x>
+      <y>437</y>
+      <w>2</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>275</x>
+      <y>448</y>
+      <w>2</w>
+      <h>2</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>299</x>
+      <y>474</y>
+      <w>2</w>
+      <h>2</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>185</x>
+      <y>438</y>
+      <w>59</w>
+      <h>8</h>
+    </coordinates>
+    <panel_attributes>Nodestate == sleeping</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>436</y>
+      <w>44</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+wakeup(NM_ADT,EM_ADT)</panel_attributes>
+    <additional_attributes>3;4;43;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>439</y>
+      <w>44</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+wakeup():Updated{NM_ADT,EM_ADT}</panel_attributes>
+    <additional_attributes>43;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>208</x>
+      <y>452</y>
+      <w>36</w>
+      <h>7</h>
+    </coordinates>
+    <panel_attributes>Level &gt; NodeLevel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>453</y>
+      <w>44</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+enqueue(Node[n], {test,Level,Edge})</panel_attributes>
+    <additional_attributes>3;4;43;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>444</y>
+      <w>36</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+getLevel(NM_ADT)</panel_attributes>
+    <additional_attributes>35;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>446</y>
+      <w>36</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+NodeLevel</panel_attributes>
+    <additional_attributes>3;4;35;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>208</x>
+      <y>464</y>
+      <w>36</w>
+      <h>7</h>
+    </coordinates>
+    <panel_attributes>FragName != NodeFragName</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>465</y>
+      <w>44</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+sendAccept(Nodey, {test,Level,Edge})</panel_attributes>
+    <additional_attributes>3;4;43;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>457</y>
+      <w>36</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+getFragName(NM_ADT)</panel_attributes>
+    <additional_attributes>35;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>459</y>
+      <w>36</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+FragName</panel_attributes>
+    <additional_attributes>3;4;35;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>273</x>
+      <y>447</y>
+      <w>4</w>
+      <h>15</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;14</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>275</x>
+      <y>461</y>
+      <w>2</w>
+      <h>2</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>297</x>
+      <y>473</y>
+      <w>4</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;5</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>208</x>
+      <y>477</y>
+      <w>103</w>
+      <h>26</h>
+    </coordinates>
+    <panel_attributes>Edge == basic</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>226</x>
+      <y>485</y>
+      <w>18</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>test-edge != Edge</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>470</y>
+      <w>60</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+IsInState(EM_ADT, basic)</panel_attributes>
+    <additional_attributes>59;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>472</y>
+      <w>60</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+True / False</panel_attributes>
+    <additional_attributes>3;4;59;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>299</x>
+      <y>478</y>
+      <w>2</w>
+      <h>2</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>474</y>
+      <w>60</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+SetState(EM_ADT,Edge, rejected)</panel_attributes>
+    <additional_attributes>59;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>477</y>
+      <w>60</w>
+      <h>4</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+    <additional_attributes>3;3;59;3</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.SeqObjectActive</type>
+    <coordinates>
+      <x>275</x>
+      <y>482</y>
+      <w>2</w>
+      <h>2</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>273</x>
+      <y>460</y>
+      <w>4</w>
+      <h>23</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;22</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>478</y>
+      <w>36</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+getTestEdge(NM_ADT)
+</panel_attributes>
+    <additional_attributes>35;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>240</x>
+      <y>480</y>
+      <w>36</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+test_edge
+</panel_attributes>
+    <additional_attributes>3;4;35;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.custom.InteractionFrame</type>
+    <coordinates>
+      <x>226</x>
+      <y>491</y>
+      <w>18</w>
+      <h>9</h>
+    </coordinates>
+    <panel_attributes>else</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>486</y>
+      <w>44</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;
+sendReject(Nodey, {test,Level,Edge})</panel_attributes>
+    <additional_attributes>3;4;43;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>492</y>
+      <w>44</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+test(NM_ADT,EM_ADT)</panel_attributes>
+    <additional_attributes>3;4;43;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>297</x>
+      <y>477</y>
+      <w>4</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;27</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>273</x>
+      <y>481</y>
+      <w>4</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;23</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>198</x>
+      <y>495</y>
+      <w>44</w>
+      <h>6</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+test():Updated{NM_ADT,EM_ADT}</panel_attributes>
+    <additional_attributes>43;4;3;4</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>239</x>
+      <y>498</y>
+      <w>4</w>
+      <h>7</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>3;3;3;6</additional_attributes>
   </element>
   <group>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1560</x>
-        <y>280</y>
-        <w>185</w>
-        <h>315</h>
+        <x>320</x>
+        <y>346</y>
+        <w>37</w>
+        <h>63</h>
       </coordinates>
       <panel_attributes>topcenter:test(NodeManagerADT, EdgeManagerADT)
 </panel_attributes>
@@ -789,10 +1218,10 @@ test(nextAKMG)</panel_attributes>
     <element>
       <type>com.umlet.element.custom.InitialState</type>
       <coordinates>
-        <x>1640</x>
-        <y>295</y>
-        <w>10</w>
-        <h>10</h>
+        <x>336</x>
+        <y>349</y>
+        <w>2</w>
+        <h>2</h>
       </coordinates>
       <panel_attributes>i</panel_attributes>
       <additional_attributes/>
@@ -800,10 +1229,10 @@ test(nextAKMG)</panel_attributes>
     <element>
       <type>com.umlet.element.custom.Decision</type>
       <coordinates>
-        <x>1635</x>
-        <y>370</y>
-        <w>20</w>
-        <h>20</h>
+        <x>335</x>
+        <y>364</y>
+        <w>4</w>
+        <h>4</h>
       </coordinates>
       <panel_attributes/>
       <additional_attributes/>
@@ -811,32 +1240,32 @@ test(nextAKMG)</panel_attributes>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1630</x>
-        <y>290</y>
-        <w>24</w>
-        <h>49</h>
+        <x>334</x>
+        <y>348</y>
+        <w>4</w>
+        <h>9</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;40;15;15</additional_attributes>
+      <additional_attributes>3;8;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1630</x>
-        <y>335</y>
-        <w>24</w>
-        <h>44</h>
+        <x>334</x>
+        <y>357</y>
+        <w>4</w>
+        <h>8</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;35;15;15</additional_attributes>
+      <additional_attributes>3;7;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1580</x>
-        <y>400</y>
-        <w>60</w>
-        <h>25</h>
+        <x>324</x>
+        <y>370</y>
+        <w>12</w>
+        <h>5</h>
       </coordinates>
       <panel_attributes>center:EdgeManager:
 findNextBasic()
@@ -846,34 +1275,34 @@ findNextBasic()
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1590</x>
-        <y>365</y>
-        <w>54</w>
-        <h>44</h>
+        <x>326</x>
+        <y>363</y>
+        <w>10</w>
+        <h>8</h>
       </coordinates>
       <panel_attributes>lt=&lt;-
 m2=[true]</panel_attributes>
-      <additional_attributes>15;35;15;15;45;15</additional_attributes>
+      <additional_attributes>3;7;3;3;9;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1640</x>
-        <y>365</y>
-        <w>49</w>
-        <h>44</h>
+        <x>336</x>
+        <y>363</y>
+        <w>9</w>
+        <h>8</h>
       </coordinates>
       <panel_attributes>lt=&lt;-
 m2=[false]</panel_attributes>
-      <additional_attributes>40;35;40;15;15;15</additional_attributes>
+      <additional_attributes>8;7;8;3;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1570</x>
-        <y>435</y>
-        <w>75</w>
-        <h>25</h>
+        <x>322</x>
+        <y>377</y>
+        <w>15</w>
+        <h>5</h>
       </coordinates>
       <panel_attributes>center:NodeManager:
 setTestEdge()</panel_attributes>
@@ -882,32 +1311,32 @@ setTestEdge()</panel_attributes>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1590</x>
-        <y>410</y>
-        <w>24</w>
-        <h>34</h>
+        <x>326</x>
+        <y>372</y>
+        <w>4</w>
+        <h>6</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;25;15;15</additional_attributes>
+      <additional_attributes>3;5;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1590</x>
-        <y>445</y>
-        <w>24</w>
-        <h>34</h>
+        <x>326</x>
+        <y>379</y>
+        <w>4</w>
+        <h>6</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;25;15;15</additional_attributes>
+      <additional_attributes>3;5;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1660</x>
-        <y>470</y>
-        <w>50</w>
-        <h>20</h>
+        <x>340</x>
+        <y>384</y>
+        <w>10</w>
+        <h>4</h>
       </coordinates>
       <panel_attributes>center:report()</panel_attributes>
       <additional_attributes/>
@@ -915,21 +1344,21 @@ setTestEdge()</panel_attributes>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1670</x>
-        <y>410</y>
-        <w>24</w>
-        <h>69</h>
+        <x>342</x>
+        <y>372</y>
+        <w>4</w>
+        <h>13</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;60;15;15</additional_attributes>
+      <additional_attributes>3;12;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.custom.State</type>
       <coordinates>
-        <x>1605</x>
-        <y>330</y>
-        <w>80</w>
-        <h>20</h>
+        <x>329</x>
+        <y>356</y>
+        <w>16</w>
+        <h>4</h>
       </coordinates>
       <panel_attributes>EdgeManager:
 availableOfState(basic)</panel_attributes>
@@ -938,10 +1367,10 @@ availableOfState(basic)</panel_attributes>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1650</x>
-        <y>400</y>
-        <w>60</w>
-        <h>25</h>
+        <x>338</x>
+        <y>370</y>
+        <w>12</w>
+        <h>5</h>
       </coordinates>
       <panel_attributes>center:NodeManager:
 setTestEdge(null)</panel_attributes>
@@ -950,10 +1379,10 @@ setTestEdge(null)</panel_attributes>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1570</x>
-        <y>470</y>
-        <w>75</w>
-        <h>25</h>
+        <x>322</x>
+        <y>384</y>
+        <w>15</w>
+        <h>5</h>
       </coordinates>
       <panel_attributes>center:Messages:
 sendTest()</panel_attributes>
@@ -962,10 +1391,10 @@ sendTest()</panel_attributes>
     <element>
       <type>com.umlet.element.custom.SynchBarHorizontal</type>
       <coordinates>
-        <x>1630</x>
-        <y>545</y>
-        <w>40</w>
-        <h>10</h>
+        <x>334</x>
+        <y>399</y>
+        <w>8</w>
+        <h>2</h>
       </coordinates>
       <panel_attributes/>
       <additional_attributes/>
@@ -973,43 +1402,43 @@ sendTest()</panel_attributes>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1645</x>
-        <y>475</y>
-        <w>49</w>
-        <h>84</h>
+        <x>337</x>
+        <y>385</y>
+        <w>9</w>
+        <h>16</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;75;15;40;40;40;40;15</additional_attributes>
+      <additional_attributes>3;15;3;8;8;8;8;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1590</x>
-        <y>480</y>
-        <w>64</w>
-        <h>79</h>
+        <x>326</x>
+        <y>386</y>
+        <w>12</w>
+        <h>15</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>55;70;55;60;15;60;15;15</additional_attributes>
+      <additional_attributes>11;14;11;12;3;12;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1640</x>
-        <y>535</y>
-        <w>24</w>
-        <h>39</h>
+        <x>336</x>
+        <y>397</y>
+        <w>4</w>
+        <h>7</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;30;15;15</additional_attributes>
+      <additional_attributes>3;6;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1590</x>
-        <y>565</y>
-        <w>130</w>
-        <h>25</h>
+        <x>326</x>
+        <y>403</y>
+        <w>26</w>
+        <h>5</h>
       </coordinates>
       <panel_attributes>center:return 
 {NodeManagerADT, EdgeManagerADT}</panel_attributes>
@@ -1018,1003 +1447,12 @@ sendTest()</panel_attributes>
   </group>
   <group>
     <element>
-      <type>com.umlet.element.Class</type>
-      <coordinates>
-        <x>1455</x>
-        <y>245</y>
-        <w>50</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes>_EdgeManager_</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Class</type>
-      <coordinates>
-        <x>1285</x>
-        <y>245</y>
-        <w>55</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes>_NodeManager_</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Class</type>
-      <coordinates>
-        <x>1140</x>
-        <y>245</y>
-        <w>50</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes>_:Node[n]_</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1150</x>
-        <y>245</y>
-        <w>24</w>
-        <h>44</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;35</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1295</x>
-        <y>245</y>
-        <w>24</w>
-        <h>94</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;85</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1465</x>
-        <y>245</y>
-        <w>24</w>
-        <h>124</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;115</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>255</y>
-        <w>219</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-{connect,Level,Edge = {Weight,Nodex,Nodey}}</panel_attributes>
-      <additional_attributes>210;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1160</x>
-        <y>280</y>
-        <w>10</w>
-        <h>305</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>880</x>
-        <y>285</y>
-        <w>295</w>
-        <h>40</h>
-      </coordinates>
-      <panel_attributes>Nodestate == sleeping</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>945</x>
-        <y>270</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-wakeup(NM_ADT,EM_ADT)</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>945</x>
-        <y>285</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-wakeup():Updated{NM_ADT,EM_ADT}</panel_attributes>
-      <additional_attributes>215;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1475</x>
-        <y>370</y>
-        <w>10</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1305</x>
-        <y>330</y>
-        <w>10</w>
-        <h>25</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>310</y>
-        <w>159</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-getLevel(NM_ADT)</panel_attributes>
-      <additional_attributes>150;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Note</type>
-      <coordinates>
-        <x>900</x>
-        <y>170</y>
-        <w>150</w>
-        <h>40</h>
-      </coordinates>
-      <panel_attributes>NM_ADT = NodeManagerADT
-EM_ADT = EdgeManagerADT
-Node[n], stellt irgendeine Node dar</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>325</y>
-        <w>159</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-NodeLevel</panel_attributes>
-      <additional_attributes>15;25;150;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>990</x>
-        <y>475</y>
-        <w>510</w>
-        <h>105</h>
-      </coordinates>
-      <panel_attributes>Level &gt;= NodeLevel &amp;&amp;</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>345</y>
-        <w>329</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-setEdgeState(EM_ADT,Edge,branch)</panel_attributes>
-      <additional_attributes>320;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>370</y>
-        <w>329</w>
-        <h>24</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-</panel_attributes>
-      <additional_attributes>15;15;320;15</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>945</x>
-        <y>370</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-sendInitiate(NodeLevel,FragmentName,NodeState,Edge)</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>1065</x>
-        <y>425</y>
-        <w>290</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>Nodestate == find</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>385</y>
-        <w>159</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-isInState(NM_ADT,find)</panel_attributes>
-      <additional_attributes>150;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>395</y>
-        <w>159</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-true / false</panel_attributes>
-      <additional_attributes>15;25;150;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1295</x>
-        <y>340</y>
-        <w>24</w>
-        <h>79</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;70</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1305</x>
-        <y>410</y>
-        <w>10</w>
-        <h>25</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>415</y>
-        <w>159</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-increaseFindCount(NM_ADT)</panel_attributes>
-      <additional_attributes>150;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1305</x>
-        <y>440</y>
-        <w>10</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1295</x>
-        <y>420</y>
-        <w>24</w>
-        <h>29</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;20</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>440</y>
-        <w>159</w>
-        <h>24</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-</panel_attributes>
-      <additional_attributes>15;15;150;15</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>990</x>
-        <y>360</y>
-        <w>510</w>
-        <h>115</h>
-      </coordinates>
-      <panel_attributes>Level &lt; NodeLevel</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1465</x>
-        <y>370</y>
-        <w>24</w>
-        <h>124</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;115</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1475</x>
-        <y>485</y>
-        <w>10</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>460</y>
-        <w>329</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-isInState(EM_ADT,Edge,basic)</panel_attributes>
-      <additional_attributes>320;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>475</y>
-        <w>329</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-true / false
-</panel_attributes>
-      <additional_attributes>15;25;320;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>995</x>
-        <y>505</y>
-        <w>185</w>
-        <h>30</h>
-      </coordinates>
-      <panel_attributes>EdgeState == basic</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>995</x>
-        <y>535</y>
-        <w>185</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>else</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>945</x>
-        <y>505</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-enqueue(Node[n], {connect,Level,Edge})</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>945</x>
-        <y>535</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-sendInitiate(NodeLevel+1,FragmentName,find,Edge)</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1150</x>
-        <y>570</y>
-        <w>24</w>
-        <h>34</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1295</x>
-        <y>440</y>
-        <w>24</w>
-        <h>164</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;155</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1465</x>
-        <y>485</y>
-        <w>24</w>
-        <h>119</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;110</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>875</x>
-        <y>145</y>
-        <w>635</w>
-        <h>455</h>
-      </coordinates>
-      <panel_attributes>Connect Allgemein ( alle Fälle), Response von Connect Message</panel_attributes>
-      <additional_attributes/>
-    </element>
-  </group>
-  <group>
-    <element>
-      <type>com.umlet.element.Class</type>
-      <coordinates>
-        <x>1435</x>
-        <y>710</y>
-        <w>50</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes>_EdgeManager_</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Class</type>
-      <coordinates>
-        <x>1320</x>
-        <y>710</y>
-        <w>50</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes>_NodeManager_</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Class</type>
-      <coordinates>
-        <x>1150</x>
-        <y>710</y>
-        <w>50</w>
-        <h>15</h>
-      </coordinates>
-      <panel_attributes>_:Node[n]_</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>710</y>
-        <w>24</w>
-        <h>34</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1325</x>
-        <y>710</y>
-        <w>24</w>
-        <h>89</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;80</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1445</x>
-        <y>710</y>
-        <w>24</w>
-        <h>219</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;210</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>870</x>
-        <y>615</y>
-        <w>655</w>
-        <h>460</h>
-      </coordinates>
-      <panel_attributes>Response von Test Message</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Note</type>
-      <coordinates>
-        <x>995</x>
-        <y>640</y>
-        <w>150</w>
-        <h>40</h>
-      </coordinates>
-      <panel_attributes>NM_ADT = NodeManagerADT
-EM_ADT = EdgeManagerADT
-Node[n], stellt irgendeine Node dar</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>960</x>
-        <y>710</y>
-        <w>214</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-{test,Level,FragName, Edge = {Weight,Nodex,Nodey}}</panel_attributes>
-      <additional_attributes>205;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1165</x>
-        <y>735</y>
-        <w>10</w>
-        <h>320</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1335</x>
-        <y>790</y>
-        <w>10</w>
-        <h>10</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1455</x>
-        <y>920</y>
-        <w>10</w>
-        <h>10</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>885</x>
-        <y>740</y>
-        <w>295</w>
-        <h>40</h>
-      </coordinates>
-      <panel_attributes>Nodestate == sleeping</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>725</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-wakeup(NM_ADT,EM_ADT)</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>740</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-wakeup():Updated{NM_ADT,EM_ADT}</panel_attributes>
-      <additional_attributes>215;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>1000</x>
-        <y>810</y>
-        <w>180</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>Level &gt; NodeLevel</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>810</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-enqueue(Node[n], {test,Level,Edge})</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>765</y>
-        <w>184</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-getLevel(NM_ADT)</panel_attributes>
-      <additional_attributes>175;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>775</y>
-        <w>184</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-NodeLevel</panel_attributes>
-      <additional_attributes>15;25;175;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>1000</x>
-        <y>870</y>
-        <w>180</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>FragName != NodeFragName</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>870</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-sendAccept(Nodey, {test,Level,Edge})</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>830</y>
-        <w>184</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-getFragName(NM_ADT)</panel_attributes>
-      <additional_attributes>175;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>840</y>
-        <w>184</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-FragName</panel_attributes>
-      <additional_attributes>15;25;175;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1325</x>
-        <y>785</y>
-        <w>24</w>
-        <h>79</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;70</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1335</x>
-        <y>855</y>
-        <w>10</w>
-        <h>10</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1445</x>
-        <y>915</y>
-        <w>24</w>
-        <h>34</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>1000</x>
-        <y>935</y>
-        <w>515</w>
-        <h>130</h>
-      </coordinates>
-      <panel_attributes>Edge == basic</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>1090</x>
-        <y>975</y>
-        <w>90</w>
-        <h>30</h>
-      </coordinates>
-      <panel_attributes>test-edge != Edge</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>895</y>
-        <w>304</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-IsInState(EM_ADT, basic)</panel_attributes>
-      <additional_attributes>295;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>905</y>
-        <w>304</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-True / False</panel_attributes>
-      <additional_attributes>15;25;295;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1455</x>
-        <y>940</y>
-        <w>10</w>
-        <h>10</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>915</y>
-        <w>304</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-SetState(EM_ADT,Edge, rejected)</panel_attributes>
-      <additional_attributes>295;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>935</y>
-        <w>304</w>
-        <h>24</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-</panel_attributes>
-      <additional_attributes>15;15;295;15</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.SeqObjectActive</type>
-      <coordinates>
-        <x>1335</x>
-        <y>960</y>
-        <w>10</w>
-        <h>10</h>
-      </coordinates>
-      <panel_attributes/>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1325</x>
-        <y>850</y>
-        <w>24</w>
-        <h>119</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;110</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>935</y>
-        <w>184</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-getTestEdge(NM_ADT)
-</panel_attributes>
-      <additional_attributes>175;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1160</x>
-        <y>945</y>
-        <w>184</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-test_edge
-</panel_attributes>
-      <additional_attributes>15;25;175;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.custom.InteractionFrame</type>
-      <coordinates>
-        <x>1090</x>
-        <y>1005</y>
-        <w>90</w>
-        <h>45</h>
-      </coordinates>
-      <panel_attributes>else</panel_attributes>
-      <additional_attributes/>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>975</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;
-sendReject(Nodey, {test,Level,Edge})</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>1005</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-test(NM_ADT,EM_ADT)</panel_attributes>
-      <additional_attributes>15;25;215;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1445</x>
-        <y>935</y>
-        <w>24</w>
-        <h>144</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;135</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1325</x>
-        <y>955</y>
-        <w>24</w>
-        <h>124</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;115</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>950</x>
-        <y>1020</y>
-        <w>224</w>
-        <h>35</h>
-      </coordinates>
-      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
-test():Updated{NM_ADT,EM_ADT}</panel_attributes>
-      <additional_attributes>215;25;15;25</additional_attributes>
-    </element>
-    <element>
-      <type>com.umlet.element.Relation</type>
-      <coordinates>
-        <x>1155</x>
-        <y>1040</y>
-        <w>24</w>
-        <h>39</h>
-      </coordinates>
-      <panel_attributes>lt=.</panel_attributes>
-      <additional_attributes>15;15;15;30</additional_attributes>
-    </element>
-  </group>
-  <group>
-    <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1560</x>
-        <y>605</y>
-        <w>155</w>
-        <h>275</h>
+        <x>320</x>
+        <y>411</y>
+        <w>31</w>
+        <h>55</h>
       </coordinates>
       <panel_attributes>topcenter:reject
 </panel_attributes>
@@ -2023,10 +1461,10 @@ test():Updated{NM_ADT,EM_ADT}</panel_attributes>
     <element>
       <type>com.umlet.element.custom.InitialState</type>
       <coordinates>
-        <x>1630</x>
-        <y>620</y>
-        <w>10</w>
-        <h>10</h>
+        <x>334</x>
+        <y>414</y>
+        <w>2</w>
+        <h>2</h>
       </coordinates>
       <panel_attributes>i</panel_attributes>
       <additional_attributes/>
@@ -2034,10 +1472,10 @@ test():Updated{NM_ADT,EM_ADT}</panel_attributes>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1580</x>
-        <y>645</y>
-        <w>115</w>
-        <h>20</h>
+        <x>324</x>
+        <y>419</y>
+        <w>23</w>
+        <h>4</h>
       </coordinates>
       <panel_attributes>center:EdgeManager:getTargetNodeName</panel_attributes>
       <additional_attributes/>
@@ -2045,10 +1483,10 @@ test():Updated{NM_ADT,EM_ADT}</panel_attributes>
     <element>
       <type>com.umlet.element.custom.Decision</type>
       <coordinates>
-        <x>1625</x>
-        <y>685</y>
-        <w>20</w>
-        <h>20</h>
+        <x>333</x>
+        <y>427</y>
+        <w>4</w>
+        <h>4</h>
       </coordinates>
       <panel_attributes/>
       <additional_attributes/>
@@ -2056,56 +1494,56 @@ test():Updated{NM_ADT,EM_ADT}</panel_attributes>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1620</x>
-        <y>610</y>
-        <w>24</w>
-        <h>44</h>
+        <x>332</x>
+        <y>412</y>
+        <w>4</w>
+        <h>8</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;35;15;15</additional_attributes>
+      <additional_attributes>3;7;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1620</x>
-        <y>650</y>
-        <w>24</w>
-        <h>44</h>
+        <x>332</x>
+        <y>420</y>
+        <w>4</w>
+        <h>8</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;35;15;15</additional_attributes>
+      <additional_attributes>3;7;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1565</x>
-        <y>680</y>
-        <w>69</w>
-        <h>79</h>
+        <x>324</x>
+        <y>426</y>
+        <w>11</w>
+        <h>15</h>
       </coordinates>
       <panel_attributes>lt=&lt;-
 m2=[Edge is basic]</panel_attributes>
-      <additional_attributes>30;70;30;15;60;15</additional_attributes>
+      <additional_attributes>3;14;3;3;9;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1630</x>
-        <y>680</y>
-        <w>81</w>
-        <h>129</h>
+        <x>332</x>
+        <y>426</y>
+        <w>11</w>
+        <h>25</h>
       </coordinates>
       <panel_attributes>lt=&lt;-
 m2=[Edge is not basic]</panel_attributes>
-      <additional_attributes>40;120;40;15;15;15</additional_attributes>
+      <additional_attributes>10;24;10;3;5;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.custom.SynchBarHorizontal</type>
       <coordinates>
-        <x>1640</x>
-        <y>795</y>
-        <w>40</w>
-        <h>10</h>
+        <x>336</x>
+        <y>449</y>
+        <w>8</w>
+        <h>2</h>
       </coordinates>
       <panel_attributes/>
       <additional_attributes/>
@@ -2113,10 +1551,10 @@ m2=[Edge is not basic]</panel_attributes>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1570</x>
-        <y>750</y>
-        <w>75</w>
-        <h>25</h>
+        <x>322</x>
+        <y>440</y>
+        <w>15</w>
+        <h>5</h>
       </coordinates>
       <panel_attributes>center:EdgeManager:
 setEdgeState(rejected)</panel_attributes>
@@ -2125,21 +1563,21 @@ setEdgeState(rejected)</panel_attributes>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1595</x>
-        <y>760</y>
-        <w>69</w>
-        <h>49</h>
+        <x>327</x>
+        <y>442</y>
+        <w>13</w>
+        <h>9</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>60;40;60;30;15;30;15;15</additional_attributes>
+      <additional_attributes>12;8;12;6;3;6;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1635</x>
-        <y>815</y>
-        <w>50</w>
-        <h>20</h>
+        <x>335</x>
+        <y>453</y>
+        <w>10</w>
+        <h>4</h>
       </coordinates>
       <panel_attributes>center:test()</panel_attributes>
       <additional_attributes/>
@@ -2147,10 +1585,10 @@ setEdgeState(rejected)</panel_attributes>
     <element>
       <type>com.umlet.element.custom.Systemborder</type>
       <coordinates>
-        <x>1635</x>
-        <y>855</y>
-        <w>50</w>
-        <h>20</h>
+        <x>335</x>
+        <y>461</y>
+        <w>10</w>
+        <h>4</h>
       </coordinates>
       <panel_attributes>center:loop()</panel_attributes>
       <additional_attributes/>
@@ -2158,24 +1596,1334 @@ setEdgeState(rejected)</panel_attributes>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1645</x>
-        <y>820</y>
-        <w>24</w>
-        <h>44</h>
+        <x>337</x>
+        <y>454</y>
+        <w>4</w>
+        <h>8</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;35;15;15</additional_attributes>
+      <additional_attributes>3;7;3;3</additional_attributes>
     </element>
     <element>
       <type>com.umlet.element.Relation</type>
       <coordinates>
-        <x>1645</x>
-        <y>785</y>
-        <w>24</w>
-        <h>39</h>
+        <x>337</x>
+        <y>447</y>
+        <w>4</w>
+        <h>7</h>
       </coordinates>
       <panel_attributes>lt=&lt;-</panel_attributes>
-      <additional_attributes>15;30;15;15</additional_attributes>
+      <additional_attributes>3;6;3;3</additional_attributes>
+    </element>
+  </group>
+  <group>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>299</x>
+        <y>339</y>
+        <w>10</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes>_EdgeManager_</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>265</x>
+        <y>339</y>
+        <w>11</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes>_NodeManager_</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>236</x>
+        <y>339</y>
+        <w>10</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes>_:Node[n]_</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>238</x>
+        <y>339</y>
+        <w>4</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;7</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>267</x>
+        <y>339</y>
+        <w>4</w>
+        <h>18</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;17</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>301</x>
+        <y>339</y>
+        <w>4</w>
+        <h>24</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;23</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>198</x>
+        <y>342</y>
+        <w>43</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;
+{connect,Level,Edge = {Weight,Nodex,Nodey}}</panel_attributes>
+      <additional_attributes>42;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>240</x>
+        <y>346</y>
+        <w>2</w>
+        <h>61</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>184</x>
+        <y>347</y>
+        <w>59</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>Nodestate == sleeping</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>197</x>
+        <y>345</y>
+        <w>44</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+wakeup(NM_ADT,EM_ADT)</panel_attributes>
+      <additional_attributes>3;4;43;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>197</x>
+        <y>348</y>
+        <w>44</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+wakeup():Updated{NM_ADT,EM_ADT}</panel_attributes>
+      <additional_attributes>43;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>303</x>
+        <y>364</y>
+        <w>2</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>269</x>
+        <y>356</y>
+        <w>2</w>
+        <h>5</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>353</y>
+        <w>31</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+getLevel(NM_ADT)</panel_attributes>
+      <additional_attributes>30;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Note</type>
+      <coordinates>
+        <x>188</x>
+        <y>324</y>
+        <w>30</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>NM_ADT = NodeManagerADT
+EM_ADT = EdgeManagerADT
+Node[n], stellt irgendeine Node dar</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>356</y>
+        <w>31</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+NodeLevel</panel_attributes>
+      <additional_attributes>3;4;30;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>206</x>
+        <y>385</y>
+        <w>102</w>
+        <h>21</h>
+      </coordinates>
+      <panel_attributes>Level &gt;= NodeLevel &amp;&amp;</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>360</y>
+        <w>65</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+setEdgeState(EM_ADT,Edge,branch)</panel_attributes>
+      <additional_attributes>64;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>364</y>
+        <w>65</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+      <additional_attributes>3;3;64;3</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>197</x>
+        <y>365</y>
+        <w>44</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;
+sendInitiate(NodeLevel,FragmentName,NodeState,Edge)</panel_attributes>
+      <additional_attributes>3;4;43;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>221</x>
+        <y>375</y>
+        <w>58</w>
+        <h>7</h>
+      </coordinates>
+      <panel_attributes>Nodestate == find</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>368</y>
+        <w>31</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+isInState(NM_ADT,find)</panel_attributes>
+      <additional_attributes>30;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>370</y>
+        <w>31</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+true / false</panel_attributes>
+      <additional_attributes>3;4;30;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>267</x>
+        <y>358</y>
+        <w>4</w>
+        <h>15</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;14</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>269</x>
+        <y>372</y>
+        <w>2</w>
+        <h>5</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>374</y>
+        <w>31</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+increaseFindCount(NM_ADT)</panel_attributes>
+      <additional_attributes>30;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>269</x>
+        <y>378</y>
+        <w>2</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>267</x>
+        <y>374</y>
+        <w>4</w>
+        <h>5</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>378</y>
+        <w>31</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+      <additional_attributes>3;3;30;3</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>206</x>
+        <y>362</y>
+        <w>102</w>
+        <h>23</h>
+      </coordinates>
+      <panel_attributes>Level &lt; NodeLevel</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>301</x>
+        <y>364</y>
+        <w>4</w>
+        <h>24</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;23</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>303</x>
+        <y>387</y>
+        <w>2</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>383</y>
+        <w>65</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+isInState(EM_ADT,Edge,basic)</panel_attributes>
+      <additional_attributes>64;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>239</x>
+        <y>386</y>
+        <w>65</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+true / false
+</panel_attributes>
+      <additional_attributes>3;4;64;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>207</x>
+        <y>391</y>
+        <w>37</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>EdgeState == basic</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>207</x>
+        <y>397</y>
+        <w>37</w>
+        <h>7</h>
+      </coordinates>
+      <panel_attributes>else</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>197</x>
+        <y>392</y>
+        <w>44</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;
+enqueue(Node[n], {connect,Level,Edge})</panel_attributes>
+      <additional_attributes>3;4;43;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>197</x>
+        <y>398</y>
+        <w>44</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;
+sendInitiate(NodeLevel+1,FragmentName,find,Edge)</panel_attributes>
+      <additional_attributes>3;4;43;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>238</x>
+        <y>404</y>
+        <w>4</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;5</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>267</x>
+        <y>378</y>
+        <w>4</w>
+        <h>32</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;31</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>301</x>
+        <y>387</y>
+        <w>4</w>
+        <h>23</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;22</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>183</x>
+        <y>319</y>
+        <w>127</w>
+        <h>91</h>
+      </coordinates>
+      <panel_attributes>Connect Allgemein ( alle Fälle), Response von Connect Message</panel_attributes>
+      <additional_attributes/>
+    </element>
+  </group>
+  <group>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>183</x>
+        <y>231</y>
+        <w>77</w>
+        <h>83</h>
+      </coordinates>
+      <panel_attributes>Response von Report Message</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>217</x>
+        <y>245</y>
+        <w>10</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes>_:Node[n]_</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Note</type>
+      <coordinates>
+        <x>185</x>
+        <y>237</y>
+        <w>30</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>NM_ADT = NodeManagerADT
+EM_ADT = EdgeManagerADT
+Node[n], stellt irgendeine Node dar</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>245</x>
+        <y>245</y>
+        <w>10</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes>_NodeManager_</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>246</x>
+        <y>245</y>
+        <w>4</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;7</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>218</x>
+        <y>245</y>
+        <w>4</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;5</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>220</x>
+        <y>250</y>
+        <w>2</w>
+        <h>61</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>182</x>
+        <y>246</y>
+        <w>39</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;
+{report,Weight,Edge = {Weight,Nodex,Nodey}}</panel_attributes>
+      <additional_attributes>38;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>248</x>
+        <y>252</y>
+        <w>2</w>
+        <h>2</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>248</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+getInBranch(NM_ADT)
+</panel_attributes>
+      <additional_attributes>29;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>250</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+InBranchEdge
+</panel_attributes>
+      <additional_attributes>3;4;29;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>203</x>
+        <y>256</y>
+        <w>53</w>
+        <h>24</h>
+      </coordinates>
+      <panel_attributes>Edge != InBranchEdge</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>202</x>
+        <y>286</y>
+        <w>39</w>
+        <h>7</h>
+      </coordinates>
+      <panel_attributes>NodeStatus == find</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>205</x>
+        <y>269</y>
+        <w>51</w>
+        <h>11</h>
+      </coordinates>
+      <panel_attributes>Weight &lt; BestWeight</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>202</x>
+        <y>293</y>
+        <w>39</w>
+        <h>9</h>
+      </coordinates>
+      <panel_attributes>Weight &gt; BestWeight</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.InteractionFrame</type>
+      <coordinates>
+        <x>202</x>
+        <y>302</y>
+        <w>39</w>
+        <h>7</h>
+      </coordinates>
+      <panel_attributes>w = best-wt = Unendlich</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>254</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+setFindCount(NM_ADT, findCount+1)
+</panel_attributes>
+      <additional_attributes>29;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>248</x>
+        <y>258</y>
+        <w>2</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>246</x>
+        <y>251</y>
+        <w>4</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;7</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>258</y>
+        <w>30</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes>
+      <additional_attributes>3;3;29;3</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>248</x>
+        <y>265</y>
+        <w>2</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>246</x>
+        <y>258</y>
+        <w>4</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;7</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>261</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+getBestWeight(NM_ADT)
+</panel_attributes>
+      <additional_attributes>29;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>264</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+BestWeight
+</panel_attributes>
+      <additional_attributes>3;4;29;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>248</x>
+        <y>271</y>
+        <w>2</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>246</x>
+        <y>265</y>
+        <w>4</w>
+        <h>7</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;6</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>267</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+setBestEdge(NM_ADT,Edge)
+</panel_attributes>
+      <additional_attributes>29;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>271</y>
+        <w>30</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+
+</panel_attributes>
+      <additional_attributes>3;3;29;3</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>182</x>
+        <y>272</y>
+        <w>39</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+report(NM_ADT,Logfilename)
+</panel_attributes>
+      <additional_attributes>3;4;38;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>183</x>
+        <y>275</y>
+        <w>38</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+report() : NM_ADT
+</panel_attributes>
+      <additional_attributes>37;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>246</x>
+        <y>271</y>
+        <w>4</w>
+        <h>12</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;11</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.SeqObjectActive</type>
+      <coordinates>
+        <x>248</x>
+        <y>282</y>
+        <w>2</w>
+        <h>3</h>
+      </coordinates>
+      <panel_attributes/>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>278</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+isInState(NM_ADT,find)
+</panel_attributes>
+      <additional_attributes>29;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>219</x>
+        <y>281</y>
+        <w>30</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+True / False
+</panel_attributes>
+      <additional_attributes>3;4;29;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>182</x>
+        <y>287</y>
+        <w>39</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;
+enqueue(Node[n], {test,Level,Edge})</panel_attributes>
+      <additional_attributes>3;4;38;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>182</x>
+        <y>294</y>
+        <w>39</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+changeRoot(NM_ADT,EM_ADT,Logfilename)
+</panel_attributes>
+      <additional_attributes>3;4;38;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>183</x>
+        <y>297</y>
+        <w>38</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+changeRoot() : EM_ADT</panel_attributes>
+      <additional_attributes>37;4;3;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>209</x>
+        <y>303</y>
+        <w>12</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+HALT</panel_attributes>
+      <additional_attributes>11;5;4;5;4;3;11;3</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>246</x>
+        <y>282</y>
+        <w>4</w>
+        <h>31</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;30</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>218</x>
+        <y>308</y>
+        <w>4</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=.</panel_attributes>
+      <additional_attributes>3;3;3;5</additional_attributes>
+    </element>
+  </group>
+  <group>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>265</x>
+        <y>230</y>
+        <w>27</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>configLoader_a2
+--
+createDefaultCoordinatorConfig/1 : void
+loadNodeConfig/1 : ConfigList</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>265</x>
+        <y>237</y>
+        <w>52</w>
+        <h>20</h>
+      </coordinates>
+      <panel_attributes>edgeManager
+--
+availableOfState/2 : bool
+convertToEdgeManagerADT/1 : EdgeManagerADT
+findNext/2 : Edge | null
+findNextBasic/1 : Edge | null
+getAllBranchEdgesExceptThisOne/2 : Liste&lt;EdgeManagerADT&gt;
+getTargetNodeName/2 : String 
+isInState/3 : bool
+setEdgeState/3 : EdgeManagerADT
+toString/1 : String</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>265</x>
+        <y>258</y>
+        <w>34</w>
+        <h>14</h>
+      </coordinates>
+      <panel_attributes>node
+--
+changeRoot/3 : EdgeManagerADT
+loop/3 : void
+report/2 : NodeManagerADT
+start/0 : PID
+test/3 : {NodeManagerADT, EdgeManagerADT} 
+wakeUp/3 : {NodeManagerADT, EdgeManagerADT} </panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>318</x>
+        <y>230</y>
+        <w>31</w>
+        <h>39</h>
+      </coordinates>
+      <panel_attributes>nodeManager
+--
+createNodeManagerADT/1 : NodeManagerADT
+initNodeManagerADT/1 : NodeManagerADT
+isInState/2 : bool
+toString/1 : String
+getBestEdge/1 : NodeManagerADT
+getBestWeight/1 : NodeManagerADT
+getFindCount/1 : NodeManagerADT
+getFragment/1 : NodeManagerADT
+getInBranch/1 : NodeManagerADT
+getLevel/1 : NodeManagerADT
+getNodeName/1 : NodeManagerADT
+getState/1 : NodeManagerADT
+getTestEdge/1 : NodeManagerADT
+setBestEdge/2 : NodeManagerADT
+setBestWeight/2 : NodeManagerADT
+setFindCount/2 : NodeManagerADT
+setFragment/2 : NodeManagerADT
+setInBranch/2 : NodeManagerADT
+setLevel/2 : NodeManagerADT
+setState/2 : NodeManagerADT
+setTestEdge/2 : NodeManagerADT</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>293</x>
+        <y>230</y>
+        <w>11</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>Logger
+--
+logging/2 : void</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>300</x>
+        <y>258</y>
+        <w>17</w>
+        <h>16</h>
+      </coordinates>
+      <panel_attributes>messages
+--
+enqueue/2 : void
+sendAccept/2 : void
+sendChangeRoot/2 : void
+sendConnect/3 : void
+sendInitiate/5 : void
+sendReject/2 : void
+sendReport/3 : void
+sendTest/4 : void</panel_attributes>
+      <additional_attributes/>
+    </element>
+  </group>
+  <group>
+    <element>
+      <type>com.umlet.element.custom.Node</type>
+      <coordinates>
+        <x>365</x>
+        <y>317</y>
+        <w>11</w>
+        <h>5</h>
+      </coordinates>
+      <panel_attributes>center:Node[n]</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.Node</type>
+      <coordinates>
+        <x>359</x>
+        <y>305</y>
+        <w>25</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>center:&lt;&lt;execution environment&gt;&gt;
+center:Node[n] System</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>371</x>
+        <y>329</y>
+        <w>11</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>&lt;&lt;Process&gt;&gt;
+Logger</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>358</x>
+        <y>329</y>
+        <w>11</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>&lt;&lt;Process&gt;&gt;
+Node-Loop</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.Node</type>
+      <coordinates>
+        <x>341</x>
+        <y>284</y>
+        <w>25</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>center:&lt;&lt;execution environment&gt;&gt;
+center:Erlang Console</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.Node</type>
+      <coordinates>
+        <x>346</x>
+        <y>294</y>
+        <w>13</w>
+        <h>5</h>
+      </coordinates>
+      <panel_attributes>center:NNS
+NodeNameServer</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>368</x>
+        <y>310</y>
+        <w>4</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;-</panel_attributes>
+      <additional_attributes>3;3;3;7</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>370</x>
+        <y>319</y>
+        <w>7</w>
+        <h>11</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;-</panel_attributes>
+      <additional_attributes>3;3;6;10</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>362</x>
+        <y>319</y>
+        <w>7</w>
+        <h>11</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;-</panel_attributes>
+      <additional_attributes>6;3;3;10</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>350</x>
+        <y>289</y>
+        <w>4</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;-</panel_attributes>
+      <additional_attributes>3;3;3;5</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.Node</type>
+      <coordinates>
+        <x>318</x>
+        <y>305</y>
+        <w>25</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>center:&lt;&lt;execution environment&gt;&gt;
+center:Node[n+1] System</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>340</x>
+        <y>305</y>
+        <w>20</w>
+        <h>6</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;.&gt;
+Network Connection</panel_attributes>
+      <additional_attributes>3;4;19;4</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>330</x>
+        <y>289</y>
+        <w>14</w>
+        <h>17</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;.&gt;
+Network Connection</panel_attributes>
+      <additional_attributes>3;16;13;3</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>359</x>
+        <y>289</y>
+        <w>13</w>
+        <h>17</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;.&gt;
+Network Connection</panel_attributes>
+      <additional_attributes>12;16;3;3</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.custom.Node</type>
+      <coordinates>
+        <x>325</x>
+        <y>317</y>
+        <w>11</w>
+        <h>5</h>
+      </coordinates>
+      <panel_attributes>center:Node[n+1]</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>331</x>
+        <y>329</y>
+        <w>11</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>&lt;&lt;Process&gt;&gt;
+Logger</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Class</type>
+      <coordinates>
+        <x>318</x>
+        <y>329</y>
+        <w>11</w>
+        <h>4</h>
+      </coordinates>
+      <panel_attributes>&lt;&lt;Process&gt;&gt;
+Node-Loop</panel_attributes>
+      <additional_attributes/>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>330</x>
+        <y>319</y>
+        <w>7</w>
+        <h>11</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;-</panel_attributes>
+      <additional_attributes>3;3;6;10</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>322</x>
+        <y>319</y>
+        <w>7</w>
+        <h>11</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;-</panel_attributes>
+      <additional_attributes>6;3;3;10</additional_attributes>
+    </element>
+    <element>
+      <type>com.umlet.element.Relation</type>
+      <coordinates>
+        <x>328</x>
+        <y>310</y>
+        <w>4</w>
+        <h>8</h>
+      </coordinates>
+      <panel_attributes>lt=&lt;-</panel_attributes>
+      <additional_attributes>3;3;3;7</additional_attributes>
     </element>
   </group>
 </diagram>
