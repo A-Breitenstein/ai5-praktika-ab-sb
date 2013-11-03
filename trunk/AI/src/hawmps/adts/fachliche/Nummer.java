@@ -17,6 +17,9 @@ final public class Nummer  implements Serializable {
     @GeneratedValue
     private int nummer;
 
+    public Nummer() {
+    }
+
     private Nummer(int nummer) {
         this.nummer = nummer;
     }
@@ -27,6 +30,10 @@ final public class Nummer  implements Serializable {
 
     public int getNummer() {
         return nummer;
+    }
+
+    public void setNummer(int nummer) {
+        this.nummer = nummer;
     }
 
     @Override
