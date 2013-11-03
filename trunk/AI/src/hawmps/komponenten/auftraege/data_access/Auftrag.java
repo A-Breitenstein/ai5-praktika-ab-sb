@@ -2,6 +2,7 @@ package hawmps.komponenten.auftraege.data_access;
 
 import hawmps.adts.fachliche.Datum;
 import hawmps.adts.fachliche.Nummer;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -36,6 +37,16 @@ public class Auftrag implements Serializable{
 
     @OneToOne
     private Nummer LieferNummer;
+
+    public Auftrag(Nummer nummer, boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+        this.nummer = nummer;
+        this.istAbgeschlossen = istAbgeschlossen;
+        this.beauftragtAm = beauftragtAm;
+        this.fertigungsAuftragsNummer = fertigungsAuftragsNummer;
+        this.angebotsNummer = angebotsNummer;
+        RechnungsNummer = rechnungsNummer;
+        LieferNummer = lieferNummer;
+    }
 
     public Auftrag() {
     }
@@ -124,5 +135,12 @@ public class Auftrag implements Serializable{
     @Override
     public int hashCode() {
         return nummer.hashCode();
+    }
+
+    public AuftragDTO toDTO(){
+        throw new NotImplementedException();
+    }
+    public void fromDTO(AuftragDTO auftragDTO){
+        throw new NotImplementedException();
     }
 }
