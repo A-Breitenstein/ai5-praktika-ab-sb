@@ -4,6 +4,7 @@ import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;
 import hawmps.komponenten.kunden.IKundenKomponente;
 import hawmps.komponenten.kunden.data_access.Kunde;
+import hawmps.komponenten.kunden.data_access.Repository;
 
 import java.util.List;
 
@@ -14,6 +15,9 @@ import java.util.List;
  * Time: 13:47
  */
 public class KundenKomponente implements IKundenKomponente {
+
+    private Repository repository;
+
     @Override
     public Kunde createKunde(Name name, Adresse adresse) {
         throw new UnsupportedOperationException("KundenKomponente :: createKunde not implemented yet");
