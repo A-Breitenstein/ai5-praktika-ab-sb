@@ -15,6 +15,9 @@ final public class Adresse implements Serializable {
     private String ort;
     private String plz;
 
+    public Adresse() {
+    }
+
     public static Adresse create(String strasse, String ort, String plz) {
         return new Adresse(strasse, ort, plz);
     }
@@ -66,5 +69,17 @@ final public class Adresse implements Serializable {
 
     public String getPlz() {
         return plz;
+    }
+
+    public void setStrasse(String strasse) {
+        this.strasse = strasse;
+    }
+
+    public void setOrt(String ort) {
+        this.ort = ort;
+    }
+
+    public void setPlz(String plz) {
+        this.plz = plz;
     }
 }

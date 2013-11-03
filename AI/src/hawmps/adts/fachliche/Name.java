@@ -13,6 +13,8 @@ import java.io.Serializable;
 final public class Name implements Serializable {
     private String name;
 
+    public Name(){}
+
     private Name(String name) {
         this.name = name;
     }
@@ -23,6 +25,11 @@ final public class Name implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+
+        this.name = name;
     }
 
     @Override
