@@ -3,9 +3,14 @@ package hawmps.komponenten.kunden.data_access;
 import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;
 import hawmps.adts.fachliche.Nummer;
+import hawmps.komponenten.auftraege.data_access.Auftrag;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -21,20 +26,35 @@ public class Repository {
         this.entityManager = entityManager;
     }
 
-    public Kunde createKunde(Nummer nummer, Name vorname, Name nachname, Adresse adresse){
-        throw new NotImplementedException();
+    public Kunde createKunde(Name vorname, Name nachname, Adresse adresse){
+        Kunde kunde = Kunde.create(vorname, nachname, adresse);
+        entityManager.persist(kunde);
+        return kunde;
     }
     public void updateKunde(Kunde kunde) {
-
+        entityManager.merge(kunde);
     }
     public void deleteKunde(Kunde kunde){
-
+        Kunde derKunde = findKundeByNummer(kunde.getNummer());
+        entityManager.remove(derKunde);
     }
 
     public List<Kunde> findKundeByNachname(Name Nachname){
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Kunde> query = builder.createQuery(Kunde.class);
+        Root<Kunde> root = query.from(Kunde.class);
 
+        query.select(root).where(builder.equal(root.get("nachname"), Nachname));
+        List<Kunde> Kunde = new ArrayList<Kunde>(entityManager.createQuery(query).getResultList());
+        return Kunde;
     }
-    public List<Kunde> findKundeByNummer(Nummer KundenNummer){
+    public Kunde findKundeByNummer(Nummer KundenNummer){
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Kunde> query = builder.createQuery(Kunde.class);
+        Root<Kunde> root = query.from(Kunde.class);
 
+        query.select(root).where(builder.equal(root.get("nummer"), KundenNummer));
+        List<Kunde> Kunde = new ArrayList<Kunde>(entityManager.createQuery(query).getResultList());
+        return Kunde.get(0);
     }
 }

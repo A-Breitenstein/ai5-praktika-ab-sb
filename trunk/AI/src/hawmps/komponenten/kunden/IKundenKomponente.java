@@ -13,6 +13,6 @@ import java.util.List;
  * Time: 13:38
  */
 public interface IKundenKomponente {
-    Kunde createKunde(Name name,Adresse adresse);
-    List<Kunde> findByKundenName(Name Kundename);
+    Kunde createKunde(Name Vorname,Name Nachname,Adresse adresse);
+    List<Kunde> findByNachname(Name Nachname);
 }

@@ -6,6 +6,7 @@ import hawmps.komponenten.kunden.IKundenKomponente;
 import hawmps.komponenten.kunden.data_access.Kunde;
 import hawmps.komponenten.kunden.data_access.Repository;
 
+import javax.persistence.EntityManager;
 import java.util.List;
 
 /**
@@ -17,14 +18,24 @@ import java.util.List;
 public class KundenKomponente implements IKundenKomponente {
 
     private Repository repository;
+    private EntityManager entityManager;
 
-    @Override
-    public Kunde createKunde(Name name, Adresse adresse) {
-        throw new UnsupportedOperationException("KundenKomponente :: createKunde not implemented yet");
+    private KundenKomponente(EntityManager entityManager) {
+        this.entityManager = entityManager;
+        this.repository = new Repository(entityManager);
+    }
+
+    public static KundenKomponente create(EntityManager entityManager) {
+        return new KundenKomponente(entityManager);
     }
 
     @Override
-    public List<Kunde> findByKundenName(Name Kundename) {
-        throw new UnsupportedOperationException("KundenKomponente :: findByKundenName not implemented yet");
+    public Kunde createKunde(Name Vorname, Name Nachname, Adresse adresse) {
+        return repository.createKunde(Vorname,Nachname,adresse);
+    }
+
+    @Override
+    public List<Kunde> findByNachname(Name Nachname) {
+        return repository.findKundeByNachname(Nachname);
     }
 }

@@ -38,8 +38,7 @@ public class Auftrag implements Serializable{
     @OneToOne
     private Nummer LieferNummer;
 
-    public Auftrag(Nummer nummer, boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
-        this.nummer = nummer;
+    private Auftrag(boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
         this.istAbgeschlossen = istAbgeschlossen;
         this.beauftragtAm = beauftragtAm;
         this.fertigungsAuftragsNummer = fertigungsAuftragsNummer;
@@ -49,6 +48,10 @@ public class Auftrag implements Serializable{
     }
 
     public Auftrag() {
+    }
+
+    public static Auftrag create(boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+        return new Auftrag(istAbgeschlossen, beauftragtAm, fertigungsAuftragsNummer, angebotsNummer, rechnungsNummer, lieferNummer);
     }
 
     public Nummer getNummer() {
