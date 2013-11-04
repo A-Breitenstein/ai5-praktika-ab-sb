@@ -32,8 +32,7 @@ public class Kunde implements Serializable{
     @OneToOne
     private Adresse adresse;
 
-    public Kunde(Nummer nummer, Name vorname, Name nachname, Adresse adresse) {
-        this.nummer = nummer;
+    private Kunde(Name vorname, Name nachname, Adresse adresse) {
         this.vorname = vorname;
         this.nachname = nachname;
         this.adresse = adresse;
@@ -41,6 +40,11 @@ public class Kunde implements Serializable{
 
     public Kunde() {
     }
+
+    public static Kunde create(Name vorname, Name nachname, Adresse adresse) {
+        return new Kunde(vorname, nachname, adresse);
+    }
+
 
     public Nummer getNummer() {
         return nummer;
