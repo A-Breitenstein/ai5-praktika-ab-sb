@@ -18,9 +18,18 @@ public class AuftragsKomponente implements IAuftragsKomponente {
     private Repository repository;
     private EntityManager entityManager;
 
+    private AuftragsKomponente(EntityManager entityManager) {
+        this.repository = new Repository(entityManager);
+        this.entityManager = entityManager;
+    }
+
+    public static AuftragsKomponente create( EntityManager entityManager) {
+        return new AuftragsKomponente( entityManager);
+    }
+
     @Override
-    public Auftrag createAuftrag(Nummer nummer, boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
-        return repository.createAuftrag(nummer, istAbgeschlossen, beauftragtAm, fertigungsAuftragsNummer, angebotsNummer, rechnungsNummer, lieferNummer);
+    public Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+        return repository.createAuftrag(istAbgeschlossen, beauftragtAm, fertigungsAuftragsNummer, angebotsNummer, rechnungsNummer, lieferNummer);
     }
 
     @Override

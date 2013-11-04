@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.testng.annotations.Test;
 
 import javax.persistence.EntityManager;
+import java.util.List;
 
 
 /**
@@ -36,4 +37,5 @@ public class KundenKomponenteTests {
         Assert.assertTrue(kundenKomponente.findByNachname(Name.create("Bartel")).size() > 0);
         entityManager.getTransaction().commit();
     }
+
 }
