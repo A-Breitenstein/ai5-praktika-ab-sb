@@ -1,5 +1,7 @@
 package hawmps.komponenten.bauteile.data_access;
 
+import javax.persistence.EntityManager;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Sven
@@ -7,4 +9,7 @@ package hawmps.komponenten.bauteile.data_access;
  * Time: 20:17
  */
 public class Repository {
+    private EntityManager entityManager;
+
+
 }

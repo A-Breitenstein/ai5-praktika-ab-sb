@@ -18,7 +18,7 @@ import java.util.List;
  */
 public interface IAuftragsKomponente {
 
-    Auftrag createAuftrag(Nummer nummer, boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer);
+    Auftrag createAuftrag( boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer);
     void updateAuftrag(Auftrag auftrag);
     void deleteAuftragByNummer(Nummer auftragsNummer);
     Auftrag findAuftragByNummer(Nummer auftragsNummer);
