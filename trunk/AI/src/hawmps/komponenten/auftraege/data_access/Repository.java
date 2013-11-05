@@ -19,12 +19,16 @@ import java.util.List;
 public class Repository {
     private EntityManager entityManager;
 
-    public Repository(EntityManager entityManager) {
+    private Repository(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
-    public Auftrag createAuftrag( boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer){
-        Auftrag auftrag = Auftrag.create(istAbgeschlossen, beauftragtAm, fertigungsAuftragsNummer, angebotsNummer, rechnungsNummer, lieferNummer);
+    public static Repository create(EntityManager entityManager) {
+        return new Repository(entityManager);
+    }
+
+    public Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer){
+        Auftrag auftrag = Auftrag.create(istAbgeschlossen, beauftragtAm, zugehoerigeFertigungsAuftrage, angebotsNummer, rechnungsNummer, lieferNummer);
         entityManager.persist(auftrag);
         return  auftrag;
     }
@@ -45,4 +49,6 @@ public class Repository {
         List<Auftrag> auftrag = new ArrayList<Auftrag>(entityManager.createQuery(query).getResultList());
         return auftrag.get(0);
     }
+
+
 }

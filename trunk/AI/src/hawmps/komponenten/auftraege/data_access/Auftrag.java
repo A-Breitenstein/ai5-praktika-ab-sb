@@ -4,11 +4,9 @@ import hawmps.adts.fachliche.Datum;
 import hawmps.adts.fachliche.Nummer;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -26,8 +24,8 @@ public class Auftrag implements Serializable{
     @OneToOne
     private Datum beauftragtAm;
 
-    @OneToOne
-    private Nummer fertigungsAuftragsNummer;
+    @OneToMany
+    private List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage;
 
     @OneToOne
     private Nummer angebotsNummer;
@@ -38,10 +36,10 @@ public class Auftrag implements Serializable{
     @OneToOne
     private Nummer LieferNummer;
 
-    private Auftrag(boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+    private Auftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
         this.istAbgeschlossen = istAbgeschlossen;
         this.beauftragtAm = beauftragtAm;
-        this.fertigungsAuftragsNummer = fertigungsAuftragsNummer;
+        this.zugehoerigeFertigungsAuftrage = zugehoerigeFertigungsAuftrage;
         this.angebotsNummer = angebotsNummer;
         RechnungsNummer = rechnungsNummer;
         LieferNummer = lieferNummer;
@@ -50,8 +48,8 @@ public class Auftrag implements Serializable{
     public Auftrag() {
     }
 
-    public static Auftrag create(boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
-        return new Auftrag(istAbgeschlossen, beauftragtAm, fertigungsAuftragsNummer, angebotsNummer, rechnungsNummer, lieferNummer);
+    public static Auftrag create(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+        return new Auftrag(istAbgeschlossen, beauftragtAm, zugehoerigeFertigungsAuftrage, angebotsNummer, rechnungsNummer, lieferNummer);
     }
 
     public Nummer getNummer() {
@@ -78,13 +76,7 @@ public class Auftrag implements Serializable{
         this.beauftragtAm = beauftragtAm;
     }
 
-    public Nummer getFertigungsAuftragsNummer() {
-        return fertigungsAuftragsNummer;
-    }
 
-    public void setFertigungsAuftragsNummer(Nummer fertigungsAuftragsNummer) {
-        this.fertigungsAuftragsNummer = fertigungsAuftragsNummer;
-    }
 
     public Nummer getAngebotsNummer() {
         return angebotsNummer;
@@ -110,18 +102,7 @@ public class Auftrag implements Serializable{
         LieferNummer = lieferNummer;
     }
 
-    @Override
-    public String toString() {
-        return "Auftrag{" +
-                "nummer=" + nummer +
-                ", istAbgeschlossen=" + istAbgeschlossen +
-                ", beauftragtAm=" + beauftragtAm +
-                ", fertigungsAuftragsNummer=" + fertigungsAuftragsNummer +
-                ", angebotsNummer=" + angebotsNummer +
-                ", RechnungsNummer=" + RechnungsNummer +
-                ", LieferNummer=" + LieferNummer +
-                '}';
-    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -145,5 +126,18 @@ public class Auftrag implements Serializable{
     }
     public void fromDTO(AuftragDTO auftragDTO){
         throw new NotImplementedException();
+    }
+
+    @Override
+    public String toString() {
+        return "Auftrag{" +
+                "nummer=" + nummer +
+                ", istAbgeschlossen=" + istAbgeschlossen +
+                ", beauftragtAm=" + beauftragtAm +
+                ", zugehoerigeFertigungsAuftrage=" + zugehoerigeFertigungsAuftrage +
+                ", angebotsNummer=" + angebotsNummer +
+                ", RechnungsNummer=" + RechnungsNummer +
+                ", LieferNummer=" + LieferNummer +
+                '}';
     }
 }

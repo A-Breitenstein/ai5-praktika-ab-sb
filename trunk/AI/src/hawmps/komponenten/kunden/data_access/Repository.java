@@ -22,8 +22,12 @@ import java.util.List;
 public class Repository {
     private EntityManager entityManager;
 
-    public Repository(EntityManager entityManager) {
+    private Repository(EntityManager entityManager) {
         this.entityManager = entityManager;
+    }
+
+    public static Repository create(EntityManager entityManager) {
+        return new Repository(entityManager);
     }
 
     public Kunde createKunde(Name vorname, Name nachname, Adresse adresse){
