@@ -3,6 +3,7 @@ package hawmps.komponenten.auftraege;
 import hawmps.adts.fachliche.Datum;
 import hawmps.adts.fachliche.Nummer;
 import hawmps.komponenten.auftraege.data_access.Auftrag;
+import hawmps.komponenten.auftraege.data_access.FertigungsAuftrag;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -18,10 +19,12 @@ import java.util.List;
  */
 public interface IAuftragsKomponente {
 
-    Auftrag createAuftrag( boolean istAbgeschlossen, Datum beauftragtAm, Nummer fertigungsAuftragsNummer, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer);
+    Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer);
     void updateAuftrag(Auftrag auftrag);
     void deleteAuftragByNummer(Nummer auftragsNummer);
     Auftrag findAuftragByNummer(Nummer auftragsNummer);
+
+    void ueberfuehreAngebotInAuftrag(Nummer bauteilNummer);
 
 
 }

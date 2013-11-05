@@ -21,7 +21,7 @@ public class BauteileKomponente implements IBauteileKomponente {
     private EntityManager entityManager;
 
     private BauteileKomponente(EntityManager entityManager) {
-        this.repository = new Repository(entityManager);
+        this.repository = Repository.create(entityManager);
         this.entityManager = entityManager;
     }
 

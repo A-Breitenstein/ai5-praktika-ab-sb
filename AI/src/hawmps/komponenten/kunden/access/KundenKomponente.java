@@ -22,7 +22,7 @@ public class KundenKomponente implements IKundenKomponente {
 
     private KundenKomponente(EntityManager entityManager) {
         this.entityManager = entityManager;
-        this.repository = new Repository(entityManager);
+        this.repository = Repository.create(entityManager);
     }
 
     public static KundenKomponente create(EntityManager entityManager) {
