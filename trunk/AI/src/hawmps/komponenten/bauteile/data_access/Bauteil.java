@@ -2,6 +2,7 @@ package hawmps.komponenten.bauteile.data_access;
 
 import hawmps.adts.fachliche.Name;
 import hawmps.adts.fachliche.Nummer;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -94,5 +95,12 @@ final public class Bauteil implements Serializable{
     @Override
     public int hashCode() {
         return nummer.hashCode();
+    }
+    public BauteilDTO toDTO(){
+        throw new NotImplementedException();
+    }
+
+    public void FromDTO(BauteilDTO bauteilDTO) {
+        throw new NotImplementedException();
     }
 }
