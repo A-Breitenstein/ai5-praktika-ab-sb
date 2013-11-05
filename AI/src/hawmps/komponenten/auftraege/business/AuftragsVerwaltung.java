@@ -34,10 +34,11 @@ public class AuftragsVerwaltung {
         return new AuftragsVerwaltung(repository, bauteileKomponente, kundenKomponente);
     }
 
-    public void ueberfuehreAngebotInAuftrag(Nummer bauteilNummer) {
+    public Auftrag ueberfuehreAngebotInAuftrag(Nummer bauteilNummer) {
         Bauteil bauteil = bauteileKomponente.findBauteilByNummer(bauteilNummer);
         List<FertigungsAuftrag> fertigungsAuftraege = erstelleFertigungsAuftraege(bauteil);
         Auftrag neuerAuftrag = Auftrag.create(false, Datum.create("11.11.11"),fertigungsAuftraege,null,null,null);
+        return neuerAuftrag;
 
     }
     private List<FertigungsAuftrag> erstelleFertigungsAuftraege(Bauteil bauteil) {

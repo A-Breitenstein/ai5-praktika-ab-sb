@@ -76,7 +76,13 @@ public class Auftrag implements Serializable{
         this.beauftragtAm = beauftragtAm;
     }
 
+    public List<FertigungsAuftrag> getZugehoerigeFertigungsAuftrage() {
+        return zugehoerigeFertigungsAuftrage;
+    }
 
+    public void setZugehoerigeFertigungsAuftrage(List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage) {
+        this.zugehoerigeFertigungsAuftrage = zugehoerigeFertigungsAuftrage;
+    }
 
     public Nummer getAngebotsNummer() {
         return angebotsNummer;

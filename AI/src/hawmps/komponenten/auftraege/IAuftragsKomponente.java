@@ -24,7 +24,7 @@ public interface IAuftragsKomponente {
     void deleteAuftragByNummer(Nummer auftragsNummer);
     Auftrag findAuftragByNummer(Nummer auftragsNummer);
 
-    void ueberfuehreAngebotInAuftrag(Nummer bauteilNummer);
+    Auftrag ueberfuehreAngebotInAuftrag(Nummer bauteilNummer);
 
 
 }
