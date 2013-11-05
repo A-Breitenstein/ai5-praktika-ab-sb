@@ -1,6 +1,7 @@
 package hawmps.adts.fachliche;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
@@ -10,9 +11,12 @@ import java.io.Serializable;
  * Time: 12:45
  */
 @Entity
-final public class Adresse implements Serializable {
+public class Adresse implements Serializable {
+    @Id
     private String strasse;
+    @Id
     private String ort;
+    @Id
     private String plz;
 
     public Adresse() {

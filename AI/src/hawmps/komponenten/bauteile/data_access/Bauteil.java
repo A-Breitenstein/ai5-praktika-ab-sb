@@ -14,7 +14,7 @@ import java.io.Serializable;
  * Time: 20:17
  */
 @Entity
-final public class Bauteil implements Serializable{
+public class Bauteil implements Serializable{
     @Id
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "Bauteil")
     private Nummer nummer;

@@ -12,7 +12,7 @@ import java.io.Serializable;
  * Time: 12:45
  */
 @Entity
-final public class Nummer  implements Serializable {
+public class Nummer  implements Serializable {
     @Id
     @GeneratedValue
     private int nummer;

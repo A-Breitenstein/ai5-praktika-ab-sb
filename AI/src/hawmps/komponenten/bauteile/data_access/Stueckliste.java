@@ -14,7 +14,7 @@ import java.util.List;
  * Time: 20:25
  */
 @Entity
-final public class Stueckliste implements Serializable {
+public class Stueckliste implements Serializable {
     @Id
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "Stueckliste")
     private Nummer nummer;

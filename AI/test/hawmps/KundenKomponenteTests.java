@@ -8,6 +8,7 @@ import hawmps.komponenten.kunden.access.KundenKomponente;
 import hawmps.komponenten.kunden.data_access.Kunde;
 import junit.framework.Assert;
 import org.junit.Before;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import javax.persistence.EntityManager;
@@ -24,7 +25,8 @@ public class KundenKomponenteTests {
     IKundenKomponente kundenKomponente;
     EntityManager entityManager;
 
-    @Before
+
+    @BeforeMethod
     public void startUpCode() {
         entityManager = PersistenceUtilsA1.createEntityManager();
         kundenKomponente = KundenKomponente.create(entityManager);
