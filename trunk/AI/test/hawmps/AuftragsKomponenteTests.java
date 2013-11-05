@@ -2,11 +2,17 @@ package hawmps;
 
 import aufgabe1.persistence.PersistenceUtilsA1;
 import hawmps.adts.fachliche.Datum;
+import hawmps.adts.fachliche.Name;
 import hawmps.adts.fachliche.Nummer;
 import hawmps.komponenten.auftraege.IAuftragsKomponente;
 import hawmps.komponenten.auftraege.access.AuftragsKomponente;
 import hawmps.komponenten.auftraege.data_access.Auftrag;
+import hawmps.komponenten.bauteile.IBauteileKomponente;
 import hawmps.komponenten.bauteile.access.BauteileKomponente;
+import hawmps.komponenten.bauteile.data_access.Bauteil;
+import hawmps.komponenten.bauteile.data_access.Stueckliste;
+import hawmps.komponenten.bauteile.data_access.StuecklistenPosition;
+import hawmps.komponenten.kunden.IKundenKomponente;
 import hawmps.komponenten.kunden.access.KundenKomponente;
 import org.junit.After;
 import org.junit.Assert;
@@ -14,6 +20,8 @@ import org.junit.Before;
 import org.testng.annotations.Test;
 
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,16 +31,21 @@ import javax.persistence.EntityManager;
  */
 public class AuftragsKomponenteTests {
     IAuftragsKomponente auftragsKomponente;
+    IBauteileKomponente bauteileKomponente;
+    IKundenKomponente kundenKomponente;
     EntityManager entityManager;
 
     @Before
     public void startUpCode() {
         entityManager = PersistenceUtilsA1.createEntityManager();
+        kundenKomponente = KundenKomponente.create(entityManager);
+        bauteileKomponente = BauteileKomponente.create(entityManager);
 
-        auftragsKomponente = AuftragsKomponente.create(entityManager,
-                                        BauteileKomponente.create(entityManager),
-                                        KundenKomponente.create(entityManager)
-                            );
+        auftragsKomponente = AuftragsKomponente.create(
+                                    entityManager,
+                                    bauteileKomponente,
+                                    kundenKomponente
+                             );
 
         entityManager.getTransaction().begin();
     }
@@ -59,5 +72,29 @@ public class AuftragsKomponenteTests {
         Assert.assertTrue(auftragnochmal.getAngebotsNummer().equals(Nummer.create(1)));
 
         auftragsKomponente.deleteAuftragByNummer(auftragnochmal.getNummer());
+    }
+
+    @Test
+    public void uebuerfuehreAngebotInAuftrag() {
+        Bauteil schraube = bauteileKomponente.createBauteil(Name.create("Schraube AB3"),null,null);
+        Bauteil kantholz = bauteileKomponente.createBauteil(Name.create("Kantholz XYZ3"),null,null);
+        Bauteil mutter = bauteileKomponente.createBauteil(Name.create("Mutter AB3"),null,null);
+        Bauteil holzplatte = bauteileKomponente.createBauteil(Name.create("Holzplatte"),null,null);
+
+        List<StuecklistenPosition> stuecklistenPositionen = new ArrayList<StuecklistenPosition>();
+        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(25), schraube));
+        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(4), kantholz));
+        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(25), mutter));
+        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(1), holzplatte));
+
+        Stueckliste stueckliste = Stueckliste.create(Datum.create("20.11.13"), Datum.create("25.11.14"), stuecklistenPositionen);
+        Bauteil tisch = bauteileKomponente.createBauteil(Name.create("Tisch"),null,stueckliste);
+
+        Auftrag neuerAuftrag = auftragsKomponente.ueberfuehreAngebotInAuftrag(tisch.getNummer());
+
+        Assert.assertTrue(neuerAuftrag.getZugehoerigeFertigungsAuftrage().size() == 1);
+
+
+
     }
 }

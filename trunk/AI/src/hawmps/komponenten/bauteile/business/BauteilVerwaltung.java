@@ -1,5 +1,8 @@
 package hawmps.komponenten.bauteile.business;
 
+
+import hawmps.komponenten.bauteile.data_access.Repository;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Sven
@@ -7,4 +10,7 @@ package hawmps.komponenten.bauteile.business;
  * Time: 21:21
  */
 public class BauteilVerwaltung {
+    Repository repository;
+
+
 }

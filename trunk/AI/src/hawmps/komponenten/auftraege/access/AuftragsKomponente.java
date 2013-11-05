@@ -60,8 +60,8 @@ public class AuftragsKomponente implements IAuftragsKomponente {
     }
 
     @Override
-    public void ueberfuehreAngebotInAuftrag(Nummer bauteilNummer) {
-        auftragsVerwaltung.ueberfuehreAngebotInAuftrag(bauteilNummer);
+    public Auftrag ueberfuehreAngebotInAuftrag(Nummer bauteilNummer) {
+        return auftragsVerwaltung.ueberfuehreAngebotInAuftrag(bauteilNummer);
     }
 
 }
