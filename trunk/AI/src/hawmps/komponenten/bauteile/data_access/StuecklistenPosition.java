@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
  * Time: 20:30
  */
 @Entity
-final public class StuecklistenPosition {
+public class StuecklistenPosition {
     @Id
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "StuecklistenPosition")
     private Nummer nummer;

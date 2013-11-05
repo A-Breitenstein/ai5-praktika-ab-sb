@@ -1,6 +1,8 @@
 package hawmps.adts.fachliche;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
@@ -10,7 +12,10 @@ import java.io.Serializable;
  * Time: 12:46
  */
 @Entity
-final public class Name implements Serializable {
+public class Name implements Serializable {
+    @Id
+    @GeneratedValue
+    private int nr;
     private String name;
 
     public Name(){}

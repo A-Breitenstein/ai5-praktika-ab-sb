@@ -16,6 +16,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/src/aufgabe1/entities" />
+      <excludeFolder url="file://$MODULE_DIR$/src/aufgabe1/main" />
+      <excludeFolder url="file://$MODULE_DIR$/src/aufgabe1/manager" />
+      <excludeFolder url="file://$MODULE_DIR$/test/crud" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

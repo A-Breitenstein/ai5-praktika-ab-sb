@@ -16,4 +16,8 @@ public class PersistenceUtilsA1 {
         return emf.createEntityManager();
     }
 
+    public static void main(String[] args) {
+        createEntityManager();
+    }
+
 }
