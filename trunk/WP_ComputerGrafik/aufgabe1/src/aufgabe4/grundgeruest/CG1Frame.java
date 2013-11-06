@@ -3,17 +3,9 @@
  * Hochschule für Angewandte Wissenschaften (HAW), Hamburg
  * Lecture demo program.
  */
-package aufgabe3.grundgeruest;
+package aufgabe4.grundgeruest;
 
-import aufgabe1.objects.Ground;
-import aufgabe1.objects.Helicopter;
-import aufgabe1.objects.Tree;
-import aufgabe2.MeshShapeFactory;
-import aufgabe2.triangle.ITriangleMesh;
-import aufgabe2.triangle.TriangleMesh;
-import aufgabe2.triangle.TriangleMeshFactory;
 import aufgabe3.TessellationUtils;
-import aufgabe3.Torus;
 import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Cylinder;
@@ -152,12 +144,12 @@ public class CG1Frame extends JFrame {
 //                              new Point3d(0,0,1),new Point3d(1,0,1),new Point3d(1,1,1),new Point3d(0,1,1)},
 //                 new double[]{0,1,0,0,0,0,0,0}
 //        );
-        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
-//        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
+//        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(1,.5));
+        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
-        AppearanceHelper.setColor(shape,new Color3f(new Color(31, 178, 255)));
+        AppearanceHelper.setColor(shape, new Color3f(new Color(31, 178, 255)));
         scene.addChild(tg);
 
         // Assemble scene

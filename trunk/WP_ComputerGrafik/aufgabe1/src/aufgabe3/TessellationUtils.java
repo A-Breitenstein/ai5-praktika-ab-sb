@@ -26,6 +26,15 @@ public class TessellationUtils {
         );
     }
 
+    /**
+     * Erstellt anhand der vorgebenen Dimension, start, und end -Werten ein Würfelvolumen mit Unterteilung,
+     * weclhe durch steps = (Math.abs(start) + Math.abs(end)) / (float) dimension berechnen.
+     *
+     * @param dimension Zur Dimensionierung des Volumes, z.B. Dimension = 10 -> Volumen 10³
+     * @param start Position
+     * @param end Position
+     * @return Array
+     */
     private static Point3d[][][] createCubeVolume(int dimension, int start, int end) {
         dimension++;
         Point3d[][][] points = new Point3d[dimension][dimension][dimension];
@@ -35,13 +44,22 @@ public class TessellationUtils {
                 for (int z = 0; z < dimension; z++) {
 
                     points[x][y][z] = new Point3d(x * steps + start, y * steps + start, z * steps + start);
-                }
+            }
             }
         }
 
         return points;
     }
 
+    /**
+     * Erstellt einen Shape3D, Form gegeben durch ImplicitFunction3D = {Sphere, Torus}, dh. Manipulation der Punkte
+     *
+     * @param dimension
+     * @param start
+     * @param end
+     * @param func
+     * @return
+     */
     public static Shape3D create(int dimension,int start,int end,ImplicitFunction3D func) {
         if(start >= end) throw new IllegalArgumentException("start muss kleiner als end sein!");
         if(dimension < 10) throw new IllegalArgumentException("so gehts nicht!");
@@ -67,7 +85,6 @@ public class TessellationUtils {
                         values[i] = func.f(tmp_points[i]);
                     }
                     createTriangles(triangleMesh,tmp_points,values);
-                    System.out.println("x "+x+" y "+y+" z "+z);
                 }
             }
         }
@@ -78,9 +95,18 @@ public class TessellationUtils {
             triangleMesh.addTriangle(triangle);
         }
 
+        triangleMesh.removeDuplicatedPointsAndFixTriangles();
+        triangleMesh.getAllAdjacentTrianglesToVertex(0);
+
         return MeshShapeFactory.createMeshShape(triangleMesh);
     }
 
+    /**
+     *
+     * @param points
+     * @param values
+     * @return
+     */
     public static Shape3D createTriangles(Point3d[] points, double[] values) {
         TriangleMesh triangleMesh = TriangleMesh.create();
         createTriangles(triangleMesh, points, values);
@@ -93,6 +119,12 @@ public class TessellationUtils {
         return MeshShapeFactory.createMeshShape(triangleMesh);
     }
 
+    /**
+     *
+     * @param triangleMesh
+     * @param points
+     * @param values
+     */
     public static void createTriangles(ITriangleMesh triangleMesh, Point3d[] points, double[] values) {
        if (!(points.length == 8 && values.length == 8)) throw new IllegalArgumentException("Erros 1234");
 
@@ -112,10 +144,6 @@ public class TessellationUtils {
                 pointBIndex = kantenAufKnoten[tmp_faces][1];
                 pointA = new Point3d(points[pointAIndex]);
                 pointB = new Point3d(points[pointBIndex]);
-                /*
-                * p = (1 - alpha) * p1 + alpha * p2
-                * alpha = v1 / (v2 - v1)
-                * */
 
                 alpha = -values[pointAIndex] / (values[pointBIndex] - values[pointAIndex]);
 
