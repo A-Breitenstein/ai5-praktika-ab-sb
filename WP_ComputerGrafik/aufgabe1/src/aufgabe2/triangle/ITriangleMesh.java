@@ -6,6 +6,7 @@
 package aufgabe2.triangle;
 
 import javax.vecmath.Point3d;
+import java.util.List;
 
 /**
  * This interface describes the valid operations for a triangle mesh structure.
@@ -75,4 +76,7 @@ public interface ITriangleMesh {
      * Clear mesh - remove all triangles and vertices.
      */
     public void clear();
+
+    public List<Triangle> getAllAdjacentTrianglesToVertex(int pointIndex);
+    public void removeDuplicatedPointsAndFixTriangles();
 }
