@@ -1,7 +1,10 @@
 package aufgabe2.triangle;
 
 
+import aufgabe4.*;
+
 import javax.vecmath.Point3d;
+import javax.vecmath.Point3f;
 import javax.vecmath.Vector3d;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -133,5 +136,67 @@ public class TriangleMesh implements ITriangleMesh {
     private boolean assertDelta(double d1, double d2, double delta) {
         final double actualDelta = (d1 > d2) ? (d1 - d2) : (d2 - d1);
         return (actualDelta <= delta);
+    }
+
+    public HalfEdgeDatastructure convertToHalfEdgeDatastructure() {
+        HalfEdgeDatastructure hed = new HalfEdgeDatastructure();
+        for (Triangle triangle : triangleList) {
+            addTriangleToHalfEdgeDatasturcture(triangle,hed);
+        }
+        for (int i = 0; i < hed.getNumberOfHalfEdges(); i++) {
+
+        }
+
+    }
+    private void addTriangleToHalfEdgeDatasturcture(Triangle triangle,HalfEdgeDatastructure hed) {
+        final HalfEdgeVertex hev_a;
+        final HalfEdgeVertex hev_b;
+        final HalfEdgeVertex hev_c;
+        final HalfEdge he1;
+        final HalfEdge he2;
+        final HalfEdge he3;
+        final HalfEdgeTriangle het;
+        //TODO: bevor punkt erstellt wird, prüfen ob es den punkt bereits im HED gibt und diesen verwenden
+        hev_a = new HalfEdgeVertex(new Point3f(point3dList.get(triangle.a)));
+        hev_b = new HalfEdgeVertex(new Point3f(point3dList.get(triangle.b)));
+        hev_c = new HalfEdgeVertex(new Point3f(point3dList.get(triangle.c)));
+        he1 = new HalfEdge();
+        he2 = new HalfEdge();
+        he3 = new HalfEdge();
+        het = new HalfEdgeTriangle();
+
+        hev_a.setHalfEdge(he1);
+        hev_b.setHalfEdge(he2);
+        hev_c.setHalfEdge(he2);
+
+        he1.setVertex(hev_a);
+        he2.setVertex(hev_b);
+        he3.setVertex(hev_c);
+
+        he1.setNext(he2);
+        he2.setNext(he3);
+        he3.setNext(he1);
+
+        he1.setPrev(he3);
+        he3.setPrev(he2);
+        he2.setPrev(he1);
+
+        he1.setFacet(het);
+        he2.setFacet(het);
+        he3.setFacet(het);
+
+        het.setHalfEdge(he1);
+
+        hed.addVertex(hev_a);
+        hed.addVertex(hev_b);
+        hed.addVertex(hev_c);
+
+        hed.addHalfEdge(he1);
+        hed.addHalfEdge(he2);
+        hed.addHalfEdge(he3);
+
+        hed.addFacet(het);
+
+
     }
 }
