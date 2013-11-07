@@ -57,38 +57,38 @@ public class AuftragsKomponenteTests {
 
     @Test
     public void createAuftrag_find_delete(){
-        Auftrag auftrag = auftragsKomponente.createAuftrag(true, Datum.create("10.10.2013"),null,null,null,null);
+        Auftrag auftrag = auftragsKomponente.createAuftrag(true, Datum.create("10.10.2013"),null,-1,-1,-1);
         Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftrag.getNummer()).equals(auftrag));
         auftragsKomponente.deleteAuftragByNummer(auftrag.getNummer());
         Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftrag.getNummer()) == null);
     }
     @Test
     public void updateAuftrag(){
-        Auftrag auftrag = auftragsKomponente.createAuftrag(false, Datum.create("11.11.2013"),null,null,null,null);
-        auftrag.setAngebotsNummer(Nummer.create(1));
+        Auftrag auftrag = auftragsKomponente.createAuftrag(false, Datum.create("11.11.2013"),null,-1,-1,-1);
+        auftrag.setAngebotsNummer(1);
         auftragsKomponente.updateAuftrag(auftrag);
 
         Auftrag auftragnochmal = auftragsKomponente.findAuftragByNummer(auftrag.getNummer());
-        Assert.assertTrue(auftragnochmal.getAngebotsNummer().equals(Nummer.create(1)));
+        Assert.assertTrue(auftragnochmal.getAngebotsNummer() == 1);
 
         auftragsKomponente.deleteAuftragByNummer(auftragnochmal.getNummer());
     }
 
     @Test
     public void uebuerfuehreAngebotInAuftrag() {
-        Bauteil schraube = bauteileKomponente.createBauteil(Name.create("Schraube AB3"),null,null);
-        Bauteil kantholz = bauteileKomponente.createBauteil(Name.create("Kantholz XYZ3"),null,null);
-        Bauteil mutter = bauteileKomponente.createBauteil(Name.create("Mutter AB3"),null,null);
-        Bauteil holzplatte = bauteileKomponente.createBauteil(Name.create("Holzplatte"),null,null);
+        Bauteil schraube = bauteileKomponente.createBauteil(Name.create("Schraube AB3"),-1,null);
+        Bauteil kantholz = bauteileKomponente.createBauteil(Name.create("Kantholz XYZ3"),-1,null);
+        Bauteil mutter = bauteileKomponente.createBauteil(Name.create("Mutter AB3"),-1,null);
+        Bauteil holzplatte = bauteileKomponente.createBauteil(Name.create("Holzplatte"),-1,null);
 
         List<StuecklistenPosition> stuecklistenPositionen = new ArrayList<StuecklistenPosition>();
-        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(25), schraube));
-        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(4), kantholz));
-        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(25), mutter));
-        stuecklistenPositionen.add(StuecklistenPosition.create(Nummer.create(1), holzplatte));
+        stuecklistenPositionen.add(StuecklistenPosition.create(25, schraube));
+        stuecklistenPositionen.add(StuecklistenPosition.create(4, kantholz));
+        stuecklistenPositionen.add(StuecklistenPosition.create(25, mutter));
+        stuecklistenPositionen.add(StuecklistenPosition.create(1, holzplatte));
 
         Stueckliste stueckliste = Stueckliste.create(Datum.create("20.11.13"), Datum.create("25.11.14"), stuecklistenPositionen);
-        Bauteil tisch = bauteileKomponente.createBauteil(Name.create("Tisch"),null,stueckliste);
+        Bauteil tisch = bauteileKomponente.createBauteil(Name.create("Tisch"),-1,stueckliste);
 
         Auftrag neuerAuftrag = auftragsKomponente.ueberfuehreAngebotInAuftrag(tisch.getNummer());
 

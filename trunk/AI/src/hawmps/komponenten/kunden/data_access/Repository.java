@@ -52,12 +52,12 @@ public class Repository {
         List<Kunde> Kunde = new ArrayList<Kunde>(entityManager.createQuery(query).getResultList());
         return Kunde;
     }
-    public Kunde findKundeByNummer(Nummer KundenNummer){
+    public Kunde findKundeByNummer(int kundenNummer){
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Kunde> query = builder.createQuery(Kunde.class);
         Root<Kunde> root = query.from(Kunde.class);
 
-        query.select(root).where(builder.equal(root.get("nummer"), KundenNummer));
+        query.select(root).where(builder.equal(root.get("nummer"), kundenNummer));
         List<Kunde> Kunde = new ArrayList<Kunde>(entityManager.createQuery(query).getResultList());
         return Kunde.get(0);
     }

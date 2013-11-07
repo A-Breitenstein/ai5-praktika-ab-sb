@@ -14,13 +14,13 @@ import java.util.List;
  * Time: 17:15
  */
 public interface IBauteileKomponente {
-    public Bauteil createBauteil(Name name, Nummer arbeitsplanNummer, Stueckliste stueckliste);
+    public Bauteil createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste);
 
     public void updateBauteil(Bauteil bauteil);
 
-    public void deleteBauteilByNummer(Nummer BauteilNummer);
+    public void deleteBauteilByNummer(int BauteilNummer);
 
-    public Bauteil findBauteilByNummer(Nummer nummer);
+    public Bauteil findBauteilByNummer(int nummer);
 
     public List<Bauteil> findBauteilByName(Name name);
 }

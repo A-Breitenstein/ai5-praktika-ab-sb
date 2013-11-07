@@ -16,27 +16,24 @@ import java.util.List;
  */
 @Entity
 public class Auftrag implements Serializable{
+
     @Id
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "Auftrag")
-    private Nummer nummer;
+    private int nummer;
 
     private boolean istAbgeschlossen;
-    @OneToOne
+
     private Datum beauftragtAm;
 
     @OneToMany
     private List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage;
 
-    @OneToOne
-    private Nummer angebotsNummer;
+    private int angebotsNummer;
 
-    @OneToOne
-    private Nummer RechnungsNummer;
+    private int RechnungsNummer;
 
-    @OneToOne
-    private Nummer LieferNummer;
+    private int LieferNummer;
 
-    private Auftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+    private Auftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer) {
         this.istAbgeschlossen = istAbgeschlossen;
         this.beauftragtAm = beauftragtAm;
         this.zugehoerigeFertigungsAuftrage = zugehoerigeFertigungsAuftrage;
@@ -48,16 +45,8 @@ public class Auftrag implements Serializable{
     public Auftrag() {
     }
 
-    public static Auftrag create(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+    public static Auftrag create(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer) {
         return new Auftrag(istAbgeschlossen, beauftragtAm, zugehoerigeFertigungsAuftrage, angebotsNummer, rechnungsNummer, lieferNummer);
-    }
-
-    public Nummer getNummer() {
-        return nummer;
-    }
-
-    public void setNummer(Nummer nummer) {
-        this.nummer = nummer;
     }
 
     public boolean isIstAbgeschlossen() {
@@ -84,31 +73,33 @@ public class Auftrag implements Serializable{
         this.zugehoerigeFertigungsAuftrage = zugehoerigeFertigungsAuftrage;
     }
 
-    public Nummer getAngebotsNummer() {
+    public void setNummer(int nummer) {
+        this.nummer = nummer;
+    }
+
+    public int getAngebotsNummer() {
         return angebotsNummer;
     }
 
-    public void setAngebotsNummer(Nummer angebotsNummer) {
+    public void setAngebotsNummer(int angebotsNummer) {
         this.angebotsNummer = angebotsNummer;
     }
 
-    public Nummer getRechnungsNummer() {
+    public int getRechnungsNummer() {
         return RechnungsNummer;
     }
 
-    public void setRechnungsNummer(Nummer rechnungsNummer) {
+    public void setRechnungsNummer(int rechnungsNummer) {
         RechnungsNummer = rechnungsNummer;
     }
 
-    public Nummer getLieferNummer() {
+    public int getLieferNummer() {
         return LieferNummer;
     }
 
-    public void setLieferNummer(Nummer lieferNummer) {
+    public void setLieferNummer(int lieferNummer) {
         LieferNummer = lieferNummer;
     }
-
-
 
     @Override
     public boolean equals(Object o) {
@@ -117,15 +108,15 @@ public class Auftrag implements Serializable{
 
         Auftrag auftrag = (Auftrag) o;
 
-        if (!nummer.equals(auftrag.nummer)) return false;
+//        if (!nummer.equals(auftrag.nummer)) return false;
 
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        return nummer.hashCode();
-    }
+//    @Override
+//    public int hashCode() {
+//        return nummer.hashCode();
+//    }
 
     public AuftragDTO toDTO(){
         throw new NotImplementedException();
@@ -145,5 +136,9 @@ public class Auftrag implements Serializable{
                 ", RechnungsNummer=" + RechnungsNummer +
                 ", LieferNummer=" + LieferNummer +
                 '}';
+    }
+
+    public int getNummer() {
+        return nummer;
     }
 }

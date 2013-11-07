@@ -5,10 +5,7 @@ import hawmps.adts.fachliche.Name;
 import hawmps.adts.fachliche.Nummer;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -19,17 +16,15 @@ import java.io.Serializable;
  */
 @Entity
 public class Kunde implements Serializable{
-    @Id
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "Kunde")
-    private Nummer nummer;
 
-    @OneToOne
+    @Id
+    @GeneratedValue
+    private int nummer;
+
     private Name vorname;
 
-    @OneToOne
     private Name nachname;
 
-    @OneToOne
     private Adresse adresse;
 
     private Kunde(Name vorname, Name nachname, Adresse adresse) {
@@ -45,14 +40,6 @@ public class Kunde implements Serializable{
         return new Kunde(vorname, nachname, adresse);
     }
 
-
-    public Nummer getNummer() {
-        return nummer;
-    }
-
-    public void setNummer(Nummer nummer) {
-        this.nummer = nummer;
-    }
 
     public Name getVorname() {
         return vorname;
@@ -87,16 +74,16 @@ public class Kunde implements Serializable{
 
         if (!adresse.equals(kunde.adresse)) return false;
         if (!nachname.equals(kunde.nachname)) return false;
-        if (!nummer.equals(kunde.nummer)) return false;
+//        if (!nummer.equals(kunde.nummer)) return false;
         if (!vorname.equals(kunde.vorname)) return false;
 
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        return nummer.hashCode();
-    }
+//    @Override
+//    public int hashCode() {
+//        return nummer.hashCode();
+//    }
 
     @Override
     public String toString() {
@@ -115,4 +102,7 @@ public class Kunde implements Serializable{
         throw new NotImplementedException();
     }
 
+    public int getNummer() {
+        return nummer;
+    }
 }

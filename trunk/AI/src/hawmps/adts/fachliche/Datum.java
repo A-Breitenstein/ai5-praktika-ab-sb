@@ -10,9 +10,8 @@ import java.io.Serializable;
  * Date: 03.11.13
  * Time: 14:22
  */
-@Entity
 public class Datum implements Serializable {
-    @Id
+
     private String datum;
 
     public Datum() {

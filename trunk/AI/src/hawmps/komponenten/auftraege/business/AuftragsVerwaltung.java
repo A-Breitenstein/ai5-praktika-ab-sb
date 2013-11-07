@@ -34,21 +34,21 @@ public class AuftragsVerwaltung {
         return new AuftragsVerwaltung(repository, bauteileKomponente, kundenKomponente);
     }
 
-    public Auftrag ueberfuehreAngebotInAuftrag(Nummer bauteilNummer) {
+    public Auftrag ueberfuehreAngebotInAuftrag(int bauteilNummer) {
         Bauteil bauteil = bauteileKomponente.findBauteilByNummer(bauteilNummer);
         List<FertigungsAuftrag> fertigungsAuftraege = erstelleFertigungsAuftraege(bauteil);
-        Auftrag neuerAuftrag = Auftrag.create(false, Datum.create("11.11.11"),fertigungsAuftraege,null,null,null);
+        Auftrag neuerAuftrag = Auftrag.create(false, Datum.create("11.11.11"),fertigungsAuftraege,-1,-1,-1);
         return neuerAuftrag;
 
     }
     private List<FertigungsAuftrag> erstelleFertigungsAuftraege(Bauteil bauteil) {
         if (bauteil.getStueckliste() != null) {
             // bauteil ist ein komplexesbautel
-            List<Nummer> bauteilNummern = new ArrayList<Nummer>();
+            List<Integer> bauteilNummern = new ArrayList<Integer>();
             sammelAllesEin(bauteil,bauteilNummern);
             List<FertigungsAuftrag> fertigungsAuftragList = new ArrayList<FertigungsAuftrag>();
             fertigungsAuftragList.add(FertigungsAuftrag.create(null, bauteil.getNummer()));
-            for (Nummer nummer : bauteilNummern) {
+            for (Integer nummer : bauteilNummern) {
                 fertigungsAuftragList.add(FertigungsAuftrag.create(null, nummer));
             }
 
@@ -58,7 +58,9 @@ public class AuftragsVerwaltung {
 
 
     }
-    private void sammelAllesEin(Bauteil bauteil,List<Nummer> bauteilNummern) {
+
+    //WTF was soll das für ein funktionsname sein !!"!§$"§!$!
+    private void sammelAllesEin(Bauteil bauteil,List<Integer> bauteilNummern) {
         for (StuecklistenPosition o : bauteil.getStueckliste().getStuecklistenPositionen()) {
             if(o.getBauteil().getStueckliste() != null){
                 bauteilNummern.add(o.getBauteil().getNummer());

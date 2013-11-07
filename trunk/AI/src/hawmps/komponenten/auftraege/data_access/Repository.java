@@ -27,7 +27,7 @@ public class Repository {
         return new Repository(entityManager);
     }
 
-    public Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer){
+    public Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer){
         Auftrag auftrag = Auftrag.create(istAbgeschlossen, beauftragtAm, zugehoerigeFertigungsAuftrage, angebotsNummer, rechnungsNummer, lieferNummer);
         entityManager.persist(auftrag);
         return  auftrag;
@@ -36,11 +36,11 @@ public class Repository {
         entityManager.merge(auftrag);
     }
 
-    public void deleteAuftragByNummer(Nummer auftragsNummer) {
+    public void deleteAuftragByNummer(int auftragsNummer) {
         Auftrag auftrag = findAuftragByNummer(auftragsNummer);
         entityManager.remove(auftrag);
     }
-    public Auftrag findAuftragByNummer(Nummer auftragsNummer){
+    public Auftrag findAuftragByNummer(int auftragsNummer){
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Auftrag> query = builder.createQuery(Auftrag.class);
         Root<Auftrag> root = query.from(Auftrag.class);

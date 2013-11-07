@@ -10,13 +10,12 @@ import java.io.Serializable;
  * Date: 03.11.13
  * Time: 12:45
  */
-@Entity
 public class Adresse implements Serializable {
-    @Id
+
     private String strasse;
-    @Id
+
     private String ort;
-    @Id
+
     private String plz;
 
     public Adresse() {

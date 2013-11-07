@@ -14,32 +14,26 @@ import java.io.Serializable;
  */
 @Entity
 public class FertigungsAuftrag implements Serializable{
+
     @Id
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "FertigungsAuftrag")
-    private Nummer nummer;
+    @GeneratedValue
+    private int nummer;
+
     @ManyToOne
     private Auftrag gehoertZuAuftrag;
-    @OneToOne
-    private Nummer bauteilNummer;
+
+    private int bauteilNummer;
 
     public FertigungsAuftrag() {
     }
 
-    private FertigungsAuftrag(Auftrag gehoertZuAuftrag, Nummer bauteilNummer) {
+    private FertigungsAuftrag(Auftrag gehoertZuAuftrag, int bauteilNummer) {
         this.gehoertZuAuftrag = gehoertZuAuftrag;
         this.bauteilNummer = bauteilNummer;
     }
 
-    public static FertigungsAuftrag create(Auftrag gehoertZuAuftrag, Nummer bauteilNummer) {
+    public static FertigungsAuftrag create(Auftrag gehoertZuAuftrag, int bauteilNummer) {
         return new FertigungsAuftrag(gehoertZuAuftrag, bauteilNummer);
-    }
-
-    public Nummer getNummer() {
-        return nummer;
-    }
-
-    public void setNummer(Nummer nummer) {
-        this.nummer = nummer;
     }
 
     public Auftrag getGehoertZuAuftrag() {
@@ -50,11 +44,19 @@ public class FertigungsAuftrag implements Serializable{
         this.gehoertZuAuftrag = gehoertZuAuftrag;
     }
 
-    public Nummer getBauteilNummer() {
+    public int getNummer() {
+        return nummer;
+    }
+
+    public void setNummer(int nummer) {
+        this.nummer = nummer;
+    }
+
+    public int getBauteilNummer() {
         return bauteilNummer;
     }
 
-    public void setBauteilNummer(Nummer bauteilNummer) {
+    public void setBauteilNummer(int bauteilNummer) {
         this.bauteilNummer = bauteilNummer;
     }
 
@@ -65,15 +67,15 @@ public class FertigungsAuftrag implements Serializable{
 
         FertigungsAuftrag that = (FertigungsAuftrag) o;
 
-        if (!nummer.equals(that.nummer)) return false;
+//        if (!nummer.equals(that.nummer)) return false;
 
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        return nummer.hashCode();
-    }
+//    @Override
+//    public int hashCode() {
+//        return nummer.hashCode();
+//    }
 
     @Override
     public String toString() {

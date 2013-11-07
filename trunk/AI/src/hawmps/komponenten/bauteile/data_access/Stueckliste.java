@@ -15,13 +15,15 @@ import java.util.List;
  */
 @Entity
 public class Stueckliste implements Serializable {
+
     @Id
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "Stueckliste")
-    private Nummer nummer;
-    @OneToOne
+    @GeneratedValue
+    private int nummer;
+
     private Datum gueltigAb;
-    @OneToOne
+
     private Datum gueltigBis;
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<StuecklistenPosition> stuecklistenPositionen;
 
@@ -38,13 +40,6 @@ public class Stueckliste implements Serializable {
         return new Stueckliste(gueltigAb, gueltigBis, stuecklistenPositionen);
     }
 
-    public Nummer getNummer() {
-        return nummer;
-    }
-
-    public void setNummer(Nummer nummer) {
-        this.nummer = nummer;
-    }
 
     public Datum getGueltigAb() {
         return gueltigAb;
@@ -87,13 +82,13 @@ public class Stueckliste implements Serializable {
 
         Stueckliste that = (Stueckliste) o;
 
-        if (!nummer.equals(that.nummer)) return false;
+//        if (!nummer.equals(that.nummer)) return false;
 
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        return nummer.hashCode();
-    }
+//    @Override
+//    public int hashCode() {
+//        return nummer.hashCode();
+//    }
 }
