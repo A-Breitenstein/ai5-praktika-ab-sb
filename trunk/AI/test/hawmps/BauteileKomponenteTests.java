@@ -3,12 +3,11 @@ package hawmps;
 import aufgabe1.persistence.PersistenceUtilsA1;
 import hawmps.adts.fachliche.Datum;
 import hawmps.adts.fachliche.Name;
-import hawmps.adts.fachliche.Nummer;
-import hawmps.komponenten.bauteile.IBauteileKomponente;
-import hawmps.komponenten.bauteile.access.BauteileKomponente;
-import hawmps.komponenten.bauteile.data_access.Bauteil;
-import hawmps.komponenten.bauteile.data_access.Stueckliste;
-import hawmps.komponenten.bauteile.data_access.StuecklistenPosition;
+import hawmps.komponenten.bauteilkomponente.IBauteileKomponente;
+import hawmps.komponenten.bauteilkomponente.access.BauteileKomponente;
+import hawmps.komponenten.bauteilkomponente.data_access.Bauteil;
+import hawmps.komponenten.bauteilkomponente.data_access.Stueckliste;
+import hawmps.komponenten.bauteilkomponente.data_access.StuecklistenPosition;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -28,15 +27,22 @@ public class BauteileKomponenteTests {
     IBauteileKomponente bauteileKomponente;
     EntityManager entityManager;
 
-    @Before
+    public BauteileKomponenteTests() {
+        startUpCode();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        cleanUpCode();
+        super.finalize();    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
     public void startUpCode() {
         entityManager = PersistenceUtilsA1.createEntityManager();
         bauteileKomponente = BauteileKomponente.create(entityManager);
 
         entityManager.getTransaction().begin();
     }
-
-    @After
     public void cleanUpCode(){
         entityManager.getTransaction().commit();
     }
