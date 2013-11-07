@@ -40,7 +40,7 @@ public class AuftragsKomponente implements IAuftragsKomponente {
 
 
     @Override
-    public Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer) {
+    public Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer) {
         return repository.createAuftrag(istAbgeschlossen, beauftragtAm, zugehoerigeFertigungsAuftrage, angebotsNummer, rechnungsNummer, lieferNummer);
     }
 
@@ -50,17 +50,17 @@ public class AuftragsKomponente implements IAuftragsKomponente {
     }
 
     @Override
-    public void deleteAuftragByNummer(Nummer auftragsNummer) {
+    public void deleteAuftragByNummer(int auftragsNummer) {
         repository.deleteAuftragByNummer(auftragsNummer);
     }
 
     @Override
-    public Auftrag findAuftragByNummer(Nummer auftragsNummer) {
+    public Auftrag findAuftragByNummer(int auftragsNummer) {
         return repository.findAuftragByNummer(auftragsNummer);
     }
 
     @Override
-    public Auftrag ueberfuehreAngebotInAuftrag(Nummer bauteilNummer) {
+    public Auftrag ueberfuehreAngebotInAuftrag(int bauteilNummer) {
         return auftragsVerwaltung.ueberfuehreAngebotInAuftrag(bauteilNummer);
     }
 

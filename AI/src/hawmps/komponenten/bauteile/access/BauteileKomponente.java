@@ -30,7 +30,7 @@ public class BauteileKomponente implements IBauteileKomponente {
     }
 
     @Override
-    public Bauteil createBauteil(Name name, Nummer arbeitsplanNummer, Stueckliste stueckliste) {
+    public Bauteil createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste) {
         return repository.createBauteil(name, arbeitsplanNummer, stueckliste);
     }
 
@@ -40,12 +40,12 @@ public class BauteileKomponente implements IBauteileKomponente {
     }
 
     @Override
-    public void deleteBauteilByNummer(Nummer BauteilNummer) {
+    public void deleteBauteilByNummer(int BauteilNummer) {
         repository.deleteBauteilByNummer(BauteilNummer);
     }
 
     @Override
-    public Bauteil findBauteilByNummer(Nummer nummer) {
+    public Bauteil findBauteilByNummer(int nummer) {
         return repository.findBauteilByNummer(nummer);
     }
 

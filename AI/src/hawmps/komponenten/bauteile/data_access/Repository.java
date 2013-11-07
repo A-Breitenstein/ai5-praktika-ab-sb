@@ -27,7 +27,7 @@ public class Repository {
         return new Repository(entityManager);
     }
 
-    public Bauteil createBauteil(Name name, Nummer arbeitsplanNummer, Stueckliste stueckliste){
+    public Bauteil createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste){
         Bauteil bauteil = Bauteil.create(name, arbeitsplanNummer, stueckliste);
         entityManager.persist(bauteil);
         return  bauteil;
@@ -36,11 +36,11 @@ public class Repository {
         entityManager.merge(bauteil);
     }
 
-    public void deleteBauteilByNummer(Nummer BauteilNummer) {
+    public void deleteBauteilByNummer(int BauteilNummer) {
         Bauteil bauteil = findBauteilByNummer(BauteilNummer);
         entityManager.remove(bauteil);
     }
-    public Bauteil findBauteilByNummer(Nummer nummer){
+    public Bauteil findBauteilByNummer(int nummer){
         CriteriaBuilder builder = entityManager.getCriteriaBuilder();
         CriteriaQuery<Bauteil> query = builder.createQuery(Bauteil.class);
         Root<Bauteil> root = query.from(Bauteil.class);

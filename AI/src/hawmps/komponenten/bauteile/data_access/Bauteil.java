@@ -15,35 +15,45 @@ import java.io.Serializable;
  */
 @Entity
 public class Bauteil implements Serializable{
+
     @Id
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "Bauteil")
-    private Nummer nummer;
-    @OneToOne
+    @GeneratedValue
+    private int nummer;
+
     private Name name;
-    @OneToOne
-    private Nummer arbeitsplanNummer;
+
+    private int arbeitsplanNummer;
+
     @OneToOne
     private Stueckliste stueckliste;
 
     public Bauteil() {
     }
 
-    private Bauteil(Name name, Nummer arbeitsplanNummer, Stueckliste stueckliste) {
+    private Bauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste) {
         this.name = name;
         this.arbeitsplanNummer = arbeitsplanNummer;
         this.stueckliste = stueckliste;
     }
 
-    public static Bauteil create(Name name, Nummer arbeitsplanNummer, Stueckliste stueckliste) {
+    public static Bauteil create(Name name, int arbeitsplanNummer, Stueckliste stueckliste) {
         return new Bauteil(name, arbeitsplanNummer, stueckliste);
     }
 
-    public Nummer getNummer() {
+    public int getNummer() {
         return nummer;
     }
 
-    public void setNummer(Nummer nummer) {
+    public void setNummer(int nummer) {
         this.nummer = nummer;
+    }
+
+    public int getArbeitsplanNummer() {
+        return arbeitsplanNummer;
+    }
+
+    public void setArbeitsplanNummer(int arbeitsplanNummer) {
+        this.arbeitsplanNummer = arbeitsplanNummer;
     }
 
     public Name getName() {
@@ -54,13 +64,6 @@ public class Bauteil implements Serializable{
         this.name = name;
     }
 
-    public Nummer getArbeitsplanNummer() {
-        return arbeitsplanNummer;
-    }
-
-    public void setArbeitsplanNummer(Nummer arbeitsplanNummer) {
-        this.arbeitsplanNummer = arbeitsplanNummer;
-    }
 
     public Stueckliste getStueckliste() {
         return stueckliste;
@@ -87,15 +90,16 @@ public class Bauteil implements Serializable{
 
         Bauteil bauteil = (Bauteil) o;
 
-        if (!nummer.equals(bauteil.nummer)) return false;
+//        if (!nummer.equals(bauteil.nummer)) return false;
 
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        return nummer.hashCode();
-    }
+//    @Override
+//    public int hashCode() {
+//        return nummer.hashCode();
+//    }
+
     public BauteilDTO toDTO(){
         throw new NotImplementedException();
     }

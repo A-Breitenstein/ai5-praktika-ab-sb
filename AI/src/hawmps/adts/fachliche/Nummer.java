@@ -11,10 +11,10 @@ import java.io.Serializable;
  * Date: 03.11.13
  * Time: 12:45
  */
-@Entity
+
+@Deprecated
 public class Nummer  implements Serializable {
-    @Id
-    @GeneratedValue
+
     private int nummer;
 
     public Nummer() {

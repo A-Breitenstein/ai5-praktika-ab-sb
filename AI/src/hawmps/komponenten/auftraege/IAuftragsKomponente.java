@@ -19,12 +19,12 @@ import java.util.List;
  */
 public interface IAuftragsKomponente {
 
-    Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, Nummer angebotsNummer, Nummer rechnungsNummer, Nummer lieferNummer);
+    Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer);
     void updateAuftrag(Auftrag auftrag);
-    void deleteAuftragByNummer(Nummer auftragsNummer);
-    Auftrag findAuftragByNummer(Nummer auftragsNummer);
+    void deleteAuftragByNummer(int auftragsNummer);
+    Auftrag findAuftragByNummer(int auftragsNummer);
 
-    Auftrag ueberfuehreAngebotInAuftrag(Nummer bauteilNummer);
+    Auftrag ueberfuehreAngebotInAuftrag(int bauteilNummer);
 
 
 }

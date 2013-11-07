@@ -2,10 +2,7 @@ package hawmps.komponenten.bauteile.data_access;
 
 import hawmps.adts.fachliche.Nummer;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,40 +12,42 @@ import javax.persistence.OneToOne;
  */
 @Entity
 public class StuecklistenPosition {
+
     @Id
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "StuecklistenPosition")
-    private Nummer nummer;
-    @OneToOne
-    private Nummer menge;
+    @GeneratedValue
+    private int nummer;
+
+    private int menge;
+
     @OneToOne
     private  Bauteil bauteil;
 
     public StuecklistenPosition() {
     }
 
-    private StuecklistenPosition(Nummer menge, Bauteil bauteil) {
+    private StuecklistenPosition(int menge, Bauteil bauteil) {
         this.menge = menge;
         this.bauteil = bauteil;
     }
 
-    public static StuecklistenPosition create(Nummer menge, Bauteil bauteil) {
+    public static StuecklistenPosition create(int menge, Bauteil bauteil) {
         return new StuecklistenPosition(menge, bauteil);
     }
 
-    public Nummer getNummer() {
-        return nummer;
-    }
-
-    public void setNummer(Nummer nummer) {
-        this.nummer = nummer;
-    }
-
-    public Nummer getMenge() {
+    public int getMenge() {
         return menge;
     }
 
-    public void setMenge(Nummer menge) {
+    public void setMenge(int menge) {
         this.menge = menge;
+    }
+
+    public int getNummer() {
+        return nummer;
+    }
+
+    public void setNummer(int nummer) {
+        this.nummer = nummer;
     }
 
     public Bauteil getBauteil() {
@@ -66,15 +65,10 @@ public class StuecklistenPosition {
 
         StuecklistenPosition that = (StuecklistenPosition) o;
 
-        if (nummer != null ? !nummer.equals(that.nummer) : that.nummer != null) return false;
 
         return true;
     }
 
-    @Override
-    public int hashCode() {
-        return nummer != null ? nummer.hashCode() : 0;
-    }
 
     @Override
     public String toString() {

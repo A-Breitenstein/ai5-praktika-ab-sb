@@ -2,14 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Adresse.java" afterPath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Adresse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Auftrag.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Auftrag.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/access/AuftragsKomponente.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/access/AuftragsKomponente.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java" afterPath="$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/business/AuftragsVerwaltung.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/business/AuftragsVerwaltung.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Bauteil.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Bauteil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/access/BauteileKomponente.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/access/BauteileKomponente.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/hawmps/BauteileKomponenteTests.java" afterPath="$PROJECT_DIR$/test/hawmps/BauteileKomponenteTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Datum.java" afterPath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Datum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/FertigungsAuftrag.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/FertigungsAuftrag.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/IAuftragsKomponente.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/IAuftragsKomponente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/hawmps/KundenKomponenteTests.java" afterPath="$PROJECT_DIR$/test/hawmps/KundenKomponenteTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/IBauteileKomponente.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/IBauteileKomponente.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Kunde.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Kunde.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Name.java" afterPath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Name.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java" afterPath="$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Repository.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Repository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Repository.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Repository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Repository.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Repository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Stueckliste.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Stueckliste.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/StuecklistenPosition.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/StuecklistenPosition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ai-praktikum.iml" afterPath="$PROJECT_DIR$/ai-praktikum.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ai-praktikum.iws" />
@@ -18,26 +32,31 @@
     <file path="/Bankkonto.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1380898769312" ignored="false" />
     <file path="/a.dummy" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383597506450" ignored="false" />
     <file path="/Kinosaal.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1380898741084" ignored="false" />
-    <file path="/Kunde.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383592454082" ignored="false" />
+    <file path="/Kunde.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383781905299" ignored="false" />
     <file path="/Kinokarte.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383478624209" ignored="false" />
-    <file path="/Nummer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383479560049" ignored="false" />
+    <file path="/Nummer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783690397" ignored="false" />
     <file path="/Name.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383481719858" ignored="false" />
     <file path="/Adresse.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383480059768" ignored="false" />
     <file path="/ADTFactory.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383482544446" ignored="false" />
-    <file path="/Dummy.txt" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383597968472" ignored="false" />
+    <file path="/Dummy.txt" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783801990" ignored="false" />
     <file path="/KundenKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383595066532" ignored="false" />
     <file path="/KundenKomponenteImpl.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383487867930" ignored="false" />
-    <file path="/IAuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383591399293" ignored="false" />
-    <file path="/Auftrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383486837357" ignored="false" />
+    <file path="/IAuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782986290" ignored="false" />
+    <file path="/Auftrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782352925" ignored="false" />
     <file path="/Datum.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383485042828" ignored="false" />
-    <file path="/Repository.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383597846056" ignored="false" />
-    <file path="/AuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383595886461" ignored="false" />
+    <file path="/Repository.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783047438" ignored="false" />
+    <file path="/AuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782993774" ignored="false" />
     <file path="/IKundenKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383592295717" ignored="false" />
-    <file path="/Bauteil.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383593095241" ignored="false" />
-    <file path="/Stueckliste.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383593621110" ignored="false" />
-    <file path="/StuecklistenPosition.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383593778645" ignored="false" />
+    <file path="/Bauteil.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782665627" ignored="false" />
+    <file path="/Stueckliste.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383781834302" ignored="false" />
+    <file path="/StuecklistenPosition.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782723813" ignored="false" />
     <file path="/KundenKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383596174218" ignored="false" />
-    <file path="/AuftragsKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383597132255" ignored="false" />
+    <file path="/AuftragsKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782612446" ignored="false" />
+    <file path="/FertigungsAuftrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782812303" ignored="false" />
+    <file path="/AuftragsVerwaltung.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783000708" ignored="false" />
+    <file path="/IBauteileKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783015359" ignored="false" />
+    <file path="/BauteileKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783037710" ignored="false" />
+    <file path="/persistence.xml" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783450954" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +71,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -89,23 +107,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/aufgabe1/entities/Kinokarte.java" line="2" class="Kinokarte.java" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -115,57 +118,74 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Adresse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Adresse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BauteileKomponenteTests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/hawmps/BauteileKomponenteTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="0" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="KundenKomponenteTests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/hawmps/KundenKomponenteTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="2" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="33" column="63" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuftragsKomponenteTests.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java">
+      <file leaf-file-name="Nummer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="32" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="14" column="11" selection-start="263" selection-end="263" vertical-scroll-proportion="0.49858356">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bauteil.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Bauteil.java">
+      <file leaf-file-name="Name.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Name.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="24" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="24" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Stueckliste.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Stueckliste.java">
+      <file leaf-file-name="persistence.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="37" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="7" column="65" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StuecklistenPosition.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/StuecklistenPosition.java">
+      <file leaf-file-name="Kunde.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Kunde.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="18" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="39" column="0" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KundenKomponente.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/access/KundenKomponente.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="33" column="0" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,49 +193,7 @@
       <file leaf-file-name="Repository.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Repository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="40" selection-start="631" selection-end="672" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1595#1602#0" expanded="true" />
-                <element signature="e#2057#2064#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Repository.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Repository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="245" selection-end="245" vertical-scroll-proportion="0.4129412">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Nummer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="19" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuftragsKomponente.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftraege/access/AuftragsKomponente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="19" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IAuftragsKomponente.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftraege/IAuftragsKomponente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="12" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+            <state line="34" column="0" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -231,30 +209,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/kunden/access/KundenKomponenteImpl.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/adts/fachliche/Datum.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/kunden/IKundenKomponente.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Repository.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Auftrag.java" />
         <option value="$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Repository.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Kunde.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/kunden/access/KundenKomponente.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Auftrag.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Repository.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Bauteil.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/StuecklistenPosition.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/FertigungsAuftrag.java" />
         <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/IAuftragsKomponente.java" />
         <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/access/AuftragsKomponente.java" />
-        <option value="$PROJECT_DIR$/test/hawmps/KundenKomponenteTests.java" />
-        <option value="$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Bauteil.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Stueckliste.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/StuecklistenPosition.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftraege/business/AuftragsVerwaltung.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/IBauteileKomponente.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/access/BauteileKomponente.java" />
         <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Repository.java" />
+        <option value="$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java" />
+        <option value="$PROJECT_DIR$/test/hawmps/BauteileKomponenteTests.java" />
+        <option value="$PROJECT_DIR$/resources/META-INF/persistence.xml" />
+        <option value="$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -263,6 +241,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -317,24 +297,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hawmps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -449,10 +411,6 @@
               <option name="myItemId" value="bauteile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data_access" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -477,6 +435,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bauteile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data_access" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,132 +589,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aufgabe1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="persistence" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aufgabe1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kunde" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aufgabe1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aufgabe1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bankkonto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aufgabe1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aufgabe1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -772,6 +608,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="h2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -782,17 +632,19 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/h2-1.3.172.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="Downloaded.Files.Path" value="C:\Projekte\IntelliJ\AI5\AI\ai-praktikum\lib" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -805,7 +657,83 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.KundenKomponenteTests">
+    <configuration default="false" name="KundenKomponenteTests" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hawmps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ai-praktikum" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="hawmps" />
+      <option name="MAIN_CLASS_NAME" value="hawmps.KundenKomponenteTests" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="3230" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BauteileKomponenteTests" type="TestNG" factoryName="TestNG" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hawmps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="ai-praktikum" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="hawmps" />
+      <option name="MAIN_CLASS_NAME" value="hawmps.BauteileKomponenteTests" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -897,7 +825,16 @@
       <patterns />
       <method />
     </configuration>
-    <list size="0" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="TestNG.KundenKomponenteTests" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.BauteileKomponenteTests" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="TestNG.KundenKomponenteTests" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.BauteileKomponenteTests" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -927,20 +864,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\AI" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\AI" />
+          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\ai-praktikum\AI" />
+          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\ai-praktikum\AI" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\AI\.idea" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\AI\.idea" />
+          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\ai-praktikum\AI\.idea" />
+          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\ai-praktikum\AI\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\AI" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\AI" />
+          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\ai-praktikum\AI" />
+          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\ai-praktikum\AI" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -971,31 +908,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.291889" sideWeight="0.303233" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28985506" sideWeight="0.57314974" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32998326" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52093804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="3" y="74" width="981" height="645" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32663316" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.49944258" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.291889" sideWeight="0.696767" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2189394" sideWeight="0.67001677" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5695142" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1041,7 +982,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="update4.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes: &#10;Nummer to integer, &#10;interface signatues from Nummer to integer,&#10;blablabla echt kein bock auf diesen scheiß,&#10;Nummer ist jetzt deprecated&#10;&#10;Kundekompadanfa test läuft bauteilkomoapfa irgendwas mit nullpointer ka will ich auch nicht wissen&#10;&#10;Nächstesmal mach ich nichts! GARNICHTS!" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1060,144 +1001,122 @@
     <MESSAGE value="update3" />
     <MESSAGE value="update4" />
     <MESSAGE value="update4.5" />
+    <MESSAGE value="Changes: &#10;Nummer to integer, &#10;interface signatues from Nummer to integer,&#10;blablabla echt kein bock auf diesen scheiß,&#10;Nummer ist jetzt deprecated&#10;&#10;Kundekompadanfa test läuft bauteilkomoapfa irgendwas mit nullpointer ka will ich auch nicht wissen&#10;&#10;Nächstesmal mach ich nichts! GARNICHTS!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/aufgabe1/manager/kunde/KundeManager.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftraege/business/AuftragsVerwaltung.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
+        <state line="37" column="60" selection-start="1473" selection-end="1473" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1965#1974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/IBauteileKomponente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="65" selection-start="577" selection-end="577" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/IKundenKomponente.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/access/BauteileKomponente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="43" column="33" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/crud/CRUDfunctionTest.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Repository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="13" selection-start="881" selection-end="881" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="52" column="42" selection-start="1811" selection-end="1811" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Repository.java">
+    <entry file="file://$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1674#1683#0" expanded="true" />
-          </folding>
+        <state line="90" column="80" selection-start="3907" selection-end="3907" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftraege/data_access/Auftrag.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Name.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="32" selection-start="744" selection-end="744" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="24" column="0" selection-start="453" selection-end="453" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Adresse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/access/KundenKomponente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftraege/access/AuftragsKomponente.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Kunde.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="19" selection-start="904" selection-end="904" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftraege/IAuftragsKomponente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="12" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+        <state line="39" column="0" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Repository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="19" selection-start="278" selection-end="278" vertical-scroll-proportion="0.0">
+        <state line="34" column="0" selection-start="1038" selection-end="1038" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/org/testng/internal/MethodInvocationHelper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="38" selection-start="286" selection-end="286" vertical-scroll-proportion="-2.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="50" selection-start="7673" selection-end="7673" vertical-scroll-proportion="-2.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/hawmps/BauteileKomponenteTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="65" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/hawmps/KundenKomponenteTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="2" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="33" column="63" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="32" selection-start="643" selection-end="643" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Stueckliste.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="37" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/StuecklistenPosition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="18" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kunden/data_access/Repository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="631" selection-end="672" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1595#1602#0" expanded="true" />
-            <element signature="e#2057#2064#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Bauteil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Repository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="245" selection-end="245" vertical-scroll-proportion="0.4129412">
+        <state line="14" column="11" selection-start="263" selection-end="263" vertical-scroll-proportion="0.49858356">
           <folding />
         </state>
       </provider>

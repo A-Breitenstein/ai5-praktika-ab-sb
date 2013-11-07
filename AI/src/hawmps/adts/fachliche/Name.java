@@ -11,11 +11,8 @@ import java.io.Serializable;
  * Date: 03.11.13
  * Time: 12:46
  */
-@Entity
 public class Name implements Serializable {
-    @Id
-    @GeneratedValue
-    private int nr;
+
     private String name;
 
     public Name(){}
