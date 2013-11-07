@@ -133,6 +133,11 @@ public class TriangleMesh implements ITriangleMesh {
         return assertDelta(p1.x,p2.x,delta) && assertDelta(p1.y,p2.y,delta) && assertDelta(p1.z,p2.z,delta);
     }
 
+    private boolean isEqual(Point3f p1,Point3f p2) {
+//        final double delta = 0.0005;
+        final double delta = 0.0;
+        return assertDelta(p1.x,p2.x,delta) && assertDelta(p1.y,p2.y,delta) && assertDelta(p1.z,p2.z,delta);
+    }
     private boolean assertDelta(double d1, double d2, double delta) {
         final double actualDelta = (d1 > d2) ? (d1 - d2) : (d2 - d1);
         return (actualDelta <= delta);
@@ -143,10 +148,21 @@ public class TriangleMesh implements ITriangleMesh {
         for (Triangle triangle : triangleList) {
             addTriangleToHalfEdgeDatasturcture(triangle,hed);
         }
+        HalfEdge current,temp;
+        HalfEdgeVertex current_source,current_target;
         for (int i = 0; i < hed.getNumberOfHalfEdges(); i++) {
-
+            current = hed.getHalfEdge(i);
+            current_source = current.getVertex();
+            current_target = current.getNext().getVertex();
+            for (int j = 1; j < hed.getNumberOfHalfEdges(); j++) {
+                temp = hed.getHalfEdge(j);
+                if (current_target.equals(temp.getVertex()) && current_source.equals(temp.getNext().getVertex())) {
+                    current.setOpposite(temp);
+                    temp.setOpposite(current);
+                }
+            }
         }
-
+        return hed;
     }
     private void addTriangleToHalfEdgeDatasturcture(Triangle triangle,HalfEdgeDatastructure hed) {
         final HalfEdgeVertex hev_a;
@@ -156,22 +172,51 @@ public class TriangleMesh implements ITriangleMesh {
         final HalfEdge he2;
         final HalfEdge he3;
         final HalfEdgeTriangle het;
-        //TODO: bevor punkt erstellt wird, prüfen ob es den punkt bereits im HED gibt und diesen verwenden
-        hev_a = new HalfEdgeVertex(new Point3f(point3dList.get(triangle.a)));
-        hev_b = new HalfEdgeVertex(new Point3f(point3dList.get(triangle.b)));
-        hev_c = new HalfEdgeVertex(new Point3f(point3dList.get(triangle.c)));
+
+        //Points
+        Point3f pA = new Point3f(point3dList.get(triangle.a));
+        Point3f pB = new Point3f(point3dList.get(triangle.b));
+        Point3f pC = new Point3f(point3dList.get(triangle.c));
+        Point3f temp;
+
+        boolean newPoint_A = false, newPoint_B = false, newPoint_C = false;
+
+        //bevor punkt erstellt wird, prüfen ob es den punkt bereits im HED gibt und diesen verwenden
+        for (int i = 0; i < hed.getNumberOfVertices(); i++) {
+            temp = hed.getVertex(i).getPosition();
+
+            if (isEqual(temp, pA)) {pA = temp; newPoint_A = true;}
+            else if (isEqual(temp, pB)) {pB = temp; newPoint_B = true;}
+            else if (isEqual(temp,pC)) {pC = temp; newPoint_C = true;}
+
+        }
+
+        hev_a = new HalfEdgeVertex(pA);
+        hev_b = new HalfEdgeVertex(pB);
+        hev_c = new HalfEdgeVertex(pC);
+
         he1 = new HalfEdge();
         he2 = new HalfEdge();
         he3 = new HalfEdge();
         het = new HalfEdgeTriangle();
 
-        hev_a.setHalfEdge(he1);
-        hev_b.setHalfEdge(he2);
-        hev_c.setHalfEdge(he2);
 
-        he1.setVertex(hev_a);
-        he2.setVertex(hev_b);
-        he3.setVertex(hev_c);
+        if (newPoint_A) {
+            hed.addVertex(hev_a);
+            he1.setVertex(hev_a);
+            hev_a.setHalfEdge(he1);
+        }
+        if (newPoint_B) {
+            hed.addVertex(hev_b);
+            he2.setVertex(hev_b);
+            hev_b.setHalfEdge(he2);
+        }
+        if (newPoint_C) {
+            hed.addVertex(hev_c);
+            he3.setVertex(hev_c);
+            hev_c.setHalfEdge(he3);
+        }
+
 
         he1.setNext(he2);
         he2.setNext(he3);
@@ -186,10 +231,6 @@ public class TriangleMesh implements ITriangleMesh {
         he3.setFacet(het);
 
         het.setHalfEdge(he1);
-
-        hed.addVertex(hev_a);
-        hed.addVertex(hev_b);
-        hed.addVertex(hev_c);
 
         hed.addHalfEdge(he1);
         hed.addHalfEdge(he2);
