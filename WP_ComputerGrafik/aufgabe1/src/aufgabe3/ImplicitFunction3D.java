@@ -14,7 +14,6 @@ import javax.vecmath.Point3d;
  * 
  */
 public interface ImplicitFunction3D {
-
     /**
      * Evaluates the implicit function a given spatial location.
      * 
