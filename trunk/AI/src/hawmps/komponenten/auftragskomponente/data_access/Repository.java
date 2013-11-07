@@ -46,6 +46,8 @@ public class Repository {
 
         query.select(root).where(builder.equal(root.get("nummer"), auftragsNummer));
         List<Auftrag> auftrag = new ArrayList<Auftrag>(entityManager.createQuery(query).getResultList());
+        if(auftrag.isEmpty())
+            return null;
         return auftrag.get(0);
     }
 
