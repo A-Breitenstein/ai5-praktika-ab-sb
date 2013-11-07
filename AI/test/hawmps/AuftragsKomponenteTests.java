@@ -3,17 +3,16 @@ package hawmps;
 import aufgabe1.persistence.PersistenceUtilsA1;
 import hawmps.adts.fachliche.Datum;
 import hawmps.adts.fachliche.Name;
-import hawmps.adts.fachliche.Nummer;
-import hawmps.komponenten.auftraege.IAuftragsKomponente;
-import hawmps.komponenten.auftraege.access.AuftragsKomponente;
-import hawmps.komponenten.auftraege.data_access.Auftrag;
-import hawmps.komponenten.bauteile.IBauteileKomponente;
-import hawmps.komponenten.bauteile.access.BauteileKomponente;
-import hawmps.komponenten.bauteile.data_access.Bauteil;
-import hawmps.komponenten.bauteile.data_access.Stueckliste;
-import hawmps.komponenten.bauteile.data_access.StuecklistenPosition;
-import hawmps.komponenten.kunden.IKundenKomponente;
-import hawmps.komponenten.kunden.access.KundenKomponente;
+import hawmps.komponenten.auftragskomponente.IAuftragsKomponente;
+import hawmps.komponenten.auftragskomponente.access.AuftragsKomponente;
+import hawmps.komponenten.auftragskomponente.data_access.Auftrag;
+import hawmps.komponenten.bauteilkomponente.IBauteileKomponente;
+import hawmps.komponenten.bauteilkomponente.access.BauteileKomponente;
+import hawmps.komponenten.bauteilkomponente.data_access.Bauteil;
+import hawmps.komponenten.bauteilkomponente.data_access.Stueckliste;
+import hawmps.komponenten.bauteilkomponente.data_access.StuecklistenPosition;
+import hawmps.komponenten.kundenkomponente.IKundenKomponente;
+import hawmps.komponenten.kundenkomponente.access.KundenKomponente;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -35,7 +34,16 @@ public class AuftragsKomponenteTests {
     IKundenKomponente kundenKomponente;
     EntityManager entityManager;
 
-    @Before
+    public AuftragsKomponenteTests() {
+        startUpCode();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        cleanUpCode();
+        super.finalize();    //To change body of overridden methods use File | Settings | File Templates.
+    }
+
     public void startUpCode() {
         entityManager = PersistenceUtilsA1.createEntityManager();
         kundenKomponente = KundenKomponente.create(entityManager);
@@ -50,7 +58,6 @@ public class AuftragsKomponenteTests {
         entityManager.getTransaction().begin();
     }
 
-    @After
     public void cleanUpCode(){
         entityManager.getTransaction().commit();
     }
@@ -93,7 +100,7 @@ public class AuftragsKomponenteTests {
         Auftrag neuerAuftrag = auftragsKomponente.ueberfuehreAngebotInAuftrag(tisch.getNummer());
 
         Assert.assertTrue(neuerAuftrag.getZugehoerigeFertigungsAuftrage().size() == 1);
-
+        Assert.assertTrue(auftragsKomponente.findAuftragByNummer(neuerAuftrag.getNummer()).getNummer() == neuerAuftrag.getNummer());
 
 
     }

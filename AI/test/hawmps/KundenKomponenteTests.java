@@ -3,16 +3,14 @@ package hawmps;
 import aufgabe1.persistence.PersistenceUtilsA1;
 import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;
-import hawmps.komponenten.kunden.IKundenKomponente;
-import hawmps.komponenten.kunden.access.KundenKomponente;
-import hawmps.komponenten.kunden.data_access.Kunde;
+import hawmps.komponenten.kundenkomponente.IKundenKomponente;
+import hawmps.komponenten.kundenkomponente.access.KundenKomponente;
+import hawmps.komponenten.kundenkomponente.data_access.Kunde;
 import junit.framework.Assert;
-import org.junit.Before;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import javax.persistence.EntityManager;
-import java.util.List;
 
 
 /**
