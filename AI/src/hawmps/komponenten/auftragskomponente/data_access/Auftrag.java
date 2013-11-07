@@ -23,7 +23,7 @@ public class Auftrag implements Serializable{
 
     private Datum beauftragtAm;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage;
 
     private int angebotsNummer;
