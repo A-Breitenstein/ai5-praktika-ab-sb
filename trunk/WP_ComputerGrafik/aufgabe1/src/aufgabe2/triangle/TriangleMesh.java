@@ -143,6 +143,7 @@ public class TriangleMesh implements ITriangleMesh {
         return (actualDelta <= delta);
     }
 
+    @Override
     public HalfEdgeDatastructure convertToHalfEdgeDatastructure() {
         HalfEdgeDatastructure hed = new HalfEdgeDatastructure();
         for (Triangle triangle : triangleList) {
@@ -179,15 +180,17 @@ public class TriangleMesh implements ITriangleMesh {
         Point3f pC = new Point3f(point3dList.get(triangle.c));
         Point3f temp;
 
-        boolean newPoint_A = false, newPoint_B = false, newPoint_C = false;
-
+        boolean newPoint_A = true, newPoint_B = true, newPoint_C = true;
+//        if(hed.getNumberOfVertices() == 0){
+//            newPoint_A = newPoint_B = newPoint_C = true;
+//        }
         //bevor punkt erstellt wird, prüfen ob es den punkt bereits im HED gibt und diesen verwenden
         for (int i = 0; i < hed.getNumberOfVertices(); i++) {
             temp = hed.getVertex(i).getPosition();
 
-            if (isEqual(temp, pA)) {pA = temp; newPoint_A = true;}
-            else if (isEqual(temp, pB)) {pB = temp; newPoint_B = true;}
-            else if (isEqual(temp,pC)) {pC = temp; newPoint_C = true;}
+            if (isEqual(temp, pA)) {pA = temp; newPoint_A = false;}
+            else if (isEqual(temp, pB)) {pB = temp; newPoint_B = false;}
+            else if (isEqual(temp,pC)) {pC = temp; newPoint_C = false;}
 
         }
 
@@ -203,19 +206,21 @@ public class TriangleMesh implements ITriangleMesh {
 
         if (newPoint_A) {
             hed.addVertex(hev_a);
-            he1.setVertex(hev_a);
             hev_a.setHalfEdge(he1);
         }
+        he1.setVertex(hev_a);
+
         if (newPoint_B) {
             hed.addVertex(hev_b);
-            he2.setVertex(hev_b);
             hev_b.setHalfEdge(he2);
         }
+        he2.setVertex(hev_b);
+
         if (newPoint_C) {
             hed.addVertex(hev_c);
-            he3.setVertex(hev_c);
             hev_c.setHalfEdge(he3);
         }
+        he3.setVertex(hev_c);
 
 
         he1.setNext(he2);
