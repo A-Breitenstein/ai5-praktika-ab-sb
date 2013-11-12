@@ -5,6 +5,8 @@
  */
 package aufgabe2.triangle;
 
+import aufgabe4.HalfEdgeDatastructure;
+
 import javax.vecmath.Point3d;
 import java.util.List;
 
@@ -79,4 +81,6 @@ public interface ITriangleMesh {
 
     public List<Triangle> getAllAdjacentTrianglesToVertex(int pointIndex);
     public void removeDuplicatedPointsAndFixTriangles();
+
+   public HalfEdgeDatastructure convertToHalfEdgeDatastructure();
 }

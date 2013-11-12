@@ -14,7 +14,7 @@ import java.util.List;
  * @author Philipp Jenke
  * 
  */
-public interface IHalfEdgeDatastructureOperations {
+public interface IHalfEdgeDatastructureOperations extends IHalfEdgeDatastructure{
 
     /**
      * Return a list of adjacent vertices for a given vertex.

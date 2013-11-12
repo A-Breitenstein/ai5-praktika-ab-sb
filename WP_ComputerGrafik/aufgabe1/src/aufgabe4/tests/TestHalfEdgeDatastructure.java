@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 
 import javax.vecmath.Point3f;
 
+import aufgabe2.triangle.ITriangleMesh;
 import aufgabe4.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -20,6 +21,7 @@ import static org.junit.Assert.*;
  * 
  */
 public class TestHalfEdgeDatastructure {
+
 
     /**
      * Test the link information in all vertices

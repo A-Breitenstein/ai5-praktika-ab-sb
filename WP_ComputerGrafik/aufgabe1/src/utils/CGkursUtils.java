@@ -1,7 +1,11 @@
 package utils;
 
+import aufgabe4.HalfEdgeVertex;
+
 import javax.media.j3d.Transform3D;
 import javax.vecmath.Matrix4d;
+import javax.vecmath.Point3d;
+import javax.vecmath.Point3f;
 import javax.vecmath.Vector3f;
 
 /**
@@ -62,5 +66,22 @@ public class CGkursUtils{
         transform3D.get(m4_old);
         m4_rotationYmitTranslation.mul(m4_old);
         transform3D.set(m4_rotationYmitTranslation);
+    }
+
+
+    public static boolean isEqual(Point3d p1,Point3d p2) {
+//        final double delta = 0.0005;
+        final double delta = 0.0;
+        return assertDelta(p1.x,p2.x,delta) && assertDelta(p1.y,p2.y,delta) && assertDelta(p1.z,p2.z,delta);
+    }
+
+    public static boolean isEqual(Point3f p1,Point3f p2) {
+//        final double delta = 0.0005;
+        final double delta = 0.0;
+        return assertDelta(p1.x,p2.x,delta) && assertDelta(p1.y,p2.y,delta) && assertDelta(p1.z,p2.z,delta);
+    }
+    private static boolean assertDelta(double d1, double d2, double delta) {
+        final double actualDelta = (d1 > d2) ? (d1 - d2) : (d2 - d1);
+        return (actualDelta <= delta);
     }
 }
