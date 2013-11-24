@@ -58,4 +58,14 @@ public class KundeDTO implements Serializable{
     public void setAdresse(Adresse adresse) {
         this.adresse = adresse;
     }
+
+    @Override
+    public String toString() {
+        return "KundeDTO{" +
+                "nummer=" + nummer +
+                ", vorname=" + vorname +
+                ", nachname=" + nachname +
+                ", adresse=" + adresse +
+                '}';
+    }
 }
