@@ -71,18 +71,15 @@ public class Kunde implements Serializable{
 
         Kunde kunde = (Kunde) o;
 
-        if (!adresse.equals(kunde.adresse)) return false;
-        if (!nachname.equals(kunde.nachname)) return false;
-//        if (!nummer.equals(kunde.nummer)) return false;
-        if (!vorname.equals(kunde.vorname)) return false;
+        if (nummer != kunde.nummer) return false;
 
         return true;
     }
 
-//    @Override
-//    public int hashCode() {
-//        return nummer.hashCode();
-//    }
+    @Override
+    public int hashCode() {
+        return nummer;
+    }
 
     @Override
     public String toString() {
@@ -95,10 +92,13 @@ public class Kunde implements Serializable{
     }
 
     public KundeDTO toDTO(){
-        throw new NotImplementedException();
+        return new KundeDTO(nummer,vorname,nachname,adresse);
     }
     public void FromDTO(KundeDTO kundeDTO){
-        throw new NotImplementedException();
+        nummer = kundeDTO.getNummer();
+        vorname = kundeDTO.getVorname();
+        nachname = kundeDTO.getNachname();
+        adresse = kundeDTO.getAdresse();
     }
 
     public int getNummer() {

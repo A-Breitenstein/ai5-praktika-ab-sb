@@ -4,9 +4,11 @@ import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;
 import hawmps.komponenten.kundenkomponente.IKundenKomponente;
 import hawmps.komponenten.kundenkomponente.data_access.Kunde;
+import hawmps.komponenten.kundenkomponente.data_access.KundeDTO;
 import hawmps.komponenten.kundenkomponente.data_access.Repository;
 
 import javax.persistence.EntityManager;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,12 +32,21 @@ public class KundenKomponente implements IKundenKomponente {
     }
 
     @Override
-    public Kunde createKunde(Name Vorname, Name Nachname, Adresse adresse) {
-        return repository.createKunde(Vorname,Nachname,adresse);
+    public KundeDTO createKunde(Name Vorname, Name Nachname, Adresse adresse) {
+        return repository.createKunde(Vorname,Nachname,adresse).toDTO();
     }
 
     @Override
-    public List<Kunde> findByNachname(Name Nachname) {
-        return repository.findKundeByNachname(Nachname);
+    public List<KundeDTO> findByNachname(Name Nachname) {
+        List<KundeDTO> result = new ArrayList<KundeDTO>();
+        for (Kunde kunde : repository.findKundeByNachname(Nachname)) {
+            result.add(kunde.toDTO());
+        }
+        return result;
+    }
+
+    @Override
+    public void deleteKundeByNummer(int kundenNummer) {
+        repository.deleteKunde(kundenNummer);
     }
 }

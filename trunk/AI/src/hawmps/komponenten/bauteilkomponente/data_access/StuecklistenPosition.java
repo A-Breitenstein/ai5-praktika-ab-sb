@@ -76,4 +76,12 @@ public class StuecklistenPosition {
                 ", bauteil=" + bauteil +
                 '}';
     }
+    public StuecklistenPositionDTO toDTO(BauteilDTO bauteilDTO) {
+        return new StuecklistenPositionDTO(nummer,menge,bauteilDTO);
+    }
+    public void fromDTO(StuecklistenPositionDTO stuecklistenPositionDTO,Bauteil bauteil) {
+        nummer = stuecklistenPositionDTO.getNummer();
+        menge = stuecklistenPositionDTO.getMenge();
+        this.bauteil = bauteil;
+    }
 }

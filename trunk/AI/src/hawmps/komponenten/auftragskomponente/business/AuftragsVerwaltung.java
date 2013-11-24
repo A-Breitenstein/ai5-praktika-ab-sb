@@ -1,12 +1,15 @@
 package hawmps.komponenten.auftragskomponente.business;
 
 import hawmps.adts.fachliche.Datum;
+import hawmps.komponenten.auftragskomponente.data_access.Angebot;
 import hawmps.komponenten.auftragskomponente.data_access.Auftrag;
 import hawmps.komponenten.auftragskomponente.data_access.FertigungsAuftrag;
 import hawmps.komponenten.auftragskomponente.data_access.Repository;
 import hawmps.komponenten.bauteilkomponente.IBauteileKomponente;
 import hawmps.komponenten.bauteilkomponente.data_access.Bauteil;
+import hawmps.komponenten.bauteilkomponente.data_access.BauteilDTO;
 import hawmps.komponenten.bauteilkomponente.data_access.StuecklistenPosition;
+import hawmps.komponenten.bauteilkomponente.data_access.StuecklistenPositionDTO;
 import hawmps.komponenten.kundenkomponente.IKundenKomponente;
 
 import java.util.ArrayList;
@@ -33,17 +36,16 @@ public class AuftragsVerwaltung {
         return new AuftragsVerwaltung(repository, bauteileKomponente, kundenKomponente);
     }
 
-    public Auftrag ueberfuehreAngebotInAuftrag(int bauteilNummer) {
-        Bauteil bauteil = bauteileKomponente.findBauteilByNummer(bauteilNummer);
+    public Auftrag ueberfuehreAngebotInAuftrag(Angebot angebot) {
+        BauteilDTO bauteil = bauteileKomponente.findBauteilByNummer(angebot.getBauteilNummer());
         List<FertigungsAuftrag> fertigungsAuftraege = erstelleFertigungsAuftraege(bauteil);
-        return repository.createAuftrag(false, Datum.create("11.11.11"),fertigungsAuftraege,-1,-1,-1);
+        return repository.createAuftrag(false, Datum.create("11.11.11"),fertigungsAuftraege,angebot.getNummer(),-1,-1);
 
     }
-    private List<FertigungsAuftrag> erstelleFertigungsAuftraege(Bauteil bauteil) {
+    private List<FertigungsAuftrag> erstelleFertigungsAuftraege(BauteilDTO bauteil) {
         if (bauteil.getStueckliste() != null) {
             // bauteil ist ein komplexesbautel
-            List<Integer> bauteilNummern = new ArrayList<Integer>();
-            sammelAllesEin(bauteil,bauteilNummern);
+            List<Integer> bauteilNummern = bauteileKomponente.getAlleUnterBauteileVon(bauteil);
             List<FertigungsAuftrag> fertigungsAuftragList = new ArrayList<FertigungsAuftrag>();
             fertigungsAuftragList.add(FertigungsAuftrag.create(null, bauteil.getNummer()));
             for (Integer nummer : bauteilNummern) {
@@ -55,15 +57,5 @@ public class AuftragsVerwaltung {
             return new ArrayList<FertigungsAuftrag>();
 
 
-    }
-
-    //WTF was soll das für ein funktionsname sein !!"!§$"§!$!
-    private void sammelAllesEin(Bauteil bauteil,List<Integer> bauteilNummern) {
-        for (StuecklistenPosition o : bauteil.getStueckliste().getStuecklistenPositionen()) {
-            if(o.getBauteil().getStueckliste() != null){
-                bauteilNummern.add(o.getBauteil().getNummer());
-                sammelAllesEin(o.getBauteil(),bauteilNummern);
-            }
-        }
     }
 }

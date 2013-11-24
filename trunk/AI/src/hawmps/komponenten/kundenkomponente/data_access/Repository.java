@@ -35,8 +35,8 @@ public class Repository {
     public void updateKunde(Kunde kunde) {
         entityManager.merge(kunde);
     }
-    public void deleteKunde(Kunde kunde){
-        Kunde derKunde = findKundeByNummer(kunde.getNummer());
+    public void deleteKunde(int kundenNummer){
+        Kunde derKunde = findKundeByNummer(kundenNummer);
         entityManager.remove(derKunde);
     }
 

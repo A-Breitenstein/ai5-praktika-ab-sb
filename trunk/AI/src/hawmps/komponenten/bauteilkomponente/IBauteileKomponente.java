@@ -2,6 +2,7 @@ package hawmps.komponenten.bauteilkomponente;
 
 import hawmps.adts.fachliche.Name;
 import hawmps.komponenten.bauteilkomponente.data_access.Bauteil;
+import hawmps.komponenten.bauteilkomponente.data_access.BauteilDTO;
 import hawmps.komponenten.bauteilkomponente.data_access.Stueckliste;
 
 import java.util.List;
@@ -13,13 +14,17 @@ import java.util.List;
  * Time: 17:15
  */
 public interface IBauteileKomponente {
-    public Bauteil createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste);
+    public BauteilDTO createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste);
 
-    public void updateBauteil(Bauteil bauteil);
+    public void updateBauteil(BauteilDTO bauteil);
 
     public void deleteBauteilByNummer(int BauteilNummer);
 
-    public Bauteil findBauteilByNummer(int nummer);
+    public BauteilDTO findBauteilByNummer(int nummer);
 
-    public List<Bauteil> findBauteilByName(Name name);
+    public List<BauteilDTO> findBauteilByName(Name name);
+
+    public List<Integer> getAlleUnterBauteileVon(BauteilDTO bauteilDTO);
+    @Deprecated
+    public void createTestBauteil(Name name);
 }

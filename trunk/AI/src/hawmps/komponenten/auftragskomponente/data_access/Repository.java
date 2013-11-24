@@ -1,5 +1,6 @@
 package hawmps.komponenten.auftragskomponente.data_access;
 
+import hawmps.adts.fachliche.Betrag;
 import hawmps.adts.fachliche.Datum;
 
 import javax.persistence.EntityManager;
@@ -50,6 +51,46 @@ public class Repository {
             return null;
         return auftrag.get(0);
     }
+
+    public Angebot createAngebot(Datum gueltigAb, Datum gueltigBis, Betrag preis, int kundenNummer, int bauteilNummer) {
+        Angebot angebot = Angebot.create(gueltigAb, gueltigBis, preis, kundenNummer, bauteilNummer);
+        entityManager.persist(angebot);
+        return angebot;
+    }
+
+    public Angebot findAngebotByNummer(int angebotNummer){
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Angebot> query = builder.createQuery(Angebot.class);
+        Root<Angebot> root = query.from(Angebot.class);
+
+        query.select(root).where(builder.equal(root.get("nummer"), angebotNummer));
+        List<Angebot> angebotList = new ArrayList<Angebot>(entityManager.createQuery(query).getResultList());
+        if(angebotList.isEmpty())
+            return null;
+        return angebotList.get(0);
+    }
+
+    public List<Angebot> findAngeboteByKundenNummer(int kundenNummer){
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Angebot> query = builder.createQuery(Angebot.class);
+        Root<Angebot> root = query.from(Angebot.class);
+
+        query.select(root).where(builder.equal(root.get("kundenNummer"), kundenNummer));
+        List<Angebot> angebotList = new ArrayList<Angebot>(entityManager.createQuery(query).getResultList());
+        if(angebotList.isEmpty())
+            return null;
+        return angebotList;
+    }
+
+    public void updateAngebot(Angebot angebot){
+        entityManager.merge(angebot);
+    }
+
+    public void deleteAngebotByNummer(int angebotsNummer) {
+        Angebot angebot = findAngebotByNummer(angebotsNummer);
+        entityManager.remove(angebot);
+    }
+
 
 
 }

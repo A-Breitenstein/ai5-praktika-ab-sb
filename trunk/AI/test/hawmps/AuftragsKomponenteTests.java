@@ -1,18 +1,24 @@
 package hawmps;
 
 import aufgabe1.persistence.PersistenceUtilsA1;
+import hawmps.adts.fachliche.Adresse;
+import hawmps.adts.fachliche.Betrag;
 import hawmps.adts.fachliche.Datum;
 import hawmps.adts.fachliche.Name;
 import hawmps.komponenten.auftragskomponente.IAuftragsKomponente;
 import hawmps.komponenten.auftragskomponente.access.AuftragsKomponente;
+import hawmps.komponenten.auftragskomponente.data_access.AngebotDTO;
 import hawmps.komponenten.auftragskomponente.data_access.Auftrag;
+import hawmps.komponenten.auftragskomponente.data_access.AuftragDTO;
 import hawmps.komponenten.bauteilkomponente.IBauteileKomponente;
 import hawmps.komponenten.bauteilkomponente.access.BauteileKomponente;
 import hawmps.komponenten.bauteilkomponente.data_access.Bauteil;
+import hawmps.komponenten.bauteilkomponente.data_access.BauteilDTO;
 import hawmps.komponenten.bauteilkomponente.data_access.Stueckliste;
 import hawmps.komponenten.bauteilkomponente.data_access.StuecklistenPosition;
 import hawmps.komponenten.kundenkomponente.IKundenKomponente;
 import hawmps.komponenten.kundenkomponente.access.KundenKomponente;
+import hawmps.komponenten.kundenkomponente.data_access.KundeDTO;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -64,40 +70,32 @@ public class AuftragsKomponenteTests {
 
     @Test
     public void createAuftrag_find_delete(){
-        Auftrag auftrag = auftragsKomponente.createAuftrag(true, Datum.create("10.10.2013"),null,-1,-1,-1);
-        Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftrag.getNummer()).equals(auftrag));
-        auftragsKomponente.deleteAuftragByNummer(auftrag.getNummer());
-        Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftrag.getNummer()) == null);
+        AuftragDTO auftragDTO = auftragsKomponente.createAuftrag(true, Datum.create("10.10.2013"),null,-1,-1,-1);
+        Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftragDTO.getNummer()).getNummer() == auftragDTO.getNummer());
+        auftragsKomponente.deleteAuftragByNummer(auftragDTO.getNummer());
+        Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftragDTO.getNummer()) == null);
     }
     @Test
     public void updateAuftrag(){
-        Auftrag auftrag = auftragsKomponente.createAuftrag(false, Datum.create("11.11.2013"),null,-1,-1,-1);
-        auftrag.setAngebotsNummer(1);
-        auftragsKomponente.updateAuftrag(auftrag);
+        AuftragDTO auftragDTO = auftragsKomponente.createAuftrag(false, Datum.create("11.11.2013"),null,-1,-1,-1);
+        auftragDTO.setAngebotsNummer(1);
+        auftragsKomponente.updateAuftrag(auftragDTO);
 
-        Auftrag auftragnochmal = auftragsKomponente.findAuftragByNummer(auftrag.getNummer());
-        Assert.assertTrue(auftragnochmal.getAngebotsNummer() == 1);
+        AuftragDTO auftragDTOnochmal = auftragsKomponente.findAuftragByNummer(auftragDTO.getNummer());
+        Assert.assertTrue(auftragDTOnochmal.getAngebotsNummer() == 1);
 
-        auftragsKomponente.deleteAuftragByNummer(auftragnochmal.getNummer());
+        auftragsKomponente.deleteAuftragByNummer(auftragDTOnochmal.getNummer());
     }
 
     @Test
     public void uebuerfuehreAngebotInAuftrag() {
-        Bauteil schraube = bauteileKomponente.createBauteil(Name.create("Schraube AB3"),-1,null);
-        Bauteil kantholz = bauteileKomponente.createBauteil(Name.create("Kantholz XYZ3"),-1,null);
-        Bauteil mutter = bauteileKomponente.createBauteil(Name.create("Mutter AB3"),-1,null);
-        Bauteil holzplatte = bauteileKomponente.createBauteil(Name.create("Holzplatte"),-1,null);
+        Name name = Name.create("Tisch");
+        bauteileKomponente.createTestBauteil(name);
+        BauteilDTO tisch = bauteileKomponente.findBauteilByName(name).get(0);
+        KundeDTO kunde1 = kundenKomponente.createKunde(Name.create("Hans"), Name.create("Meiser"), Adresse.create("dd","aa","bb"));
 
-        List<StuecklistenPosition> stuecklistenPositionen = new ArrayList<StuecklistenPosition>();
-        stuecklistenPositionen.add(StuecklistenPosition.create(25, schraube));
-        stuecklistenPositionen.add(StuecklistenPosition.create(4, kantholz));
-        stuecklistenPositionen.add(StuecklistenPosition.create(25, mutter));
-        stuecklistenPositionen.add(StuecklistenPosition.create(1, holzplatte));
-
-        Stueckliste stueckliste = Stueckliste.create(Datum.create("20.11.13"), Datum.create("25.11.14"), stuecklistenPositionen);
-        Bauteil tisch = bauteileKomponente.createBauteil(Name.create("Tisch"),-1,stueckliste);
-
-        Auftrag neuerAuftrag = auftragsKomponente.ueberfuehreAngebotInAuftrag(tisch.getNummer());
+        AngebotDTO angebotDTO = auftragsKomponente.createAngebot(Datum.create("heute"), Datum.create("bis morgen"), Betrag.create(5555),kunde1.getNummer(), tisch.getNummer());
+        AuftragDTO neuerAuftrag = auftragsKomponente.ueberfuehreAngebotInAuftrag(angebotDTO);
 
         Assert.assertTrue(neuerAuftrag.getZugehoerigeFertigungsAuftrage().size() == 1);
         Assert.assertTrue(auftragsKomponente.findAuftragByNummer(neuerAuftrag.getNummer()).getNummer() == neuerAuftrag.getNummer());

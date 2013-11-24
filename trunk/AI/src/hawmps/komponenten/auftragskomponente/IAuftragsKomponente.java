@@ -1,8 +1,8 @@
 package hawmps.komponenten.auftragskomponente;
 
+import hawmps.adts.fachliche.Betrag;
 import hawmps.adts.fachliche.Datum;
-import hawmps.komponenten.auftragskomponente.data_access.Auftrag;
-import hawmps.komponenten.auftragskomponente.data_access.FertigungsAuftrag;
+import hawmps.komponenten.auftragskomponente.data_access.*;
 
 import java.util.List;
 
@@ -14,12 +14,18 @@ import java.util.List;
  */
 public interface IAuftragsKomponente {
 
-    Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer);
-    void updateAuftrag(Auftrag auftrag);
+    AuftragDTO createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer);
+    void updateAuftrag(AuftragDTO auftrag);
     void deleteAuftragByNummer(int auftragsNummer);
-    Auftrag findAuftragByNummer(int auftragsNummer);
+    AuftragDTO findAuftragByNummer(int auftragsNummer);
 
-    Auftrag ueberfuehreAngebotInAuftrag(int bauteilNummer);
+    AuftragDTO ueberfuehreAngebotInAuftrag(AngebotDTO angebotDTO);
+
+    AngebotDTO createAngebot(Datum gueltigAb, Datum gueltigBis, Betrag preis, int kundenNummer, int bauteilNummer);
+
+    AngebotDTO findAngebotByNummer(int angebotNummer);
+
+    List<AngebotDTO> findAngeboteByKundenNummer(int kundenNummer);
 
 
 }

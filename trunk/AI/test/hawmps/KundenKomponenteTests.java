@@ -6,6 +6,7 @@ import hawmps.adts.fachliche.Name;
 import hawmps.komponenten.kundenkomponente.IKundenKomponente;
 import hawmps.komponenten.kundenkomponente.access.KundenKomponente;
 import hawmps.komponenten.kundenkomponente.data_access.Kunde;
+import hawmps.komponenten.kundenkomponente.data_access.KundeDTO;
 import junit.framework.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -33,7 +34,7 @@ public class KundenKomponenteTests {
     @Test
     public void createKunde(){
         entityManager.getTransaction().begin();
-        Kunde kunde = kundenKomponente.createKunde(Name.create("Sven"), Name.create("Bartel"), Adresse.create("qwe str1","hh","22457"));
+        KundeDTO kunde = kundenKomponente.createKunde(Name.create("Sven"), Name.create("Bartel"), Adresse.create("qwe str1","hh","22457"));
         Assert.assertTrue(kundenKomponente.findByNachname(Name.create("Bartel")).size() > 0);
         entityManager.getTransaction().commit();
     }

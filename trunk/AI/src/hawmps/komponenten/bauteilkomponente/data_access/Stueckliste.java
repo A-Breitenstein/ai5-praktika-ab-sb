@@ -4,6 +4,7 @@ import hawmps.adts.fachliche.Datum;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -81,13 +82,32 @@ public class Stueckliste implements Serializable {
 
         Stueckliste that = (Stueckliste) o;
 
-//        if (!nummer.equals(that.nummer)) return false;
+        if (nummer != that.nummer) return false;
 
         return true;
     }
 
-//    @Override
-//    public int hashCode() {
-//        return nummer.hashCode();
-//    }
+    @Override
+    public int hashCode() {
+        return nummer;
+    }
+
+    public StuecklisteDTO toDTO(BauteilDTO bauteilDTO) {
+        List<StuecklistenPositionDTO> stuecklistenPositionDTOs = new ArrayList<StuecklistenPositionDTO>();
+        for (StuecklistenPosition stuecklistenPosition : stuecklistenPositionen) {
+            stuecklistenPositionDTOs.add(stuecklistenPosition.toDTO(bauteilDTO));
+        }
+        return new StuecklisteDTO(nummer, gueltigAb, gueltigBis, stuecklistenPositionDTOs);
+    }
+    public void fromDTO(StuecklisteDTO stuecklisteDTO,Bauteil bauteil) {
+        nummer  = stuecklisteDTO.getNummer();
+        gueltigAb = stuecklisteDTO.getGueltigAb();
+        gueltigBis = stuecklisteDTO.getGueltigBis();
+        stuecklistenPositionen = new ArrayList<StuecklistenPosition>();
+        for (StuecklistenPositionDTO stuecklistenPositionDTO : stuecklisteDTO.getStuecklistenPositionen()) {
+            StuecklistenPosition tmp = new StuecklistenPosition();
+            tmp.fromDTO(stuecklistenPositionDTO,bauteil);
+            stuecklistenPositionen.add(tmp);
+        }
+    }
 }
