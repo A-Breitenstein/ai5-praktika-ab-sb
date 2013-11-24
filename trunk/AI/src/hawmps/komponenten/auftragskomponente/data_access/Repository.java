@@ -29,7 +29,8 @@ public class Repository {
 
     public Auftrag createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer){
         Auftrag auftrag = Auftrag.create(istAbgeschlossen, beauftragtAm, zugehoerigeFertigungsAuftrage, angebotsNummer, rechnungsNummer, lieferNummer);
-        entityManager.persist(auftrag);
+//        entityManager.persist(auftrag);
+        entityManager.merge(auftrag);
         return  auftrag;
     }
     public void updateAuftrag(Auftrag auftrag){
@@ -54,7 +55,8 @@ public class Repository {
 
     public Angebot createAngebot(Datum gueltigAb, Datum gueltigBis, Betrag preis, int kundenNummer, int bauteilNummer) {
         Angebot angebot = Angebot.create(gueltigAb, gueltigBis, preis, kundenNummer, bauteilNummer);
-        entityManager.persist(angebot);
+//        entityManager.persist(angebot);
+        entityManager.merge(angebot);
         return angebot;
     }
 

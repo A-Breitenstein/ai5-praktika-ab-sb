@@ -131,7 +131,11 @@ public class Angebot implements Serializable {
                 '}';
     }
     public AngebotDTO toDTO() {
-        return new AngebotDTO(nummer,gueltigAb,gueltigBis,preis,kundenNummer,bauteilNummer,auftrag.toDTO());
+        AngebotDTO angebotDTO = new AngebotDTO(nummer, gueltigAb, gueltigBis, preis, kundenNummer, bauteilNummer, null);
+        if (auftrag != null) {
+            angebotDTO.setAuftragDTO(auftrag.toDTO());
+        }
+        return angebotDTO;
     }
     public  void fromDTO(AngebotDTO angebotDTO) {
         nummer = angebotDTO.getNummer();
@@ -140,8 +144,10 @@ public class Angebot implements Serializable {
         preis = angebotDTO.getPreis();
         kundenNummer = angebotDTO.getKundenNummer();
         bauteilNummer = angebotDTO.getBauteilNummer();
-        auftrag =  new Auftrag();
-        auftrag.fromDTO(angebotDTO.getAuftragDTO());
+        if (angebotDTO.getAuftragDTO() != null) {
+            auftrag =  new Auftrag();
+            auftrag.fromDTO(angebotDTO.getAuftragDTO());
+        }
 
     }
 

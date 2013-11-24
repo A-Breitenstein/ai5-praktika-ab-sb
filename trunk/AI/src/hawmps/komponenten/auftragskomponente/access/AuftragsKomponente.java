@@ -57,7 +57,11 @@ public class AuftragsKomponente implements IAuftragsKomponente {
 
     @Override
     public AuftragDTO findAuftragByNummer(int auftragsNummer) {
-        return repository.findAuftragByNummer(auftragsNummer).toDTO();
+        Auftrag auftrag = repository.findAuftragByNummer(auftragsNummer);
+        if (auftrag != null) {
+            return auftrag.toDTO();
+        }
+        return null;
     }
 
     @Override
