@@ -66,15 +66,15 @@ public class FertigungsAuftrag implements Serializable{
 
         FertigungsAuftrag that = (FertigungsAuftrag) o;
 
-//        if (!nummer.equals(that.nummer)) return false;
+        if (nummer != that.nummer) return false;
 
         return true;
     }
 
-//    @Override
-//    public int hashCode() {
-//        return nummer.hashCode();
-//    }
+    @Override
+    public int hashCode() {
+        return nummer;
+    }
 
     @Override
     public String toString() {
@@ -85,10 +85,12 @@ public class FertigungsAuftrag implements Serializable{
                 '}';
     }
 
-    public FertigungsAuftragDTO toDTO(){
-        throw new NotImplementedException();
+    public FertigungsAuftragDTO toDTO(AuftragDTO auftragDTO){
+        return new FertigungsAuftragDTO(nummer,auftragDTO,bauteilNummer);
     }
-    public void fromDTO(FertigungsAuftragDTO fertigungsAuftragDTO) {
-        throw new NotImplementedException();
+    public void fromDTO(FertigungsAuftragDTO fertigungsAuftragDTO,Auftrag auftrag) {
+        nummer = fertigungsAuftragDTO.getNummer();
+        gehoertZuAuftrag = auftrag;
+        bauteilNummer = fertigungsAuftragDTO.getBauteilNummer();
     }
 }

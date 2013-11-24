@@ -89,21 +89,31 @@ public class Bauteil implements Serializable{
 
         Bauteil bauteil = (Bauteil) o;
 
-//        if (!nummer.equals(bauteil.nummer)) return false;
+        if (nummer != bauteil.nummer) return false;
 
         return true;
     }
 
-//    @Override
-//    public int hashCode() {
-//        return nummer.hashCode();
-//    }
+    @Override
+    public int hashCode() {
+        return nummer;
+    }
 
     public BauteilDTO toDTO(){
-        throw new NotImplementedException();
+        BauteilDTO bauteilDTO = new BauteilDTO(nummer,name,arbeitsplanNummer,null);
+        if(stueckliste != null)
+            bauteilDTO.setStueckliste(stueckliste.toDTO(bauteilDTO));
+        return bauteilDTO;
     }
 
     public void FromDTO(BauteilDTO bauteilDTO) {
-        throw new NotImplementedException();
+        nummer = bauteilDTO.getNummer();
+        name = bauteilDTO.getName();
+        arbeitsplanNummer = bauteilDTO.getArbeitsplanNummer();
+
+        if (bauteilDTO.getStueckliste() != null) {
+            stueckliste = new Stueckliste();
+            stueckliste.fromDTO(bauteilDTO.getStueckliste(),this);
+        }
     }
 }

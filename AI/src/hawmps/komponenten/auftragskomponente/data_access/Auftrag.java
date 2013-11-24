@@ -5,6 +5,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -107,21 +108,40 @@ public class Auftrag implements Serializable{
 
         Auftrag auftrag = (Auftrag) o;
 
-//        if (!nummer.equals(auftrag.nummer)) return false;
+        if (nummer != auftrag.nummer) return false;
 
         return true;
     }
 
-//    @Override
-//    public int hashCode() {
-//        return nummer.hashCode();
-//    }
-
-    public AuftragDTO toDTO(){
-        throw new NotImplementedException();
+    @Override
+    public int hashCode() {
+        return nummer;
     }
-    public void fromDTO(AuftragDTO auftragDTO){
-        throw new NotImplementedException();
+
+    public AuftragDTO toDTO() {
+        List<FertigungsAuftragDTO> fertigungsAuftragDTOList = new ArrayList<FertigungsAuftragDTO>();
+        AuftragDTO auftragDTO = new AuftragDTO(nummer,istAbgeschlossen,beauftragtAm,fertigungsAuftragDTOList,angebotsNummer,RechnungsNummer,LieferNummer);
+        if (zugehoerigeFertigungsAuftrage != null) {
+            for (FertigungsAuftrag fertigungsAuftrag : zugehoerigeFertigungsAuftrage) {
+                fertigungsAuftragDTOList.add(fertigungsAuftrag.toDTO(auftragDTO));
+            }
+        }
+        return auftragDTO;
+    }
+    public void fromDTO(AuftragDTO auftragDTO) {
+        nummer = auftragDTO.getNummer();
+        istAbgeschlossen = auftragDTO.isIstAbgeschlossen();
+        beauftragtAm = auftragDTO.getBeauftragtAm();
+        List<FertigungsAuftrag> fertigungsAuftragList = new ArrayList<FertigungsAuftrag>();
+        for (FertigungsAuftragDTO fertigungsAuftragDTO : auftragDTO.getZugehoerigeFertigungsAuftrage()) {
+            FertigungsAuftrag tmp = new FertigungsAuftrag();
+            tmp.fromDTO(fertigungsAuftragDTO,this);
+            fertigungsAuftragList.add(tmp);
+        }
+        zugehoerigeFertigungsAuftrage = fertigungsAuftragList;
+        angebotsNummer = auftragDTO.getAngebotsNummer();
+        RechnungsNummer = auftragDTO.getRechnungsNummer();
+        LieferNummer = auftragDTO.getLieferNummer();
     }
 
     @Override
