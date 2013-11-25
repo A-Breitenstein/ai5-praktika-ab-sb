@@ -17,13 +17,21 @@ import java.rmi.RemoteException;
  * To change this template use File | Settings | File Templates.
  */
 public class ClientStarter {
-   public static void main(String[] args) throws RemoteException {
+   public static void main(String[] args) throws RemoteException, InterruptedException {
        Dispatcher dispatcher = new Dispatcher();
        Monitor monitor = Monitor.create(dispatcher);
 
        MpsServer server1 = MpsServer.create("s1");
        MpsServer server2 = MpsServer.create("s2");
 
+       //TODO entfernter methodenaufruf funktioniert aber alle parameter sind anscheinend leer
+       /*Hibernate:
+       insert
+               into
+       Kunde
+               (nummer, adresse, nachname, vorname)
+       values
+               (null, ?, ?, ?)*/
        KundeDTO kunde = dispatcher.getRemoteServerInstance().createKunde(Name.create("Max"), Name.create("Mustermann"), Adresse.create("Musterstraße", "Musterort", "22222"));
        System.out.println(kunde);
    }

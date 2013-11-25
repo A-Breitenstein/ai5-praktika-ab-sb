@@ -19,6 +19,7 @@ import hawmps.komponenten.kundenkomponente.data_access.KundeDTO;
 import hawmps.persistenceUtils.TransactionManagement;
 
 import javax.persistence.EntityManager;
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -44,7 +45,7 @@ public class HawMps implements ISystemFassade{
 
 
     @Override
-    public AuftragDTO createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer) {
+    public AuftragDTO createAuftrag(boolean istAbgeschlossen, Datum beauftragtAm, List<FertigungsAuftrag> zugehoerigeFertigungsAuftrage, int angebotsNummer, int rechnungsNummer, int lieferNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         AuftragDTO auftragDTO =  auftragsKomponente.createAuftrag(istAbgeschlossen, beauftragtAm, zugehoerigeFertigungsAuftrage, angebotsNummer, rechnungsNummer, lieferNummer);
         transaktionsVerwaltung.commitTransaction();
@@ -52,21 +53,21 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public void updateAuftrag(AuftragDTO auftrag) {
+    public void updateAuftrag(AuftragDTO auftrag) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         auftragsKomponente.updateAuftrag(auftrag);
         transaktionsVerwaltung.commitTransaction();
     }
 
     @Override
-    public void deleteAuftragByNummer(int auftragsNummer) {
+    public void deleteAuftragByNummer(int auftragsNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         auftragsKomponente.deleteAuftragByNummer(auftragsNummer);
         transaktionsVerwaltung.commitTransaction();
     }
 
     @Override
-    public AuftragDTO findAuftragByNummer(int auftragsNummer) {
+    public AuftragDTO findAuftragByNummer(int auftragsNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
          AuftragDTO auftragDTO  = auftragsKomponente.findAuftragByNummer(auftragsNummer);
         transaktionsVerwaltung.commitTransaction();
@@ -74,7 +75,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public AuftragDTO ueberfuehreAngebotInAuftrag(AngebotDTO angebotDTO) {
+    public AuftragDTO ueberfuehreAngebotInAuftrag(AngebotDTO angebotDTO) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         AuftragDTO auftragDTO =  auftragsKomponente.ueberfuehreAngebotInAuftrag(angebotDTO);
         transaktionsVerwaltung.commitTransaction();
@@ -82,7 +83,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public AngebotDTO createAngebot(Datum gueltigAb, Datum gueltigBis, Betrag preis, int kundenNummer, int bauteilNummer) {
+    public AngebotDTO createAngebot(Datum gueltigAb, Datum gueltigBis, Betrag preis, int kundenNummer, int bauteilNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         AngebotDTO angebotDTO = auftragsKomponente.createAngebot(gueltigAb, gueltigBis, preis, kundenNummer, bauteilNummer);
         transaktionsVerwaltung.commitTransaction();
@@ -90,7 +91,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public AngebotDTO findAngebotByNummer(int angebotNummer) {
+    public AngebotDTO findAngebotByNummer(int angebotNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         AngebotDTO angebotDTO =  auftragsKomponente.findAngebotByNummer(angebotNummer);
         transaktionsVerwaltung.commitTransaction();
@@ -98,7 +99,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public List<AngebotDTO> findAngeboteByKundenNummer(int kundenNummer) {
+    public List<AngebotDTO> findAngeboteByKundenNummer(int kundenNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         List<AngebotDTO> angebotDTOs =  auftragsKomponente.findAngeboteByKundenNummer(kundenNummer);
         transaktionsVerwaltung.commitTransaction();
@@ -106,7 +107,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public BauteilDTO createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste) {
+    public BauteilDTO createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         BauteilDTO bauteilDTO =  bauteileKomponente.createBauteil(name, arbeitsplanNummer, stueckliste);
         transaktionsVerwaltung.commitTransaction();
@@ -114,21 +115,21 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public void updateBauteil(BauteilDTO bauteil) {
+    public void updateBauteil(BauteilDTO bauteil) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         bauteileKomponente.updateBauteil(bauteil);
         transaktionsVerwaltung.commitTransaction();
     }
 
     @Override
-    public void deleteBauteilByNummer(int BauteilNummer) {
+    public void deleteBauteilByNummer(int BauteilNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         bauteileKomponente.deleteBauteilByNummer(BauteilNummer);
         transaktionsVerwaltung.commitTransaction();
     }
 
     @Override
-    public BauteilDTO findBauteilByNummer(int nummer) {
+    public BauteilDTO findBauteilByNummer(int nummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         BauteilDTO bauteilDTO =  bauteileKomponente.findBauteilByNummer(nummer);
         transaktionsVerwaltung.commitTransaction();
@@ -136,7 +137,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public List<BauteilDTO> findBauteilByName(Name name) {
+    public List<BauteilDTO> findBauteilByName(Name name) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         List<BauteilDTO> bauteilDTOs =  bauteileKomponente.findBauteilByName(name);
         transaktionsVerwaltung.commitTransaction();
@@ -144,7 +145,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public List<Integer> getAlleUnterBauteileVon(BauteilDTO bauteilDTO) {
+    public List<Integer> getAlleUnterBauteileVon(BauteilDTO bauteilDTO) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         List<Integer> nummern = bauteileKomponente.getAlleUnterBauteileVon(bauteilDTO);
         transaktionsVerwaltung.commitTransaction();
@@ -153,14 +154,14 @@ public class HawMps implements ISystemFassade{
 
     @Override
     @Deprecated
-    public void createTestBauteil(Name name) {
+    public void createTestBauteil(Name name) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         bauteileKomponente.createTestBauteil(name);
         transaktionsVerwaltung.commitTransaction();
     }
 
     @Override
-    public KundeDTO createKunde(Name Vorname, Name Nachname, Adresse adresse) {
+    public KundeDTO createKunde(Name Vorname, Name Nachname, Adresse adresse) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         KundeDTO kundeDTO = kundenKomponente.createKunde(Vorname, Nachname, adresse);
         transaktionsVerwaltung.commitTransaction();
@@ -168,7 +169,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public List<KundeDTO> findByNachname(Name Nachname) {
+    public List<KundeDTO> findByNachname(Name Nachname) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         List<KundeDTO> kundeDTOs = kundenKomponente.findByNachname(Nachname);
         transaktionsVerwaltung.commitTransaction();
@@ -176,7 +177,7 @@ public class HawMps implements ISystemFassade{
     }
 
     @Override
-    public void deleteKundeByNummer(int kundenNummer) {
+    public void deleteKundeByNummer(int kundenNummer) throws RemoteException {
         transaktionsVerwaltung.beginTransaction();
         kundenKomponente.deleteKundeByNummer(kundenNummer);
         transaktionsVerwaltung.commitTransaction();

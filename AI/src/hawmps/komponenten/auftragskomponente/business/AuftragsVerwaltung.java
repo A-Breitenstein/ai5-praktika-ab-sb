@@ -12,6 +12,7 @@ import hawmps.komponenten.bauteilkomponente.data_access.StuecklistenPosition;
 import hawmps.komponenten.bauteilkomponente.data_access.StuecklistenPositionDTO;
 import hawmps.komponenten.kundenkomponente.IKundenKomponente;
 
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,13 +37,13 @@ public class AuftragsVerwaltung {
         return new AuftragsVerwaltung(repository, bauteileKomponente, kundenKomponente);
     }
 
-    public Auftrag ueberfuehreAngebotInAuftrag(Angebot angebot) {
+    public Auftrag ueberfuehreAngebotInAuftrag(Angebot angebot) throws RemoteException {
         BauteilDTO bauteil = bauteileKomponente.findBauteilByNummer(angebot.getBauteilNummer());
         List<FertigungsAuftrag> fertigungsAuftraege = erstelleFertigungsAuftraege(bauteil);
         return repository.createAuftrag(false, Datum.create("11.11.11"),fertigungsAuftraege,angebot.getNummer(),-1,-1);
 
     }
-    private List<FertigungsAuftrag> erstelleFertigungsAuftraege(BauteilDTO bauteil) {
+    private List<FertigungsAuftrag> erstelleFertigungsAuftraege(BauteilDTO bauteil) throws RemoteException {
         if (bauteil.getStueckliste() != null) {
             // bauteil ist ein komplexesbautel
             List<Integer> bauteilNummern = bauteileKomponente.getAlleUnterBauteileVon(bauteil);
