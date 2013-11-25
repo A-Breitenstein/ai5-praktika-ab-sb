@@ -1,6 +1,7 @@
 package hawmps.dispatcher;
 
 import hawmps.komponenten.server.IMpsServer;
+import hawmps.starter.Config;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -16,16 +17,11 @@ import java.util.ArrayList;
  */
 public class Dispatcher {
     public Registry serverRegistry;
-    public Registry hearBeatRegistry;
     public ArrayList<IMpsServer> serverList;
     public int roundRobinCounter = 0;
-    public static final int SERVER_REGISTRY_PORT = Registry.REGISTRY_PORT; // standard RegistryPort
-    public static final int HEARTBEAT_REGISTRY_PORT = Registry.REGISTRY_PORT + 1; // standard RegistryPort plus 1
-    public static final String REGISTRY_HOST = "localhost"; //ist selbe adresse wie die des dispatchers, da der dispatcher auch die Registry bereitstellt
 
     public Dispatcher() throws RemoteException {
-        this.serverRegistry = LocateRegistry.createRegistry(SERVER_REGISTRY_PORT);
-        this.hearBeatRegistry = LocateRegistry.getRegistry(HEARTBEAT_REGISTRY_PORT);
+        this.serverRegistry = LocateRegistry.createRegistry(Config.REGISTRY_PORT);
     }
 
     public IMpsServer getRemoteServerInstance(){

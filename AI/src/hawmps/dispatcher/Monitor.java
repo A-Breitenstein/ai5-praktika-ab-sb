@@ -1,6 +1,7 @@
 package hawmps.dispatcher;
 
 import hawmps.komponenten.server.IMpsServer;
+import hawmps.starter.Config;
 
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -22,7 +23,6 @@ public class Monitor implements IMonitor{
     public transient Dispatcher dispatcher;
     public transient HashMap<String, Timer> aliveTimer;
     public transient static final int timeOut = 10000;
-    public static final String MONITOR_NAME = "rmi://localhost:"+Dispatcher.HEARTBEAT_REGISTRY_PORT+"/Objektname";
 
     private Monitor(Dispatcher dispatcher){
         this.dispatcher = dispatcher;
@@ -33,9 +33,8 @@ public class Monitor implements IMonitor{
         Monitor monitor = new Monitor(dispatcher);
         IMonitor stub = (IMonitor)UnicastRemoteObject.exportObject(monitor, 0);
 
-        Registry heartBeatRegistry = dispatcher.hearBeatRegistry;
-        //TODO hostname vermutlich falsch, verbindung mit der Registry klappt nicht, die Registry ist auf jeden fall gestartet(mit telnet getestet)
-        heartBeatRegistry.rebind(MONITOR_NAME, stub); //treagt den Monitor unter dem namen in die Registry ein
+        Registry heartBeatRegistry = dispatcher.serverRegistry;
+        heartBeatRegistry.rebind(Config.MONITOR_NAME, stub); //treagt den Monitor unter dem namen in die Registry ein
 
         return monitor;
     }

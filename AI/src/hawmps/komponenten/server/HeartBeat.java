@@ -5,6 +5,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import hawmps.dispatcher.IMonitor;
+import hawmps.starter.Config;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,8 +17,6 @@ import hawmps.dispatcher.IMonitor;
 public class HeartBeat extends Thread{
     private String serverName;
     public static final int hearBeatInterval = 1000; //in Millisekunden
-    public static final int HEARTBEAT_REGISTRY_PORT = Registry.REGISTRY_PORT + 1; // standard RegistryPort plus 1
-    public static final String REGISTRY_HOST = "localhost"; //ist selbe adresse wie die des dispatchers
 
     public HeartBeat(String serverName){
       this.serverName = serverName;
@@ -27,8 +26,8 @@ public class HeartBeat extends Thread{
    public void run(){
        while(!interrupted()){
            try {
-               Registry monitorRegistry = LocateRegistry.getRegistry(REGISTRY_HOST, HEARTBEAT_REGISTRY_PORT);
-               IMonitor monitor = (IMonitor)monitorRegistry.lookup(monitorRegistry.list()[0]);
+               Registry monitorRegistry = LocateRegistry.getRegistry(Config.REGISTRY_HOST, Config.REGISTRY_PORT);
+               IMonitor monitor = (IMonitor)monitorRegistry.lookup(Config.MONITOR_NAME);
                monitor.alive(serverName);
                sleep(hearBeatInterval);
            } catch (RemoteException e) {
