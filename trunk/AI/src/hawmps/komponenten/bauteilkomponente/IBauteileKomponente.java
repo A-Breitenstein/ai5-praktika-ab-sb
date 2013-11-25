@@ -5,6 +5,7 @@ import hawmps.komponenten.bauteilkomponente.data_access.Bauteil;
 import hawmps.komponenten.bauteilkomponente.data_access.BauteilDTO;
 import hawmps.komponenten.bauteilkomponente.data_access.Stueckliste;
 
+import java.rmi.RemoteException;
 import java.util.List;
 
 /**
@@ -14,17 +15,17 @@ import java.util.List;
  * Time: 17:15
  */
 public interface IBauteileKomponente {
-    public BauteilDTO createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste);
+    public BauteilDTO createBauteil(Name name, int arbeitsplanNummer, Stueckliste stueckliste) throws RemoteException;
 
-    public void updateBauteil(BauteilDTO bauteil);
+    public void updateBauteil(BauteilDTO bauteil) throws RemoteException;
 
-    public void deleteBauteilByNummer(int BauteilNummer);
+    public void deleteBauteilByNummer(int BauteilNummer) throws RemoteException;
 
-    public BauteilDTO findBauteilByNummer(int nummer);
+    public BauteilDTO findBauteilByNummer(int nummer) throws RemoteException;
 
-    public List<BauteilDTO> findBauteilByName(Name name);
+    public List<BauteilDTO> findBauteilByName(Name name) throws RemoteException;
 
-    public List<Integer> getAlleUnterBauteileVon(BauteilDTO bauteilDTO);
+    public List<Integer> getAlleUnterBauteileVon(BauteilDTO bauteilDTO) throws RemoteException;
     @Deprecated
-    public void createTestBauteil(Name name);
+    public void createTestBauteil(Name name) throws RemoteException;
 }

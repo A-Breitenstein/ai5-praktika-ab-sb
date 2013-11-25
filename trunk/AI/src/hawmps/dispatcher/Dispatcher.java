@@ -7,6 +7,7 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,9 +23,15 @@ public class Dispatcher {
 
     public Dispatcher() throws RemoteException {
         this.serverRegistry = LocateRegistry.createRegistry(Config.REGISTRY_PORT);
+        this.serverList = new ArrayList<IMpsServer>();
     }
 
     public IMpsServer getRemoteServerInstance(){
+        /*try {
+            System.out.println("Namen in Registry:"+ Arrays.toString(serverRegistry.list()));
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }*/
         return getNextRemoteObject();
     }
 
@@ -36,7 +43,7 @@ public class Dispatcher {
     }
 
     public synchronized void alive(IMpsServer serverInstance){
-        if(serverList.contains(serverInstance)){
+        if(!serverList.contains(serverInstance)){
             serverList.add(serverInstance);
         }
     }

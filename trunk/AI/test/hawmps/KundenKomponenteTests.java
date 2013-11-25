@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import javax.persistence.EntityManager;
+import java.rmi.RemoteException;
 
 
 /**
@@ -32,7 +33,7 @@ public class KundenKomponenteTests {
     }
 
     @Test
-    public void createKunde(){
+    public void createKunde() throws RemoteException {
         entityManager.getTransaction().begin();
         KundeDTO kunde = kundenKomponente.createKunde(Name.create("Sven"), Name.create("Bartel"), Adresse.create("qwe str1","hh","22457"));
         Assert.assertTrue(kundenKomponente.findByNachname(Name.create("Bartel")).size() > 0);

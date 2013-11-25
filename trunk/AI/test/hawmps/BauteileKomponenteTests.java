@@ -15,6 +15,7 @@ import org.junit.Before;
 import org.testng.annotations.Test;
 
 import javax.persistence.EntityManager;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class BauteileKomponenteTests {
     }
 
     @Test
-    public void createKomplexBauteil() {
+    public void createKomplexBauteil() throws RemoteException {
         Name name = Name.create("Tisch");
         bauteileKomponente.createTestBauteil(name);
         BauteilDTO tischAusDB = bauteileKomponente.findBauteilByName(name).get(0);

@@ -25,6 +25,7 @@ import org.junit.Before;
 import org.testng.annotations.Test;
 
 import javax.persistence.EntityManager;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -69,14 +70,14 @@ public class AuftragsKomponenteTests {
     }
 
     @Test
-    public void createAuftrag_find_delete(){
+    public void createAuftrag_find_delete() throws RemoteException {
         AuftragDTO auftragDTO = auftragsKomponente.createAuftrag(true, Datum.create("10.10.2013"),null,-1,-1,-1);
         Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftragDTO.getNummer()).getNummer() == auftragDTO.getNummer());
         auftragsKomponente.deleteAuftragByNummer(auftragDTO.getNummer());
         Assert.assertTrue(auftragsKomponente.findAuftragByNummer(auftragDTO.getNummer()) == null);
     }
     @Test
-    public void updateAuftrag(){
+    public void updateAuftrag() throws RemoteException {
         AuftragDTO auftragDTO = auftragsKomponente.createAuftrag(false, Datum.create("11.11.2013"),null,-1,-1,-1);
         auftragDTO.setAngebotsNummer(1);
         auftragsKomponente.updateAuftrag(auftragDTO);
@@ -88,7 +89,7 @@ public class AuftragsKomponenteTests {
     }
 
     @Test
-    public void uebuerfuehreAngebotInAuftrag() {
+    public void uebuerfuehreAngebotInAuftrag() throws RemoteException {
         Name name = Name.create("Tisch");
         bauteileKomponente.createTestBauteil(name);
         BauteilDTO tisch = bauteileKomponente.findBauteilByName(name).get(0);

@@ -9,6 +9,7 @@ import hawmps.komponenten.bauteilkomponente.IBauteileKomponente;
 import hawmps.komponenten.kundenkomponente.IKundenKomponente;
 
 import javax.persistence.EntityManager;
+import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,7 +66,7 @@ public class AuftragsKomponente implements IAuftragsKomponente {
     }
 
     @Override
-    public AuftragDTO ueberfuehreAngebotInAuftrag(AngebotDTO angebotDTO) {
+    public AuftragDTO ueberfuehreAngebotInAuftrag(AngebotDTO angebotDTO) throws RemoteException {
         Angebot angebot = new Angebot();
         angebot.fromDTO(angebotDTO);
         return auftragsVerwaltung.ueberfuehreAngebotInAuftrag(angebot).toDTO();

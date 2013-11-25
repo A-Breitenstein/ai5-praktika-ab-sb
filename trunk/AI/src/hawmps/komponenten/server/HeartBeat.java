@@ -29,6 +29,7 @@ public class HeartBeat extends Thread{
                Registry monitorRegistry = LocateRegistry.getRegistry(Config.REGISTRY_HOST, Config.REGISTRY_PORT);
                IMonitor monitor = (IMonitor)monitorRegistry.lookup(Config.MONITOR_NAME);
                monitor.alive(serverName);
+               //System.out.println("HeartBeat gesendet");
                sleep(hearBeatInterval);
            } catch (RemoteException e) {
                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
