@@ -34,6 +34,7 @@ public class Monitor implements IMonitor{
         IMonitor stub = (IMonitor)UnicastRemoteObject.exportObject(monitor, 0);
 
         Registry heartBeatRegistry = dispatcher.hearBeatRegistry;
+        //TODO hostname vermutlich falsch, verbindung mit der Registry klappt nicht, die Registry ist auf jeden fall gestartet(mit telnet getestet)
         heartBeatRegistry.rebind(MONITOR_NAME, stub); //treagt den Monitor unter dem namen in die Registry ein
 
         return monitor;
