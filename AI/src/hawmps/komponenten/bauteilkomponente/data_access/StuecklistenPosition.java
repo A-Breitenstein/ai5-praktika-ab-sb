@@ -76,8 +76,8 @@ public class StuecklistenPosition {
                 ", bauteil=" + bauteil +
                 '}';
     }
-    public StuecklistenPositionDTO toDTO(BauteilDTO bauteilDTO) {
-        return new StuecklistenPositionDTO(nummer,menge,bauteilDTO);
+    public StuecklistenPositionDTO toDTO() {
+        return new StuecklistenPositionDTO(nummer,menge,bauteil.toDTO());
     }
     public void fromDTO(StuecklistenPositionDTO stuecklistenPositionDTO,Bauteil bauteil) {
         nummer = stuecklistenPositionDTO.getNummer();

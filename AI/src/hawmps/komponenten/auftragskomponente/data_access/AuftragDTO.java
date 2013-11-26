@@ -91,4 +91,17 @@ public class AuftragDTO implements Serializable {
     public void setLieferNummer(int lieferNummer) {
         LieferNummer = lieferNummer;
     }
+
+    @Override
+    public String toString() {
+        return "AuftragDTO{" +
+                "nummer=" + nummer +
+                ", istAbgeschlossen=" + istAbgeschlossen +
+                ", beauftragtAm=" + beauftragtAm +
+                ", zugehoerigeFertigungsAuftrage=" + zugehoerigeFertigungsAuftrage +
+                ", angebotsNummer=" + angebotsNummer +
+                ", RechnungsNummer=" + RechnungsNummer +
+                ", LieferNummer=" + LieferNummer +
+                '}';
+    }
 }

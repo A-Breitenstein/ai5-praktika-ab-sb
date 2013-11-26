@@ -96,18 +96,17 @@ public class Monitor implements IMonitor {
                     }
             }
 
-            if (derServer != null) {
+            if ((derServer != null && !derServer.isDeaktiviert()) || zustand.equals(MonitorGUI.Zustand.offline)) {
                 if (serverName.equals(Config.HAWMPS1_NAME)) {
-                    if(!derServer.isDeaktiviert())
                         MonitorGUI.getInstance().changeZustandMPS1(zustand);
                 } else if (serverName.equals(Config.HAWMPS2_NAME)) {
-                    if(!derServer.isDeaktiviert())
                         MonitorGUI.getInstance().changeZustandMPS2(zustand);
 
                 } else {
                     throw new UnknownError("Unbekannter Servername: " + serverName);
                 }
             }
+
 
         } catch (RemoteException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.

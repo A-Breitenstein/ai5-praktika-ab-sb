@@ -85,4 +85,17 @@ public class AngebotDTO implements Serializable {
     public void setAuftragDTO(AuftragDTO auftragDTO) {
         this.auftragDTO = auftragDTO;
     }
+
+    @Override
+    public String toString() {
+        return "AngebotDTO{" +
+                "nummer=" + nummer +
+                ", gueltigAb=" + gueltigAb +
+                ", gueltigBis=" + gueltigBis +
+                ", preis=" + preis +
+                ", kundenNummer=" + kundenNummer +
+                ", bauteilNummer=" + bauteilNummer +
+                ", auftragDTO=" + auftragDTO +
+                '}';
+    }
 }

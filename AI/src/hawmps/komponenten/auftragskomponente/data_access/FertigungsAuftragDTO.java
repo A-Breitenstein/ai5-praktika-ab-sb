@@ -44,4 +44,12 @@ public class FertigungsAuftragDTO implements Serializable {
     public void setBauteilNummer(int bauteilNummer) {
         this.bauteilNummer = bauteilNummer;
     }
+
+    @Override
+    public String toString() {
+        return "FertigungsAuftragDTO{" +
+                "nummer=" + nummer +
+                ", bauteilNummer=" + bauteilNummer +
+                '}';
+    }
 }

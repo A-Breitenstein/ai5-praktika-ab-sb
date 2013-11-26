@@ -95,7 +95,7 @@ public class Stueckliste implements Serializable {
     public StuecklisteDTO toDTO(BauteilDTO bauteilDTO) {
         List<StuecklistenPositionDTO> stuecklistenPositionDTOs = new ArrayList<StuecklistenPositionDTO>();
         for (StuecklistenPosition stuecklistenPosition : stuecklistenPositionen) {
-            stuecklistenPositionDTOs.add(stuecklistenPosition.toDTO(bauteilDTO));
+            stuecklistenPositionDTOs.add(stuecklistenPosition.toDTO());
         }
         return new StuecklisteDTO(nummer, gueltigAb, gueltigBis, stuecklistenPositionDTOs);
     }

@@ -28,6 +28,10 @@ public class MonitorGUI {
     private JPanel mps1_panel;
     private JToggleButton mps1_btn;
     private JToggleButton mps2_btn;
+    private JLabel mps1_lab_time;
+    private JLabel mps2_lab_time;
+    private JLabel mps1_time;
+    private JLabel mps2_time;
     private  JFrame jFrame;
     private static MonitorGUI instance;
 

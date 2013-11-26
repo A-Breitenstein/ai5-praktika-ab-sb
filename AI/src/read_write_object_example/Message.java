@@ -1,4 +1,4 @@
-package hawmps;
+package read_write_object_example;
 
 import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;

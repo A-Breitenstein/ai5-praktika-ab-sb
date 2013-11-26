@@ -57,4 +57,14 @@ public class BauteilDTO implements Serializable {
     public void setStueckliste(StuecklisteDTO stueckliste) {
         this.stueckliste = stueckliste;
     }
+
+    @Override
+    public String toString() {
+        return "BauteilDTO{" +
+                "nummer=" + nummer +
+                ", name=" + name +
+                ", arbeitsplanNummer=" + arbeitsplanNummer +
+                ", stueckliste=" + stueckliste +
+                '}';
+    }
 }
