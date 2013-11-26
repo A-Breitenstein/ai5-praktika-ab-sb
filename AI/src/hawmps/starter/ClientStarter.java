@@ -34,6 +34,8 @@ public class ClientStarter {
                (nummer, adresse, nachname, vorname)
        values
                (null, ?, ?, ?)*/
+       //damit die mps server s1 und s2 eingetragen sind
+       Thread.sleep(1500);
        KundeDTO kunde = dispatcher.getRemoteServerInstance().createKunde(Name.create("Max"), Name.create("Mustermann"), Adresse.create("Musterstraße", "Musterort", "22222"));
        System.out.println(kunde);
    }
