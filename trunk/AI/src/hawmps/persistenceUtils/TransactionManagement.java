@@ -21,8 +21,6 @@ public class TransactionManagement {
     }
     public void commitTransaction() {
       entityManager.getTransaction().commit();
-      //#TODO dirty aber so gehts erstmal ....
-        HawMpsMain.getInstance().clientLeft();
     }
     public void rollback() {
         entityManager.getTransaction().rollback();

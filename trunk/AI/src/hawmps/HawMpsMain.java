@@ -91,6 +91,7 @@ public class HawMpsMain {
                             } catch (ClassNotFoundException e) {
                                 e.printStackTrace();
                             }
+                            HawMpsMain.getInstance().clientLeft();
 
                         }
                     });
