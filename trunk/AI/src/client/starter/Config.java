@@ -1,4 +1,4 @@
-package hawmps.starter;
+package client.starter;
 
 import java.rmi.registry.Registry;
 

@@ -1,9 +1,9 @@
-package hawmps.starter;
+package client.starter;
 
 import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;
-import hawmps.dispatcher.Dispatcher;
-import hawmps.dispatcher.Monitor;
+import monitor.dispatcher.Dispatcher;
+import monitor.dispatcher.Monitor;
 import hawmps.komponenten.kundenkomponente.data_access.KundeDTO;
 import hawmps.komponenten.server.MpsServer;
 
