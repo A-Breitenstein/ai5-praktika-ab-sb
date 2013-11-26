@@ -1,13 +1,12 @@
-package hawmps.dispatcher;
+package monitor.dispatcher;
 
 import hawmps.komponenten.server.IMpsServer;
-import hawmps.starter.Config;
+import client.starter.Config;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.

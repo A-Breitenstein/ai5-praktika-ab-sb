@@ -1,4 +1,4 @@
-package hawmps.dispatcher;
+package monitor.dispatcher;
 
 import java.rmi.NotBoundException;
 import java.rmi.Remote;
