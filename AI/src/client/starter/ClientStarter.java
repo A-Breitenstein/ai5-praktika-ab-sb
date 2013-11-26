@@ -6,7 +6,9 @@ import monitor.dispatcher.Dispatcher;
 import monitor.dispatcher.Monitor;
 import hawmps.komponenten.kundenkomponente.data_access.KundeDTO;
 import hawmps.komponenten.server.MpsServer;
+import monitor.gui.MonitorGUI;
 
+import javax.swing.*;
 import java.rmi.RemoteException;
 
 /**
@@ -18,11 +20,20 @@ import java.rmi.RemoteException;
  */
 public class ClientStarter {
    public static void main(String[] args) throws RemoteException, InterruptedException {
+
+       JFrame frame = new JFrame("MonitorGUI");
+       MonitorGUI x = new MonitorGUI(frame);
+       frame.setContentPane(x.monitorGUI);
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       frame.pack();
+       frame.setVisible(true);
+
+
        Dispatcher dispatcher = new Dispatcher();
        Monitor monitor = Monitor.create(dispatcher);
 
-       MpsServer server1 = MpsServer.create("s1");
-       MpsServer server2 = MpsServer.create("s2");
+//       MpsServer server1 = MpsServer.create(Config.HAWMPS1_NAME);
+       MpsServer server2 = MpsServer.create(Config.HAWMPS2_NAME);
 
        //TODO Ohne Speziellen Logger kann man den Inhalt der Values nicht sehen, Hibernate verbirgt das anscheinend
        //TOFU mit einem Logger auf einem Applicationserver würde man es z.B. sehen können!!!!

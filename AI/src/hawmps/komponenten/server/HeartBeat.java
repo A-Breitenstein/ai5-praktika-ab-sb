@@ -4,8 +4,8 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import hawmps.dispatcher.IMonitor;
-import hawmps.starter.Config;
+import monitor.dispatcher.IMonitor;
+import client.starter.Config;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,7 +29,7 @@ public class HeartBeat extends Thread{
                Registry monitorRegistry = LocateRegistry.getRegistry(Config.REGISTRY_HOST, Config.REGISTRY_PORT);
                IMonitor monitor = (IMonitor)monitorRegistry.lookup(Config.MONITOR_NAME);
                monitor.alive(serverName);
-               //System.out.println("HeartBeat gesendet");
+               System.out.println("HeartBeat gesendet");
                sleep(hearBeatInterval);
            } catch (RemoteException e) {
                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.

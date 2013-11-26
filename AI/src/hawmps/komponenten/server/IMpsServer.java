@@ -6,6 +6,7 @@ import hawmps.komponenten.bauteilkomponente.IBauteileKomponente;
 import hawmps.komponenten.kundenkomponente.IKundenKomponente;
 
 import java.rmi.Remote;
+import java.rmi.RemoteException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -22,4 +23,7 @@ import java.rmi.Remote;
  *
  */  //TODO alle methodenSignaturen aus allen unter-interfaces muessen throws RemoteException werfen
 public interface IMpsServer extends Remote, ISystemFassade {
+    boolean isDeaktiviert() throws RemoteException;
+    void setisDeaktiviert(boolean b) throws RemoteException;
+    String getName() throws  RemoteException;
 }
