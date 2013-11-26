@@ -37,7 +37,7 @@ public class MonitorGUI {
         mps1_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (mps1_btn.isSelected()) {
+                if (!mps1_btn.isSelected()) {
                     //TODO MPS1 Server in der roundrobben queue aktivieren
                     mps1_btn.setText("Aktiviert");
                     Dispatcher.dispatcher.deaktiviereServerInstanz(Config.HAWMPS1_NAME,false);
@@ -55,7 +55,7 @@ public class MonitorGUI {
         mps2_btn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (mps2_btn.isSelected()) {
+                if (!mps2_btn.isSelected()) {
                     //TODO MPS2 Server in der roundrobben queue aktivieren
                     mps2_btn.setText("Aktiviert");
                     Dispatcher.dispatcher.deaktiviereServerInstanz(Config.HAWMPS2_NAME,false);

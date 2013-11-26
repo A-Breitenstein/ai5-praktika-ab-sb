@@ -32,7 +32,7 @@ public class ClientStarter {
        Dispatcher dispatcher = new Dispatcher();
        Monitor monitor = Monitor.create(dispatcher);
 
-//       MpsServer server1 = MpsServer.create(Config.HAWMPS1_NAME);
+       MpsServer server1 = MpsServer.create(Config.HAWMPS1_NAME);
        MpsServer server2 = MpsServer.create(Config.HAWMPS2_NAME);
 
        //TODO Ohne Speziellen Logger kann man den Inhalt der Values nicht sehen, Hibernate verbirgt das anscheinend
