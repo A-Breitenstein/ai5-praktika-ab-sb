@@ -44,4 +44,13 @@ public class StuecklistenPositionDTO implements Serializable {
     public void setBauteil(BauteilDTO bauteil) {
         this.bauteil = bauteil;
     }
+
+    @Override
+    public String toString() {
+        return "StuecklistenPositionDTO{" +
+                "nummer=" + nummer +
+                ", menge=" + menge +
+                ", bauteil=" + bauteil.getName() +
+                '}';
+    }
 }

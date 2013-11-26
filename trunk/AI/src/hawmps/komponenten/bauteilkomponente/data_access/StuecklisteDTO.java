@@ -58,4 +58,14 @@ public class StuecklisteDTO implements Serializable {
     public void setStuecklistenPositionen(List<StuecklistenPositionDTO> stuecklistenPositionen) {
         this.stuecklistenPositionen = stuecklistenPositionen;
     }
+
+    @Override
+    public String toString() {
+        return "StuecklisteDTO{" +
+                "nummer=" + nummer +
+                ", gueltigAb=" + gueltigAb +
+                ", gueltigBis=" + gueltigBis +
+                ", stuecklistenPositionen=" + stuecklistenPositionen +
+                '}';
+    }
 }

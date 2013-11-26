@@ -1,11 +1,10 @@
-package hawmps;
+package read_write_object_example;
 
 import aufgabe1.persistence.PersistenceUtilsA1;
 import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;
 import hawmps.fassade.HawMps;
 import hawmps.fassade.ISystemFassade;
-import hawmps.komponenten.kundenkomponente.data_access.KundeDTO;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

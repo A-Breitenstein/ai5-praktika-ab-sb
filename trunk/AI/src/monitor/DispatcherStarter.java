@@ -1,4 +1,4 @@
-package client.starter;
+package monitor;
 
 import hawmps.adts.fachliche.Adresse;
 import hawmps.adts.fachliche.Name;
@@ -24,7 +24,7 @@ import java.util.Arrays;
  * Time: 16:50
  * To change this template use File | Settings | File Templates.
  */
-public class ClientStarter {
+public class DispatcherStarter {
    public static void main(String[] args) throws RemoteException, InterruptedException, NotBoundException {
 
        JFrame frame = new JFrame("MonitorGUI");

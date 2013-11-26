@@ -1,5 +1,6 @@
-package client.starter;
+package hawmps;
 
+import client.starter.Config;
 import hawmps.komponenten.server.MpsServer;
 
 import java.rmi.RemoteException;

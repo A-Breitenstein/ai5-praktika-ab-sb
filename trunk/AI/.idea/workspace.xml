@@ -1,54 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" readonly="true" id="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" name="Default" comment="-server komponete hinzugefuegt, dispatcher+monitor&#10;-Clientstarter erstmal zum testen.&#10;-es besteht noch ein verbindungsproblem zur registry">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/hawmps/starter/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/dispatcher/Dispatcher.java" afterPath="$PROJECT_DIR$/src/hawmps/dispatcher/Dispatcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/server/HeartBeat.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/server/HeartBeat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/server/IMpsServer.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/server/IMpsServer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/dispatcher/Monitor.java" afterPath="$PROJECT_DIR$/src/hawmps/dispatcher/Monitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/server/MpsServer.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/server/MpsServer.java" />
+    <list default="true" readonly="true" id="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" name="Default" comment="dto s kotz .... tests laufen noch nicht alle wieder">
+      <change type="MOVED" beforePath="C:\Users\Sven\IdeaProjects\AI\src\client\starter\ClientStarter.java" afterPath="$PROJECT_DIR$/src/monitor/DispatcherStarter.java" />
+      <change type="MOVED" beforePath="C:\Users\Sven\IdeaProjects\AI\src\client\starter\ServerStarter.java" afterPath="$PROJECT_DIR$/src/hawmps/ServerStarter.java" />
+      <change type="MOVED" beforePath="C:\Users\Sven\IdeaProjects\AI\src\hawmps\HawMpsMain.java" afterPath="$PROJECT_DIR$/src/read_write_object_example/HawMpsMain.java" />
+      <change type="MOVED" beforePath="C:\Users\Sven\IdeaProjects\AI\src\hawmps\HawMpsTestClient.java" afterPath="$PROJECT_DIR$/src/read_write_object_example/HawMpsTestClient.java" />
+      <change type="MOVED" beforePath="C:\Users\Sven\IdeaProjects\AI\src\hawmps\Message.java" afterPath="$PROJECT_DIR$/src/read_write_object_example/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AngebotDTO.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AngebotDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AuftragDTO.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AuftragDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/BauteilDTO.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/BauteilDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/dispatcher/Dispatcher.java" afterPath="$PROJECT_DIR$/src/monitor/dispatcher/Dispatcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/FertigungsAuftragDTO.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/FertigungsAuftragDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/dispatcher/Monitor.java" afterPath="$PROJECT_DIR$/src/monitor/dispatcher/Monitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/gui/MonitorGUI.form" afterPath="$PROJECT_DIR$/src/monitor/gui/MonitorGUI.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/monitor/gui/MonitorGUI.java" afterPath="$PROJECT_DIR$/src/monitor/gui/MonitorGUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/Stueckliste.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/Stueckliste.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklisteDTO.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklisteDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPosition.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPosition.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPositionDTO.java" afterPath="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPositionDTO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/hawmps/persistenceUtils/TransactionManagement.java" afterPath="$PROJECT_DIR$/src/hawmps/persistenceUtils/TransactionManagement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ai-praktikum.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385343211436" ignored="false" />
+    <file path="/fragment.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385506089966" ignored="false" />
     <file path="/Bankkonto.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1380898769312" ignored="false" />
-    <file path="/a.dummy" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383597506450" ignored="false" />
+    <file path="/a.dummy" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385296904609" ignored="false" />
     <file path="/Kinosaal.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1380898741084" ignored="false" />
-    <file path="/Kunde.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383781905299" ignored="false" />
+    <file path="/Kunde.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385303853076" ignored="false" />
     <file path="/Kinokarte.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383478624209" ignored="false" />
-    <file path="/Nummer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783690397" ignored="false" />
-    <file path="/Name.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383481719858" ignored="false" />
-    <file path="/Adresse.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383480059768" ignored="false" />
+    <file path="/Nummer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383479560049" ignored="false" />
+    <file path="/Name.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383688561262" ignored="false" />
+    <file path="/Adresse.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383688515346" ignored="false" />
     <file path="/ADTFactory.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383482544446" ignored="false" />
-    <file path="/Dummy.txt" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385411215963" ignored="false" />
-    <file path="/KundenKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383595066532" ignored="false" />
+    <file path="/Dummy.txt" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385506763231" ignored="false" />
+    <file path="/KundenKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385304081904" ignored="false" />
     <file path="/KundenKomponenteImpl.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383487867930" ignored="false" />
-    <file path="/IAuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782986290" ignored="false" />
-    <file path="/Auftrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782352925" ignored="false" />
-    <file path="/Datum.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383485042828" ignored="false" />
-    <file path="/Repository.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783047438" ignored="false" />
-    <file path="/AuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782993774" ignored="false" />
-    <file path="/IKundenKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383592295717" ignored="false" />
-    <file path="/Bauteil.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782665627" ignored="false" />
-    <file path="/Stueckliste.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383781834302" ignored="false" />
-    <file path="/StuecklistenPosition.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782723813" ignored="false" />
-    <file path="/KundenKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383596174218" ignored="false" />
-    <file path="/AuftragsKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782612446" ignored="false" />
-    <file path="/FertigungsAuftrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383782812303" ignored="false" />
-    <file path="/AuftragsVerwaltung.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783000708" ignored="false" />
-    <file path="/IBauteileKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783015359" ignored="false" />
-    <file path="/BauteileKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783037710" ignored="false" />
-    <file path="/persistence.xml" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383783450954" ignored="false" />
-    <file path="/IMpsServer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385414827014" ignored="false" />
-    <file path="/MpsServer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385412408473" ignored="false" />
-    <file path="/Dispatcher.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385412435069" ignored="false" />
-    <file path="/HeartBeat.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385412564816" ignored="false" />
-    <file path="/IMonitor.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385342373665" ignored="false" />
-    <file path="/Monitor.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385412891550" ignored="false" />
-    <file path="/ServerStarter.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385395062020" ignored="false" />
-    <file path="/ClientStarter.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385398303523" ignored="false" />
+    <file path="/IAuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385309757687" ignored="false" />
+    <file path="/Auftrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385311114557" ignored="false" />
+    <file path="/Datum.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383688085511" ignored="false" />
+    <file path="/Repository.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385313729874" ignored="false" />
+    <file path="/AuftragsKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385313633358" ignored="false" />
+    <file path="/IKundenKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385304024336" ignored="false" />
+    <file path="/Bauteil.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385307812877" ignored="false" />
+    <file path="/Stueckliste.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385305784074" ignored="false" />
+    <file path="/StuecklistenPosition.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385505399872" ignored="false" />
+    <file path="/KundenKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385308054692" ignored="false" />
+    <file path="/AuftragsKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385310509902" ignored="false" />
+    <file path="/BauteilKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383669594693" ignored="false" />
+    <file path="/BauteileKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385309378414" ignored="false" />
+    <file path="/BauteileKomponenteTests.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385309521279" ignored="false" />
+    <file path="/FertigungsAuftrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385303015310" ignored="false" />
+    <file path="/AuftragsVerwaltung.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385307379525" ignored="false" />
+    <file path="/BauteilVerwaltung.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385307472605" ignored="false" />
+    <file path="/PersistenceUtilsA1.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1383688452161" ignored="false" />
+    <file path="/Angebot.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385313503861" ignored="false" />
+    <file path="/Betrag.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385296236006" ignored="false" />
+    <file path="/AngebotDTO.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385504494671" ignored="false" />
+    <file path="/AuftragDTO.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385300759104" ignored="false" />
+    <file path="/FertigungsAuftragDTO.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385300828389" ignored="false" />
+    <file path="/BauteilDTO.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385304186198" ignored="false" />
+    <file path="/StuecklisteDTO.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385304332074" ignored="false" />
+    <file path="/StuecklistenPositionDTO.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385505074674" ignored="false" />
+    <file path="/IBauteileKomponente.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385309354611" ignored="false" />
+    <file path="/KundeDTO.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385309601921" ignored="false" />
+    <file path="/HawMps.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385315601636" ignored="false" />
+    <file path="/SystemFassade.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385312255102" ignored="false" />
+    <file path="/TransactionManagement.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385317044124" ignored="false" />
+    <file path="/HawMpsMain.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385499564689" ignored="false" />
+    <file path="/Server.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385319625249" ignored="false" />
+    <file path="/Client.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385319330730" ignored="false" />
+    <file path="/Kommunikation.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385319807568" ignored="false" />
+    <file path="/Message.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385502193165" ignored="false" />
+    <file path="/HawMpsClient.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385323501427" ignored="false" />
+    <file path="/HawMpsTestClient.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385503905808" ignored="false" />
+    <file path="/Dispatcher.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385505830811" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/dispatcher/HeartBeatEntry.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385500762858" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/dispatcher/HeartBeatServer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385503487196" ignored="false" />
+    <file path="/HeartBeatServer.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385503486435" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/hawmps/HawMpsMain.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385503679202" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/dispatcher/Config.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385499744772" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/dispatcher/Monitor.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385504156566" ignored="false" />
+    <file path="/Monitor.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385506597495" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/dispatcher/Dispatcher.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385502691362" ignored="false" />
+    <file path="/HeartBeatEntry.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385500756582" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/hawmps/HawMpsTestClient.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385504004258" ignored="false" />
+    <file path="$PROJECT_DIR$/../AI_sven2/AI/src/hawmps/Message.java" changelist="9b44ca0c-c4d3-4c72-9306-5bdab2960ee1" time="1385502193165" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +94,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CommittedChangesCache">
+    <option name="initialCount" value="100" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -100,7 +141,53 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint url="file://$PROJECT_DIR$/test/hawmps/KundenKomponenteTests.java" line="36" class="hawmps.KundenKomponenteTests" package="hawmps">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/Auftrag.java" line="122" class="hawmps.komponenten.auftragskomponente.data_access.Auftrag" package="hawmps.komponenten.auftragskomponente.data_access">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/monitor/dispatcher/Dispatcher.java" line="70" class="monitor.dispatcher.Dispatcher" package="monitor.dispatcher">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -110,93 +197,89 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ClientStarter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/starter/ClientStarter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="6" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IMonitor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/dispatcher/IMonitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="25" selection-start="290" selection-end="298" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Dispatcher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/dispatcher/Dispatcher.java">
+        <entry file="file://$PROJECT_DIR$/src/monitor/dispatcher/Dispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="85" column="19" selection-start="3297" selection-end="3297" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Registry.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_06/src.zip!/java/rmi/registry/Registry.java">
+      <file leaf-file-name="HawMpsMain.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/read_write_object_example/HawMpsMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="28" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.0">
+            <state line="22" column="13" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Monitor.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/dispatcher/Monitor.java">
+        <entry file="file://$PROJECT_DIR$/src/monitor/dispatcher/Monitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="63" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0">
+            <state line="103" column="56" selection-start="3740" selection-end="3740" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/starter/Config.java">
+      <file leaf-file-name="ServerStarter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/ServerStarter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
+            <state line="15" column="18" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeartBeat.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/server/HeartBeat.java">
+      <file leaf-file-name="MonitorGUI.form" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/monitor/gui/MonitorGUI.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HawMpsTestClient.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/read_write_object_example/HawMpsTestClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="86" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
+            <state line="19" column="13" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MpsServer.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/server/MpsServer.java">
+      <file leaf-file-name="StuecklistenPosition.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPosition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+            <state line="78" column="67" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IMpsServer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/server/IMpsServer.java">
+      <file leaf-file-name="Stueckliste.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/Stueckliste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="62" selection-start="891" selection-end="891" vertical-scroll-proportion="0.5391791">
+            <state line="97" column="73" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ISystemFassade.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/hawmps/fassade/ISystemFassade.java">
+      <file leaf-file-name="AuftragDTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AuftragDTO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="100" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+            <state line="13" column="13" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Auftrag.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/Auftrag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="19" selection-start="3794" selection-end="3794" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -212,30 +295,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/IBauteileKomponente.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/access/BauteileKomponente.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteile/data_access/Repository.java" />
-        <option value="$PROJECT_DIR$/test/hawmps/AuftragsKomponenteTests.java" />
-        <option value="$PROJECT_DIR$/test/hawmps/BauteileKomponenteTests.java" />
-        <option value="$PROJECT_DIR$/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/hawmps/adts/fachliche/Nummer.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/dispatcher/IMonitor.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/starter/ServerStarter.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/starter/Config.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/server/MpsServer.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/server/HeartBeat.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/dispatcher/Dispatcher.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/starter/ClientStarter.java" />
         <option value="$PROJECT_DIR$/src/hawmps/dispatcher/Monitor.java" />
-        <option value="$PROJECT_DIR$/src/hawmps/komponenten/server/IMpsServer.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/dispatcher/Dispatcher.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/server/MpsServer.java" />
+        <option value="$PROJECT_DIR$/src/client/starter/ClientStarter.java" />
+        <option value="$PROJECT_DIR$/src/monitor/gui/MonitorGUI.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AngebotDTO.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/BauteilDTO.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AuftragDTO.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/FertigungsAuftragDTO.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklisteDTO.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPositionDTO.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPosition.java" />
+        <option value="$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/Stueckliste.java" />
+        <option value="$PROJECT_DIR$/src/monitor/dispatcher/Dispatcher.java" />
+        <option value="$PROJECT_DIR$/src/monitor/gui/MonitorGUI.form" />
+        <option value="$PROJECT_DIR$/src/monitor/dispatcher/Monitor.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="876" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -244,8 +327,6 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <OptionsSetting value="true" id="Undo Check Out" />
-    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -265,6 +346,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -329,7 +411,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hawmps" />
+              <option name="myItemId" value="monitor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -347,11 +429,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="hawmps" />
+              <option name="myItemId" value="monitor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="starter" />
+              <option name="myItemId" value="gui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MonitorGUI" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ai-praktikum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,159 +469,227 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hawmps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="komponenten" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hawmps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="komponenten" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hawmps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fassade" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai-praktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AI" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hawmps" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dispatcher" />
+              <option name="myItemId" value="h2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/h2-1.3.172.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exporter/exporter.iml" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="Downloaded.Files.Path" value="C:\Projekte\IntelliJ\AI5\AI\ai-praktikum\lib" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projekte\IntelliJ\AI5\AI\ai-praktikum\resources" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="hawmps.komponenten.auftragskomponente.data_access" />
+      <recent name="hawmps.komponenten.bauteile.access" />
       <recent name="hawmps.komponenten.bauteile.data_access" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="hawmps" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ClientStarter">
-    <configuration default="false" name="KundenKomponenteTests" type="TestNG" factoryName="TestNG" temporary="true">
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="95">C:\Users\Sven\IdeaProjects\AI\src\client\starter\TestClient.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
+  <component name="RunManager" selected="Application.TestClient">
+    <configuration default="false" name="HawMpsMain" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="hawmps.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="ai-praktikum" />
+      <option name="MAIN_CLASS_NAME" value="read_write_object_example.HawMpsMain" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="hawmps" />
-      <option name="MAIN_CLASS_NAME" value="hawmps.KundenKomponenteTests" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+      <module name="ai-praktikum" />
       <envs />
-      <properties />
-      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="HawMpsTestClient" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="hawmps.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="read_write_object_example.HawMpsTestClient" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ai-praktikum" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="DispatcherStarter" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="client.starter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="monitor.DispatcherStarter" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ai-praktikum" />
+      <envs />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="3230" />
+        <option name="DEBUG_PORT" value="" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -526,74 +698,36 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="BauteileKomponenteTests" type="TestNG" factoryName="TestNG" temporary="true">
+    <configuration default="false" name="ServerStarter" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="hawmps.*" />
+          <option name="PATTERN" value="client.starter.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <module name="ai-praktikum" />
+      <option name="MAIN_CLASS_NAME" value="hawmps.ServerStarter" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="hawmps" />
-      <option name="MAIN_CLASS_NAME" value="hawmps.BauteileKomponenteTests" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+      <module name="ai-praktikum" />
       <envs />
-      <properties />
-      <listeners />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="AuftragsKomponenteTests" type="TestNG" factoryName="TestNG" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="ai-praktikum" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="hawmps" />
-      <option name="MAIN_CLASS_NAME" value="hawmps.AuftragsKomponenteTests" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="ClientStarter" type="Application" factoryName="Application" temporary="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="hawmps.starter.ClientStarter" />
+    <configuration default="false" name="TestClient" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="client.starter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="client.starter.TestClient" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -699,18 +833,20 @@
       <patterns />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.KundenKomponenteTests" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.BauteileKomponenteTests" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.AuftragsKomponenteTests" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ClientStarter" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Application.HawMpsMain" />
+      <item index="1" class="java.lang.String" itemvalue="Application.HawMpsTestClient" />
+      <item index="2" class="java.lang.String" itemvalue="Application.DispatcherStarter" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ServerStarter" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestClient" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.ClientStarter" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.AuftragsKomponenteTests" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.BauteileKomponenteTests" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.KundenKomponenteTests" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.TestClient" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ServerStarter" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DispatcherStarter" />
+        <item index="3" class="java.lang.String" itemvalue="Application.DispatcherStarter" />
+        <item index="4" class="java.lang.String" itemvalue="Application.HawMpsTestClient" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -719,6 +855,11 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
@@ -742,20 +883,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\timey\IdeaProjects\AI" />
-          <option name="myCopyRoot" value="C:\Users\timey\IdeaProjects\AI" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\AI" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\AI" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\timey\IdeaProjects\AI\.idea" />
-          <option name="myCopyRoot" value="C:\Users\timey\IdeaProjects\AI\.idea" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\AI\.idea" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\AI\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\timey\IdeaProjects\AI" />
-          <option name="myCopyRoot" value="C:\Users\timey\IdeaProjects\AI" />
+          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\AI" />
+          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\AI" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -782,15 +923,51 @@
       <created>1383595732108</created>
       <updated>1383595732108</updated>
     </task>
-    <task id="LOCAL-00005" summary="-server komponete hinzugefuegt, dispatcher+monitor&#10;-Clientstarter erstmal zum testen.&#10;-es besteht noch ein verbindungsproblem zur registry">
-      <created>1385410285112</created>
-      <updated>1385410285112</updated>
+    <task id="LOCAL-00005" summary="update4.5">
+      <created>1383598014105</created>
+      <updated>1383598014105</updated>
     </task>
-    <task id="LOCAL-00006" summary="todo connection refused">
-      <created>1385411231106</created>
-      <updated>1385411231106</updated>
+    <task id="LOCAL-00006" summary="update5">
+      <created>1383670536112</created>
+      <updated>1383670536112</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update5.5">
+      <created>1383685930102</created>
+      <updated>1383685930102</updated>
+    </task>
+    <task id="LOCAL-00008" summary="update5.7">
+      <created>1383686839104</created>
+      <updated>1383686839105</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update5.8">
+      <created>1383691534103</created>
+      <updated>1383691534103</updated>
+    </task>
+    <task id="LOCAL-00010" summary="package umbennenung">
+      <created>1383856077102</created>
+      <updated>1383856077102</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixfix">
+      <created>1383856929102</created>
+      <updated>1383856929102</updated>
+    </task>
+    <task id="LOCAL-00012" summary="dto s kotz .... tests laufen noch nicht alle wieder">
+      <created>1385311363107</created>
+      <updated>1385311363107</updated>
+    </task>
+    <task id="LOCAL-00013" summary="so HawMpsMain steht mit dispatcher und lauscht auf port 50000">
+      <created>1385317421102</created>
+      <updated>1385317421102</updated>
+    </task>
+    <task id="LOCAL-00014" summary="HawMpsMain (Server ) und da im looper sowie HawMpsTestClient (Client) in der main einmal beispielhaft die aufrufe">
+      <created>1385323687105</created>
+      <updated>1385323687105</updated>
+    </task>
+    <task id="LOCAL-00015" summary="einige fixeses, aber das deaktivieren scheint nicht zu funzen ka...">
+      <created>1385489916102</created>
+      <updated>1385489916102</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -814,35 +991,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52093804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="3" y="74" width="981" height="645" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977587" sideWeight="0.71460426" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14941302" sideWeight="0.3779264" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32977587" sideWeight="0.71460426" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48940915" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32545203" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14941302" sideWeight="0.3779264" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22073579" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40691194" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14941302" sideWeight="0.3779264" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.49944258" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21879022" sideWeight="0.8108484" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1891516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28985506" sideWeight="0.57314974" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14941302" sideWeight="0.71460426" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28539577" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962447" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32329988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -888,7 +1063,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="todo connection refused" />
+    <option name="LAST_COMMIT_MESSAGE" value="einige fixes und tostrings gui uptime noch nicht fertig" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -907,128 +1082,130 @@
     <MESSAGE value="update3" />
     <MESSAGE value="update4" />
     <MESSAGE value="update4.5" />
-    <MESSAGE value="Changes: &#10;Nummer to integer, &#10;interface signatues from Nummer to integer,&#10;blablabla echt kein bock auf diesen scheiß,&#10;Nummer ist jetzt deprecated&#10;&#10;Kundekompadanfa test läuft bauteilkomoapfa irgendwas mit nullpointer ka will ich auch nicht wissen&#10;&#10;Nächstesmal mach ich nichts! GARNICHTS!" />
-    <MESSAGE value="-server komponete hinzugefuegt, dispatcher+monitor&#10;-Clientstarter erstmal zum testen.&#10;-es besteht noch ein verbindungsproblem zur registry" />
-    <MESSAGE value="todo connection refused" />
+    <MESSAGE value="update5" />
+    <MESSAGE value="update5.5" />
+    <MESSAGE value="update5.7" />
+    <MESSAGE value="update5.8" />
+    <MESSAGE value="package umbennenung" />
+    <MESSAGE value="fixfix" />
+    <MESSAGE value="dto s kotz .... tests laufen noch nicht alle wieder" />
+    <MESSAGE value="so HawMpsMain steht mit dispatcher und lauscht auf port 50000" />
+    <MESSAGE value="HawMpsMain (Server ) und da im looper sowie HawMpsTestClient (Client) in der main einmal beispielhaft die aufrufe" />
+    <MESSAGE value="einige fixeses, aber das deaktivieren scheint nicht zu funzen ka..." />
+    <MESSAGE value="einige fixes und tostrings gui uptime noch nicht fertig" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/hawmps/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/FertigungsAuftragDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="31" selection-start="507" selection-end="520" vertical-scroll-proportion="0.23953824">
+        <state line="50" column="56" selection-start="1206" selection-end="1206" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/adts/fachliche/Name.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklisteDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="23" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/HawMpsMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="77" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.0">
+        <state line="68" column="10" selection-start="1776" selection-end="1776" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/kundenkomponente/data_access/KundeDTO.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AngebotDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="13" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/HawMpsTestClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="45" selection-start="538" selection-end="637" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/fassade/HawMps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="1209" selection-end="1209" vertical-scroll-proportion="0.0">
+        <state line="101" column="27" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_06/src.zip!/java/rmi/registry/Registry.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/BauteilDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="28" selection-start="2745" selection-end="2745" vertical-scroll-proportion="0.0">
+        <state line="61" column="18" selection-start="1324" selection-end="1324" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/starter/Config.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/Bauteil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
+        <state line="104" column="54" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/server/HeartBeat.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPositionDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="86" selection-start="895" selection-end="895" vertical-scroll-proportion="0.0">
+        <state line="17" column="61" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/dispatcher/Dispatcher.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/StuecklistenPosition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="589" selection-end="589" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/starter/ClientStarter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+        <state line="78" column="67" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/server/MpsServer.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/bauteilkomponente/data_access/Stueckliste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
+        <state line="97" column="73" selection-start="2646" selection-end="2646" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/fassade/ISystemFassade.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/AuftragDTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="100" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0">
+        <state line="13" column="13" selection-start="249" selection-end="249" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/dispatcher/IMonitor.java">
+    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/auftragskomponente/data_access/Auftrag.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="290" selection-end="298" vertical-scroll-proportion="0.0">
+        <state line="128" column="19" selection-start="3794" selection-end="3794" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/dispatcher/Monitor.java">
+    <entry file="file://$PROJECT_DIR$/src/read_write_object_example/HawMpsTestClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="63" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0">
+        <state line="19" column="13" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/hawmps/komponenten/server/IMpsServer.java">
+    <entry file="file://$PROJECT_DIR$/src/read_write_object_example/HawMpsMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="62" selection-start="891" selection-end="891" vertical-scroll-proportion="0.5391791">
+        <state line="22" column="13" selection-start="561" selection-end="561" vertical-scroll-proportion="0.0">
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hawmps/ServerStarter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/monitor/dispatcher/Dispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="19" selection-start="3297" selection-end="3297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/monitor/dispatcher/Monitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="56" selection-start="3740" selection-end="3740" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/monitor/gui/MonitorGUI.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
       </provider>
     </entry>
   </component>
@@ -1048,7 +1225,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>JPA</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1088,6 +1265,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

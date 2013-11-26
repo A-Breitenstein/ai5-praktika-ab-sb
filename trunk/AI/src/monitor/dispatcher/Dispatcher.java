@@ -80,6 +80,7 @@ public class Dispatcher implements IDispatcher{
                 return server;
             }
            roundRobinCounter++;
+           if(roundRobinCounter == serverList.size()) roundRobinCounter = 0;
         }
         return null;  //To change body of created methods use File | Settings | File Templates.
     }
