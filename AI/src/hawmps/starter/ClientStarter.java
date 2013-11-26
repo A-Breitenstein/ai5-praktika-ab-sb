@@ -24,6 +24,8 @@ public class ClientStarter {
        MpsServer server1 = MpsServer.create("s1");
        MpsServer server2 = MpsServer.create("s2");
 
+       //TODO Ohne Speziellen Logger kann man den Inhalt der Values nicht sehen, Hibernate verbirgt das anscheinend
+       //TOFU mit einem Logger auf einem Applicationserver würde man es z.B. sehen können!!!!
        //TODO entfernter methodenaufruf funktioniert aber alle parameter sind anscheinend leer
        /*Hibernate:
        insert
