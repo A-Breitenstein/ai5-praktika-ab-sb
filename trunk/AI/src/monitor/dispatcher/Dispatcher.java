@@ -6,6 +6,7 @@ import client.starter.Config;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
 /**
@@ -15,11 +16,11 @@ import java.util.ArrayList;
  * Time: 01:07
  * To change this template use File | Settings | File Templates.
  */
-public class Dispatcher {
+public class Dispatcher implements IDispatcher{
     public Registry serverRegistry;
     public ArrayList<IMpsServer> serverList;
     public int roundRobinCounter = 0;
-    public static Dispatcher dispatcher;
+    public static Dispatcher dispatcher = null;
 
     public Dispatcher() throws RemoteException {
         dispatcher = this;
@@ -27,7 +28,19 @@ public class Dispatcher {
         this.serverList = new ArrayList<IMpsServer>();
     }
 
-    public IMpsServer getRemoteServerInstance(){
+    public static Dispatcher create() throws RemoteException {
+        if(dispatcher == null){
+            dispatcher = new Dispatcher();
+            IDispatcher stub = (IDispatcher) UnicastRemoteObject.exportObject(dispatcher, 0);
+
+            Registry dispatcherRegistry = dispatcher.serverRegistry;
+            dispatcherRegistry.rebind(Config.DISPATCHER_NAME, stub); //treagt den dispatcher unter dem namen in die Registry ein
+        }
+        return dispatcher;
+    }
+
+    @Override
+    public IMpsServer getRemoteServerInstance() throws RemoteException{
         /*try {
             System.out.println("Namen in Registry:"+ Arrays.toString(serverRegistry.list()));
         } catch (RemoteException e) {
