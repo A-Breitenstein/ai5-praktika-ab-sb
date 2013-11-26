@@ -94,8 +94,8 @@ public class Monitor implements IMonitor {
                     if (server.getName().equals(serverName)) {
                         derServer = server;
                     }
-
             }
+
             if (derServer != null) {
                 if (serverName.equals(Config.HAWMPS1_NAME)) {
                     if(!derServer.isDeaktiviert())

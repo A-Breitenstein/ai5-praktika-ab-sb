@@ -39,11 +39,11 @@ public class Dispatcher {
     private synchronized IMpsServer getNextRemoteObject(){
         IMpsServer server = null;
         try {
-            do{
-                server = getNextActiveServer();
+            server = getNextActiveServer();
+            while (server == null) {
                 Thread.sleep(5000);
-            }while (server == null);
-
+                server = getNextActiveServer();
+            }
         } catch (RemoteException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         } catch (InterruptedException e) {
@@ -79,12 +79,13 @@ public class Dispatcher {
 
     public void deaktiviereServerInstanz(String servername,boolean b) {
         for (IMpsServer server : serverList) {
-            if (server.equals(servername)) {
-                try {
-                    server.setisDeaktiviert(b);
-                } catch (RemoteException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            try{
+                if (server.getName().equals(servername)) {
+                        server.setisDeaktiviert(b);
+
                 }
+            } catch (RemoteException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             }
         }
     }
