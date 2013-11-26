@@ -2,7 +2,8 @@ package hawmps.komponenten.server;
 
 import aufgabe1.persistence.PersistenceUtilsA1;
 import hawmps.fassade.HawMps;
-import hawmps.starter.Config;
+import client.starter.Config;
+import monitor.gui.MonitorGUI;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -19,6 +20,7 @@ import java.rmi.server.UnicastRemoteObject;
 public class MpsServer extends HawMps implements IMpsServer{
     private String serverName;
     private HeartBeat heartBeat;
+    private boolean isDeaktiviert = false;
 
     private MpsServer(String serverName, HeartBeat heartBeat) {
         super(PersistenceUtilsA1.createEntityManager());
@@ -37,5 +39,20 @@ public class MpsServer extends HawMps implements IMpsServer{
         heartBeat.start();
 
         return mpsSever;
+    }
+
+    @Override
+    public boolean isDeaktiviert() {
+        return isDeaktiviert;  //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void setisDeaktiviert(boolean b) {
+        isDeaktiviert = b;
+    }
+
+    @Override
+    public String getName() throws RemoteException {
+        return serverName;
     }
 }

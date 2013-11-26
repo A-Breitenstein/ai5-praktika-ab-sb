@@ -19,8 +19,10 @@ public class Dispatcher {
     public Registry serverRegistry;
     public ArrayList<IMpsServer> serverList;
     public int roundRobinCounter = 0;
+    public static Dispatcher dispatcher;
 
     public Dispatcher() throws RemoteException {
+        dispatcher = this;
         this.serverRegistry = LocateRegistry.createRegistry(Config.REGISTRY_PORT);
         this.serverList = new ArrayList<IMpsServer>();
     }
@@ -35,10 +37,32 @@ public class Dispatcher {
     }
 
     private synchronized IMpsServer getNextRemoteObject(){
-        if(roundRobinCounter >= serverList.size()){roundRobinCounter = 0;}
-        IMpsServer server = serverList.get(roundRobinCounter);
-        roundRobinCounter++;
+        IMpsServer server = null;
+        try {
+            do{
+                server = getNextActiveServer();
+                Thread.sleep(5000);
+            }while (server == null);
+
+        } catch (RemoteException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (InterruptedException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
         return server;
+    }
+
+    private IMpsServer getNextActiveServer() throws RemoteException {
+       roundRobinCounter %= serverList.size();
+       IMpsServer server;
+       while(roundRobinCounter < serverList.size()) {
+            server = serverList.get(roundRobinCounter);
+            if (!server.isDeaktiviert()) {
+                return server;
+            }
+           roundRobinCounter++;
+        }
+        return null;  //To change body of created methods use File | Settings | File Templates.
     }
 
     public synchronized void alive(IMpsServer serverInstance){
@@ -52,5 +76,18 @@ public class Dispatcher {
             serverList.remove(serverInstance);
         }
     }
+
+    public void deaktiviereServerInstanz(String servername,boolean b) {
+        for (IMpsServer server : serverList) {
+            if (server.equals(servername)) {
+                try {
+                    server.setisDeaktiviert(b);
+                } catch (RemoteException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+        }
+    }
+
 
 }
