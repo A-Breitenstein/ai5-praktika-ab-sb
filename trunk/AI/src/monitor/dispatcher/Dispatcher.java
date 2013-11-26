@@ -2,6 +2,7 @@ package monitor.dispatcher;
 
 import hawmps.komponenten.server.IMpsServer;
 import client.starter.Config;
+import monitor.gui.MonitorGUI;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -46,6 +47,7 @@ public class Dispatcher implements IDispatcher{
         } catch (RemoteException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }*/
+
         return getNextRemoteObject();
     }
 
@@ -71,6 +73,10 @@ public class Dispatcher implements IDispatcher{
        while(roundRobinCounter < serverList.size()) {
             server = serverList.get(roundRobinCounter);
             if (!server.isDeaktiviert()) {
+                //TODO dirty aber geht erstmal nicht besser
+                if(server.getName().equals(Config.HAWMPS1_NAME)){MonitorGUI.getInstance().erhoeheAnfragenVonMPS1();}
+                if(server.getName().equals(Config.HAWMPS2_NAME)){MonitorGUI.getInstance().erhoeheAnfragenVonMPS2();}
+                roundRobinCounter++;
                 return server;
             }
            roundRobinCounter++;
