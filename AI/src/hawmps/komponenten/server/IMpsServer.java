@@ -21,7 +21,7 @@ import java.rmi.RemoteException;
  * Das MarkerInterface Remote muss extendet werden um die entfernten Aufrufe zu ermoeglichen.
  * Alle Datentypen der Methoden dieses Interface muessen Serializable implementieren oder primitive Typen sein!
  *
- */  //TODO alle methodenSignaturen aus allen unter-interfaces muessen throws RemoteException werfen
+ */
 public interface IMpsServer extends Remote, ISystemFassade {
     boolean isDeaktiviert() throws RemoteException;
     void setisDeaktiviert(boolean b) throws RemoteException;
