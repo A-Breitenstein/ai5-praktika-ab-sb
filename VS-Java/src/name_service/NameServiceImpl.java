@@ -1,7 +1,12 @@
 package name_service;
 
+import bank_access.AccountImplServant;
+import bank_access.AccountImplStub;
+import bank_access.OverdraftException;
 import mware_lib.Config;
 import mware_lib.NameService;
+import mware_lib.ObjectServer;
+import mware_lib.Servant;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -30,6 +35,8 @@ public class NameServiceImpl extends NameService {
             ObjectOutputStream objOS = new ObjectOutputStream(clientSocket.getOutputStream());
             objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.REBIND, InetAddress.getLocalHost(), Config.OBJECT_SERVER_PORT,name));
             objOS.close();
+
+            ObjectServer.getInstance().rebind((Servant) servant, name);
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
@@ -59,13 +66,23 @@ public class NameServiceImpl extends NameService {
     public static void main(String[] args) {
 
         try {
-            NameService nameServiceClient = new NameServiceImpl(new Socket(InetAddress.getLocalHost(), Config.NAME_SERVER_PORT));
-            NameService nameServiceServer = new NameServiceImpl(new Socket(InetAddress.getLocalHost(), Config.NAME_SERVER_PORT));
-            System.out.println("rebind called");
-            nameServiceServer.rebind(null,args[0]);
-            System.out.println(nameServiceClient.resolve(args[0]));
+            if (args[0].equals("client")) {
+                NameService nameServiceClient = new NameServiceImpl(new Socket(InetAddress.getLocalHost(), Config.NAME_SERVER_PORT));
+                NameServiceMessage msg = (NameServiceMessage)nameServiceClient.resolve(args[1]);
+                System.out.println("resolve: "+msg);
+                AccountImplStub stub = new AccountImplStub(msg);
+                stub.transfer(100.0);
+
+            }else if (args[0].equals("server")) {
+                System.out.println("rebind called");
+                NameService nameServiceServer = new NameServiceImpl(new Socket(InetAddress.getLocalHost(), Config.NAME_SERVER_PORT));
+                nameServiceServer.rebind(new AccountImplServant(100.0), args[1]);
+            }else System.out.println("fail...");
+
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (OverdraftException e) {
+            e.printStackTrace();
         }
     }
 }
