@@ -97,7 +97,7 @@ public class ObjectServer {
                         }
                     });
                     current_connections++;
-                    System.out.println("ObjectServer: current_connections: "+current_connections);
+                    printCurrentConnections(current_connections);
                 }else{
                     try {
                         Thread.sleep(1000000);
@@ -111,10 +111,14 @@ public class ObjectServer {
         }
     }
 
+    private void printCurrentConnections(int current_connections) {
+        System.out.println("Aktuelle Verbindungen: " +current_connections);
+    }
+
     public synchronized void clientLeft() {
         if (current_connections < max_connections) {
             current_connections--;
-            System.out.println(current_connections);
+            printCurrentConnections(current_connections);
         }
         else{
             current_connections--;

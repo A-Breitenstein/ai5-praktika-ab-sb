@@ -2,38 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="80781152-e5bc-4f47-b431-f9b3c8b23d84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bank_access/AccountImplServant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bank_access/AccountImplSkeleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/bank_access/AccountImplStub.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mware_lib/ObjectServerMessage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mware_lib/Servant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mware_lib/Skeleton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/mware_lib/Stub.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/bank_access/AccountImplBase.java" afterPath="$PROJECT_DIR$/src/bank_access/AccountImplBase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mware_lib/Config.java" afterPath="$PROJECT_DIR$/src/mware_lib/Config.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/name_service/NameServiceImpl.java" afterPath="$PROJECT_DIR$/src/name_service/NameServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/name_service/NameServiceMessage.java" afterPath="$PROJECT_DIR$/src/name_service/NameServiceMessage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mware_lib/ObjectBroker.java" afterPath="$PROJECT_DIR$/src/mware_lib/ObjectBroker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/name_service/NameServiceServer.java" afterPath="$PROJECT_DIR$/src/name_service/NameServiceServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/mware_lib/ObjectServer.java" afterPath="$PROJECT_DIR$/src/mware_lib/ObjectServer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="VS-Java.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/AccountImplBase.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385585340291" ignored="false" />
-    <file path="/NameServiceServer.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385564033190" ignored="false" />
+    <file path="/NameServiceServer.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385589208897" ignored="false" />
     <file path="/NameServiceMessage.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385585458292" ignored="false" />
     <file path="/fragment.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385588342162" ignored="false" />
     <file path="/ObjectBroker.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385586760729" ignored="false" />
     <file path="/NameServiceImpl.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385587206807" ignored="false" />
     <file path="/Config.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385584330426" ignored="false" />
-    <file path="/ObjectServer.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385587903186" ignored="false" />
+    <file path="/ObjectServer.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385589410383" ignored="false" />
     <file path="/ObjectServerMessage.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385586131078" ignored="false" />
     <file path="/Skeleton.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385581487502" ignored="false" />
     <file path="/AccountImplStub.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385587103454" ignored="false" />
     <file path="/AccountImplSkeleton.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385584158089" ignored="false" />
     <file path="/AccountImplServant.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385584684756" ignored="false" />
     <file path="/Servant.java" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385583981695" ignored="false" />
-    <file path="/Dummy.txt" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385588402333" ignored="false" />
+    <file path="/Dummy.txt" changelist="80781152-e5bc-4f47-b431-f9b3c8b23d84" time="1385589594500" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,22 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Skeleton.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mware_lib/Skeleton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="21" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AccountImplStub.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/bank_access/AccountImplStub.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="0" selection-start="471" selection-end="529" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,10 +132,17 @@
       <file leaf-file-name="NameServiceImpl.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/name_service/NameServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="43" column="54" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NameServiceServer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/name_service/NameServiceServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="12" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,10 +150,8 @@
       <file leaf-file-name="ObjectServer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mware_lib/ObjectServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="38" selection-start="2392" selection-end="2392" vertical-scroll-proportion="-0.7271095">
-              <folding>
-                <element signature="e#764#781#0" expanded="true" />
-              </folding>
+            <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.11034483">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -185,9 +169,7 @@
         <entry file="file://$PROJECT_DIR$/src/bank_access/AccountImplSkeleton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="23" column="28" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,7 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/name_service/NameServiceServer.java" />
         <option value="$PROJECT_DIR$/src/mware_lib/Stub.java" />
         <option value="$PROJECT_DIR$/src/mware_lib/Skeleton.java" />
         <option value="$PROJECT_DIR$/src/mware_lib/Config.java" />
@@ -213,17 +194,16 @@
         <option value="$PROJECT_DIR$/src/mware_lib/ObjectBroker.java" />
         <option value="$PROJECT_DIR$/src/name_service/NameServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/bank_access/AccountImplStub.java" />
-        <option value="$PROJECT_DIR$/src/mware_lib/ObjectServer.java" />
         <option value="$PROJECT_DIR$/src/mware_lib/Servant.java" />
         <option value="$PROJECT_DIR$/src/bank_access/AccountImplSkeleton.java" />
+        <option value="$PROJECT_DIR$/src/name_service/NameServiceServer.java" />
+        <option value="$PROJECT_DIR$/src/mware_lib/ObjectServer.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="683" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -232,6 +212,8 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
+    <OptionsSetting value="true" id="Undo Check Out" />
+    <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
@@ -252,6 +234,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,7 +341,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -396,6 +378,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -422,19 +417,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -558,20 +540,20 @@
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\VS-Java" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\VS-Java" />
+          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS-Java" />
+          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS-Java" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\VS-Java\.idea" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\VS-Java\.idea" />
+          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS-Java\.idea" />
+          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS-Java\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\VS-Java" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\VS-Java" />
+          <option name="myVcsRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS-Java" />
+          <option name="myCopyRoot" value="D:\Alex\Projekte\IntelliJ\AI5\VS-Java" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -585,26 +567,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="683" height="738" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16328709" sideWeight="0.6187291" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33556297" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3542673" sideWeight="0.6672662" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3327338" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -655,7 +641,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="NameServiceServer main starten&#10;danach NameServiceImpl mit arguments   server abc123&#10;danach NameServceImpl mit arguments  client abc123 &#10;starten" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed: Methode zur Ausgabe aktueller Verbindungen mit Kennzeichung" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -671,6 +657,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Project-Import" />
     <MESSAGE value="NameServiceServer main starten&#10;danach NameServiceImpl mit arguments   server abc123&#10;danach NameServceImpl mit arguments  client abc123 &#10;starten" />
+    <MESSAGE value="changed: Methode zur Ausgabe aktueller Verbindungen mit Kennzeichung" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -707,13 +694,6 @@
     <entry file="file://$PROJECT_DIR$/src/bank_access/AccountImplBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="106" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/name_service/NameServiceServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="11" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -765,18 +745,7 @@
     <entry file="file://$PROJECT_DIR$/src/bank_access/AccountImplStub.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="0" selection-start="471" selection-end="529" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/name_service/NameServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -790,18 +759,28 @@
     <entry file="file://$PROJECT_DIR$/src/bank_access/AccountImplSkeleton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="28" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/name_service/NameServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="54" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/name_service/NameServiceServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="12" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mware_lib/ObjectServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="38" selection-start="2392" selection-end="2392" vertical-scroll-proportion="-0.7271095">
-          <folding>
-            <element signature="e#764#781#0" expanded="true" />
-          </folding>
+        <state line="2" column="0" selection-start="20" selection-end="20" vertical-scroll-proportion="0.11034483">
+          <folding />
         </state>
       </provider>
     </entry>

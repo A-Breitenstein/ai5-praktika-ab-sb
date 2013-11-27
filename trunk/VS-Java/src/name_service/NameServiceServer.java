@@ -83,7 +83,7 @@ public class NameServiceServer {
                         }
                     });
                     current_connections++;
-                    System.out.println(current_connections);
+                    printCurrentConnections(current_connections);
                 }else{
                     try {
                         Thread.sleep(1000000);
@@ -97,6 +97,10 @@ public class NameServiceServer {
         }
     }
 
+    private void printCurrentConnections(int current_connections) {
+        System.out.println("Aktuelle Verbindungen: "+ current_connections);
+    }
+
     private void rebind(NameServiceMessage serviceMessage) {
         nameDirectory.put(serviceMessage.id, serviceMessage);
     }
@@ -108,7 +112,7 @@ public class NameServiceServer {
     public synchronized void clientLeft() {
         if (current_connections < max_connections) {
             current_connections--;
-            System.out.println(current_connections);
+            printCurrentConnections(current_connections);
         }
         else{
             current_connections--;
