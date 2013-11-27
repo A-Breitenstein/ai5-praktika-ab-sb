@@ -10,4 +10,5 @@ package mware_lib;
 public class Config {
     public static final int OBJECT_SERVER_PORT = 50005;
     public static final int NAME_SERVER_PORT = 50004;
+    public static final int SKELETONS_PER_SERVANT = 10;
 }

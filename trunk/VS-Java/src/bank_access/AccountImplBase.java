@@ -1,5 +1,7 @@
 package bank_access;
 
+import name_service.NameServiceMessage;
+
 /**
  * Created with IntelliJ IDEA.
  * User: abg667
@@ -10,5 +12,5 @@ package bank_access;
 public abstract class AccountImplBase {
     public abstract void transfer(double amount) throws OverdraftException;
     public abstract double getBalance();
-    public static AccountImplBase narrow_cast(Object o) {return null;}
+    public static AccountImplBase narrow_cast(Object o) {return new AccountImplStub((NameServiceMessage) o);}
 }

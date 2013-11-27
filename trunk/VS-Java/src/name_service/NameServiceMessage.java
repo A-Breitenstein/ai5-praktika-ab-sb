@@ -53,4 +53,20 @@ public class NameServiceMessage implements Serializable{
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
     }
+
+    public Operations getOperation() {
+        return operation;
+    }
+
+    public InetAddress getInetAddress() {
+        return inetAddress;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public String getId() {
+        return id;
+    }
 }

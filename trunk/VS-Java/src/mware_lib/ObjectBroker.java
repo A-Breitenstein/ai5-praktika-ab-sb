@@ -37,11 +37,12 @@ public class ObjectBroker {
      * @return an ObjectBroker Interface to Nameservice
      */
     public static ObjectBroker init(String serviceName, int port) {
-              ObjectBroker objectBroker;
+              ObjectBroker objectBroker = null;
         try {
             objectBroker = new ObjectBroker(InetAddress.getByName(serviceName), port);
         } catch (UnknownHostException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
+        return objectBroker;
     }
 }

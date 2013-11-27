@@ -1,10 +1,9 @@
 package mware_lib;
 
-import name_service.NameServiceMessage;
-
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -22,11 +21,14 @@ import java.util.concurrent.Executors;
 public class ObjectServer {
     ExecutorService threadPool;
     ServerSocket serverSocket;
-    int port = 50000;
+    int port = Config.OBJECT_SERVER_PORT;
     int max_connections = 10;
     int current_connections = 0;
     Thread dispatcherThread;
 
+
+    Map<String,Servant> objectDirectory = new HashMap<String, Servant>();
+    private static ObjectServer instance;
 
     public ObjectServer() {
         dispatcherThread = Thread.currentThread();
@@ -34,13 +36,25 @@ public class ObjectServer {
             serverSocket = new ServerSocket(port);
             serverSocket.setSoTimeout(7000);
             threadPool = Executors.newCachedThreadPool();
+            System.out.println("ObjectServer stated on "+ InetAddress.getLocalHost() +":"+port);
 
-            looper();
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    looper();
+
+                }
+            }).start();
+            Thread.sleep(100);
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
 
     }
+
+
 
     public void looper() {
 
@@ -57,7 +71,19 @@ public class ObjectServer {
                                 ObjectInputStream objIS = new ObjectInputStream(clientSocket.getInputStream());
                                 ObjectOutputStream objOS = new ObjectOutputStream(clientSocket.getOutputStream());
 
-                                NameServiceMessage serviceMessage = (NameServiceMessage) objIS.readObject();
+                                ObjectServerMessage serviceMessage = (ObjectServerMessage) objIS.readObject();
+                                System.out.println("ObjectServer: received: "+serviceMessage);
+                                Servant servant = objectDirectory.get(serviceMessage.getObjectID());
+
+                                if (servant == null) {
+                                    serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_NOT_FOUND);
+                                    objOS.writeObject(serviceMessage);
+                                }else {
+                                    servant.createSkeleton(clientSocket, serviceMessage);
+                                    serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_FOUND);
+                                    serviceMessage.setReturnVal(null);
+                                    objOS.writeObject(serviceMessage);
+                                }
 
                                 objIS.close();
                                 objOS.close();
@@ -71,7 +97,7 @@ public class ObjectServer {
                         }
                     });
                     current_connections++;
-                    System.out.println(current_connections);
+                    System.out.println("ObjectServer: current_connections: "+current_connections);
                 }else{
                     try {
                         Thread.sleep(1000000);
@@ -96,9 +122,20 @@ public class ObjectServer {
         }
     }
 
+    public static ObjectServer getInstance() {
+        if (instance == null) {
+            instance = new ObjectServer();
+        }
+        return instance;
+    }
+
     public static void main(String[] args) {
         new ObjectServer();
     }
 
 
+    public void rebind(Servant servant, String objectID) {
+        objectDirectory.put(objectID, servant);
+        System.out.println("ObjectServer: rebind: objectID = "+objectID+", "+servant);
+    }
 }
