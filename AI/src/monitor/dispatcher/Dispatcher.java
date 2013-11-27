@@ -110,5 +110,16 @@ public class Dispatcher implements IDispatcher{
         }
     }
 
+    public boolean isServerOnline(String servername) {
+        for (IMpsServer iMpsServer : serverList) {
+            try {
+                if (servername.equals(iMpsServer.getName()))
+                    return true;
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+    }
 
 }
