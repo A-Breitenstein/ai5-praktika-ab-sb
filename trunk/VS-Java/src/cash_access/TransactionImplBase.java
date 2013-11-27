@@ -16,5 +16,5 @@ public abstract class TransactionImplBase {
             throws InvalidParamException,OverdraftException;
     public abstract double getBalance(String accountId)
             throws InvalidParamException;
-    public static TransactionImplBase narrow_cast(Object o) {...}
+    public static TransactionImplBase narrow_cast(Object o) {return null;}
 }
