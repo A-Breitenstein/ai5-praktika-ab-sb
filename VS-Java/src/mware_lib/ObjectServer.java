@@ -1,10 +1,10 @@
-package name_service;
+package mware_lib;
 
-import mware_lib.Config;
+import name_service.NameServiceMessage;
 
-import java.io.*;
-import java.net.Inet4Address;
-import java.net.InetAddress;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -14,25 +14,23 @@ import java.util.concurrent.Executors;
 
 /**
  * Created with IntelliJ IDEA.
- * User: abg628
+ * User: Sven
  * Date: 27.11.13
- * Time: 15:32
+ * Time: 16:21
  * To change this template use File | Settings | File Templates.
  */
-public class NameServiceServer {
+public class ObjectServer {
     ExecutorService threadPool;
     ServerSocket serverSocket;
-    int port = Config.NAME_SERVER_PORT;
+    int port = 50000;
     int max_connections = 10;
     int current_connections = 0;
     Thread dispatcherThread;
 
-    Map<String,NameServiceMessage> nameDirectory = new HashMap<String, NameServiceMessage>();
 
-    public NameServiceServer() {
+    public ObjectServer() {
         dispatcherThread = Thread.currentThread();
         try {
-            System.out.println("NameServiceServer gestartet "+ InetAddress.getLocalHost()+":"+ port);
             serverSocket = new ServerSocket(port);
             serverSocket.setSoTimeout(7000);
             threadPool = Executors.newCachedThreadPool();
@@ -48,7 +46,7 @@ public class NameServiceServer {
 
         while (true){
             try {
-               final Socket clientSocket;
+                final Socket clientSocket;
                 if (current_connections < max_connections) {
                     clientSocket= serverSocket.accept();
 
@@ -60,16 +58,6 @@ public class NameServiceServer {
                                 ObjectOutputStream objOS = new ObjectOutputStream(clientSocket.getOutputStream());
 
                                 NameServiceMessage serviceMessage = (NameServiceMessage) objIS.readObject();
-                                System.out.println("empfangen: "+serviceMessage);
-                                switch (serviceMessage.operation) {
-                                    case REBIND:
-                                        rebind(serviceMessage);
-                                        break;
-                                    case RESOLVE:
-                                        objOS.writeObject(resolve(serviceMessage));
-                                        break;
-                                }
-
 
                                 objIS.close();
                                 objOS.close();
@@ -97,14 +85,6 @@ public class NameServiceServer {
         }
     }
 
-    private void rebind(NameServiceMessage serviceMessage) {
-        nameDirectory.put(serviceMessage.id, serviceMessage);
-    }
-
-    private NameServiceMessage resolve(NameServiceMessage serviceMessage) {
-        return nameDirectory.get(serviceMessage.id);
-    }
-
     public synchronized void clientLeft() {
         if (current_connections < max_connections) {
             current_connections--;
@@ -117,9 +97,8 @@ public class NameServiceServer {
     }
 
     public static void main(String[] args) {
-        new NameServiceServer();
+        new ObjectServer();
     }
-
 
 
 }
