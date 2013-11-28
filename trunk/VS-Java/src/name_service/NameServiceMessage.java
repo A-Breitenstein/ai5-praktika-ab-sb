@@ -11,9 +11,11 @@ import java.net.InetAddress;
  * To change this template use File | Settings | File Templates.
  */
 public class NameServiceMessage implements Serializable{
-    enum Operations{
+    public enum Operations{
         REBIND,
-        RESOLVE;
+        RESOLVE,
+        CLOSE_CON;
+
     }
     Operations operation;
     InetAddress inetAddress;

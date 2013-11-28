@@ -3,15 +3,9 @@ package name_service;
 import bank_access.AccountImplServant;
 import bank_access.AccountImplStub;
 import bank_access.OverdraftException;
-import mware_lib.Config;
-import mware_lib.NameService;
-import mware_lib.ObjectServer;
-import mware_lib.Servant;
+import mware_lib.*;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 
@@ -23,18 +17,19 @@ import java.net.Socket;
  * To change this template use File | Settings | File Templates.
  */
 public class NameServiceImpl extends NameService {
-    Socket clientSocket;
+    ObjectOutputStream objOS;
+    ObjectInputStream objIS;
 
-    public NameServiceImpl(Socket clientSocket) {
-        this.clientSocket = clientSocket;
+
+    public NameServiceImpl(ObjectOutputStream outputStream, ObjectInputStream inputStream) {
+            objOS = outputStream;
+            objIS = inputStream;
     }
 
     @Override
     public void rebind(Object servant, String name) {
         try {
-            ObjectOutputStream objOS = new ObjectOutputStream(clientSocket.getOutputStream());
-            objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.REBIND, InetAddress.getLocalHost(), Config.OBJECT_SERVER_PORT,name));
-            objOS.close();
+            objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.REBIND, InetAddress.getLocalHost(), Config.OBJECT_SERVER_PORT, name));
 
             ObjectServer.getInstance().rebind((Servant) servant, name);
         } catch (IOException e) {
@@ -46,14 +41,9 @@ public class NameServiceImpl extends NameService {
     public Object resolve(String name) {
         NameServiceMessage nameServiceMessage = null;
         try {
-            ObjectOutputStream objOS = new ObjectOutputStream(clientSocket.getOutputStream());
-            ObjectInputStream objIS = new ObjectInputStream(clientSocket.getInputStream());
 
             objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.RESOLVE,null,0,name));
             nameServiceMessage = (NameServiceMessage) objIS.readObject();
-
-            objIS.close();
-            objOS.close();
 
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -67,21 +57,29 @@ public class NameServiceImpl extends NameService {
 
         try {
             if (args[0].equals("client")) {
-                NameService nameServiceClient = new NameServiceImpl(new Socket(InetAddress.getLocalHost(), Config.NAME_SERVER_PORT));
-                NameServiceMessage msg = (NameServiceMessage)nameServiceClient.resolve(args[1]);
-                System.out.println("resolve: "+msg);
+                ObjectBroker objectBroker = ObjectBroker.init("localhost", Config.NAME_SERVER_PORT);
+                NameService nameServiceClient = objectBroker.getNameService();
+
+                NameServiceMessage msg = (NameServiceMessage) nameServiceClient.resolve(args[1]);
+                System.out.println("resolve: " + msg);
                 AccountImplStub stub = new AccountImplStub(msg);
                 stub.transfer(100.0);
 
+                objectBroker.shutDown();
+
             }else if (args[0].equals("server")) {
                 System.out.println("rebind called");
-                NameService nameServiceServer = new NameServiceImpl(new Socket(InetAddress.getLocalHost(), Config.NAME_SERVER_PORT));
+                ObjectBroker objectBroker = ObjectBroker.init("localhost",Config.NAME_SERVER_PORT);
+                NameService nameServiceServer = objectBroker.getNameService();
+
                 nameServiceServer.rebind(new AccountImplServant(100.0), args[1]);
+                nameServiceServer.rebind(new AccountImplServant(150.0), args[1]+"ab");
+
+                objectBroker.shutDown();
+
             }else System.out.println("fail...");
 
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (OverdraftException e) {
+        }  catch (OverdraftException e) {
             e.printStackTrace();
         }
     }
