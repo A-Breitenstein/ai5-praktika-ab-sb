@@ -27,7 +27,7 @@ public class ObjectServer {
     Thread dispatcherThread;
 
 
-    Map<String,Servant> objectDirectory = new HashMap<String, Servant>();
+    Map<String,SkeletonFactory> objectDirectory = new HashMap<String, SkeletonFactory>();
     private static ObjectServer instance;
 
     public ObjectServer() {
@@ -73,22 +73,22 @@ public class ObjectServer {
 
                                 ObjectServerMessage serviceMessage = (ObjectServerMessage) objIS.readObject();
                                 System.out.println("ObjectServer: received: "+serviceMessage);
-                                Servant servant = objectDirectory.get(serviceMessage.getObjectID());
+                                SkeletonFactory skeletonFactory = objectDirectory.get(serviceMessage.getObjectID());
 
-                                if (servant == null) {
+                                if (skeletonFactory == null) {
                                     serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_NOT_FOUND);
                                     objOS.writeObject(serviceMessage);
                                 }else {
-                                    Skeleton skeleton = servant.createSkeleton(clientSocket, serviceMessage);
-                                    System.out.println("ObjectServer: "+servant.getReferences()+" references on"+servant.getClass().toString());
+                                    Skeleton skeleton = skeletonFactory.createSkeleton(clientSocket, serviceMessage);
+                                    System.out.println("ObjectServer: " + skeletonFactory.getReferences() + " references on" + skeletonFactory.getClass().toString());
                                     serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_FOUND);
 
                                     Object returnObject = skeleton.callFunction(serviceMessage);
 
                                     serviceMessage.setReturnVal(returnObject);
-                                    System.out.println("ObjectServer: send: "+serviceMessage );
+                                    System.out.println("ObjectServer: send: " + serviceMessage);
                                     objOS.writeObject(serviceMessage);
-                                    servant.removeSkeleton(skeleton);
+                                    skeletonFactory.removeSkeleton(skeleton);
                                 }
 
                                 objIS.close();
@@ -143,8 +143,19 @@ public class ObjectServer {
     }
 
 
-    public void rebind(Servant servant, String objectID) {
-        objectDirectory.put(objectID, servant);
-        System.out.println("ObjectServer: rebind: objectID = "+objectID+", "+servant);
+    public void rebind(Object servant, String objectID) {
+        objectDirectory.put(objectID,createSkeletonFactory(servant));
+        System.out.println("ObjectServer: rebind: objectID = " + objectID + ", " + servant);
     }
+
+    private SkeletonFactory createSkeletonFactory(Object servant) {
+        System.out.println(servant.getClass().getSuperclass());
+        //TODO: hier muss geguckt welchen vom welchem typ der servant ist, und dann muss die passende
+        //skeletonfactory ausgewählt werden und der servant auf seine superclass gecastet werden
+        //damit man ihn der skeletonfactory per constructor übergeben kann
+
+         return null;
+    }
+
+
 }
