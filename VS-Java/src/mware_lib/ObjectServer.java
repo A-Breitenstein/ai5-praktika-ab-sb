@@ -1,12 +1,17 @@
 package mware_lib;
 
+import bank_access.AccountSkeletonFactory;
+import bank_access.ManagerSkeletonFactory;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -26,16 +31,19 @@ public class ObjectServer {
     int current_connections = 0;
     Thread dispatcherThread;
 
+    List<SkeletonFactory> skeletonFactoryList = new ArrayList<SkeletonFactory>();
 
     Map<String,SkeletonFactory> objectDirectory = new HashMap<String, SkeletonFactory>();
     private static ObjectServer instance;
 
     public ObjectServer() {
+        skeletonFactoryList.add(new AccountSkeletonFactory());
+        skeletonFactoryList.add(new ManagerSkeletonFactory());
         try {
             serverSocket = new ServerSocket(port);
             serverSocket.setSoTimeout(7000);
             threadPool = Executors.newCachedThreadPool();
-            System.out.println("ObjectServer stated on "+ InetAddress.getLocalHost() +":"+port);
+            System.out.println("ObjectServer stated on " + InetAddress.getLocalHost() + ":" + port);
 
             new Thread(new Runnable() {
                 @Override
@@ -154,7 +162,14 @@ public class ObjectServer {
         //skeletonfactory ausgewählt werden und der servant auf seine superclass gecastet werden
         //damit man ihn der skeletonfactory per constructor übergeben kann
 
-         return null;
+        System.out.println("ObjectServer: trying to find suiteable SkeletonFactory for: "+servant.getClass().getSuperclass());
+        for (SkeletonFactory skeletonFactory : skeletonFactoryList) {
+            if (skeletonFactory.getServantClass().equals(servant.getClass().getSuperclass())) {
+                System.out.println("ObjectServer: found!");
+                return skeletonFactory;
+            }
+        }
+        throw new ClassCastException("ObjectServer: couldnt find suiteable skeletonFactory");
     }
 
 
