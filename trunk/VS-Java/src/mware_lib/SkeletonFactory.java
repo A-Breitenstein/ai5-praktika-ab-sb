@@ -12,4 +12,7 @@ public interface SkeletonFactory {
     Skeleton createSkeleton(Socket clientSocket,ObjectServerMessage serviceMessage);
     void removeSkeleton(Skeleton skeleton);
     int getReferences();
+    void setServant(Object servant);
+
+    Class getServantClass();
 }
