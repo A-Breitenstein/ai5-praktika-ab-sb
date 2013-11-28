@@ -6,6 +6,8 @@ import mware_lib.Skeleton;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.Socket;
 
 /**
@@ -55,5 +57,25 @@ public class AccountImplSkeleton extends AccountImplBase implements Skeleton {
     @Override
     public int hashCode() {
         return id;
+    }
+
+    @Override
+    public Object callFunction(ObjectServerMessage serviceMessage) {
+        Method[] methods = accountImplServant.getClass().getMethods();
+        Object returnValue = null;
+
+        for (Method method : methods) {
+
+            if (method.getName().equals(String.valueOf(serviceMessage.getOperation()))) {
+                try {
+                    returnValue = method.invoke(accountImplServant, serviceMessage.getParameter());
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return returnValue;
     }
 }

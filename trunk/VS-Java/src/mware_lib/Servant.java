@@ -12,5 +12,7 @@ public interface Servant {
     Skeleton createSkeleton(Socket clientSocket,ObjectServerMessage serviceMessage);
     void removeSkeleton(Skeleton skeleton);
 
+    int getReferences();
+
 
 }

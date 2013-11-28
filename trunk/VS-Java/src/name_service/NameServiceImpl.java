@@ -8,6 +8,9 @@ import mware_lib.*;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created with IntelliJ IDEA.
@@ -44,6 +47,7 @@ public class NameServiceImpl extends NameService {
 
             objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.RESOLVE,null,0,name));
             nameServiceMessage = (NameServiceMessage) objIS.readObject();
+            objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.CLOSE_CON,null,0,null));
 
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -53,19 +57,40 @@ public class NameServiceImpl extends NameService {
         return (Object)nameServiceMessage;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
-        try {
             if (args[0].equals("client")) {
-                ObjectBroker objectBroker = ObjectBroker.init("localhost", Config.NAME_SERVER_PORT);
-                NameService nameServiceClient = objectBroker.getNameService();
+                ExecutorService threadPool = Executors.newCachedThreadPool();
+                for (int i = 0; i < 25; i++) {
 
-                NameServiceMessage msg = (NameServiceMessage) nameServiceClient.resolve(args[1]);
-                System.out.println("resolve: " + msg);
-                AccountImplStub stub = new AccountImplStub(msg);
-                stub.transfer(100.0);
+                    threadPool.execute(new Runnable() {
+                        @Override
+                        public void run() {
+                            ObjectBroker objectBroker = ObjectBroker.init("localhost", Config.NAME_SERVER_PORT);
+                            NameService nameServiceClient = objectBroker.getNameService();
 
-                objectBroker.shutDown();
+                            NameServiceMessage msg = (NameServiceMessage) nameServiceClient.resolve(args[1]);
+                            System.out.println("resolve: " + msg);
+                            AccountImplStub stub = new AccountImplStub(msg);
+
+                            Random random = new Random();
+                            System.out.println("CurrentBalance before 10 transfers: "+stub.getBalance());
+                            for (int i = 0; i < 50; i++) {
+                                try {
+                                    stub.transfer(random.nextDouble() * 100);
+                                } catch (OverdraftException e) {
+                                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                                }
+                                System.out.println("CurrentBalance transfer "+(i+1)+": "+stub.getBalance());
+                            }
+                            System.out.println("CurrentBalance after 10 transfers: "+stub.getBalance());
+
+
+                            objectBroker.shutDown();
+                        }
+                    });
+                }
+
 
             }else if (args[0].equals("server")) {
                 System.out.println("rebind called");
@@ -79,8 +104,5 @@ public class NameServiceImpl extends NameService {
 
             }else System.out.println("fail...");
 
-        }  catch (OverdraftException e) {
-            e.printStackTrace();
-        }
     }
 }

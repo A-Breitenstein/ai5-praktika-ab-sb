@@ -67,7 +67,9 @@ public class NameServiceServer {
                                             rebind(serviceMessage);
                                             break;
                                         case RESOLVE:
-                                            objOS.writeObject(resolve(serviceMessage));
+                                            serviceMessage = resolve(serviceMessage);
+                                            System.out.println("send: "+serviceMessage);
+                                            objOS.writeObject(serviceMessage);
                                             break;
                                         case CLOSE_CON:
                                             run = false;

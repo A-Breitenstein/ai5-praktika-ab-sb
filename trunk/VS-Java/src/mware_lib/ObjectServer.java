@@ -31,7 +31,6 @@ public class ObjectServer {
     private static ObjectServer instance;
 
     public ObjectServer() {
-        dispatcherThread = Thread.currentThread();
         try {
             serverSocket = new ServerSocket(port);
             serverSocket.setSoTimeout(7000);
@@ -41,6 +40,7 @@ public class ObjectServer {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
+                    dispatcherThread = Thread.currentThread();
                     looper();
 
                 }
@@ -79,10 +79,16 @@ public class ObjectServer {
                                     serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_NOT_FOUND);
                                     objOS.writeObject(serviceMessage);
                                 }else {
-                                    servant.createSkeleton(clientSocket, serviceMessage);
+                                    Skeleton skeleton = servant.createSkeleton(clientSocket, serviceMessage);
+                                    System.out.println("ObjectServer: "+servant.getReferences()+" references on"+servant.getClass().toString());
                                     serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_FOUND);
-                                    serviceMessage.setReturnVal(null);
+
+                                    Object returnObject = skeleton.callFunction(serviceMessage);
+
+                                    serviceMessage.setReturnVal(returnObject);
+                                    System.out.println("ObjectServer: send: "+serviceMessage );
                                     objOS.writeObject(serviceMessage);
+                                    servant.removeSkeleton(skeleton);
                                 }
 
                                 objIS.close();
@@ -100,9 +106,8 @@ public class ObjectServer {
                     printCurrentConnections(current_connections);
                 }else{
                     try {
-                        Thread.sleep(1000000);
+                        Thread.sleep(10000000);
                     } catch (InterruptedException e) {
-
                     }
                 }
             } catch (IOException e) {
@@ -112,7 +117,7 @@ public class ObjectServer {
     }
 
     private void printCurrentConnections(int current_connections) {
-        System.out.println("Aktuelle Verbindungen: " +current_connections);
+        System.out.println("ObjectServer: Aktuelle Verbindungen: " +current_connections);
     }
 
     public synchronized void clientLeft() {
