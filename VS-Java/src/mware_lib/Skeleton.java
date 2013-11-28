@@ -8,4 +8,5 @@ package mware_lib;
  */
 public interface Skeleton {
 
+    Object callFunction(ObjectServerMessage serviceMessage);
 }

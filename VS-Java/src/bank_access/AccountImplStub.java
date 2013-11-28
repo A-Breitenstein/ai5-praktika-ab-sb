@@ -16,46 +16,61 @@ import java.net.Socket;
  * Time: 20:45
  */
 public class AccountImplStub extends AccountImplBase implements Stub {
-    Socket objectServer;
     NameServiceMessage nameServiceMessage;
-    ObjectOutputStream objOS;
-    ObjectInputStream objIS;
+
     public AccountImplStub(NameServiceMessage nameServiceMessage) {
-        try {
-            this.nameServiceMessage = nameServiceMessage;
-            objectServer = new Socket(nameServiceMessage.getInetAddress(), nameServiceMessage.getPort());
-            objOS = new ObjectOutputStream(objectServer.getOutputStream());
-            objIS = new ObjectInputStream(objectServer.getInputStream());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        this.nameServiceMessage = nameServiceMessage;
 
     }
 
-    @Override
-    public void transfer(double amount) throws OverdraftException {
+    private ObjectServerMessage sendObjectServerMessage(ObjectServerMessage message) throws OverdraftException {
+        ObjectServerMessage answer = null;
         try {
+            final Socket objectServer = new Socket(nameServiceMessage.getInetAddress(), nameServiceMessage.getPort());
+            final ObjectOutputStream objOS = new ObjectOutputStream(objectServer.getOutputStream());
+            final ObjectInputStream objIS = new ObjectInputStream(objectServer.getInputStream());
 
-            objOS.writeObject(new ObjectServerMessage("transfer",new Object[]{(Object)Double.valueOf(amount)},nameServiceMessage.getId()));
-            ObjectServerMessage answer = (ObjectServerMessage) objIS.readObject();
+            objOS.writeObject(message);
+            answer = (ObjectServerMessage) objIS.readObject();
+
             switch (answer.getMsg()) {
                 case OBJECT_NOT_FOUND:
                     throw new OverdraftException("AccountImplSkeleton on ObjectServer notfound");
                 case OBJECT_FOUND:
                     System.out.println("AccountImplStub:: Object_Found");
-
                     break;
             }
+            objIS.close();
+            objOS.close();
+            objectServer.close();
 
-        } catch (IOException e) {
-            throw new OverdraftException("AccountImplStub::transfer -> IO Exception");
         } catch (ClassNotFoundException e) {
-            throw new OverdraftException("AccountImplStub::transfer -> ClassNotFound Exception");
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
+        return answer;
     }
 
     @Override
-    public double getBalance() {
-        throw new UnsupportedOperationException("AccountImplStub :: getBalance not implemented yet");
+    public void transfer(double amount) throws OverdraftException {
+            sendObjectServerMessage(new ObjectServerMessage("transfer", new Double[]{amount}, nameServiceMessage.getId()));
+    }
+
+    @Override
+    public double getBalance()  {
+        double returnValue = 0;
+        try {
+            returnValue = ((Double) sendObjectServerMessage(
+                                                            new ObjectServerMessage("getBalance", new Object[]{}, nameServiceMessage.getId())
+                                                            ).getReturnVal()
+                          )
+                          .doubleValue();
+
+        } catch (OverdraftException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+        return returnValue;
     }
 }
