@@ -56,23 +56,28 @@ public class NameServiceServer {
                         @Override
                         public void run() {
                             try {
-                                ObjectInputStream objIS = new ObjectInputStream(clientSocket.getInputStream());
                                 ObjectOutputStream objOS = new ObjectOutputStream(clientSocket.getOutputStream());
-
-                                NameServiceMessage serviceMessage = (NameServiceMessage) objIS.readObject();
-                                System.out.println("empfangen: "+serviceMessage);
-                                switch (serviceMessage.operation) {
-                                    case REBIND:
-                                        rebind(serviceMessage);
-                                        break;
-                                    case RESOLVE:
-                                        objOS.writeObject(resolve(serviceMessage));
-                                        break;
+                                ObjectInputStream objIS = new ObjectInputStream(clientSocket.getInputStream());
+                                boolean run = true;
+                                while (run && !Thread.currentThread().isInterrupted()){
+                                    NameServiceMessage serviceMessage = (NameServiceMessage) objIS.readObject();
+                                    System.out.println("empfangen: "+serviceMessage);
+                                    switch (serviceMessage.operation) {
+                                        case REBIND:
+                                            rebind(serviceMessage);
+                                            break;
+                                        case RESOLVE:
+                                            objOS.writeObject(resolve(serviceMessage));
+                                            break;
+                                        case CLOSE_CON:
+                                            run = false;
+                                            break;
+                                    }
                                 }
 
 
-                                objIS.close();
                                 objOS.close();
+                                objIS.close();
                                 clientSocket.close();
                             } catch (IOException e) {
                                 e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
