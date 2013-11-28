@@ -33,8 +33,7 @@ public class NameServiceImpl extends NameService {
     public void rebind(Object servant, String name) {
         try {
             objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.REBIND, InetAddress.getLocalHost(), Config.OBJECT_SERVER_PORT, name));
-
-            ObjectServer.getInstance().rebind((Servant) servant, name);
+            ObjectServer.getInstance().rebind(servant, name);
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }

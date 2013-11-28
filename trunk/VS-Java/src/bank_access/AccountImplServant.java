@@ -18,8 +18,7 @@ import java.util.concurrent.Semaphore;
  */
 public class AccountImplServant extends AccountImplBase implements Servant {
     double account;
-    List<Skeleton> skeletons = new ArrayList<Skeleton>();
-    Semaphore skeleton_per_servant = new Semaphore(Config.SKELETONS_PER_SERVANT,true);
+
 
     public AccountImplServant(double account) {
         this.account = account;
@@ -42,29 +41,4 @@ public class AccountImplServant extends AccountImplBase implements Servant {
                 '}';
     }
 
-    @Override
-    public Skeleton createSkeleton(Socket clientSocket, ObjectServerMessage serviceMessage) {
-        Skeleton tmp = null;
-        try {
-            System.out.println("permits:"+skeleton_per_servant.availablePermits());
-            skeleton_per_servant.acquire();
-            tmp = new AccountImplSkeleton(this, clientSocket, serviceMessage, skeletons.size());
-            skeletons.add(tmp);
-        } catch (InterruptedException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-
-        return tmp;
-    }
-
-    @Override
-    public void removeSkeleton(Skeleton skeleton) {
-        skeletons.remove(skeleton);
-        skeleton_per_servant.release();
-    }
-
-    @Override
-    public int getReferences() {
-        return skeletons.size();
-    }
 }

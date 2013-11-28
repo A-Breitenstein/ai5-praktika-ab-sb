@@ -9,10 +9,7 @@ import java.net.Socket;
  * Time: 20:49
  */
 public interface Servant {
-    Skeleton createSkeleton(Socket clientSocket,ObjectServerMessage serviceMessage);
-    void removeSkeleton(Skeleton skeleton);
 
-    int getReferences();
 
 
 }

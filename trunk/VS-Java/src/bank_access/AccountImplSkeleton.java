@@ -1,8 +1,8 @@
 package bank_access;
 
 import mware_lib.ObjectServerMessage;
-import mware_lib.Servant;
 import mware_lib.Skeleton;
+import mware_lib.SkeletonFactory;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -17,7 +17,7 @@ import java.net.Socket;
  * Time: 20:47
  */
 public class AccountImplSkeleton extends AccountImplBase implements Skeleton {
-    Servant accountImplServant;
+    SkeletonFactory accountSkeletonFactory;
     Socket clientSocket;
     ObjectServerMessage objectServerMessage;
     int id;
@@ -25,8 +25,8 @@ public class AccountImplSkeleton extends AccountImplBase implements Skeleton {
     ObjectOutputStream objOS;
     ObjectInputStream objIS;
 
-    public AccountImplSkeleton(Servant accountImplServant, Socket clientSocket, ObjectServerMessage objectServerMessage, int id) {
-        this.accountImplServant = accountImplServant;
+    public AccountImplSkeleton(SkeletonFactory skeletonFactory, Socket clientSocket, ObjectServerMessage objectServerMessage, int id) {
+        this.accountSkeletonFactory = skeletonFactory;
         this.clientSocket = clientSocket;
         this.objectServerMessage = objectServerMessage;
         this.id = id;
@@ -61,14 +61,14 @@ public class AccountImplSkeleton extends AccountImplBase implements Skeleton {
 
     @Override
     public Object callFunction(ObjectServerMessage serviceMessage) {
-        Method[] methods = accountImplServant.getClass().getMethods();
+        Method[] methods = accountSkeletonFactory.getClass().getMethods();
         Object returnValue = null;
 
         for (Method method : methods) {
 
             if (method.getName().equals(String.valueOf(serviceMessage.getOperation()))) {
                 try {
-                    returnValue = method.invoke(accountImplServant, serviceMessage.getParameter());
+                    returnValue = method.invoke(accountSkeletonFactory, serviceMessage.getParameter());
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
                 } catch (InvocationTargetException e) {
