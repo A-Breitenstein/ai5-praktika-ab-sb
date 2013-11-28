@@ -151,7 +151,7 @@ public class CG1Frame extends JFrame {
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
-        AppearanceHelper.setColor(shape,new Color3f(new Color(31, 178, 255)));
+        AppearanceHelper.setColor(shape,new Color3f(new Color(255, 65, 168)));
         scene.addChild(tg);
 
         // Assemble scene
