@@ -1,14 +1,8 @@
-package bank_access;
+package test_servant;
 
-import mware_lib.Config;
-import mware_lib.ObjectServerMessage;
-import mware_lib.Servant;
-import mware_lib.Skeleton;
-
-import java.net.Socket;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Semaphore;
+import bank_access.AccountImplBase;
+import bank_access.OverdraftException;
+import mware_lib.servant.Servant;
 
 /**
  * Created with IntelliJ IDEA.

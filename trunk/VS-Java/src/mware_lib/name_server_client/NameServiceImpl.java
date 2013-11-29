@@ -1,13 +1,14 @@
-package name_service;
+package mware_lib.name_server_client;
 
-import bank_access.AccountImplServant;
+import mware_lib.name_server.NameServiceMessage;
+import mware_lib.object_server.ObjectServer;
+import test_servant.AccountImplServant;
 import bank_access.AccountImplStub;
 import bank_access.OverdraftException;
 import mware_lib.*;
 
 import java.io.*;
 import java.net.InetAddress;
-import java.net.Socket;
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -32,8 +33,13 @@ public class NameServiceImpl extends NameService {
     @Override
     public void rebind(Object servant, String name) {
         try {
-            objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.REBIND, InetAddress.getLocalHost(), Config.OBJECT_SERVER_PORT, name));
             ObjectServer.getInstance().rebind(servant, name);
+            objOS.writeObject(
+                    new NameServiceMessage(NameServiceMessage.Operations.REBIND,
+                                           InetAddress.getLocalHost(),
+                                            ObjectServer.getInstance().getPort(),
+                                            name)
+            );
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
@@ -46,8 +52,9 @@ public class NameServiceImpl extends NameService {
 
             objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.RESOLVE,null,0,name));
             nameServiceMessage = (NameServiceMessage) objIS.readObject();
-            objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.CLOSE_CON,null,0,null));
-
+            if (nameServiceMessage == null) {
+                throw new UnknownError("NameService cant resolve: " + name);
+            }
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         } catch (ClassNotFoundException e) {
@@ -69,20 +76,20 @@ public class NameServiceImpl extends NameService {
                             NameService nameServiceClient = objectBroker.getNameService();
 
                             NameServiceMessage msg = (NameServiceMessage) nameServiceClient.resolve(args[1]);
-                            System.out.println("resolve: " + msg);
+                            if(Config.DEBUG) if(Config.DEBUG) System.out.println("resolve: " + msg);
                             AccountImplStub stub = new AccountImplStub(msg);
 
                             Random random = new Random();
-                            System.out.println("CurrentBalance before 10 transfers: "+stub.getBalance());
+                            if(Config.DEBUG) if(Config.DEBUG) System.out.println("CurrentBalance before 10 transfers: "+stub.getBalance());
                             for (int i = 0; i < 50; i++) {
                                 try {
                                     stub.transfer(random.nextDouble() * 100);
                                 } catch (OverdraftException e) {
                                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
                                 }
-                                System.out.println("CurrentBalance transfer "+(i+1)+": "+stub.getBalance());
+                                if(Config.DEBUG) if(Config.DEBUG) System.out.println("CurrentBalance transfer "+(i+1)+": "+stub.getBalance());
                             }
-                            System.out.println("CurrentBalance after 10 transfers: "+stub.getBalance());
+                            if(Config.DEBUG) if(Config.DEBUG) System.out.println("CurrentBalance after 10 transfers: "+stub.getBalance());
 
 
                             objectBroker.shutDown();
@@ -92,7 +99,7 @@ public class NameServiceImpl extends NameService {
 
 
             }else if (args[0].equals("server")) {
-                System.out.println("rebind called");
+                if(Config.DEBUG) if(Config.DEBUG) System.out.println("rebind called");
                 ObjectBroker objectBroker = ObjectBroker.init("localhost",Config.NAME_SERVER_PORT);
                 NameService nameServiceServer = objectBroker.getNameService();
 
@@ -101,7 +108,7 @@ public class NameServiceImpl extends NameService {
 
                 objectBroker.shutDown();
 
-            }else System.out.println("fail...");
+            }else if(Config.DEBUG) if(Config.DEBUG) System.out.println("fail...");
 
     }
 }

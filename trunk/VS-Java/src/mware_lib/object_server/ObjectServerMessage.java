@@ -1,4 +1,4 @@
-package mware_lib;
+package mware_lib.object_server;
 
 import java.io.Serializable;
 import java.util.Arrays;
@@ -16,14 +16,18 @@ public class ObjectServerMessage implements Serializable{
     Object returnVal;
     Msg msg;
 
+    public ObjectServerMessage(Object operation, Object[] parameter) {
+        this.operation = operation;
+        this.parameter = parameter;
+    }
+
     public enum Msg {
         OBJECT_NOT_FOUND,
         OBJECT_FOUND;
     }
 
     public ObjectServerMessage(Object operation, Object[] parameter, String objectID) {
-        this.operation = operation;
-        this.parameter = parameter;
+        this(operation, parameter);
         this.objectID = objectID;
     }
 

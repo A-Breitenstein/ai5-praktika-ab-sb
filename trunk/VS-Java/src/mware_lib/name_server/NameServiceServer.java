@@ -1,9 +1,8 @@
-package name_service;
+package mware_lib.name_server;
 
 import mware_lib.Config;
 
 import java.io.*;
-import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -61,14 +60,14 @@ public class NameServiceServer {
                                 boolean run = true;
                                 while (run && !Thread.currentThread().isInterrupted()){
                                     NameServiceMessage serviceMessage = (NameServiceMessage) objIS.readObject();
-                                    System.out.println("empfangen: "+serviceMessage);
+                                    if(Config.DEBUG) System.out.println("empfangen: "+serviceMessage);
                                     switch (serviceMessage.operation) {
                                         case REBIND:
                                             rebind(serviceMessage);
                                             break;
                                         case RESOLVE:
                                             serviceMessage = resolve(serviceMessage);
-                                            System.out.println("send: "+serviceMessage);
+                                            if(Config.DEBUG) System.out.println("send: "+serviceMessage);
                                             objOS.writeObject(serviceMessage);
                                             break;
                                         case CLOSE_CON:
@@ -105,7 +104,7 @@ public class NameServiceServer {
     }
 
     private void printCurrentConnections(int current_connections) {
-        System.out.println("Aktuelle Verbindungen: "+ current_connections);
+        if(Config.DEBUG) System.out.println("Aktuelle Verbindungen: "+ current_connections);
     }
 
     private void rebind(NameServiceMessage serviceMessage) {
