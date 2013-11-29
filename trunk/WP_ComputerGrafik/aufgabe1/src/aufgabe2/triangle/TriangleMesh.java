@@ -5,11 +5,9 @@ import aufgabe4.*;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.Point3f;
-import javax.vecmath.Vector3d;
+import javax.vecmath.TexCoord3f;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,10 +19,13 @@ import java.util.Set;
 public class TriangleMesh implements ITriangleMesh {
     List<Triangle> triangleList;
     List<Point3d> point3dList;
+    List<TexCoord3f> texCoord3fList;
+
 
     public TriangleMesh() {
         triangleList = new ArrayList<Triangle>();
         point3dList = new ArrayList<Point3d>();
+        texCoord3fList = new ArrayList<TexCoord3f>();
     }
 
     public static TriangleMesh create() {
@@ -33,7 +34,6 @@ public class TriangleMesh implements ITriangleMesh {
 
 
     @Override
-
     public void addTriangle(Triangle t) {
         triangleList.add(t);
     }
@@ -41,7 +41,7 @@ public class TriangleMesh implements ITriangleMesh {
     @Override
     public int addVertex(Point3d v) {
         point3dList.add(v);
-        return point3dList.size()-1;
+        return point3dList.size() - 1;
     }
 
     @Override
@@ -74,11 +74,11 @@ public class TriangleMesh implements ITriangleMesh {
     public List<Triangle> getAllAdjacentTrianglesToVertex(int pointIndex) {
         List<Triangle> triangleList = new ArrayList<Triangle>();
         for (Triangle triangle : this.triangleList) {
-            if(triangle.a == pointIndex)
+            if (triangle.a == pointIndex)
                 triangleList.add(triangle);
-            else if(triangle.b == pointIndex)
+            else if (triangle.b == pointIndex)
                 triangleList.add(triangle);
-            else if(triangle.c == pointIndex)
+            else if (triangle.c == pointIndex)
                 triangleList.add(triangle);
         }
         return triangleList;
@@ -96,24 +96,24 @@ public class TriangleMesh implements ITriangleMesh {
             if (!containsPoint3d(uniquePoints, currentPoint)) {
 
                 uniquePoints.add(currentPoint);
-                index = uniquePoints.size()-1;
+                index = uniquePoints.size() - 1;
                 for (Triangle triangle : triangleList) {
 
-                    if(isEqual(point3dList.get(triangle.a),currentPoint))
+                    if (isEqual(point3dList.get(triangle.a), currentPoint))
                         triangle.a = index;
-                    else if (isEqual(point3dList.get(triangle.b),currentPoint))
+                    else if (isEqual(point3dList.get(triangle.b), currentPoint))
                         triangle.b = index;
-                    else if(isEqual(point3dList.get(triangle.c),currentPoint))
+                    else if (isEqual(point3dList.get(triangle.c), currentPoint))
                         triangle.c = index;
                 }
 
             }
         }
-        System.out.println("p3L:"+point3dList.size()+", uniqu:"+uniquePoints.size());
+        System.out.println("p3L:" + point3dList.size() + ", uniqu:" + uniquePoints.size());
 
         if (containsPoint3d(uniquePoints, point3dList.get(4003))) {
             System.out.println("ist drin");
-        }else System.out.println("ist nicht drin");
+        } else System.out.println("ist nicht drin");
 
         point3dList = uniquePoints;
 
@@ -121,23 +121,24 @@ public class TriangleMesh implements ITriangleMesh {
 
     private boolean containsPoint3d(List<Point3d> uniquePoints, Point3d currentPoint) {
         for (Point3d uniquePoint : uniquePoints) {
-            if(isEqual(uniquePoint,currentPoint))
+            if (isEqual(uniquePoint, currentPoint))
                 return true;
         }
         return false;
     }
 
-    private boolean isEqual(Point3d p1,Point3d p2) {
+    private boolean isEqual(Point3d p1, Point3d p2) {
 //        final double delta = 0.0005;
         final double delta = 0.0;
-        return assertDelta(p1.x,p2.x,delta) && assertDelta(p1.y,p2.y,delta) && assertDelta(p1.z,p2.z,delta);
+        return assertDelta(p1.x, p2.x, delta) && assertDelta(p1.y, p2.y, delta) && assertDelta(p1.z, p2.z, delta);
     }
 
-    private boolean isEqual(Point3f p1,Point3f p2) {
+    private boolean isEqual(Point3f p1, Point3f p2) {
 //        final double delta = 0.0005;
         final double delta = 0.0;
-        return assertDelta(p1.x,p2.x,delta) && assertDelta(p1.y,p2.y,delta) && assertDelta(p1.z,p2.z,delta);
+        return assertDelta(p1.x, p2.x, delta) && assertDelta(p1.y, p2.y, delta) && assertDelta(p1.z, p2.z, delta);
     }
+
     private boolean assertDelta(double d1, double d2, double delta) {
         final double actualDelta = (d1 > d2) ? (d1 - d2) : (d2 - d1);
         return (actualDelta <= delta);
@@ -147,10 +148,10 @@ public class TriangleMesh implements ITriangleMesh {
     public HalfEdgeDatastructure convertToHalfEdgeDatastructure() {
         HalfEdgeDatastructure hed = new HalfEdgeDatastructure();
         for (Triangle triangle : triangleList) {
-            addTriangleToHalfEdgeDatasturcture(triangle,hed);
+            addTriangleToHalfEdgeDatasturcture(triangle, hed);
         }
-        HalfEdge current,temp;
-        HalfEdgeVertex current_source,current_target;
+        HalfEdge current, temp;
+        HalfEdgeVertex current_source, current_target;
         for (int i = 0; i < hed.getNumberOfHalfEdges(); i++) {
             current = hed.getHalfEdge(i);
             current_source = current.getVertex();
@@ -165,7 +166,24 @@ public class TriangleMesh implements ITriangleMesh {
         }
         return hed;
     }
-    private void addTriangleToHalfEdgeDatasturcture(Triangle triangle,HalfEdgeDatastructure hed) {
+
+    @Override
+    public int addTexCoord(TexCoord3f texCoord3f) {
+        texCoord3fList.add(texCoord3f);
+        return getNumberOfTexCoord() - 1;
+    }
+
+    @Override
+    public int getNumberOfTexCoord() {
+        return texCoord3fList.size();
+    }
+
+    @Override
+    public TexCoord3f getTexCoord(int index) {
+        return texCoord3fList.get(index);
+    }
+
+    private void addTriangleToHalfEdgeDatasturcture(Triangle triangle, HalfEdgeDatastructure hed) {
         final HalfEdgeVertex hev_a;
         final HalfEdgeVertex hev_b;
         final HalfEdgeVertex hev_c;
@@ -188,9 +206,16 @@ public class TriangleMesh implements ITriangleMesh {
         for (int i = 0; i < hed.getNumberOfVertices(); i++) {
             temp = hed.getVertex(i).getPosition();
 
-            if (isEqual(temp, pA)) {pA = temp; newPoint_A = false;}
-            else if (isEqual(temp, pB)) {pB = temp; newPoint_B = false;}
-            else if (isEqual(temp,pC)) {pC = temp; newPoint_C = false;}
+            if (isEqual(temp, pA)) {
+                pA = temp;
+                newPoint_A = false;
+            } else if (isEqual(temp, pB)) {
+                pB = temp;
+                newPoint_B = false;
+            } else if (isEqual(temp, pC)) {
+                pC = temp;
+                newPoint_C = false;
+            }
 
         }
 
