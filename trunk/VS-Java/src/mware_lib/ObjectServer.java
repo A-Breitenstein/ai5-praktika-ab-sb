@@ -1,11 +1,15 @@
 package mware_lib;
 
+import bank_access.AccountImplServant;
 import bank_access.AccountSkeletonFactory;
+import bank_access.ManagerImplServant;
 import bank_access.ManagerSkeletonFactory;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -148,6 +152,67 @@ public class ObjectServer {
 
     public static void main(String[] args) {
         new ObjectServer();
+
+        //TODO:Ohne SkeletonFactoryList und dynamisch, Liste muss nicht bei neuen SkeletonFactories ergänzt werden
+        //Man spart sich das Hinzufügen in die Liste, sowie das halten einer liste,
+        //lediglich Methoden in der ImplBase muss vorhanden sein->über Interface lösbar
+        sogehtsAuch();
+
+        /*
+        * Weitere Möglichkeit: Abstracts implementieren SkeletonFactoryInterface, (Object) Servant cast zu SkeletonFactoryInterface
+        * aufruf der Methode skeletonFactory() -> super Delegation -> Abstract Class erstellt Kontextbezogenen SkeletonFactory als Rückgabewert
+        */
+    }
+
+    /**
+     * Java Reflection Möglichkeit, anderer Weg siehe oben
+     */
+    private static void sogehtsAuch() {
+        Object servant;
+
+        final String const_SkeletonFactoryMethodName = "skeletonFactory";
+        // ACCOUNT IMPL SERVANT
+        servant = new AccountImplServant(123.3);
+
+        Method[] methods = servant.getClass().getSuperclass().getMethods();
+
+        SkeletonFactory skeletonFactory = null;
+        for (Method method : methods) {
+
+            if (method.getName().equals(const_SkeletonFactoryMethodName)) {
+                try {
+                    skeletonFactory = (SkeletonFactory) method.invoke(servant.getClass().getSuperclass(), new Object[]{});
+                    break;
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+        }
+        System.out.println(skeletonFactory);
+
+        //MANAGER IMPL SERVANT
+        servant = new ManagerImplServant();
+
+        methods = servant.getClass().getSuperclass().getMethods();
+
+        skeletonFactory = null;
+        for (Method method : methods) {
+
+            if (method.getName().equals(const_SkeletonFactoryMethodName)) {
+                try {
+                    skeletonFactory = (SkeletonFactory) method.invoke(servant.getClass().getSuperclass(), new Object[]{});
+                    break;
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                }
+            }
+        }
+        System.out.println(skeletonFactory);
+
     }
 
 
@@ -158,6 +223,7 @@ public class ObjectServer {
 
     private SkeletonFactory createSkeletonFactory(Object servant) {
         System.out.println(servant.getClass().getSuperclass());
+        //TODO: Siehe: sogehtsauch()
         //TODO: hier muss geguckt welchen vom welchem typ der servant ist, und dann muss die passende
         //skeletonfactory ausgewählt werden und der servant auf seine superclass gecastet werden
         //damit man ihn der skeletonfactory per constructor übergeben kann
@@ -169,6 +235,10 @@ public class ObjectServer {
                 return skeletonFactory;
             }
         }
+
+
+
+
         throw new ClassCastException("ObjectServer: couldnt find suiteable skeletonFactory");
     }
 
