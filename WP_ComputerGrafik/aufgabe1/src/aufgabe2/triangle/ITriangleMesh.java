@@ -8,6 +8,7 @@ package aufgabe2.triangle;
 import aufgabe4.HalfEdgeDatastructure;
 
 import javax.vecmath.Point3d;
+import javax.vecmath.TexCoord3f;
 import java.util.List;
 
 /**
@@ -82,5 +83,11 @@ public interface ITriangleMesh {
     public List<Triangle> getAllAdjacentTrianglesToVertex(int pointIndex);
     public void removeDuplicatedPointsAndFixTriangles();
 
-   public HalfEdgeDatastructure convertToHalfEdgeDatastructure();
+    public HalfEdgeDatastructure convertToHalfEdgeDatastructure();
+
+
+    //TexCoordinate functions
+    public int addTexCoord(TexCoord3f texCoord3f);
+    public int getNumberOfTexCoord();
+    public TexCoord3f getTexCoord(int index);
 }

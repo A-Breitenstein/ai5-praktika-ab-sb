@@ -15,7 +15,7 @@ import javax.vecmath.Vector3f;
 public class Triangle {
     public int a, b, c;
     public Vector3f normal;
-    public TexCoord3f texCoordA, texCoordB, texCoordC;
+    public int texCoordA, texCoordB, texCoordC;
 
     public Triangle(int a, int b, int c) {
         this.a = a;
@@ -28,21 +28,21 @@ public class Triangle {
         return new Triangle(a, b, c);
     }
 
-    public void setTextureCoordinates(TexCoord3f a, TexCoord3f b, TexCoord3f c) {
+    public void setTextureCoordinates(int a, int b, int c) {
         texCoordA = a;
         texCoordB = b;
         texCoordC = c;
     }
 
-    public TexCoord3f getTexCoordA() {
+    public int getTexCoordA() {
         return texCoordA;
     }
 
-    public TexCoord3f getTexCoordB() {
+    public int getTexCoordB() {
         return texCoordB;
     }
 
-    public TexCoord3f getTexCoordC() {
+    public int getTexCoordC() {
         return texCoordC;
     }
 
