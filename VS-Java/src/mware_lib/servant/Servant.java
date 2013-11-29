@@ -1,4 +1,4 @@
-package mware_lib;
+package mware_lib.servant;
 
 import java.net.Socket;
 

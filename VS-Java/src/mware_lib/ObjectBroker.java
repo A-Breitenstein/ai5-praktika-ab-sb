@@ -1,7 +1,7 @@
 package mware_lib;
 
-import name_service.NameServiceImpl;
-import name_service.NameServiceMessage;
+import mware_lib.name_server.NameServiceMessage;
+import mware_lib.name_server_client.NameServiceImpl;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -24,6 +24,7 @@ public class ObjectBroker {
     ObjectInputStream objIS;
 
     public ObjectBroker(InetAddress inetAddress, int port) {
+        if(Config.DEBUG) System.out.println("ObjectBroker:constructor called");
         this.inetAddress = inetAddress;
         this.port = port;
 
@@ -31,7 +32,7 @@ public class ObjectBroker {
             clientSocket = new Socket(inetAddress, port);
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("ObjectBroker: NameService not found");
+            if(Config.DEBUG) System.out.println("ObjectBroker: NameService not found");
         }
     }
 
@@ -39,6 +40,7 @@ public class ObjectBroker {
      * @return an Implementation for a local NameService
      */
     public NameService getNameService() {
+        if(Config.DEBUG) System.out.println("ObjectBroker:getNameService called");
         if (nameService == null) {
             try {
                 objOS = new ObjectOutputStream(clientSocket.getOutputStream());
@@ -56,15 +58,19 @@ public class ObjectBroker {
      * terminates process
      */
     public void shutDown() {
+        if(Config.DEBUG) System.out.println("ObjectBroker:shutDown called");
         try {
             objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.CLOSE_CON,null,0,null));
             objIS.close();
             objOS.close();
             clientSocket.close();
+            nameService = null;
+            objIS = null;
+            objOS = null;
             //TODO ObjectServer shutDown auch machen?
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("ObjectBroker: cant close NameService connection");
+            if(Config.DEBUG) System.out.println("ObjectBroker: cant close NameService connection");
         }
     }
     /**
@@ -76,7 +82,9 @@ public class ObjectBroker {
      * @return an ObjectBroker Interface to Nameservice
      */
     public static ObjectBroker init(String serviceName, int port) {
-              ObjectBroker objectBroker = null;
+        if(Config.DEBUG) System.out.println("ObjectBroker:init called");
+
+        ObjectBroker objectBroker = null;
         try {
             objectBroker = new ObjectBroker(InetAddress.getByName(serviceName), port);
         } catch (UnknownHostException e) {

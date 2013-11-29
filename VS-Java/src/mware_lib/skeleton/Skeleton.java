@@ -1,4 +1,6 @@
-package mware_lib;
+package mware_lib.skeleton;
+
+import mware_lib.object_server.ObjectServerMessage;
 
 /**
  * Created with IntelliJ IDEA.

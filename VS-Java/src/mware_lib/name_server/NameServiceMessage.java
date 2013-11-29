@@ -1,4 +1,4 @@
-package name_service;
+package mware_lib.name_server;
 
 import java.io.Serializable;
 import java.net.InetAddress;
@@ -31,12 +31,26 @@ public class NameServiceMessage implements Serializable{
 
     @Override
     public String toString() {
-        return "NameServiceMessage{" +
-                "operation=" + operation +
-                ", inetAddress=" + inetAddress +
-                ", port=" + port +
-                ", id='" + id + '\'' +
-                '}';
+
+        switch (operation) {
+            case REBIND:
+                return "NameServiceMessage{" +
+                        "operation=" + operation +
+                        ", inetAddress=" + inetAddress +
+                        ", port=" + port +
+                        ", id='" + id + '\'' +
+                        '}';
+            case RESOLVE:
+                return "NameServiceMessage{" +
+                        "operation=" + operation +
+                        ", id='" + id + '\'' +
+                        '}';
+            case CLOSE_CON:
+                return "NameServiceMessage{" +
+                        "operation=" + operation +
+                        '}';
+        }
+        return null;
     }
 
     @Override

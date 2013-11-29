@@ -1,4 +1,6 @@
-package mware_lib;
+package mware_lib.skeleton;
+
+import mware_lib.object_server.ObjectServerMessage;
 
 import java.net.Socket;
 
@@ -9,10 +11,8 @@ import java.net.Socket;
  * Time: 22:39
  */
 public interface SkeletonFactory {
-    Skeleton createSkeleton(Socket clientSocket,ObjectServerMessage serviceMessage);
+    Skeleton createSkeleton(Socket clientSocket, ObjectServerMessage serviceMessage);
+
     void removeSkeleton(Skeleton skeleton);
     int getReferences();
-    void setServant(Object servant);
-
-    Class getServantClass();
 }

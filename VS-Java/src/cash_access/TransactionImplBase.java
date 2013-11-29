@@ -1,6 +1,7 @@
 package cash_access;
 
 import bank_access.OverdraftException;
+import mware_lib.name_server.NameServiceMessage;
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,5 +17,7 @@ public abstract class TransactionImplBase {
             throws InvalidParamException,OverdraftException;
     public abstract double getBalance(String accountId)
             throws InvalidParamException;
-    public static TransactionImplBase narrow_cast(Object o) {return null;}
+    public static TransactionImplBase narrowCast(Object o) {
+        return new TransactionImplStub((NameServiceMessage) o);
+    }
 }

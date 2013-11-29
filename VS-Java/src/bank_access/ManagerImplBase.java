@@ -1,5 +1,7 @@
 package bank_access;
 
+import mware_lib.name_server.NameServiceMessage;
+
 /**
  * Created with IntelliJ IDEA.
  * User: abg667
@@ -9,9 +11,8 @@ package bank_access;
  */
 public abstract class ManagerImplBase{
     public abstract String createAccount(String owner,String branch);
-    public static ManagerImplBase narrow_cast(Object gor) {return null;}
-
-    //TEST
-    public static SkeletonFactoryBase skeletonFactory(){ return new ManagerSkeletonFactory();}
+    public static ManagerImplBase narrowCast(Object gor) {
+        return new ManagerImplStub((NameServiceMessage) gor);
+    }
 
 }

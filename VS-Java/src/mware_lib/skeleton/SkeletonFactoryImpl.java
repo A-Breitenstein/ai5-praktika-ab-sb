@@ -1,9 +1,7 @@
-package bank_access;
+package mware_lib.skeleton;
 
 import mware_lib.Config;
-import mware_lib.ObjectServerMessage;
-import mware_lib.Skeleton;
-import mware_lib.SkeletonFactory;
+import mware_lib.object_server.ObjectServerMessage;
 
 import java.net.Socket;
 import java.util.ArrayList;
@@ -16,10 +14,23 @@ import java.util.concurrent.Semaphore;
  * Date: 28.11.13
  * Time: 23:12
  */
-public  abstract class SkeletonFactoryBase implements SkeletonFactory {
+public class SkeletonFactoryImpl implements SkeletonFactory {
+    Object servant;
+
     List<Skeleton> skeletons = new ArrayList<Skeleton>();
     Semaphore skeleton_per_servant = new Semaphore(Config.SKELETONS_PER_SERVANT,true);
-    Class classTester;
+
+    public SkeletonFactoryImpl(Object servant) {
+        this.servant = servant;
+    }
+
+    @Override
+    public Skeleton createSkeleton(Socket clientSocket, ObjectServerMessage serviceMessage) {
+        Skeleton tmp = new SkeletonImpl(this,servant,serviceMessage,getReferences(),clientSocket );
+        addToSkeletonList(tmp);
+        return tmp;
+    }
+
     @Override
     public void removeSkeleton(Skeleton skeleton) {
         skeletons.remove(skeleton);
@@ -30,10 +41,9 @@ public  abstract class SkeletonFactoryBase implements SkeletonFactory {
     public int getReferences() {
         return skeletons.size();
     }
-
-    protected void addToSkeletonList(Skeleton skeleton) {
+    private void addToSkeletonList(Skeleton skeleton) {
         try {
-            System.out.println("permits:"+skeleton_per_servant.availablePermits());
+            if(Config.DEBUG) System.out.println("permits:"+skeleton_per_servant.availablePermits());
             skeleton_per_servant.acquire();
             skeletons.add(skeleton);
         } catch (InterruptedException e) {
@@ -41,7 +51,10 @@ public  abstract class SkeletonFactoryBase implements SkeletonFactory {
         }
     }
 
-    protected void setClassTester(Object servant) {
-          classTester = servant.getClass().getSuperclass();
+    @Override
+    public String toString() {
+        return "SkeletonFactoryImpl{" +
+                "servant=" + servant +
+                '}';
     }
 }
