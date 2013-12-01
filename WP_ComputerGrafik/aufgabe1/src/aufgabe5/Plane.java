@@ -27,8 +27,8 @@ public class Plane {
         triangleMesh.addVertex(p2);
         triangleMesh.addVertex(p3);
 
-        Triangle a = new Triangle(3, 0, 2);
-        Triangle b = new Triangle(2, 0, 1);
+        Triangle a = new Triangle(2, 3, 0);
+        Triangle b = new Triangle(0, 1, 2);
 
         a.computeNormal(p2,p1,p0);
         b.computeNormal(p0,p1,p3);
