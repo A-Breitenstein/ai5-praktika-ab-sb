@@ -27,20 +27,14 @@ public class Plane {
         triangleMesh.addVertex(p2);
         triangleMesh.addVertex(p3);
 
-        Triangle a = new Triangle(2, 1, 0);
-        Triangle b = new Triangle(0, 1, 3);
-        Triangle c = new Triangle(1, 2, 3);
-        Triangle d = new Triangle(2, 0, 3);
+        Triangle a = new Triangle(2, 3, 0);
+        Triangle b = new Triangle(1, 2, 0);
 
         a.computeNormal(p2,p1,p0);
         b.computeNormal(p0,p1,p3);
-        c.computeNormal(p1,p2,p3);
-        d.computeNormal(p2,p0,p3);
 
         triangleMesh.addTriangle(a);
         triangleMesh.addTriangle(b);
-        triangleMesh.addTriangle(c);
-        triangleMesh.addTriangle(d);
 
         TessellationUtils.addTextureCoordinates(triangleMesh);
 
