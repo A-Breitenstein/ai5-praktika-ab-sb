@@ -6,6 +6,7 @@
 package aufgabe5;
 
 import java.awt.Image;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
@@ -80,7 +81,9 @@ public class AppearanceHelper {
      * @return Appearance for the texture.
      */
     public static Appearance createTextureAppearance(String textureFilename) {
-        Appearance app = ...
+        Appearance app = new Appearance();
+        Texture texture = createTexture(textureFilename);
+        app.setTexture(texture);
         
         // Your code here
 
@@ -99,7 +102,16 @@ public class AppearanceHelper {
      * @return
      */
     private static Texture createTexture(String textureFilename) {
-        // Your code here
+        BufferedImage image = null;
+
+        try {
+            image = ImageIO.read(new File(textureFilename));
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+        Texture tex = new TextureLoader(image, TextureLoader.BY_REFERENCE | TextureLoader.Y_UP, null).getTexture();
+
+        return tex;
     }
 
     /**
@@ -169,5 +181,10 @@ public class AppearanceHelper {
         // Finalize and retur the shader Appearance
         appearance.setShaderProgram(shaderProgram);
         return appearance;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(createTexture("3874057-1348593766.jpg"));
+        System.out.println(createTextureAppearance("3874057-1348593766.jpg"));
     }
 }
