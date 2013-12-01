@@ -19,7 +19,7 @@
     <file path="/Ground.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381139691341" ignored="false" />
     <file path="/AppearanceHelper.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380030991765" ignored="false" />
     <file path="/Helicopter.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380128361691" ignored="false" />
-    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385909022849" ignored="false" />
+    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385909246392" ignored="false" />
     <file path="/TriangleMesh.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385905740260" ignored="false" />
     <file path="/Triangle.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385734059769" ignored="false" />
     <file path="/MeshShapeFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908245692" ignored="false" />
@@ -234,7 +234,7 @@
       <file leaf-file-name="Plane.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="43" selection-start="879" selection-end="879" vertical-scroll-proportion="0.6169265">
+            <state line="30" column="41" selection-start="877" selection-end="877" vertical-scroll-proportion="0.8908686">
               <folding />
             </state>
           </provider>
@@ -987,7 +987,11 @@
       <created>1385909031117</created>
       <updated>1385909031117</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="aufgabe5 Plane">
+      <created>1385909256108</created>
+      <updated>1385909256108</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1241,7 +1245,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="43" selection-start="879" selection-end="879" vertical-scroll-proportion="0.6169265">
+        <state line="30" column="41" selection-start="877" selection-end="877" vertical-scroll-proportion="0.8908686">
           <folding />
         </state>
       </provider>
