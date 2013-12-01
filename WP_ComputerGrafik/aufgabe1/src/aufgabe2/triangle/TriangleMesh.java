@@ -116,7 +116,48 @@ public class TriangleMesh implements ITriangleMesh {
         } else System.out.println("ist nicht drin");
 
         point3dList = uniquePoints;
+    }
 
+    @Override
+    public void removeDuplicatedTexturePointsAndFixTriangles() {
+        int size = texCoord3fList.size();
+        TexCoord3f currentPoint;
+        ArrayList<TexCoord3f> uniquePoints = new ArrayList<TexCoord3f>();
+        int index;
+        for (int i = 0; i < size; i++) {
+            currentPoint = texCoord3fList.get(i);
+
+            if (!containsTexCoord3f(uniquePoints, currentPoint)) {
+
+                uniquePoints.add(currentPoint);
+                index = uniquePoints.size() - 1;
+                for (Triangle triangle : triangleList) {
+
+                    if (isEqual(texCoord3fList.get(triangle.texCoordA), currentPoint))
+                        triangle.texCoordA = index;
+                    else if (isEqual(texCoord3fList.get(triangle.texCoordB), currentPoint))
+                        triangle.texCoordB = index;
+                    else if (isEqual(texCoord3fList.get(triangle.texCoordC), currentPoint))
+                        triangle.texCoordC = index;
+                }
+
+            }
+        }
+        System.out.println("t3L:" + texCoord3fList.size() + ", uniqu:" + uniquePoints.size());
+
+        if (containsTexCoord3f(uniquePoints, texCoord3fList.get(4003))) {
+            System.out.println("ist drin");
+        } else System.out.println("ist nicht drin");
+
+        texCoord3fList = uniquePoints;
+    }
+
+    private boolean containsTexCoord3f(List<TexCoord3f> uniqueTexPoints, TexCoord3f currentTexPoint) {
+        for (TexCoord3f uniquePoint : uniqueTexPoints) {
+            if (isEqual(uniquePoint, currentTexPoint))
+                return true;
+        }
+        return false;
     }
 
     private boolean containsPoint3d(List<Point3d> uniquePoints, Point3d currentPoint) {
@@ -125,6 +166,12 @@ public class TriangleMesh implements ITriangleMesh {
                 return true;
         }
         return false;
+    }
+
+    private boolean isEqual(TexCoord3f p1, TexCoord3f p2) {
+//        final double delta = 0.0005;
+        final double delta = 0.0;
+        return assertDelta(p1.x, p2.x, delta) && assertDelta(p1.y, p2.y, delta) && assertDelta(p1.z, p2.z, delta);
     }
 
     private boolean isEqual(Point3d p1, Point3d p2) {

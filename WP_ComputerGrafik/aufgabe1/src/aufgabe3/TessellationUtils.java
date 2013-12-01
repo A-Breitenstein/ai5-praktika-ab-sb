@@ -7,6 +7,7 @@ import aufgabe2.triangle.TriangleMesh;
 
 import javax.media.j3d.Shape3D;
 import javax.vecmath.Point3d;
+import javax.vecmath.TexCoord3f;
 
 /**
  * Created with IntelliJ IDEA.
@@ -95,10 +96,42 @@ public class TessellationUtils {
             triangleMesh.addTriangle(triangle);
         }
 
-        triangleMesh.removeDuplicatedPointsAndFixTriangles();
+//        triangleMesh.removeDuplicatedPointsAndFixTriangles();
         triangleMesh.getAllAdjacentTrianglesToVertex(0);
 
+        addTextureCoordinates(triangleMesh);
+
+//        triangleMesh.removeDuplicatedTexturePointsAndFixTriangles();
+
         return MeshShapeFactory.createMeshShape(triangleMesh);
+    }
+
+    private static void addTextureCoordinates(TriangleMesh triangleMesh) {
+        Triangle triangle;
+
+        Point3d coordA,
+            coordB,
+            coordC;
+
+        int indexA,
+            indexB,
+            indexC;
+
+        for (int i = 0; i < triangleMesh.getNumberOfTriangles(); i++) {
+            triangle = triangleMesh.getTriangle(i);
+
+            coordA = triangleMesh.getVertex(triangle.a);
+            coordB = triangleMesh.getVertex(triangle.b);
+            coordC = triangleMesh.getVertex(triangle.c);
+
+            indexA = triangleMesh.addTexCoord(new TexCoord3f((float) coordA.x, (float) coordA.y, 0.f));
+            indexB = triangleMesh.addTexCoord(new TexCoord3f((float) coordB.x, (float) coordB.y, 0.f));
+            indexC = triangleMesh.addTexCoord(new TexCoord3f((float) coordC.x, (float) coordC.y, 0.f));
+
+
+            triangle.setTextureCoordinates(indexA,indexB, indexC);
+
+        }
     }
 
     /**
