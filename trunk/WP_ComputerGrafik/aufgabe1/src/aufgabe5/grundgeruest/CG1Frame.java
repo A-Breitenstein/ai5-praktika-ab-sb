@@ -9,6 +9,7 @@ import aufgabe2.MeshShapeFactory;
 import aufgabe3.TessellationUtils;
 import aufgabe3.Torus;
 import aufgabe4.Tetraeder;
+import aufgabe5.Plane;
 import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Cylinder;
@@ -146,7 +147,8 @@ public class CG1Frame extends JFrame {
 //        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
 //        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
 
-        Shape3D shape = MeshShapeFactory.createMeshShape(Tetraeder.create());
+//        Shape3D shape = MeshShapeFactory.createMeshShape(Tetraeder.create());
+        Shape3D shape = MeshShapeFactory.createMeshShape(Plane.create());
 
         shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
         scale.setScale(1);
