@@ -106,7 +106,7 @@ public class TessellationUtils {
         return MeshShapeFactory.createMeshShape(triangleMesh);
     }
 
-    private static void addTextureCoordinates(TriangleMesh triangleMesh) {
+    public static void addTextureCoordinates(ITriangleMesh triangleMesh) {
         Triangle triangle;
 
         Point3d coordA,

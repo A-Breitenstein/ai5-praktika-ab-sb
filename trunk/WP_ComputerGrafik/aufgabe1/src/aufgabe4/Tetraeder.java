@@ -3,6 +3,7 @@ package aufgabe4;
 import aufgabe2.triangle.ITriangleMesh;
 import aufgabe2.triangle.Triangle;
 import aufgabe2.triangle.TriangleMesh;
+import aufgabe3.TessellationUtils;
 
 import javax.vecmath.Point3d;
 
@@ -40,6 +41,8 @@ public class Tetraeder {
         triangleMesh.addTriangle(b);
         triangleMesh.addTriangle(c);
         triangleMesh.addTriangle(d);
+
+        TessellationUtils.addTextureCoordinates(triangleMesh);
 
         return triangleMesh;
     }
