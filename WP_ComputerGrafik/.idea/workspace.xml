@@ -6,15 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="1924037c-bdff-4362-8edb-16a7dee7d344" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe4/Tetraeder.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe4/Tetraeder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="computergrafikwp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385905020871" ignored="false" />
-    <file path="/CG1Frame.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908484308" ignored="false" />
+    <file path="/fragment.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908863757" ignored="false" />
+    <file path="/CG1Frame.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908974682" ignored="false" />
     <file path="/Global.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380021924567" ignored="false" />
     <file path="/Tree.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380031082238" ignored="false" />
     <file path="/a.dummy" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381231586757" ignored="false" />
@@ -191,7 +190,7 @@
       <file leaf-file-name="CG1Frame.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="50" selection-start="4877" selection-end="4877" vertical-scroll-proportion="0.4988864">
+            <state line="150" column="59" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.53452116">
               <folding />
             </state>
           </provider>
@@ -233,6 +232,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Plane.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="35" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AppearanceHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/AppearanceHelper.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -245,16 +253,7 @@
       <file leaf-file-name="MeshShapeFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="34" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ITriangleMesh.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/ITriangleMesh.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1032" selection-end="1051" vertical-scroll-proportion="0.0">
+            <state line="21" column="26" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -284,7 +283,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/grundgeruest/AppearanceHelper.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/grundgeruest/TestGeometry.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/Torus.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/ImplicitFunction3D.java" />
@@ -297,9 +295,10 @@
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/TriangleMesh.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/AppearanceHelper.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe4/Tetraeder.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
       </list>
     </option>
   </component>
@@ -423,6 +422,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computergrafikwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="aufgabe3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -511,6 +528,9 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="aufgabe5" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="Z:\AI5\computergrafikwp\WP_ComputerGrafik\aufgabe1\src\aufgabe2" />
     </key>
@@ -960,7 +980,11 @@
       <created>1385908312117</created>
       <updated>1385908312117</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="aufgabe5 tetraeder lol">
+      <created>1385908818117</created>
+      <updated>1385908818117</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1101,13 +1125,6 @@
     <option name="showOnlyWarnings" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/aufgabe1/lib/j3d-1_5_2-src.zip!/javax/media/j3d/GeometryArrayRetained.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5001" column="0" selection-start="156051" selection-end="156051" vertical-scroll-proportion="0.33173078">
@@ -1171,16 +1188,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/AppearanceHelper.java">
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="7" selection-start="4408" selection-end="4408" vertical-scroll-proportion="0.0">
+        <state line="107" column="60" selection-start="4107" selection-end="4107" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
+        <state line="21" column="26" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1197,13 +1214,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="60" selection-start="4107" selection-end="4107" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe4/Tetraeder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="40" selection-start="1307" selection-end="1307" vertical-scroll-proportion="0.0">
@@ -1211,9 +1221,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="35" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/AppearanceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="7" selection-start="4408" selection-end="4408" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="50" selection-start="4877" selection-end="4877" vertical-scroll-proportion="0.4988864">
+        <state line="150" column="59" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.53452116">
           <folding />
         </state>
       </provider>
