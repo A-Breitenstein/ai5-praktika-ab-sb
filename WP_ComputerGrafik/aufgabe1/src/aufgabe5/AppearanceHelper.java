@@ -130,11 +130,31 @@ public class AppearanceHelper {
      */
     public static Appearance createShaderAppearance(
             String vertexShaderFilename, String fragmentShaderFilename,
-            String textureFilename) {
+            String textureFilename) throws IOException {
 
         ShaderAppearance appearance = new ShaderAppearance();
 
+        File vertexShaderFile = new File(vertexShaderFilename);
+        File fragmentShaderFile = new File(vertexShaderFilename);
+
+        String vertexProgram,fragmentProgram;
+
+        if (textureFilename == null || textureFilename.isEmpty()) {
+            throw new IllegalArgumentException("Argument texturFilename is Null|Empty");
+        }
+
         // Check if vertex shader file exists.
+        if (!vertexShaderFile.exists()) {
+            throw new IOException("Can't find vertex shader " + vertexShaderFilename);
+        }
+
+        // Check if fragment shader file exists.
+        if (!fragmentShaderFile.exists()) {
+            throw new IOException("Can't find vertex shader " + fragmentShaderFilename);
+        }
+
+// COPY-PASTE-FEHLER?
+/*        // Check if vertex shader file exists.
         if (!new File(vertexShaderFilename).exists()) {
             System.out.println("Can't find vertex shader "
                     + vertexShaderFilename);
@@ -146,21 +166,16 @@ public class AppearanceHelper {
             System.out.println("Can't find fragment shader "
                     + fragmentShaderFilename);
             return null;
-        }
+        }*/
+
 
         // Try to create a texture, if the a filename is provided.
-        if (textureFilename != null) {
+
             Texture tex = createTexture(textureFilename);
-            if (tex == null) {
-                System.out.println("Failed to create texture.");
-                return null;
-            }
             appearance.setTexture(tex);
-        }
 
         // Read the shader programs from file.
-        String vertexProgram = null;
-        String fragmentProgram = null;
+
         try {
             vertexProgram = StringIO.readFully(vertexShaderFilename);
             fragmentProgram = StringIO.readFully(fragmentShaderFilename);
@@ -184,7 +199,13 @@ public class AppearanceHelper {
     }
 
     public static void main(String[] args) {
-        System.out.println(createTexture("ab_10.jpg"));
+//        System.out.println(createTexture("ab_10.jpg"));
         System.out.println(createTextureAppearance("ab_10.jpg"));
+
+        try {
+            System.out.println(createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
     }
 }

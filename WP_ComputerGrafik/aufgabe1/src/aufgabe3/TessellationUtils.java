@@ -128,7 +128,6 @@ public class TessellationUtils {
             indexB = triangleMesh.addTexCoord(new TexCoord3f((float) coordB.x, (float) coordB.y, 0.f));
             indexC = triangleMesh.addTexCoord(new TexCoord3f((float) coordC.x, (float) coordC.y, 0.f));
 
-
             triangle.setTextureCoordinates(indexA,indexB, indexC);
 
         }
