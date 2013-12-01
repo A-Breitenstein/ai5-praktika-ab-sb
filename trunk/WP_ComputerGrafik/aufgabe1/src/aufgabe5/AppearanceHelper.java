@@ -130,12 +130,12 @@ public class AppearanceHelper {
      */
     public static Appearance createShaderAppearance(
             String vertexShaderFilename, String fragmentShaderFilename,
-            String textureFilename) throws IOException {
+            String textureFilename){
 
         ShaderAppearance appearance = new ShaderAppearance();
 
         File vertexShaderFile = new File(vertexShaderFilename);
-        File fragmentShaderFile = new File(vertexShaderFilename);
+        File fragmentShaderFile = new File(fragmentShaderFilename);
 
         String vertexProgram,fragmentProgram;
 
@@ -144,14 +144,11 @@ public class AppearanceHelper {
         }
 
         // Check if vertex shader file exists.
-        if (!vertexShaderFile.exists()) {
-            throw new IOException("Can't find vertex shader " + vertexShaderFilename);
-        }
+        checkFileExistens(vertexShaderFile);
 
         // Check if fragment shader file exists.
-        if (!fragmentShaderFile.exists()) {
-            throw new IOException("Can't find vertex shader " + fragmentShaderFilename);
-        }
+        checkFileExistens(fragmentShaderFile);
+
 
 // COPY-PASTE-FEHLER?
 /*        // Check if vertex shader file exists.
@@ -198,14 +195,19 @@ public class AppearanceHelper {
         return appearance;
     }
 
-    public static void main(String[] args) {
-//        System.out.println(createTexture("ab_10.jpg"));
-        System.out.println(createTextureAppearance("ab_10.jpg"));
+    private static void checkFileExistens(File file) {
+        if (!file.exists())
+            try {
+                throw new IOException("Can't find vertex shader " + file.getName());
+            } catch (IOException e) {
+                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            }
+    }
 
-        try {
-            System.out.println(createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
+    public static void main(String[] args) {
+        System.out.println(createTexture("ab_10.jpg"));
+        System.out.println(createTextureAppearance("ab_10.jpg"));
+        System.out.println(createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
+
     }
 }
