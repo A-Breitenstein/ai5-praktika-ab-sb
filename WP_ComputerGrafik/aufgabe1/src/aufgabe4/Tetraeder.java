@@ -42,7 +42,7 @@ public class Tetraeder {
         triangleMesh.addTriangle(c);
         triangleMesh.addTriangle(d);
 
-        TessellationUtils.addTextureCoordinates(triangleMesh);
+//        TessellationUtils.addTextureCoordinates(triangleMesh, bb_x_low, bb_y_low, bb_x_max, bb_y_max);
 
         return triangleMesh;
     }
