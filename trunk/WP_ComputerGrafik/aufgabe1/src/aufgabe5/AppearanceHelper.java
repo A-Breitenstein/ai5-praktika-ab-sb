@@ -184,7 +184,7 @@ public class AppearanceHelper {
     }
 
     public static void main(String[] args) {
-        System.out.println(createTexture("3874057-1348593766.jpg"));
-        System.out.println(createTextureAppearance("3874057-1348593766.jpg"));
+        System.out.println(createTexture("ab_10.jpg"));
+        System.out.println(createTextureAppearance("ab_10.jpg"));
     }
 }
