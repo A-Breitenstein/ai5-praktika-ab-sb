@@ -150,7 +150,8 @@ public class CG1Frame extends JFrame {
 //        Shape3D shape = MeshShapeFactory.createMeshShape(Tetraeder.create());
         Shape3D shape = MeshShapeFactory.createMeshShape(Plane.create());
 
-        shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
+//        shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
+        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
