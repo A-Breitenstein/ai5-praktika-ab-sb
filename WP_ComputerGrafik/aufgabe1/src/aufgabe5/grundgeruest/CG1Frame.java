@@ -5,6 +5,7 @@
  */
 package aufgabe5.grundgeruest;
 
+import aufgabe2.MeshShapeFactory;
 import aufgabe3.TessellationUtils;
 import aufgabe3.Torus;
 import aufgabe4.Tetraeder;
@@ -143,8 +144,9 @@ public class CG1Frame extends JFrame {
         Transform3D scale = new Transform3D();
 
 //        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
-        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
+//        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
 
+        Shape3D shape = MeshShapeFactory.createMeshShape(Tetraeder.create());
 
         shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
         scale.setScale(1);
