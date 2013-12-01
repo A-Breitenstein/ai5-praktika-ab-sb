@@ -94,6 +94,9 @@ public class TriangleMeshFactory {
                 b = mesh.addVertex(p11);
                 c = mesh.addVertex(p10);
                 t = Triangle.create(a, b, c);
+                //TODO: add TextureCoordinates
+                t.setTextureCoordinates(a,b,c);
+
                 t.computeNormal(p00, p11, p10);
                 mesh.addTriangle(t);
 
