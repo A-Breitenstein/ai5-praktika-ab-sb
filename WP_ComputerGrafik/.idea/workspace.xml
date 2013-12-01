@@ -6,8 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="1924037c-bdff-4362-8edb-16a7dee7d344" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="computergrafikwp.iws" />
@@ -20,7 +19,7 @@
     <file path="/Ground.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381139691341" ignored="false" />
     <file path="/AppearanceHelper.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380030991765" ignored="false" />
     <file path="/Helicopter.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380128361691" ignored="false" />
-    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908802838" ignored="false" />
+    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385909022849" ignored="false" />
     <file path="/TriangleMesh.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385905740260" ignored="false" />
     <file path="/Triangle.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385734059769" ignored="false" />
     <file path="/MeshShapeFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908245692" ignored="false" />
@@ -187,10 +186,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CG1Frame.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CG1Frame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="59" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.53452116">
+            <state line="150" column="59" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -232,10 +231,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Plane.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Plane.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="35" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
+            <state line="30" column="43" selection-start="879" selection-end="879" vertical-scroll-proportion="0.6169265">
               <folding />
             </state>
           </provider>
@@ -297,8 +296,8 @@
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe4/Tetraeder.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
       </list>
     </option>
   </component>
@@ -984,7 +983,11 @@
       <created>1385908818117</created>
       <updated>1385908818117</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="aufgabe5 Plane">
+      <created>1385909031117</created>
+      <updated>1385909031117</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1080,7 +1083,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="aufgabe5 tetraeder lol" />
+    <option name="LAST_COMMIT_MESSAGE" value="aufgabe5 Plane" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1107,6 +1110,7 @@
     <MESSAGE value="aufgabe5" />
     <MESSAGE value="ka hat irgendwas mit den indices zu tun in der meshshapefactory" />
     <MESSAGE value="aufgabe5 tetraeder lol" />
+    <MESSAGE value="aufgabe5 Plane" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1221,13 +1225,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="35" selection-start="827" selection-end="827" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/AppearanceHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="129" column="7" selection-start="4408" selection-end="4408" vertical-scroll-proportion="0.0">
@@ -1237,7 +1234,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="59" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.53452116">
+        <state line="150" column="59" selection-start="4989" selection-end="4989" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="43" selection-start="879" selection-end="879" vertical-scroll-proportion="0.6169265">
           <folding />
         </state>
       </provider>
