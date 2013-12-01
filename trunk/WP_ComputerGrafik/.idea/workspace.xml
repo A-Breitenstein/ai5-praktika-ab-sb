@@ -19,7 +19,7 @@
     <file path="/Ground.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381139691341" ignored="false" />
     <file path="/AppearanceHelper.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380030991765" ignored="false" />
     <file path="/Helicopter.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380128361691" ignored="false" />
-    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385909246392" ignored="false" />
+    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385910139473" ignored="false" />
     <file path="/TriangleMesh.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385905740260" ignored="false" />
     <file path="/Triangle.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385734059769" ignored="false" />
     <file path="/MeshShapeFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908245692" ignored="false" />
@@ -31,6 +31,7 @@
     <file path="/ITriangleMesh.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385733802898" ignored="false" />
     <file path="/TriangleMeshFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385902211609" ignored="false" />
     <file path="/Tetraeder.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908716693" ignored="false" />
+    <file path="/Plane.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385909665457" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +217,7 @@
       <file leaf-file-name="TessellationUtils.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="60" selection-start="4107" selection-end="4107" vertical-scroll-proportion="0.0">
+            <state line="130" column="94" selection-start="4947" selection-end="4947" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,7 +235,7 @@
       <file leaf-file-name="Plane.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="41" selection-start="877" selection-end="877" vertical-scroll-proportion="0.8908686">
+            <state line="30" column="41" selection-start="877" selection-end="877" vertical-scroll-proportion="0.35634744">
               <folding />
             </state>
           </provider>
@@ -991,7 +992,11 @@
       <created>1385909256108</created>
       <updated>1385909256108</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="aufgabe5 Plane">
+      <created>1385909465118</created>
+      <updated>1385909465118</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1087,7 +1092,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="aufgabe5 Plane" />
+    <option name="LAST_COMMIT_MESSAGE" value="aufgabe5 lol...." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1115,6 +1120,7 @@
     <MESSAGE value="ka hat irgendwas mit den indices zu tun in der meshshapefactory" />
     <MESSAGE value="aufgabe5 tetraeder lol" />
     <MESSAGE value="aufgabe5 Plane" />
+    <MESSAGE value="aufgabe5 lol...." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1196,13 +1202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="60" selection-start="4107" selection-end="4107" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="26" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
@@ -1243,9 +1242,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="94" selection-start="4947" selection-end="4947" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="41" selection-start="877" selection-end="877" vertical-scroll-proportion="0.8908686">
+        <state line="30" column="41" selection-start="877" selection-end="877" vertical-scroll-proportion="0.35634744">
           <folding />
         </state>
       </provider>
