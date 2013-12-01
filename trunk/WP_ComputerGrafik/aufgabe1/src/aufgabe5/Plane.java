@@ -36,27 +36,26 @@ public class Plane {
         triangleMesh.addTriangle(a);
         triangleMesh.addTriangle(b);
 
-        double boundingBox_x_low = 0.f, boundingBox_y_low = 0.f,
-              boundingBox_x_max = 0.f, boundingBox_y_max = 0.f;
+        double bb_x_low = 0.f, bb_y_low = 0.f, bb_x_max = 0.f, bb_y_max = 0.f;
 
         Point3d vertex;
         for (int i = 0; i < triangleMesh.getNumberOfVertices(); i++) {
             vertex = triangleMesh.getVertex(i);
 
-            if (vertex.x <= boundingBox_x_low) {
-                boundingBox_x_low = vertex.x;
-            }else if(vertex.x >= boundingBox_x_max){
-                boundingBox_x_max = vertex.x;
+            if (vertex.x <= bb_x_low) {
+                bb_x_low = vertex.x;
+            }else if(vertex.x >= bb_x_max){
+                bb_x_max = vertex.x;
             }
 
-            if (vertex.y <= boundingBox_y_low) {
-                boundingBox_y_low = vertex.y;
-            }else if(vertex.y >= boundingBox_y_max){
-                boundingBox_y_max = vertex.y;
+            if (vertex.y <= bb_y_low) {
+                bb_y_low = vertex.y;
+            }else if(vertex.y >= bb_y_max){
+                bb_y_max = vertex.y;
             }
         }
 
-        TessellationUtils.addTextureCoordinates(triangleMesh);
+        TessellationUtils.addTextureCoordinates(triangleMesh,bb_x_low, bb_y_low, bb_x_max, bb_y_max);
 
         return triangleMesh;
     }

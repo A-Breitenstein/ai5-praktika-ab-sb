@@ -99,19 +99,21 @@ public class TessellationUtils {
 //        triangleMesh.removeDuplicatedPointsAndFixTriangles();
         triangleMesh.getAllAdjacentTrianglesToVertex(0);
 
-        addTextureCoordinates(triangleMesh);
+//        addTextureCoordinates(triangleMesh, bb_x_low, bb_y_low, bb_x_max, bb_y_max);
 
 //        triangleMesh.removeDuplicatedTexturePointsAndFixTriangles();
 
         return MeshShapeFactory.createMeshShape(triangleMesh);
     }
 
-    public static void addTextureCoordinates(ITriangleMesh triangleMesh) {
+
+
+    public static void addTextureCoordinates(ITriangleMesh triangleMesh, double bb_x_low, double bb_y_low, double bb_x_max, double bb_y_max) {
         Triangle triangle;
 
         Point3d coordA,
-            coordB,
-            coordC;
+                coordB,
+                coordC;
 
         int indexA,
             indexB,
@@ -124,13 +126,27 @@ public class TessellationUtils {
             coordB = triangleMesh.getVertex(triangle.b);
             coordC = triangleMesh.getVertex(triangle.c);
 
-            indexA = triangleMesh.addTexCoord(new TexCoord3f((float) coordA.x, (float) coordA.y, 0.f));
-            indexB = triangleMesh.addTexCoord(new TexCoord3f((float) coordB.x, (float) coordB.y, 0.f));
-            indexC = triangleMesh.addTexCoord(new TexCoord3f((float) coordC.x, (float) coordC.y, 0.f));
+            float uA, uB, uC,
+                    vA, vB, vC;
+            uA = rechnung(coordA.x, bb_x_max, bb_x_low);
+            uB = rechnung(coordB.x, bb_x_max, bb_x_low);
+            uC = rechnung(coordC.x, bb_x_max, bb_x_low);
+
+            vA = rechnung(coordA.y, bb_y_max, bb_y_low);
+            vB = rechnung(coordB.y, bb_y_max, bb_y_low);
+            vC = rechnung(coordC.y, bb_y_max, bb_y_low);
+
+            indexA = triangleMesh.addTexCoord(new TexCoord3f(uA, vA, 0.f));
+            indexB = triangleMesh.addTexCoord(new TexCoord3f(uB, vB, 0.f));
+            indexC = triangleMesh.addTexCoord(new TexCoord3f(uC, vC, 0.f));
 
             triangle.setTextureCoordinates(indexA,indexB, indexC);
 
         }
+    }
+
+    private static float rechnung(double x, double bb_max, double bb_low) {
+        return (float)((x - bb_low) / (bb_max - bb_low));
     }
 
     /**
