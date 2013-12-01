@@ -30,7 +30,7 @@ public class MeshShapeFactory {
             triangleArray.setNormals(coordinateIndex, new Vector3f[]{triangle.normal,triangle.normal,triangle.normal});
 
             triangleArray.setTextureCoordinates(coordinateIndex,
-                                                0,
+                    triangleIndex,
                                                 new TexCoord3f[]
                                                         {
                                                         mesh.getTexCoord(triangle.getTexCoordA()),
