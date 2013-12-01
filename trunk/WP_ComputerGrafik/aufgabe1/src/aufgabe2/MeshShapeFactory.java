@@ -8,6 +8,7 @@ import javax.media.j3d.GeometryArray;
 import javax.media.j3d.Shape3D;
 import javax.media.j3d.TriangleArray;
 import javax.vecmath.Point3d;
+import javax.vecmath.TexCoord3f;
 import javax.vecmath.Vector3f;
 
 /**
@@ -20,14 +21,23 @@ import javax.vecmath.Vector3f;
 public class MeshShapeFactory {
     public static Shape3D createMeshShape(ITriangleMesh mesh) {
         Shape3D shape = new Shape3D();
-        TriangleArray triangleArray = new TriangleArray(mesh.getNumberOfTriangles()*3, GeometryArray.COORDINATES | GeometryArray.NORMALS);
+        TriangleArray triangleArray = new TriangleArray(mesh.getNumberOfTriangles()*3, GeometryArray.COORDINATES | GeometryArray.NORMALS | GeometryArray.TEXTURE_COORDINATE_3);
+
 
         for (int triangleIndex = 0,coordinateIndex = 0; triangleIndex < mesh.getNumberOfTriangles(); triangleIndex++,coordinateIndex+=3) {
             Triangle triangle = mesh.getTriangle(triangleIndex);
             triangleArray.setCoordinates(coordinateIndex,new Point3d[]{mesh.getVertex(triangle.a),mesh.getVertex(triangle.b),mesh.getVertex(triangle.c)});
             triangleArray.setNormals(coordinateIndex, new Vector3f[]{triangle.normal,triangle.normal,triangle.normal});
-// TODO:TextureCoordinates
-// triangleArray.setTextureCoordinates();
+
+            triangleArray.setTextureCoordinates(coordinateIndex,
+                                                0,
+                                                new TexCoord3f[]
+                                                        {
+                                                        mesh.getTexCoord(triangle.getTexCoordA()),
+                                                        mesh.getTexCoord(triangle.getTexCoordB()),
+                                                        mesh.getTexCoord(triangle.getTexCoordC())
+                                                        }
+            );
 // triangleArray.setNormals(coordinateIndex, new Vector3f[]{n(mesh.getVertex(triangle.a)),n(mesh.getVertex(triangle.b)),n(mesh.getVertex(triangle.c))});
         }
 

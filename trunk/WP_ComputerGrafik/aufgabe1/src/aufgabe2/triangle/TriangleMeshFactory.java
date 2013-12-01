@@ -6,6 +6,7 @@
 package aufgabe2.triangle;
 
 import javax.vecmath.Point3d;
+import javax.vecmath.TexCoord3f;
 
 /**
  * Create example triangle meshes.
@@ -86,7 +87,9 @@ public class TriangleMeshFactory {
                 int a = mesh.addVertex(p00);
                 int b = mesh.addVertex(p01);
                 int c = mesh.addVertex(p11);
+
                 Triangle t = Triangle.create(a, b, c);
+
                 t.computeNormal(p00, p01, p11);
                 mesh.addTriangle(t);
 
@@ -94,8 +97,6 @@ public class TriangleMeshFactory {
                 b = mesh.addVertex(p11);
                 c = mesh.addVertex(p10);
                 t = Triangle.create(a, b, c);
-                //TODO: add TextureCoordinates
-                t.setTextureCoordinates(a,b,c);
 
                 t.computeNormal(p00, p11, p10);
                 mesh.addTriangle(t);

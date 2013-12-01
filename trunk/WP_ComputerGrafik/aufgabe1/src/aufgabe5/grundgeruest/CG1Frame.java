@@ -7,6 +7,7 @@ package aufgabe5.grundgeruest;
 
 import aufgabe3.TessellationUtils;
 import aufgabe3.Torus;
+import aufgabe4.Tetraeder;
 import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Cylinder;
@@ -140,14 +141,12 @@ public class CG1Frame extends JFrame {
         scene.addChild(createCoordinateSystem());
 
         Transform3D scale = new Transform3D();
-//        Shape3D shape = TessellationUtils.createTriangles(
-//                new Point3d[]{new Point3d(0,0,0),new Point3d(1,0,0),new Point3d(1,1,0),new Point3d(0,1,0),
-//                              new Point3d(0,0,1),new Point3d(1,0,1),new Point3d(1,1,1),new Point3d(0,1,1)},
-//                 new double[]{0,1,0,0,0,0,0,0}
-//        );
-        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.25,.125));
-//        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
-        shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("3874057-1348593766.jpg"));
+
+//        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
+        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
+
+
+        shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);

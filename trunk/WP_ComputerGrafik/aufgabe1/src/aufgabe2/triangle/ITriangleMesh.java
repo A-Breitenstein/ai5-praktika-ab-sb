@@ -90,4 +90,6 @@ public interface ITriangleMesh {
     public int addTexCoord(TexCoord3f texCoord3f);
     public int getNumberOfTexCoord();
     public TexCoord3f getTexCoord(int index);
+
+    void removeDuplicatedTexturePointsAndFixTriangles();
 }
