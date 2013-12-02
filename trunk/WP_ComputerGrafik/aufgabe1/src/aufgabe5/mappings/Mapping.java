@@ -17,30 +17,47 @@ public class Mapping {
     public static void uv_kugelMapping(ITriangleMesh triangleMesh) {
 
         double[] bb = boundingBox(triangleMesh);
-        double x_s = bb[3]-0.5*(Math.abs(bb[0]) + bb[3]),
-               y_s = bb[4]-0.5*(Math.abs(bb[1]) + bb[4]),
-               z_s = bb[5]-0.5*(Math.abs(bb[2]) + bb[5]);
+        double x_s = bb[3] - 0.5 * (Math.abs(bb[0]) + bb[3]),
+                y_s = bb[4] - 0.5 * (Math.abs(bb[1]) + bb[4]),
+                z_s = bb[5] - 0.5 * (Math.abs(bb[2]) + bb[5]);
 
         double u, v, x, y, z;
         Triangle triangle;
-        Point3d point3d;
+        Point3d coordA,
+                coordB,
+                coordC;
 
         for (int i = 0; i < triangleMesh.getNumberOfVertices(); i++) {
 
             triangle = triangleMesh.getTriangle(i);
 
-            x = triangleMesh.getVertex(triangle.a);
-            y = triangleMesh.getVertex()
-            z = triangleMesh.getVertex()
+            float uA, uB, uC,
+                    vA, vB, vC;
 
-            u = (Math.PI + Math.atan2(y - y_s, x - x_s)) / 2 * Math.PI;
-            v = (Math.atan2(2 * Math.PI / (Math.sqrt(Math.pow(x - x_s, 2.f) + Math.pow(y - y_s, 2.f))), z - z_s)) / Math.PI;
+            coordA = triangleMesh.getVertex(triangle.a);
+            coordB = triangleMesh.getVertex(triangle.b);
+            coordC = triangleMesh.getVertex(triangle.c);
+
+            uA = (float) u_kugelmapping(coordA.y, y_s, coordA.x, x_s);
+            uB = (float) u_kugelmapping(coordB.y, y_s, coordB.x, x_s);
+            uC = (float) u_kugelmapping(coordC.y, y_s, coordC.x, x_s);
+
+            vA = (float) v_kugelmapping(coordA.y, y_s, coordA.x, x_s, coordA.z, z_s);
+            vB = (float) v_kugelmapping(coordB.y, y_s, coordB.x, x_s, coordB.z, z_s);
+            vC = (float) v_kugelmapping(coordC.y, y_s, coordC.x, x_s, coordC.z, z_s);
         }
 
     }
 
+    private static double u_kugelmapping(double y, double y_s, double x, double x_s) {
+        return (Math.PI + Math.atan2(y - y_s, x - x_s)) / 2 * Math.PI;
+    }
+
+    private static double v_kugelmapping(double y, double y_s, double x, double x_s, double z, double z_s) {
+        return (Math.atan2(2 * Math.PI / (Math.sqrt(Math.pow(x - x_s, 2.f) + Math.pow(y - y_s, 2.f))), z - z_s)) / Math.PI;
+    }
+
     /**
-     *
      * @param triangleMesh
      * @return double[]{bb_x_low[0], bb_y_low[1], bb_z_low[2], bb_x_max[3], bb_y_max[4], bb_z_max[5]}
      */
