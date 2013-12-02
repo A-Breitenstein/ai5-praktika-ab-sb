@@ -8,6 +8,7 @@ package table;
  */
 public class QTableFactory {
     public static QTable createQTable() {
-        return new QTableImpl();
+//        return new QTableImpl();
+        return new QTableNeuralImpl();
     }
 }
