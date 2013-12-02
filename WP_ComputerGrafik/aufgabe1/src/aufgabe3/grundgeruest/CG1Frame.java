@@ -152,12 +152,12 @@ public class CG1Frame extends JFrame {
 //                              new Point3d(0,0,1),new Point3d(1,0,1),new Point3d(1,1,1),new Point3d(0,1,1)},
 //                 new double[]{0,1,0,0,0,0,0,0}
 //        );
-        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
+//        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
 //        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
-        tg.addChild(shape);
-        AppearanceHelper.setColor(shape,new Color3f(new Color(31, 178, 255)));
+//        tg.addChild(shape);
+//        AppearanceHelper.setColor(shape,new Color3f(new Color(31, 178, 255)));
         scene.addChild(tg);
 
         // Assemble scene
