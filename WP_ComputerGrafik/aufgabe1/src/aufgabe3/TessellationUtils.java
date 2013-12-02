@@ -106,11 +106,6 @@ public class TessellationUtils {
     }
 
 
-    //TODO: BOx Rechnung Aufgabe5
-    private static float rechnung(double x, double bb_max, double bb_low) {
-        return (float)((x - bb_low) / (bb_max - bb_low));
-    }
-
     /**
      *
      * @param points
