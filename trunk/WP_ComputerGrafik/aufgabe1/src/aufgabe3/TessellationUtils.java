@@ -4,6 +4,7 @@ import aufgabe2.MeshShapeFactory;
 import aufgabe2.triangle.ITriangleMesh;
 import aufgabe2.triangle.Triangle;
 import aufgabe2.triangle.TriangleMesh;
+import aufgabe5.mappings.TextureMapper;
 
 import javax.media.j3d.Shape3D;
 import javax.vecmath.Point3d;
@@ -61,7 +62,7 @@ public class TessellationUtils {
      * @param func
      * @return
      */
-    public static Shape3D create(int dimension,int start,int end,ImplicitFunction3D func) {
+    public static Shape3D create(int dimension,int start,int end,ImplicitFunction3D func, TextureMapper textureMapper) {
         if(start >= end) throw new IllegalArgumentException("start muss kleiner als end sein!");
         if(dimension < 10) throw new IllegalArgumentException("so gehts nicht!");
 
@@ -96,55 +97,16 @@ public class TessellationUtils {
             triangleMesh.addTriangle(triangle);
         }
 
-//        triangleMesh.removeDuplicatedPointsAndFixTriangles();
+        triangleMesh.removeDuplicatedPointsAndFixTriangles();
         triangleMesh.getAllAdjacentTrianglesToVertex(0);
 
-//        addTextureCoordinates(triangleMesh, bb_x_low, bb_y_low, bb_x_max, bb_y_max);
-
-//        triangleMesh.removeDuplicatedTexturePointsAndFixTriangles();
+        textureMapper.mappTextureCoordinates(triangleMesh);
 
         return MeshShapeFactory.createMeshShape(triangleMesh);
     }
 
 
-
-    public static void addTextureCoordinates(ITriangleMesh triangleMesh, double bb_x_low, double bb_y_low, double bb_x_max, double bb_y_max) {
-        Triangle triangle;
-
-        Point3d coordA,
-                coordB,
-                coordC;
-
-        int indexA,
-            indexB,
-            indexC;
-
-        for (int i = 0; i < triangleMesh.getNumberOfTriangles(); i++) {
-            triangle = triangleMesh.getTriangle(i);
-
-            coordA = triangleMesh.getVertex(triangle.a);
-            coordB = triangleMesh.getVertex(triangle.b);
-            coordC = triangleMesh.getVertex(triangle.c);
-
-            float uA, uB, uC,
-                    vA, vB, vC;
-            uA = rechnung(coordA.x, bb_x_max, bb_x_low);
-            uB = rechnung(coordB.x, bb_x_max, bb_x_low);
-            uC = rechnung(coordC.x, bb_x_max, bb_x_low);
-
-            vA = rechnung(coordA.y, bb_y_max, bb_y_low);
-            vB = rechnung(coordB.y, bb_y_max, bb_y_low);
-            vC = rechnung(coordC.y, bb_y_max, bb_y_low);
-
-            indexA = triangleMesh.addTexCoord(new TexCoord3f(uA, vA, 0.f));
-            indexB = triangleMesh.addTexCoord(new TexCoord3f(uB, vB, 0.f));
-            indexC = triangleMesh.addTexCoord(new TexCoord3f(uC, vC, 0.f));
-
-            triangle.setTextureCoordinates(indexA,indexB, indexC);
-
-        }
-    }
-
+    //TODO: BOx Rechnung Aufgabe5
     private static float rechnung(double x, double bb_max, double bb_low) {
         return (float)((x - bb_low) / (bb_max - bb_low));
     }

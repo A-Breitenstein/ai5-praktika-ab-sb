@@ -4,6 +4,7 @@ import aufgabe2.triangle.ITriangleMesh;
 import aufgabe2.triangle.Triangle;
 
 import javax.vecmath.Point3d;
+import javax.vecmath.TexCoord3f;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,27 +13,35 @@ import javax.vecmath.Point3d;
  * Time: 14:18
  * To change this template use File | Settings | File Templates.
  */
-public class Mapping {
+public class KugelTextureMapping extends TextureMapper{
 
-    public static void uv_kugelMapping(ITriangleMesh triangleMesh) {
+
+    private KugelTextureMapping() {
+    }
+
+    public static KugelTextureMapping create() {
+        return new KugelTextureMapping();
+    }
+
+    @Override
+    public void mappTextureCoordinates(ITriangleMesh triangleMesh) {
 
         double[] bb = boundingBox(triangleMesh);
         double x_s = bb[3] - 0.5 * (Math.abs(bb[0]) + bb[3]),
                 y_s = bb[4] - 0.5 * (Math.abs(bb[1]) + bb[4]),
                 z_s = bb[5] - 0.5 * (Math.abs(bb[2]) + bb[5]);
+        float uA, uB, uC,
+                vA, vB, vC;
 
-        double u, v, x, y, z;
+        int indexA, indexB, indexC;
+
         Triangle triangle;
-        Point3d coordA,
-                coordB,
-                coordC;
+
+        Point3d coordA, coordB, coordC;
 
         for (int i = 0; i < triangleMesh.getNumberOfVertices(); i++) {
 
             triangle = triangleMesh.getTriangle(i);
-
-            float uA, uB, uC,
-                    vA, vB, vC;
 
             coordA = triangleMesh.getVertex(triangle.a);
             coordB = triangleMesh.getVertex(triangle.b);
@@ -45,6 +54,12 @@ public class Mapping {
             vA = (float) v_kugelmapping(coordA.y, y_s, coordA.x, x_s, coordA.z, z_s);
             vB = (float) v_kugelmapping(coordB.y, y_s, coordB.x, x_s, coordB.z, z_s);
             vC = (float) v_kugelmapping(coordC.y, y_s, coordC.x, x_s, coordC.z, z_s);
+
+            indexA = triangleMesh.addTexCoord(new TexCoord3f(uA, vA, 0.f));
+            indexB = triangleMesh.addTexCoord(new TexCoord3f(uB, vB, 0.f));
+            indexC = triangleMesh.addTexCoord(new TexCoord3f(uC, vC, 0.f));
+
+            triangle.setTextureCoordinates(indexA, indexB, indexC);
         }
 
     }
@@ -56,39 +71,5 @@ public class Mapping {
     private static double v_kugelmapping(double y, double y_s, double x, double x_s, double z, double z_s) {
         return (Math.atan2(2 * Math.PI / (Math.sqrt(Math.pow(x - x_s, 2.f) + Math.pow(y - y_s, 2.f))), z - z_s)) / Math.PI;
     }
-
-    /**
-     * @param triangleMesh
-     * @return double[]{bb_x_low[0], bb_y_low[1], bb_z_low[2], bb_x_max[3], bb_y_max[4], bb_z_max[5]}
-     */
-    public static double[] boundingBox(ITriangleMesh triangleMesh) {
-        double bb_x_low = 0.f, bb_y_low = 0.f, bb_z_low = 0.f, bb_x_max = 0.f, bb_y_max = 0.f, bb_z_max = 0.0f;
-
-        Point3d vertex;
-        for (int i = 0; i < triangleMesh.getNumberOfVertices(); i++) {
-            vertex = triangleMesh.getVertex(i);
-
-            if (vertex.x <= bb_x_low) {
-                bb_x_low = vertex.x;
-            } else if (vertex.x >= bb_x_max) {
-                bb_x_max = vertex.x;
-            }
-
-            if (vertex.y <= bb_y_low) {
-                bb_y_low = vertex.y;
-            } else if (vertex.y >= bb_y_max) {
-                bb_y_max = vertex.y;
-            }
-
-            if (vertex.z <= bb_z_low) {
-                bb_z_low = vertex.z;
-            } else if (vertex.z >= bb_z_max) {
-                bb_z_max = vertex.z;
-            }
-        }
-
-        return new double[]{bb_x_low, bb_y_low, bb_z_low, bb_x_max, bb_y_max, bb_z_max};
-    }
-
 
 }
