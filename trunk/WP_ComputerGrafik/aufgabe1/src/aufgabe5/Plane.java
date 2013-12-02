@@ -4,6 +4,7 @@ import aufgabe2.triangle.ITriangleMesh;
 import aufgabe2.triangle.Triangle;
 import aufgabe2.triangle.TriangleMesh;
 import aufgabe3.TessellationUtils;
+import aufgabe5.mappings.BoxTexturMapping;
 
 import javax.vecmath.Point3d;
 
@@ -35,6 +36,8 @@ public class Plane {
 
         triangleMesh.addTriangle(a);
         triangleMesh.addTriangle(b);
+
+        BoxTexturMapping.create().mappTextureCoordinates(triangleMesh);
 
         return triangleMesh;
     }

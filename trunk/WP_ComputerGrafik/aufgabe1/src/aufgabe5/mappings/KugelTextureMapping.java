@@ -24,9 +24,9 @@ public class KugelTextureMapping extends TextureMapper{
     }
 
     @Override
-    public void mappTextureCoordinates(ITriangleMesh triangleMesh) {
+    public void mappTextureCoordinates(ITriangleMesh iTriangleMesh) {
 
-        double[] bb = boundingBox(triangleMesh);
+        double[] bb = boundingBox(iTriangleMesh);
         double x_s = bb[3] - 0.5 * (Math.abs(bb[0]) + bb[3]),
                 y_s = bb[4] - 0.5 * (Math.abs(bb[1]) + bb[4]),
                 z_s = bb[5] - 0.5 * (Math.abs(bb[2]) + bb[5]);
@@ -39,13 +39,13 @@ public class KugelTextureMapping extends TextureMapper{
 
         Point3d coordA, coordB, coordC;
 
-        for (int i = 0; i < triangleMesh.getNumberOfVertices(); i++) {
+        for (int i = 0; i < iTriangleMesh.getNumberOfTriangles(); i++) {
 
-            triangle = triangleMesh.getTriangle(i);
+            triangle = iTriangleMesh.getTriangle(i);
 
-            coordA = triangleMesh.getVertex(triangle.a);
-            coordB = triangleMesh.getVertex(triangle.b);
-            coordC = triangleMesh.getVertex(triangle.c);
+            coordA = iTriangleMesh.getVertex(triangle.a);
+            coordB = iTriangleMesh.getVertex(triangle.b);
+            coordC = iTriangleMesh.getVertex(triangle.c);
 
             uA = (float) u_kugelmapping(coordA.y, y_s, coordA.x, x_s);
             uB = (float) u_kugelmapping(coordB.y, y_s, coordB.x, x_s);
@@ -55,9 +55,9 @@ public class KugelTextureMapping extends TextureMapper{
             vB = (float) v_kugelmapping(coordB.y, y_s, coordB.x, x_s, coordB.z, z_s);
             vC = (float) v_kugelmapping(coordC.y, y_s, coordC.x, x_s, coordC.z, z_s);
 
-            indexA = triangleMesh.addTexCoord(new TexCoord3f(uA, vA, 0.f));
-            indexB = triangleMesh.addTexCoord(new TexCoord3f(uB, vB, 0.f));
-            indexC = triangleMesh.addTexCoord(new TexCoord3f(uC, vC, 0.f));
+            indexA = iTriangleMesh.addTexCoord(new TexCoord3f(uA, vA, 0.f));
+            indexB = iTriangleMesh.addTexCoord(new TexCoord3f(uB, vB, 0.f));
+            indexC = iTriangleMesh.addTexCoord(new TexCoord3f(uC, vC, 0.f));
 
             triangle.setTextureCoordinates(indexA, indexB, indexC);
         }

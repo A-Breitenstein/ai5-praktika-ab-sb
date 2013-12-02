@@ -10,6 +10,7 @@ import aufgabe3.TessellationUtils;
 import aufgabe3.Torus;
 import aufgabe4.Tetraeder;
 import aufgabe5.Plane;
+import aufgabe5.mappings.BoxTexturMapping;
 import aufgabe5.mappings.KugelTextureMapping;
 import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.geometry.Box;
@@ -145,11 +146,11 @@ public class CG1Frame extends JFrame {
 
         Transform3D scale = new Transform3D();
 
-//        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
-        Shape3D shape = TessellationUtils.create(25,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
+//        Shape3D shape = MeshShapeFactory.createMeshShape(Plane.create());
+        Shape3D shape = TessellationUtils.create(30,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
 
-//        shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
-        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
+        shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
+//        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
