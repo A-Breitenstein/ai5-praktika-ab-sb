@@ -117,8 +117,9 @@ public class QLearning //implements Algorithms
 			
 			if(0==numEpisodes%1000)
 			System.out.println(numEpisodes+","+learningRate);
-			
-			return true;
+
+            System.out.println("Eine Runde gschafft");
+            return true;
 		}
 		
 		

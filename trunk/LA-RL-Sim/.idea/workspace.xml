@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a04001f3-0c95-4e19-a627-b0d63ddd2252" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/encog-core-3.1.0-javadoc.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/encog-core-3.1.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/table" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/NeuralNet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/table/QTable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/table/QTableFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/table/QTableImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/table/QTableNeuralImpl.java" />
+    <list default="true" readonly="true" id="a04001f3-0c95-4e19-a627-b0d63ddd2252" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/table/IdentityFunction.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LA_rl_sim.iml" afterPath="$PROJECT_DIR$/LA_rl_sim.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/NeuralNet.java" afterPath="$PROJECT_DIR$/src/NeuralNet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RL_sim/src/QLearning.java" afterPath="$PROJECT_DIR$/RL_sim/src/QLearning.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/table/QTableFactory.java" afterPath="$PROJECT_DIR$/src/table/QTableFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/table/QTableNeuralImpl.java" afterPath="$PROJECT_DIR$/src/table/QTableNeuralImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LA_rl_sim.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/QTable.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385931612966" ignored="false" />
-    <file path="/QLearning.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385931652110" ignored="false" />
-    <file path="/QTableFactory.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385930822708" ignored="false" />
+    <file path="/QLearning.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385987188728" ignored="false" />
+    <file path="/QTableFactory.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385976447948" ignored="false" />
     <file path="/QTableImpl.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385931628296" ignored="false" />
-    <file path="/QTableNeuralImpl.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385933496880" ignored="false" />
+    <file path="/QTableNeuralImpl.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385994130988" ignored="false" />
     <file path="/Normalizable.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385932602214" ignored="false" />
     <file path="/Dummy.txt" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385933647702" ignored="false" />
+    <file path="/IdentityFunction.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385978734175" ignored="false" />
+    <file path="/fragment.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385987578948" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe2/triangle/TriangleMeshFactory.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385987542174" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe3/TessellationUtils.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385987554606" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe2/grundgeruest/CG1Frame.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385987542174" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe2/triangle/TriangleMesh.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385987542174" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe5/Plane.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385990737008" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe2/MeshShapeFactory.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385990118034" ignored="false" />
+    <file path="/MeshShapeFactory.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385990117219" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe5/mappings/Kugelmapping.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385990323284" ignored="false" />
+    <file path="$PROJECT_DIR$/../computergrafikwp/WP_ComputerGrafik/aufgabe1/src/aufgabe5/mappings/Mapping.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385990744558" ignored="false" />
+    <file path="/Mapping.java" changelist="a04001f3-0c95-4e19-a627-b0d63ddd2252" time="1385990725733" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +53,6 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -66,7 +69,6 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -78,23 +80,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/RL_sim/src/QLearning.java" line="46" class="QLearning" package="">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -107,10 +93,8 @@
       <file leaf-file-name="QLearning.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RL_sim/src/QLearning.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="187" column="27" selection-start="5564" selection-end="5564" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="192" column="0" selection-start="5703" selection-end="5703" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,83 +102,84 @@
       <file leaf-file-name="QLSimulator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RL_sim/src/QLSimulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="622" column="30" selection-start="18949" selection-end="18949" vertical-scroll-proportion="0.0">
+            <state line="629" column="0" selection-start="19238" selection-end="19238" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Maze.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL_sim/src/Maze.java">
+      <file leaf-file-name="IdentityFunction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/table/IdentityFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="9" selection-start="3286" selection-end="3286" vertical-scroll-proportion="0.0">
+            <state line="11" column="20" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QTableNeuralImpl.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="QTableFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/table/QTableFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="3" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QTableNeuralImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/table/QTableNeuralImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="0" selection-start="3724" selection-end="3724" vertical-scroll-proportion="0.0">
+            <state line="70" column="58" selection-start="2596" selection-end="2596" vertical-scroll-proportion="-1.606383">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#916#929#0" expanded="true" />
+                <element signature="e#1115#1128#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IQTable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="vcs://IQTable.java">
+      <file leaf-file-name="BasicLayer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/neural/networks/layers/BasicLayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="26" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="71" column="35" selection-start="2587" selection-end="2587" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#4056#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NeuralNet.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="vcs://NeuralNet.java">
+      <file leaf-file-name="ActivationFunction.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/engine/network/activation/ActivationFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="26" selection-start="4208" selection-end="4208" vertical-scroll-proportion="0.49922958">
-              <folding />
+            <state line="44" column="0" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#3966#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QTable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/table/QTable.java">
+      <file leaf-file-name="BasicNetwork.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/neural/networks/BasicNetwork.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="35" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="604" column="61" selection-start="16817" selection-end="16817" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#21126#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QTableImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/table/QTableImpl.java">
+      <file leaf-file-name="RangeRandomizer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/mathutil/randomize/RangeRandomizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="3" selection-start="149" selection-end="192" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValueFunction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL_sim/src/ValueFunction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="4" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Action.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RL_sim/src/Action.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="24" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="82" column="27" selection-start="2200" selection-end="2209" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#2424#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,17 +200,23 @@
         <option value="$PROJECT_DIR$/src/QTable/QTableImpl.java" />
         <option value="$PROJECT_DIR$/src/table/QTable.java" />
         <option value="$PROJECT_DIR$/src/table/QTableImpl.java" />
-        <option value="$PROJECT_DIR$/RL_sim/src/QLearning.java" />
         <option value="$PROJECT_DIR$/src/table/Normalizable.java" />
+        <option value="$PROJECT_DIR$/src/NeuralNet.java" />
+        <option value="$PROJECT_DIR$/src/table/QTableFactory.java" />
+        <option value="$PROJECT_DIR$/src/table/IdentityFunction.java" />
+        <option value="$PROJECT_DIR$/RL_sim/src/QLearning.java" />
         <option value="$PROJECT_DIR$/src/table/QTableNeuralImpl.java" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1696" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -254,6 +245,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -349,10 +341,105 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-core-3.1.0.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA_rl_sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA-RL-Sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-core-3.1.0.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neural" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA_rl_sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA-RL-Sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-core-3.1.0.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="neural" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="networks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA_rl_sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA-RL-Sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="encog-core-3.1.0.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA_rl_sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LA-RL-Sim" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -363,16 +450,16 @@
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/encog-core-3.1.0.jar!/" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="Repository.Attach.Sources" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="Repository.Attach.Sources" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim\lib" />
     <property name="dynamic.classpath" value="false" />
+    <property name="Downloaded.Files.Path" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim\lib" />
   </component>
   <component name="RunManager" selected="Application.MainUI">
     <configuration default="false" name="MainUI" type="Application" factoryName="Application" temporary="true">
@@ -412,19 +499,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -451,6 +525,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -508,7 +595,7 @@
       <AnalysisUIOptions />
     </option>
   </component>
-  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true" SSL_PROTOCOLS="all">
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="true">
     <option name="USER" value="" />
     <option name="PASSWORD" value="" />
     <option name="mySSHConnectionTimeout" value="30000" />
@@ -518,6 +605,7 @@
     <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
     <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
     <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
     <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
@@ -525,25 +613,26 @@
     <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="false">C:\Users\Sven\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="SvnFileUrlMappingImpl">
     <option name="myMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim" />
+          <option name="myVcsRoot" value="Z:\AI5\LA-RL-Sim" />
+          <option name="myCopyRoot" value="Z:\AI5\LA-RL-Sim" />
         </SvnCopyRootSimple>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim\.idea" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim\.idea" />
+          <option name="myVcsRoot" value="Z:\AI5\LA-RL-Sim\.idea" />
+          <option name="myCopyRoot" value="Z:\AI5\LA-RL-Sim\.idea" />
         </SvnCopyRootSimple>
       </list>
     </option>
     <option name="myMoreRealMappingRoots">
       <list>
         <SvnCopyRootSimple>
-          <option name="myVcsRoot" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim" />
-          <option name="myCopyRoot" value="C:\Users\Sven\IdeaProjects\LA-RL-Sim" />
+          <option name="myVcsRoot" value="Z:\AI5\LA-RL-Sim" />
+          <option name="myCopyRoot" value="Z:\AI5\LA-RL-Sim" />
         </SvnCopyRootSimple>
       </list>
     </option>
@@ -557,29 +646,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29988852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32887402" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23299888" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46075085" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287827" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2766218" sideWeight="0.5392491" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.7670011" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08807135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.249694" sideWeight="0.70989764" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2901024" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23299888" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -610,7 +701,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -620,10 +711,6 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="da" />
@@ -637,7 +724,6 @@
     <option name="ACTIVE_VCS_NAME" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="da" />
@@ -645,28 +731,16 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.sixrr.metrics.MetricsReloaded">
+    <option name="selectedProfile" value="" />
+    <option name="autoscroll" value="false" />
+    <option name="showOnlyWarnings" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RL_sim/src/ValueFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="4" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL_sim/src/State.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RL_sim/src/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="9" selection-start="3286" selection-end="3286" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RL_sim/src/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="24" selection-start="686" selection-end="686" vertical-scroll-proportion="0.0">
@@ -674,49 +748,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RL_sim/src/QLSimulator.java">
+    <entry file="file://$PROJECT_DIR$/src/table/QTableImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="622" column="30" selection-start="18949" selection-end="18949" vertical-scroll-proportion="0.0">
+        <state line="31" column="24" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/mathutil/randomize/NguyenWidrowRandomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="13" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.21101993">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/mathutil/randomize/RangeRandomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="27" selection-start="2200" selection-end="2209" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#2424#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/mathutil/randomize/Randomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="11" selection-start="1769" selection-end="1769" vertical-scroll-proportion="0.33279744">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/mathutil/randomize/BasicRandomizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="24" selection-start="2794" selection-end="2794" vertical-scroll-proportion="0.5643087">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/QTableFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="205" selection-end="205" vertical-scroll-proportion="0.4695652">
+        <state line="7" column="3" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/engine/network/activation/ActivationFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#3966#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/neural/flat/FlatLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="31" selection-start="2096" selection-end="2096" vertical-scroll-proportion="-2.0965059">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/neural/networks/BasicNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="604" column="61" selection-start="16817" selection-end="16817" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#21126#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/table/IdentityFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="20" selection-start="253" selection-end="253" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/engine/network/activation/ActivationSigmoid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="34" selection-start="1643" selection-end="1643" vertical-scroll-proportion="0.29950082">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/encog-core-3.1.0-sources.jar!/org/encog/neural/networks/layers/BasicLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="35" selection-start="2587" selection-end="2587" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#4056#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_sim/src/QLSimulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="629" column="0" selection-start="19238" selection-end="19238" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RL_sim/src/QLearning.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="187" column="27" selection-start="5564" selection-end="5564" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/QTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="35" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/table/QTableImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="3" selection-start="149" selection-end="192" vertical-scroll-proportion="0.0">
+        <state line="192" column="0" selection-start="5703" selection-end="5703" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/table/QTableNeuralImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="0" selection-start="3724" selection-end="3724" vertical-scroll-proportion="0.0">
+        <state line="70" column="58" selection-start="2596" selection-end="2596" vertical-scroll-proportion="-1.606383">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#916#929#0" expanded="true" />
+            <element signature="e#1115#1128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -778,7 +923,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -786,7 +930,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.encog:encog-core:3.1.0</last-edited>
+          <last-edited>encog-core-3.1.0-javadoc</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
