@@ -98,7 +98,6 @@ public class TessellationUtils {
         }
 
         triangleMesh.removeDuplicatedPointsAndFixTriangles();
-        triangleMesh.getAllAdjacentTrianglesToVertex(0);
 
         textureMapper.mappTextureCoordinates(triangleMesh);
 

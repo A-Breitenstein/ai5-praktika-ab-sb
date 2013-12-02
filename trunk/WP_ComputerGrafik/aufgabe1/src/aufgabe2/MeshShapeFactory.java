@@ -23,23 +23,33 @@ public class MeshShapeFactory {
         Shape3D shape = new Shape3D();
         TriangleArray triangleArray = new TriangleArray(mesh.getNumberOfTriangles()*3, GeometryArray.COORDINATES | GeometryArray.NORMALS | GeometryArray.TEXTURE_COORDINATE_3);
 
+        Point3d[] vertexCoords = new Point3d[mesh.getNumberOfTriangles() * 3];
+        TexCoord3f[] texCoords = new TexCoord3f[mesh.getNumberOfTriangles() * 3];
+        Vector3f[] normals = new Vector3f[mesh.getNumberOfTriangles() * 3];
 
         for (int triangleIndex = 0,coordinateIndex = 0; triangleIndex < mesh.getNumberOfTriangles(); triangleIndex++,coordinateIndex+=3) {
             Triangle triangle = mesh.getTriangle(triangleIndex);
-            triangleArray.setCoordinates(coordinateIndex,new Point3d[]{mesh.getVertex(triangle.a),mesh.getVertex(triangle.b),mesh.getVertex(triangle.c)});
-            triangleArray.setNormals(coordinateIndex, new Vector3f[]{triangle.normal,triangle.normal,triangle.normal});
 
-            triangleArray.setTextureCoordinates(coordinateIndex,
-                    triangleIndex,
-                                                new TexCoord3f[]
-                                                        {
-                                                        mesh.getTexCoord(triangle.getTexCoordA()),
-                                                        mesh.getTexCoord(triangle.getTexCoordB()),
-                                                        mesh.getTexCoord(triangle.getTexCoordC())
-                                                        }
-            );
-// triangleArray.setNormals(coordinateIndex, new Vector3f[]{n(mesh.getVertex(triangle.a)),n(mesh.getVertex(triangle.b)),n(mesh.getVertex(triangle.c))});
+            vertexCoords[coordinateIndex] = mesh.getVertex(triangle.a);
+            vertexCoords[coordinateIndex+1] =  mesh.getVertex(triangle.b);
+            vertexCoords[coordinateIndex+2] =  mesh.getVertex(triangle.c);
+
+            normals[coordinateIndex] = triangle.normal;
+            normals[coordinateIndex+1] = triangle.normal;
+            normals[coordinateIndex+2] = triangle.normal;
+
+            texCoords[coordinateIndex] = mesh.getTexCoord(triangle.a);
+            texCoords[coordinateIndex+1] = mesh.getTexCoord(triangle.b);
+            texCoords[coordinateIndex+2] = mesh.getTexCoord(triangle.c);
+
+//            normals[coordinateIndex] = n(mesh.getVertex(triangle.a));
+//            normals[coordinateIndex+1] = n(mesh.getVertex(triangle.b));
+//            normals[coordinateIndex+2] = n(mesh.getVertex(triangle.c));
         }
+
+        triangleArray.setCoordinates(0, vertexCoords);
+        triangleArray.setNormals(0,normals);
+        triangleArray.setTextureCoordinates(0,0,texCoords);
 
         shape.setGeometry(triangleArray);
         return shape;

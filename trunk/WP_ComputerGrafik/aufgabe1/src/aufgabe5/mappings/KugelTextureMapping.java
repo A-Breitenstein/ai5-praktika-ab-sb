@@ -24,52 +24,36 @@ public class KugelTextureMapping extends TextureMapper{
     }
 
     @Override
-    public void mappTextureCoordinates(ITriangleMesh iTriangleMesh) {
+    public void mappTextureCoordinates(ITriangleMesh triangleMesh) {
 
-        double[] bb = boundingBox(iTriangleMesh);
+        double[] bb = boundingBox(triangleMesh);
         double x_s = bb[3] - 0.5 * (Math.abs(bb[0]) + bb[3]),
                 y_s = bb[4] - 0.5 * (Math.abs(bb[1]) + bb[4]),
                 z_s = bb[5] - 0.5 * (Math.abs(bb[2]) + bb[5]);
         float uA, uB, uC,
                 vA, vB, vC;
 
-        int indexA, indexB, indexC;
 
-        Triangle triangle;
 
-        Point3d coordA, coordB, coordC;
+        Point3d vertex;
+        for (int i = 0; i < triangleMesh.getNumberOfVertices(); i++) {
 
-        for (int i = 0; i < iTriangleMesh.getNumberOfTriangles(); i++) {
+            vertex = triangleMesh.getVertex(i);
 
-            triangle = iTriangleMesh.getTriangle(i);
+            uA = (float) u_kugelmapping(vertex.y, y_s, vertex.x, x_s);
+            vA = (float) v_kugelmapping(vertex.y, y_s, vertex.x, x_s, vertex.z, z_s);
+            triangleMesh.addTexCoord(new TexCoord3f(uA, vA, 0.f));
 
-            coordA = iTriangleMesh.getVertex(triangle.a);
-            coordB = iTriangleMesh.getVertex(triangle.b);
-            coordC = iTriangleMesh.getVertex(triangle.c);
-
-            uA = (float) u_kugelmapping(coordA.y, y_s, coordA.x, x_s);
-            uB = (float) u_kugelmapping(coordB.y, y_s, coordB.x, x_s);
-            uC = (float) u_kugelmapping(coordC.y, y_s, coordC.x, x_s);
-
-            vA = (float) v_kugelmapping(coordA.y, y_s, coordA.x, x_s, coordA.z, z_s);
-            vB = (float) v_kugelmapping(coordB.y, y_s, coordB.x, x_s, coordB.z, z_s);
-            vC = (float) v_kugelmapping(coordC.y, y_s, coordC.x, x_s, coordC.z, z_s);
-
-            indexA = iTriangleMesh.addTexCoord(new TexCoord3f(uA, vA, 0.f));
-            indexB = iTriangleMesh.addTexCoord(new TexCoord3f(uB, vB, 0.f));
-            indexC = iTriangleMesh.addTexCoord(new TexCoord3f(uC, vC, 0.f));
-
-            triangle.setTextureCoordinates(indexA, indexB, indexC);
         }
 
     }
 
     private static double u_kugelmapping(double y, double y_s, double x, double x_s) {
-        return (Math.PI + Math.atan2(y - y_s, x - x_s)) / 2 * Math.PI;
+        return (Math.PI + Math.atan2(y - y_s, x - x_s)) / (2 * Math.PI);
     }
 
     private static double v_kugelmapping(double y, double y_s, double x, double x_s, double z, double z_s) {
-        return (Math.atan2(2 * Math.PI / (Math.sqrt(Math.pow(x - x_s, 2.f) + Math.pow(y - y_s, 2.f))), z - z_s)) / Math.PI;
+        return (Math.atan2((Math.sqrt(Math.pow(x - x_s, 2.f) + Math.pow(y - y_s, 2.f))), z - z_s)) / Math.PI;
     }
 
 }
