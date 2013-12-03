@@ -1,5 +1,6 @@
 package utils;
 
+import aufgabe4.HalfEdge;
 import aufgabe4.HalfEdgeVertex;
 
 import javax.media.j3d.Transform3D;
@@ -83,5 +84,10 @@ public class CGkursUtils{
     private static boolean assertDelta(double d1, double d2, double delta) {
         final double actualDelta = (d1 > d2) ? (d1 - d2) : (d2 - d1);
         return (actualDelta <= delta);
+    }
+
+    public static boolean isEqual(HalfEdge startEdge, HalfEdge tempEdge) {
+       return isEqual(startEdge.getVertex().getPosition(),tempEdge.getVertex().getPosition()) &&
+              isEqual(startEdge.getNext().getVertex().getPosition(),tempEdge.getNext().getVertex().getPosition());
     }
 }

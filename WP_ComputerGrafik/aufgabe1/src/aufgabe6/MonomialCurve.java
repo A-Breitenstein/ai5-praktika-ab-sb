@@ -31,12 +31,44 @@ public class MonomialCurve implements Curve {
 
     @Override
     public Vector3d eval(double value) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        Vector3d tangentV = new Vector3d();
+        Vector3d temp;
+        for (int i = 0; i < getDegree(); i++) {
+            temp = new Vector3d(controlPoints[i]);
+
+            temp.scale(Math.pow(value,i));
+
+            tangentV.add(temp);
+        }
+
+        return tangentV;
     }
 
     @Override
     public Vector3d derivative(double value) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        Vector3d tangentV = new Vector3d();
+        Vector3d temp;
+        double scalar;
+        for (int i = 1; i < getDegree(); i++) {
+            temp = new Vector3d(controlPoints[i]);
+
+            scalar = ableitung(i, value);
+
+            temp.scale(scalar);
+
+            tangentV.add(temp);
+        }
+
+        return tangentV;
+    }
+
+    @Override
+    public Vector3d[] getControllPoints() {
+        return controlPoints;
+    }
+
+    private double ableitung(int z, double value) {
+        return z * Math.pow(value, z - 1);
     }
 
     public int getDegree() {

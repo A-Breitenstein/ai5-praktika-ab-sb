@@ -14,4 +14,6 @@ public interface Curve {
     Vector3d eval(double value);
 
     Vector3d derivative(double value);
+
+    Vector3d[] getControllPoints();
 }
