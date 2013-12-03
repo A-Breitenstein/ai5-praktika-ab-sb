@@ -14,6 +14,7 @@ import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Cylinder;
 import com.sun.j3d.utils.geometry.Sphere;
+import com.sun.j3d.utils.pickfast.behaviors.PickTranslateBehavior;
 import com.sun.j3d.utils.universe.SimpleUniverse;
 
 import javax.media.j3d.*;
@@ -37,7 +38,7 @@ public class CG1Frame extends JFrame {
     /**
      * Canvas object for the 3D content.
      */
-    private Canvas3D canvas3D;
+    public static Canvas3D canvas3D;
 
     /**
      * Simple universe (provides reasonable default values).
@@ -48,17 +49,20 @@ public class CG1Frame extends JFrame {
      * Scene graph for the 3D content scene.
      */
     protected BranchGroup scene = new BranchGroup();
+    public static Regler  regler;
 
     /**
      * Default constructor.
      */
     public CG1Frame() {
+        initRegler();
         // Create canvas object to draw on
         canvas3D = new Canvas3D(SimpleUniverse.getPreferredConfiguration());
 
         // The SimpleUniverse provides convenient default settings
         universe = new SimpleUniverse(canvas3D);
         universe.getViewingPlatform().setNominalViewingTransform();
+
 
         // Setup lighting
         addLight(universe);
@@ -81,6 +85,15 @@ public class CG1Frame extends JFrame {
         setSize(1000, 1000);
         getContentPane().add("Center", canvas3D);
         setVisible(true);
+    }
+
+    private void initRegler() {
+        JFrame frame = new JFrame("Regler");
+        regler = new Regler();
+        frame.setContentPane(regler.getPanel1());
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
     }
 
     /**
@@ -147,6 +160,11 @@ public class CG1Frame extends JFrame {
         Curve curve = MonomialCurve.create(v1, v2, v3, v4);
 
         scene.addChild(Plotter.plottFunction(curve,1000));
+
+        BoundingSphere behaveBounds = new BoundingSphere();
+        PickTranslateBehavior pickTranslate = new PickTranslateBehavior(scene,
+                CG1Frame.canvas3D, behaveBounds);
+        scene.addChild(pickTranslate);
 
         // Assemble scene
         scene.compile();
