@@ -18,17 +18,17 @@ import javax.vecmath.Point3d;
 public class Plane {
     public static ITriangleMesh create() {
         ITriangleMesh triangleMesh = new TriangleMesh();
-        Point3d p0 = new Point3d(0, 0, 0);
-        Point3d p1 = new Point3d(1, 0, 0);
-        Point3d p2 = new Point3d(1, 1, 0);
-        Point3d p3 = new Point3d(0, 1, 0);
+        Point3d p0 = new Point3d(3, 0, 0);
+        Point3d p1 = new Point3d(4, 0, 0);
+        Point3d p2 = new Point3d(4, 1, 0);
+        Point3d p3 = new Point3d(3, 1, 0);
 
         triangleMesh.addVertex(p0);
         triangleMesh.addVertex(p1);
         triangleMesh.addVertex(p2);
         triangleMesh.addVertex(p3);
 
-        Triangle a = new Triangle(2, 3, 0);
+        Triangle a = new Triangle(3, 0, 2);
         Triangle b = new Triangle(0, 1, 2);
 
         a.computeNormal(p2,p1,p0);
