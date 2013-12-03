@@ -145,14 +145,16 @@ public class CG1Frame extends JFrame {
 
         Transform3D scale = new Transform3D();
 
-//        Shape3D shape = TessellationUtils.create(100,-2,2,new Torus(.5,.25));
         Shape3D shape = TessellationUtils.create(20,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
 
         shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
+//        shape2.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("IMGP1511.jpg"));
 //        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
+//        shape2.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","IMGP1511.jpg"));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
+//        tg.addChild(shape2);
 //        AppearanceHelper.setColor(shape, new Color3f(new Color(31, 178, 255)));
         scene.addChild(tg);
 
