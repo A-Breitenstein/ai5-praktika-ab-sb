@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="1924037c-bdff-4362-8edb-16a7dee7d344" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/Plotter.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/Plotter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.form" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="computergrafikwp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386103853435" ignored="false" />
+    <file path="/fragment.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386116450779" ignored="false" />
     <file path="/CG1Frame.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386115768943" ignored="false" />
     <file path="/Global.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380021924567" ignored="false" />
     <file path="/Tree.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380031082238" ignored="false" />
@@ -21,7 +17,7 @@
     <file path="/Ground.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381139691341" ignored="false" />
     <file path="/AppearanceHelper.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386016378199" ignored="false" />
     <file path="/Helicopter.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380128361691" ignored="false" />
-    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386116393316" ignored="false" />
+    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386116428643" ignored="false" />
     <file path="/TriangleMesh.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385905740260" ignored="false" />
     <file path="/Triangle.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385734059769" ignored="false" />
     <file path="/MeshShapeFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386018076491" ignored="false" />
@@ -236,7 +232,7 @@
       <file leaf-file-name="Regler.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="44" selection-start="324" selection-end="324" vertical-scroll-proportion="0.2963671">
+            <state line="23" column="54" selection-start="429" selection-end="429" vertical-scroll-proportion="0.5105162">
               <folding />
             </state>
           </provider>
@@ -729,7 +725,7 @@
       </UpdatedFiles>
     </UpdateInfo>
   </component>
-  <component name="RunManager" selected="Application.CG1Frame">
+  <component name="RunManager" selected="Application.Aufgabe 6 - Kurven">
     <configuration default="false" name="TessellationUtils" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="aufgabe3.TessellationUtils" />
@@ -809,7 +805,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="CG1Frame" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="Aufgabe 6 - Kurven" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="aufgabe6.grundgeruest.*" />
@@ -980,11 +976,11 @@
       <item index="2" class="java.lang.String" itemvalue="Application.TessellationUtils" />
       <item index="3" class="java.lang.String" itemvalue="Application.CG1Texture" />
       <item index="4" class="java.lang.String" itemvalue="Application.AppearanceHelper" />
-      <item index="5" class="java.lang.String" itemvalue="Application.CG1Frame" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Aufgabe 6 - Kurven" />
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.CG1Frame" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Aufgabe 6 - Kurven" />
         <item index="1" class="java.lang.String" itemvalue="Application.CG1Texture" />
         <item index="2" class="java.lang.String" itemvalue="Application.AppearanceHelper" />
         <item index="3" class="java.lang.String" itemvalue="Application.TessellationUtils" />
@@ -1144,7 +1140,11 @@
       <created>1386030691118</created>
       <updated>1386030691118</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="aufgabe6 fertig? i think so">
+      <created>1386116440140</created>
+      <updated>1386116440140</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1400,7 +1400,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="44" selection-start="324" selection-end="324" vertical-scroll-proportion="0.2963671">
+        <state line="23" column="54" selection-start="429" selection-end="429" vertical-scroll-proportion="0.5105162">
           <folding />
         </state>
       </provider>
