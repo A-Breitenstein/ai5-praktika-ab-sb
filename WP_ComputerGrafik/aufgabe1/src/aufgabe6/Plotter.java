@@ -93,7 +93,7 @@ public class Plotter {
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                CG1Frame.regler.value
+//                CG1Frame.regler.value
             }
         },10,10);
     }

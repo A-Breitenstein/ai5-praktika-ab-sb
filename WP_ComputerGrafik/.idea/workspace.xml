@@ -1,33 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" line="106" />
-    <bookmark url="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java" line="31" />
+    <bookmark url="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java" line="40" />
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="1924037c-bdff-4362-8edb-16a7dee7d344" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/TextureMapper.java" />
-      <change type="MOVED" beforePath="C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe5\mappings\Mapping.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/KugelTextureMapping.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe3/grundgeruest/CG1Frame.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe3/grundgeruest/CG1Frame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/Plotter.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/Plotter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.form" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java" afterPath="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="computergrafikwp.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908863757" ignored="false" />
-    <file path="/CG1Frame.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386006509687" ignored="false" />
+    <file path="/fragment.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386103853435" ignored="false" />
+    <file path="/CG1Frame.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386115768943" ignored="false" />
     <file path="/Global.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380021924567" ignored="false" />
     <file path="/Tree.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380031082238" ignored="false" />
-    <file path="/a.dummy" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386006566637" ignored="false" />
+    <file path="/a.dummy" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386014177217" ignored="false" />
     <file path="/Ground.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381139691341" ignored="false" />
-    <file path="/AppearanceHelper.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385914494177" ignored="false" />
+    <file path="/AppearanceHelper.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386016378199" ignored="false" />
     <file path="/Helicopter.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1380128361691" ignored="false" />
-    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386005002684" ignored="false" />
+    <file path="/Dummy.txt" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386116393316" ignored="false" />
     <file path="/TriangleMesh.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385905740260" ignored="false" />
     <file path="/Triangle.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385734059769" ignored="false" />
-    <file path="/MeshShapeFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385918306368" ignored="false" />
+    <file path="/MeshShapeFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386018076491" ignored="false" />
     <file path="$PROJECT_DIR$/../../VS/src/aufgabe1/messageServer.erl" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381244949108" ignored="false" />
     <file path="/messageServer.erl" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381244891287" ignored="false" />
     <file path="$PROJECT_DIR$/../../VS/src/aufgabe1/messageClient.erl" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1381248125880" ignored="false" />
@@ -36,9 +33,12 @@
     <file path="/ITriangleMesh.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385733802898" ignored="false" />
     <file path="/TriangleMeshFactory.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385902211609" ignored="false" />
     <file path="/Tetraeder.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385908716693" ignored="false" />
-    <file path="/Plane.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1385916519861" ignored="false" />
+    <file path="/Plane.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386014354234" ignored="false" />
     <file path="/Mapping.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386006238509" ignored="false" />
     <file path="/Mapper.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386006296213" ignored="false" />
+    <file path="/BoxTexturMapping.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386014403185" ignored="false" />
+    <file path="/KugelTextureMapping.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386014426226" ignored="false" />
+    <file path="/Regler.java" changelist="1924037c-bdff-4362-8edb-16a7dee7d344" time="1386116274108" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +58,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -95,6 +94,25 @@
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
     </breakpoint_any>
+    <exception_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint class_name="java.lang.IndexOutOfBoundsException" package_name="java.lang">
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </exception_breakpoints>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/grundgeruest/CG1Frame.java" line="150" class="aufgabe2.grundgeruest.CG1Frame" package="aufgabe2.grundgeruest">
         <option name="ENABLED" value="true" />
@@ -126,11 +144,7 @@
         <option name="CONDITION" value="&#13;&#13;JAVA" />
         <option name="LOG_MESSAGE" value="&#13;&#13;JAVA" />
       </breakpoint>
-    </line_breakpoints>
-    <exception_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint class_name="java.lang.IndexOutOfBoundsException" package_name="java.lang">
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
+      <breakpoint url="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/KugelTextureMapping.java" line="44" class="aufgabe5.mappings.KugelTextureMapping" package="aufgabe5.mappings">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -145,7 +159,23 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-    </exception_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java" line="235" class="aufgabe6.grundgeruest.CG1Frame" package="aufgabe6.grundgeruest">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -158,37 +188,72 @@
       <file leaf-file-name="CG1Frame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="148" column="51" selection-start="4859" selection-end="4859" vertical-scroll-proportion="0.0">
+            <state line="159" column="50" selection-start="5597" selection-end="5597" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sphere.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/Sphere.java">
+      <file leaf-file-name="CG1Frame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="5" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
+            <state line="176" column="28" selection-start="5769" selection-end="5769" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TessellationUtils.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
+      <file leaf-file-name="MonomialCurve.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/MonomialCurve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="25" selection-start="2112" selection-end="2119" vertical-scroll-proportion="0.0">
+            <state line="75" column="47" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextureMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/TextureMapper.java">
+      <file leaf-file-name="HermiteCurve.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/HermiteCurve.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="5" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0">
+            <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plotter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/Plotter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="26" selection-start="3511" selection-end="3525" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3736#3871#0" expanded="true" />
+                <element signature="e#3860#3861#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Regler.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="44" selection-start="324" selection-end="324" vertical-scroll-proportion="0.2963671">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Regler.form" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.form">
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MeshShapeFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="14" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -196,16 +261,7 @@
       <file leaf-file-name="Plane.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="41" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CG1Frame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/grundgeruest/CG1Frame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="31" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.0">
+            <state line="30" column="41" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -214,16 +270,7 @@
       <file leaf-file-name="KugelTextureMapping.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/KugelTextureMapping.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MeshShapeFactory.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="66" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.60952383">
+            <state line="19" column="42" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -239,30 +286,29 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/ITriangleMesh.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/Triangle.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/TriangleMeshFactory.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/TriangleMesh.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/AppearanceHelper.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe4/Tetraeder.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/Mapping.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/KugelMapping.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/Mapper.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/TextureMapper.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/KugelTextureMapping.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/grundgeruest/CG1Frame.java" />
-        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/BoxTexturMapping.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/AppearanceHelper.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/KugelTextureMapping.java" />
         <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe6/Plotter.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.form" />
+        <option value="$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1010" />
+    <option name="x" value="217" />
+    <option name="width" value="1063" />
+    <option name="height" value="994" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -290,7 +336,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -320,6 +365,72 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computergrafikwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computergrafikwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grundgeruest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Regler" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computergrafikwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grundgeruest" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -385,8 +496,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computergrafikwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computergrafikwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="objects" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="computergrafikwp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aufgabe1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="grundgeruest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -431,7 +605,131 @@
       <recent name="Z:\AI5\computergrafikwp\WP_ComputerGrafik\aufgabe1\src\aufgabe2\triangle" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CG1Texture">
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\utils\CGkursUtils.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\MonomialCurve.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\HermiteCurve.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\Curve.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\TestCurves.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\Plotter.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\grundgeruest</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\grundgeruest\AppearanceHelper.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\grundgeruest\Regler.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\grundgeruest\Regler.form</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\grundgeruest\CG1Frame.java</PATH>
+            <PATH vcs="svn" revision="146">C:\Projekte\IntelliJ\AI5\CG\aufgabe1\src\aufgabe6\grundgeruest\TestGeometry.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
+  <component name="RunManager" selected="Application.CG1Frame">
     <configuration default="false" name="TessellationUtils" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="aufgabe3.TessellationUtils" />
@@ -496,6 +794,34 @@
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="aufgabe1" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CG1Frame" type="Application" factoryName="Application" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="aufgabe6.grundgeruest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="aufgabe6.grundgeruest.CG1Frame" />
+      <option name="VM_PARAMETERS" value="-Djava.library.path=Z:\AI5\computergrafikwp\WP_ComputerGrafik\aufgabe1\bin;C:\Projekte\IntelliJ\AI5\CG\aufgabe1\bin" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -648,18 +974,20 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.CGFram2" />
       <item index="1" class="java.lang.String" itemvalue="Application.CG3" />
       <item index="2" class="java.lang.String" itemvalue="Application.TessellationUtils" />
       <item index="3" class="java.lang.String" itemvalue="Application.CG1Texture" />
       <item index="4" class="java.lang.String" itemvalue="Application.AppearanceHelper" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CG1Frame" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.CG1Texture" />
-        <item index="1" class="java.lang.String" itemvalue="Application.AppearanceHelper" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TessellationUtils" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.CG1Frame" />
+        <item index="1" class="java.lang.String" itemvalue="Application.CG1Texture" />
+        <item index="2" class="java.lang.String" itemvalue="Application.AppearanceHelper" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TessellationUtils" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -804,7 +1132,19 @@
       <created>1386005010106</created>
       <updated>1386005010106</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="aufgabe5 -_- wtf">
+      <created>1386006849118</created>
+      <updated>1386006849118</updated>
+    </task>
+    <task id="LOCAL-00022" summary="aufgabe5 BoxtexturMapping hinzugefügt und statt getNumberOfVertices getNumberofTriangles gewechselt">
+      <created>1386014581110</created>
+      <updated>1386014581110</updated>
+    </task>
+    <task id="LOCAL-00023" summary="aufgabe5 BoxtexturMapping hinzugefügt und statt getNumberOfVertices getNumberofTriangles gewechselt">
+      <created>1386030691118</created>
+      <updated>1386030691118</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -828,24 +1168,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1010" extended-state="6" />
+    <frame x="217" y="0" width="1063" height="994" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18981019" sideWeight="0.6810036" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2954279" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18981019" sideWeight="0.6810036" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4544335" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1724" y="71" width="1634" height="943" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45320198" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1724" y="71" width="1634" height="943" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3270809" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32590857" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16774717" sideWeight="0.5627198" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43728018" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.366782" sideWeight="0.6810036" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31899643" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.249694" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -853,7 +1195,6 @@
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282532" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Metrics" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -900,7 +1241,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="aufgabe5 MappingClass update" />
+    <option name="LAST_COMMIT_MESSAGE" value="aufgabe6 fertig? i think so" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -934,6 +1275,9 @@
     <MESSAGE value="aufgabe5 plane box code" />
     <MESSAGE value="aufgabe5 MappingClass" />
     <MESSAGE value="aufgabe5 MappingClass update" />
+    <MESSAGE value="aufgabe5 -_- wtf" />
+    <MESSAGE value="aufgabe5 BoxtexturMapping hinzugefügt und statt getNumberOfVertices getNumberofTriangles gewechselt" />
+    <MESSAGE value="aufgabe6 fertig? i think so" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -952,112 +1296,111 @@
     <option name="showOnlyWarnings" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fragment_shader_texture.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vertex_shader_texture.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/Torus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="29" selection-start="921" selection-end="922" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/triangle/TriangleMesh.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="261" column="43" selection-start="8671" selection-end="8671" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="58" column="0" selection-start="1244" selection-end="1244" vertical-scroll-proportion="0.31602708" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/AppearanceHelper.java">
+    <entry file="jar://$PROJECT_DIR$/aufgabe1/lib/j3d-1_5_2-src.zip!/javax/media/j3d/TriangleArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="26" selection-start="1389" selection-end="1389" vertical-scroll-proportion="0.63544303">
-          <folding />
-        </state>
+        <state line="87" column="24" selection-start="3121" selection-end="3132" vertical-scroll-proportion="-0.06779661" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/aufgabe1/lib/j3d-1_5_2-src.zip!/javax/media/j3d/GeometryArrayRetained.java">
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4991" column="0" selection-start="155681" selection-end="155681" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe4/Tetraeder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="42" selection-start="563" selection-end="563" vertical-scroll-proportion="0.0">
+        <state line="103" column="0" selection-start="3991" selection-end="3991" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/AppearanceHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="51" selection-start="6751" selection-end="6751" vertical-scroll-proportion="0.0">
+        <state line="111" column="87" selection-start="3682" selection-end="3682" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/TessellationUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="25" selection-start="2112" selection-end="2119" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/Sphere.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="5" selection-start="834" selection-end="834" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/TextureMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="5" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/mappings/KugelTextureMapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="378" selection-end="378" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="41" selection-start="950" selection-end="950" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe3/grundgeruest/CG1Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="31" selection-start="5583" selection-end="5583" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="51" selection-start="4859" selection-end="4859" vertical-scroll-proportion="0.0">
+        <state line="19" column="42" selection-start="420" selection-end="420" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe2/MeshShapeFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="66" selection-start="1341" selection-end="1341" vertical-scroll-proportion="0.60952383">
+        <state line="21" column="14" selection-start="530" selection-end="530" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/Plane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="41" selection-start="876" selection-end="876" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe5/grundgeruest/CG1Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="159" column="50" selection-start="5597" selection-end="5597" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/Plotter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="26" selection-start="3511" selection-end="3525" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#3736#3871#0" expanded="true" />
+            <element signature="e#3860#3861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe1/objects/Helicopter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="34" selection-start="902" selection-end="916" vertical-scroll-proportion="-2.7402596">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe1/grundgeruest/CG1Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="17" selection-start="745" selection-end="745" vertical-scroll-proportion="0.24304268">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/HermiteCurve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/MonomialCurve.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="47" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/CG1Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="28" selection-start="5769" selection-end="5769" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aufgabe1/src/aufgabe6/grundgeruest/Regler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="44" selection-start="324" selection-end="324" vertical-scroll-proportion="0.2963671">
           <folding />
         </state>
       </provider>

@@ -5,9 +5,8 @@
  */
 package aufgabe6.grundgeruest;
 
-import aufgabe3.TessellationUtils;
-import aufgabe5.mappings.KugelTextureMapping;
 import aufgabe6.Curve;
+import aufgabe6.HermiteCurve;
 import aufgabe6.MonomialCurve;
 import aufgabe6.Plotter;
 import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
@@ -50,6 +49,9 @@ public class CG1Frame extends JFrame {
      */
     protected BranchGroup scene = new BranchGroup();
     public static Regler  regler;
+    public Shape3D tangentVector;
+    public Curve curve;
+    private BranchGroup branchGroup;
 
     /**
      * Default constructor.
@@ -90,6 +92,7 @@ public class CG1Frame extends JFrame {
     private void initRegler() {
         JFrame frame = new JFrame("Regler");
         regler = new Regler();
+        regler.setCg1Frame(this);
         frame.setContentPane(regler.getPanel1());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
@@ -154,10 +157,23 @@ public class CG1Frame extends JFrame {
 
         Vector3d v1 = new Vector3d(.1,.2,.3);
         Vector3d v2 = new Vector3d(.4,.4,.9);
-        Vector3d v3 = new Vector3d(.9,.2,.5);
-        Vector3d v4 = new Vector3d(.6,.7,-2);
+        Vector3d v3 = new Vector3d(-.2,.3,-.5);
+        Vector3d v4 = new Vector3d(.35,0,0);
+        Vector3d v5 = new Vector3d(.3,-.2,.4);
+        Vector3d v6 = new Vector3d(.1,-.4,.2);
 
-        Curve curve = MonomialCurve.create(v1, v2, v3, v4);
+        MonomialCurve monocurve = MonomialCurve.create(6);
+
+        monocurve.setControlPoint(0,v1);
+        monocurve.setControlPoint(1,v2);
+        monocurve.setControlPoint(2,v3);
+        monocurve.setControlPoint(3,v4);
+        monocurve.setControlPoint(4,v5);
+        monocurve.setControlPoint(5,v6);
+
+//        curve = monocurve;
+//        curve = MonomialCurve.create(v1, v2, v3, v4);
+        curve = HermiteCurve.create(v1, v2, v3, v4);
 
         scene.addChild(Plotter.plottFunction(curve,1000));
 
@@ -165,6 +181,25 @@ public class CG1Frame extends JFrame {
         PickTranslateBehavior pickTranslate = new PickTranslateBehavior(scene,
                 CG1Frame.canvas3D, behaveBounds);
         scene.addChild(pickTranslate);
+
+        Vector3d source, target;
+
+        source = curve.eval(0.d);
+        target = curve.derivative(0.d);
+
+        tangentVector = createTangentVector(source, target);
+        branchGroup = new BranchGroup();
+        branchGroup.setCapability(Group.ALLOW_CHILDREN_EXTEND);
+        branchGroup.setCapability(Group.ALLOW_CHILDREN_WRITE);
+        branchGroup.setCapability(BranchGroup.ALLOW_DETACH);
+
+        branchGroup.addChild(tangentVector);
+
+
+        scene.setCapability(Group.ALLOW_CHILDREN_EXTEND);
+        scene.setCapability(Group.ALLOW_CHILDREN_WRITE);
+        scene.addChild(branchGroup);
+
 
         // Assemble scene
         scene.compile();
@@ -174,6 +209,43 @@ public class CG1Frame extends JFrame {
         universe.getViewer().getView().setBackClipDistance(500);
         universe.addBranchGraph(scene);
     }
+
+    private Shape3D createTangentVector(Vector3d source, Vector3d target) {
+        Point3f[] dotPts = new Point3f[2];
+        dotPts[0] = new Point3f(source);
+        dotPts[1] = new Point3f(target);
+        LineArray dot = new LineArray(2, LineArray.COORDINATES);
+        dot.setCoordinates(0, dotPts);
+        LineAttributes dotLa = new LineAttributes();
+        dotLa.setLineWidth(20.0f);
+        dotLa.setLinePattern(LineAttributes.PATTERN_SOLID);
+        Appearance dotApp = new Appearance();
+        ColoringAttributes ca = new ColoringAttributes(new Color3f(new Color(206, 0, 9)),
+                ColoringAttributes.SHADE_FLAT);
+        dotApp.setColoringAttributes(ca);
+        dotApp.setLineAttributes(dotLa);
+        dotApp.setColoringAttributes(ca);
+        Shape3D dotShape = new Shape3D(dot, dotApp);
+        return dotShape;
+    }
+
+    public void changeTangentVector(double position) {
+        final double val = position;
+        tangentVector = createTangentVector(curve.eval(val), curve.derivative(val));
+
+        branchGroup.detach();
+        branchGroup = new BranchGroup();
+        branchGroup.setCapability(Group.ALLOW_CHILDREN_EXTEND);
+        branchGroup.setCapability(Group.ALLOW_CHILDREN_WRITE);
+        branchGroup.setCapability(BranchGroup.ALLOW_DETACH);
+
+        branchGroup.addChild(tangentVector);
+
+        scene.addChild(branchGroup);
+
+    }
+
+
     protected Node createBox(){
         Box box = new Box();
         AppearanceHelper.setColor(box, new Color3f(0.75f, 0.25f, 0.25f));
