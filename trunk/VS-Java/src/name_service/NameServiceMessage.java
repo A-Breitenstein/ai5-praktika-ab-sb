@@ -1,4 +1,4 @@
-package mware_lib.name_server;
+package name_service;
 
 import java.io.Serializable;
 import java.net.InetAddress;

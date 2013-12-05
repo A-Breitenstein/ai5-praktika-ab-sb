@@ -1,6 +1,6 @@
 package mware_lib;
 
-import mware_lib.name_server.NameServiceMessage;
+import name_service.NameServiceMessage;
 import mware_lib.name_server_client.NameServiceImpl;
 
 import java.io.IOException;
