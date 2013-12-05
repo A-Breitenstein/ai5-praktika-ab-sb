@@ -1,6 +1,6 @@
 package mware_lib.name_server_client;
 
-import mware_lib.name_server.NameServiceMessage;
+import name_service.NameServiceMessage;
 import mware_lib.object_server.ObjectServer;
 import test_servant.AccountImplServant;
 import bank_access.AccountImplStub;

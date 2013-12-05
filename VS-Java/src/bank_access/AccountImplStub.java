@@ -4,9 +4,7 @@ import mware_lib.Config;
 import mware_lib.object_server.ObjectServerMessage;
 import mware_lib.stub.Stub;
 import mware_lib.stub.StubFactory;
-import mware_lib.stub.StubImpl;
-import mware_lib.name_server.NameServiceMessage;
-import mware_lib.stub.StubImplReuseConnection;
+import name_service.NameServiceMessage;
 
 /**
  * Created with IntelliJ IDEA.

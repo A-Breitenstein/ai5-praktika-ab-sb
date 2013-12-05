@@ -1,6 +1,6 @@
 package bank_access;
 
-import mware_lib.name_server.NameServiceMessage;
+import name_service.NameServiceMessage;
 
 /**
  * Created with IntelliJ IDEA.

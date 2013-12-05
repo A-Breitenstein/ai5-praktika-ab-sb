@@ -3,14 +3,12 @@ package mware_lib.stub;
 import bank_access.OverdraftException;
 import mware_lib.Config;
 import mware_lib.object_server.ObjectServerMessage;
-import mware_lib.name_server.NameServiceMessage;
+import name_service.NameServiceMessage;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
