@@ -23,6 +23,7 @@ public class StubImplReuseConnection implements Stub {
     NameServiceMessage nameServiceMessage;
 
     public StubImplReuseConnection(NameServiceMessage nameServiceMessage) {
+        if (Config.DEBUG) System.out.println("StubImpl::created");
         this.nameServiceMessage = nameServiceMessage;
         try {
             objectServer = new Socket(nameServiceMessage.getInetAddress(), nameServiceMessage.getPort());
@@ -51,9 +52,9 @@ public class StubImplReuseConnection implements Stub {
 
             switch (answer.getMsg()) {
                 case OBJECT_NOT_FOUND:
-                    throw new OverdraftException("AccountImplSkeleton on ObjectServer notfound");
+                    throw new OverdraftException("ImplSkeleton on ObjectServer notfound");
                 case OBJECT_FOUND:
-                    if(Config.DEBUG) System.out.println("AccountImplStub:: Object_Found");
+                    if(Config.DEBUG) System.out.println("ImplStub:: Object_Found");
                     break;
             }
 

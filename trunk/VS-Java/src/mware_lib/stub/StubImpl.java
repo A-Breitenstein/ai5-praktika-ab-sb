@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,6 +22,7 @@ public class StubImpl implements Stub {
     NameServiceMessage nameServiceMessage;
 
     public StubImpl(NameServiceMessage nameServiceMessage) {
+        if (Config.DEBUG) System.out.println("StubImpl::created");
         this.nameServiceMessage = nameServiceMessage;
     }
 
@@ -27,6 +30,7 @@ public class StubImpl implements Stub {
     public ObjectServerMessage sendObjectServerMessage(ObjectServerMessage message) throws OverdraftException {
         ObjectServerMessage answer = null;
         message.setObjectID(nameServiceMessage.getId());
+        message.setMsg(ObjectServerMessage.Msg.CALL_ON_OBJECT);
 
         try {
             final Socket objectServer = new Socket(nameServiceMessage.getInetAddress(), nameServiceMessage.getPort());
@@ -38,11 +42,14 @@ public class StubImpl implements Stub {
 
             switch (answer.getMsg()) {
                 case OBJECT_NOT_FOUND:
-                    throw new OverdraftException("AccountImplSkeleton on ObjectServer notfound");
+                    throw new OverdraftException("ImplSkeleton on ObjectServer notfound");
                 case OBJECT_FOUND:
-                    if(Config.DEBUG) System.out.println("AccountImplStub:: Object_Found");
+                    if(Config.DEBUG) System.out.println("ImplStub:: Object_Found");
                     break;
             }
+            // close connection
+            objOS.writeObject(new ObjectServerMessage(ObjectServerMessage.Msg.CLOSE_CON));
+
             objIS.close();
             objOS.close();
             objectServer.close();

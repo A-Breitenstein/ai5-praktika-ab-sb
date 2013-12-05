@@ -3,6 +3,7 @@ package bank_access;
 import mware_lib.Config;
 import mware_lib.object_server.ObjectServerMessage;
 import mware_lib.stub.Stub;
+import mware_lib.stub.StubFactory;
 import mware_lib.stub.StubImpl;
 import mware_lib.name_server.NameServiceMessage;
 import mware_lib.stub.StubImplReuseConnection;
@@ -19,8 +20,8 @@ public class ManagerImplStub extends ManagerImplBase {
 
     public ManagerImplStub(NameServiceMessage nameServiceMessage) {
         if(Config.DEBUG) System.out.println("ManagerImplStub created");
-        stub = new StubImpl(nameServiceMessage);
-//        this.stub = new StubImplReuseConnection(nameServiceMessage);
+        this.stub = StubFactory.createStub(nameServiceMessage);
+
     }
 
     @Override
