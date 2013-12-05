@@ -13,5 +13,5 @@ public class Config {
     public static final int NAME_SERVER_PORT = 50004;
     public static final int SKELETONS_PER_SERVANT = 10;
 
-    public static final boolean DEBUG =false;
+    public static final boolean DEBUG =true;
 }

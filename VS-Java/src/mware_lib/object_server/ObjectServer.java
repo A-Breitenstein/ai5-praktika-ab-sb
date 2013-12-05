@@ -90,24 +90,38 @@ public class ObjectServer {
                                 ObjectInputStream objIS = new ObjectInputStream(clientSocket.getInputStream());
                                 ObjectOutputStream objOS = new ObjectOutputStream(clientSocket.getOutputStream());
 
-                                ObjectServerMessage serviceMessage = (ObjectServerMessage) objIS.readObject();
-                                if(Config.DEBUG) System.out.println("ObjectServer: received: "+serviceMessage);
-                                SkeletonFactory skeletonFactory = objectDirectory.get(serviceMessage.getObjectID());
+                                boolean run = true;
+                                while(!Thread.currentThread().isInterrupted() && run){
 
-                                if (skeletonFactory == null) {
-                                    serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_NOT_FOUND);
-                                    objOS.writeObject(serviceMessage);
-                                }else {
-                                    Skeleton skeleton = skeletonFactory.createSkeleton(clientSocket, serviceMessage);
-                                    if(Config.DEBUG) System.out.println("ObjectServer: " + skeletonFactory.getReferences() + " references on" + skeleton.getClass().toString());
-                                    serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_FOUND);
+                                    ObjectServerMessage serviceMessage = (ObjectServerMessage) objIS.readObject();
+                                    if(Config.DEBUG) System.out.println("ObjectServer: received: "+serviceMessage);
+                                    switch (serviceMessage.msg) {
 
-                                    Object returnObject = skeleton.callFunction(serviceMessage);
+                                        case CALL_ON_OBJECT:
+                                            SkeletonFactory skeletonFactory = objectDirectory.get(serviceMessage.getObjectID());
 
-                                    serviceMessage.setReturnVal(returnObject);
-                                    if(Config.DEBUG) System.out.println("ObjectServer: send: " + serviceMessage);
-                                    objOS.writeObject(serviceMessage);
-                                    skeletonFactory.removeSkeleton(skeleton);
+                                            if (skeletonFactory == null) {
+                                                serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_NOT_FOUND);
+                                                objOS.writeObject(serviceMessage);
+                                            }else {
+                                                Skeleton skeleton = skeletonFactory.createSkeleton(clientSocket, serviceMessage);
+                                                if(Config.DEBUG) System.out.println("ObjectServer: " + skeletonFactory.getReferences() + " references on" + skeleton.getClass().toString());
+                                                serviceMessage.setMsg(ObjectServerMessage.Msg.OBJECT_FOUND);
+
+                                                Object returnObject = skeleton.callFunction(serviceMessage);
+
+                                                serviceMessage.setReturnVal(returnObject);
+                                                if(Config.DEBUG) System.out.println("ObjectServer: send: " + serviceMessage);
+                                                objOS.writeObject(serviceMessage);
+                                                skeletonFactory.removeSkeleton(skeleton);
+                                            }
+                                            break;
+                                        case CLOSE_CON:
+                                            run = false;
+                                            break;
+                                    }
+
+
                                 }
 
                                 objIS.close();

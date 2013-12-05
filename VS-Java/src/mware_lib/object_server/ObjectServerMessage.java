@@ -21,9 +21,15 @@ public class ObjectServerMessage implements Serializable{
         this.parameter = parameter;
     }
 
+    public ObjectServerMessage(Msg closeCon) {
+        this.msg = closeCon;
+    }
+
     public enum Msg {
         OBJECT_NOT_FOUND,
-        OBJECT_FOUND;
+        OBJECT_FOUND,
+        CALL_ON_OBJECT,
+        CLOSE_CON;
     }
 
     public ObjectServerMessage(Object operation, Object[] parameter, String objectID) {
