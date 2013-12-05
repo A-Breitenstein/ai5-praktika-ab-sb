@@ -163,6 +163,7 @@ public class CG1Frame extends JFrame {
         Vector3d v6 = new Vector3d(.1,-.4,.2);
 
         MonomialCurve monocurve = MonomialCurve.create(6);
+        MonomialCurve monocurve2 = MonomialCurve.create(3);
 
         monocurve.setControlPoint(0,v1);
         monocurve.setControlPoint(1,v2);
@@ -171,11 +172,29 @@ public class CG1Frame extends JFrame {
         monocurve.setControlPoint(4,v5);
         monocurve.setControlPoint(5,v6);
 
+        monocurve2.setControlPoint(0,v1);
+        monocurve2.setControlPoint(1,v2);
+        monocurve2.setControlPoint(2,v3);
+
+        MonomialCurve monocurve3 = MonomialCurve.create(new Vector3d[]{v1, v3});
+
+
+        Vector3d t1 = new Vector3d(.1,.2,.3);
+        Vector3d t2 = new Vector3d(0.25000000000000006, 0.47500000000000003, 0.625);
+        Vector3d t3 = new Vector3d(0.3, 0.9000000000000001, 0.7);
+
+        Vector3d t4 = new Vector3d(0.1, 0.2, 0.3);
+        Vector3d t5 = new Vector3d(-0.1, 0.5, -0.2);
+
 //        curve = monocurve;
+//        curve = monocurve2;
+        curve = monocurve3;
+        Curve curve2 = MonomialCurve.interpolate(t4, t5);
 //        curve = MonomialCurve.create(v1, v2, v3, v4);
-        curve = HermiteCurve.create(v1, v2, v3, v4);
+//        curve = HermiteCurve.create(v1, v2, v3, v4);
 
         scene.addChild(Plotter.plottFunction(curve,1000));
+        scene.addChild(Plotter.plottFunction(curve2,1000));
 
         BoundingSphere behaveBounds = new BoundingSphere();
         PickTranslateBehavior pickTranslate = new PickTranslateBehavior(scene,
@@ -217,7 +236,7 @@ public class CG1Frame extends JFrame {
         LineArray dot = new LineArray(2, LineArray.COORDINATES);
         dot.setCoordinates(0, dotPts);
         LineAttributes dotLa = new LineAttributes();
-        dotLa.setLineWidth(20.0f);
+        dotLa.setLineWidth(2.0f);
         dotLa.setLinePattern(LineAttributes.PATTERN_SOLID);
         Appearance dotApp = new Appearance();
         ColoringAttributes ca = new ColoringAttributes(new Color3f(new Color(206, 0, 9)),
@@ -231,6 +250,9 @@ public class CG1Frame extends JFrame {
 
     public void changeTangentVector(double position) {
         final double val = position;
+
+        if(val == 0.0 || val == 0.5|| val == 1.0) System.out.println(curve.eval(val));
+
         tangentVector = createTangentVector(curve.eval(val), curve.derivative(val));
 
         branchGroup.detach();

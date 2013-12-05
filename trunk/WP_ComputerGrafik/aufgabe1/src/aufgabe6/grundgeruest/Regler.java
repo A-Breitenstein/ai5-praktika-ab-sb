@@ -16,7 +16,7 @@ public class Regler {
     public int value;
     private CG1Frame cg1Frame;
 
-    final static int percision = 100000;
+    final static int percision = 1000;
 
     public JPanel getPanel1() {
         return panel1;

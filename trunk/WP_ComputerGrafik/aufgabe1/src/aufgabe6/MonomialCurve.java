@@ -1,5 +1,6 @@
 package aufgabe6;
 
+import javax.vecmath.Point3d;
 import javax.vecmath.Vector3d;
 
 /**
@@ -21,12 +22,19 @@ public class MonomialCurve implements Curve {
         controlPoints = new Vector3d[]{v1, v2, v3, v4};
     }
 
+    public MonomialCurve(Vector3d[] vectors) {
+        controlPoints = vectors;
+    }
+
     public static MonomialCurve create(int size) {
         return new MonomialCurve(size);
     }
 
     public static MonomialCurve create(Vector3d v1, Vector3d v2, Vector3d v3, Vector3d v4) {
         return new MonomialCurve(v1, v2, v3, v4);
+    }
+    public static MonomialCurve create(Vector3d[] vectors) {
+        return new MonomialCurve(vectors);
     }
 
     @Override
@@ -84,4 +92,36 @@ public class MonomialCurve implements Curve {
         controlPoints[index] = vector;
     }
 
-}
+    public static Curve interpolate(Vector3d p0, Vector3d p1, Vector3d p2) {
+        VectorRichtig p0_ = VectorRichtig.create(p0),
+                      p1_ = VectorRichtig.create(p1),
+                      p2_ = VectorRichtig.create(p2);
+        VectorRichtig dc2, dc1, dc0;
+        final double k_DH = 1.0 / -0.25;
+
+        dc2 = p0_.scale(0.5).add(p1_).sub(p0_.add(p2_.scale(0.5)));
+        dc1 = p0_.add(p2_.scale(0.25)).sub(p1_.add(p0_.scale(0.25)));
+        dc0 = p0_.scale(0.25).sub(p0_.scale(0.5));
+
+
+        return new MonomialCurve(new Vector3d[]{dc0.scale(k_DH).toVektorFalsch(),
+                                                dc1.scale(k_DH).toVektorFalsch(),
+                                                dc2.scale(k_DH).toVektorFalsch()
+                                                });
+    }
+
+    public static Curve interpolate(Vector3d p0, Vector3d p1) {
+
+        VectorRichtig vp0 = VectorRichtig.create(p0), vp1 = VectorRichtig.create(p1), dc0, dc1;
+        final double k_DH = 1.0;
+
+        dc0 = vp0;
+        dc1 = vp1.sub(vp0);
+
+        return new MonomialCurve(new Vector3d[]{dc0.scale(k_DH).toVektorFalsch(),
+                                                dc1.scale(k_DH).toVektorFalsch()
+                                               });
+    }
+
+
+    }
