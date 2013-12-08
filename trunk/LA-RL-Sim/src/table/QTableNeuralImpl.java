@@ -15,7 +15,9 @@ import org.encog.neural.networks.training.propagation.back.Backpropagation;
 import org.encog.neural.networks.training.propagation.resilient.ResilientPropagation;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -29,6 +31,7 @@ public class QTableNeuralImpl implements QTable {
     private static final int InputNeuronSize =6;
     private static final int OutputNeuronSize = 1;
     List<QValueEntry> history = new ArrayList<QValueEntry>();
+    Map<String, QValueEntry> historyMap = new HashMap<String, QValueEntry>();
     TrainingPatterns trainingPat = new TrainingPatterns();
 
     private static final double tausend = 1000;
@@ -40,6 +43,11 @@ public class QTableNeuralImpl implements QTable {
     private void trainNet(List<QValueEntry> history) {
 
         TrainingPatterns trainingPatterns = trainingPat.createTrainingPatterns(history);
+
+        //historyMapCode Start -----
+//        TrainingPatterns trainingPatterns = trainingPat.createTrainingPatterns(new ArrayList<QValueEntry>(historyMap.values()));
+        //historyMapCode END -----
+
         final MLDataSet trainingSet = new BasicMLDataSet(trainingPatterns.trainingInput, trainingPatterns.trainingOutput);
         final ResilientPropagation train = new ResilientPropagation(network, trainingSet);
         final int ITERATIONMAX = 6000;
@@ -83,6 +91,12 @@ public class QTableNeuralImpl implements QTable {
         QValueEntry qValueEntry = new QValueEntry(xPos,yPos,currentAction,qValue);
 
         qValueEntry.normalize(new NormalizerX1());
+
+        //historyMapCode START -----
+//        final String key = getKey(xPos, yPos, currentAction);
+//        historyMap.put(key, qValueEntry);
+        //historyMapCode END -----
+
         history.add(qValueEntry);
         //System.err.println(history.size());
         network.reset();
@@ -148,6 +162,10 @@ public class QTableNeuralImpl implements QTable {
         //System.err.println(outPut.getData()[0]*100000);
 //        return outPut.getData()[0] * tausend;
         return outPut.getData()[0];
+    }
+
+    private String getKey(int xPos, int yPos, int action) {
+        return String.valueOf(xPos).concat(String.valueOf(yPos)).concat(String.valueOf(action));
     }
 
     @Override
