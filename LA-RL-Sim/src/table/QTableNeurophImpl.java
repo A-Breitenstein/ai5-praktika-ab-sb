@@ -145,7 +145,7 @@ public class QTableNeurophImpl implements QTable {
     }
 
 
-    private class TrainingPatterns {
+    public static class TrainingPatterns {
 
         public DataSet createTrainingPatterns(Object[] history) {
             DataSet trainingSet = new DataSet(InputNeuronSize, OutputNeuronSize);
@@ -191,18 +191,18 @@ public class QTableNeurophImpl implements QTable {
             this.updatedQValue = updatedQValue;
         }
 
-        private void normalize(Normalizable func) {
+        public void normalize(Normalizable func) {
             func.setQValueEntry(this);
             func.normalize();
         }
     }
 
-    private interface Normalizable {
+    public interface Normalizable {
         void normalize();
         void setQValueEntry(QValueEntry qValueEntry);
     }
 
-    private static class NormalizerX1 implements Normalizable {
+    public static class NormalizerX1 implements Normalizable {
         QValueEntry qValueEntry;
 
         @Override
