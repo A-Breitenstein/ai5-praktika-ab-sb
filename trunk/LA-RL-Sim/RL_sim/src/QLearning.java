@@ -1,7 +1,13 @@
 
+import org.neuroph.core.data.DataSet;
 import table.QTable;
 import table.QTableFactory;
+import table.QTableNeurophImpl;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Vector;
 
@@ -99,7 +105,7 @@ public class QLearning //implements Algorithms
 	        decayingLR = (new Boolean(value)).booleanValue();
 	    }
 	}
-	
+	public static int counter = 0;
 	public boolean step()
 	{
 		double transitionCost;
@@ -119,6 +125,34 @@ public class QLearning //implements Algorithms
 			System.out.println(numEpisodes+","+learningRate);
 
             System.out.println("Eine Runde gschafft");
+            counter++;
+            if (counter == 150) {
+                System.out.println("START CSV EXPORT");
+                double[][][] table = qTable.getCompleteTable();
+                List<QTableNeurophImpl.QValueEntry> history = new ArrayList<QTableNeurophImpl.QValueEntry>();
+                QTableNeurophImpl.QValueEntry qValueEntry;
+                QTableNeurophImpl.NormalizerX1 normalizerX1 = new QTableNeurophImpl.NormalizerX1();
+                for (int xPos = 0; xPos < table.length; xPos++) {
+                    for (int yPos = 0; yPos < table[xPos].length; yPos++) {
+                        for (int action = 0; action < table[xPos][yPos].length; action++) {
+                            qValueEntry = new QTableNeurophImpl.QValueEntry(xPos, yPos, action, table[xPos][yPos][action]);
+                            qValueEntry.normalize(normalizerX1);
+                            history.add(qValueEntry);
+                        }
+                    }
+                }
+                QTableNeurophImpl.TrainingPatterns patterns = new QTableNeurophImpl.TrainingPatterns();
+                DataSet dataSet = patterns.createTrainingPatterns(history.toArray());
+                try {
+                    FileWriter fw = new FileWriter("qtable.csv");
+                    fw.write(dataSet.toCSV());
+                    fw.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("CSV EXPORT FINISHED");
+
+            }
             return true;
 		}
 		
