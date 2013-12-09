@@ -1,4 +1,4 @@
-package name_service;
+package mware_lib;
 
 import java.io.Serializable;
 import java.net.InetAddress;
@@ -21,10 +21,8 @@ public class NameServiceMessage implements Serializable{
     InetAddress inetAddress;
     int port;
     String id;
-
     public NameServiceMessage() {
     }
-
     public NameServiceMessage(Operations operation, InetAddress inetAddress, int port, String id) {
         this.operation = operation;
         this.inetAddress = inetAddress;
@@ -88,7 +86,6 @@ public class NameServiceMessage implements Serializable{
     public String getId() {
         return id;
     }
-
     public Object[] toObjectArray() {
         Object[] objects = new Object[4];
         objects[0] = this.operation.toString();
@@ -106,5 +103,4 @@ public class NameServiceMessage implements Serializable{
                 (String) objects[3]
         );
     }
-
 }

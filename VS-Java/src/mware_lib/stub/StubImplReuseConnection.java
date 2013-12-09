@@ -2,7 +2,7 @@ package mware_lib.stub;
 
 import bank_access.OverdraftException;
 import mware_lib.Config;
-import name_service.NameServiceMessage;
+import mware_lib.NameServiceMessage;
 import mware_lib.object_server.ObjectServerMessage;
 
 import java.io.IOException;
