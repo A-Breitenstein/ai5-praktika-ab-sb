@@ -164,7 +164,7 @@ public class CG1Frame extends JFrame {
 //        shape2.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("IMGP1511.jpg"));
 //        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
 //        shape2.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","IMGP1511.jpg"));
-        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("a7_vertex_shader.glsl","a7_fragment_shader.glsl","latitude_map.jpg"));
+        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("a7_vertex_shader.glsl","a7_fragment_shader.glsl","neue-galerie-panorama1.jpg"));
         scale.setScale(1);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
