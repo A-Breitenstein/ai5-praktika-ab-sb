@@ -59,7 +59,7 @@ public class NameServiceServer {
                                 ObjectInputStream objIS = new ObjectInputStream(clientSocket.getInputStream());
                                 boolean run = true;
                                 while (run && !Thread.currentThread().isInterrupted()){
-                                    NameServiceMessage serviceMessage = (NameServiceMessage) objIS.readObject();
+                                    NameServiceMessage serviceMessage = NameServiceMessage.fromObjectArray((Object[])objIS.readObject());
                                     if(Config.DEBUG) System.out.println("empfangen: "+serviceMessage);
                                     switch (serviceMessage.operation) {
                                         case REBIND:
@@ -68,7 +68,7 @@ public class NameServiceServer {
                                         case RESOLVE:
                                             serviceMessage = resolve(serviceMessage);
                                             if(Config.DEBUG) System.out.println("send: "+serviceMessage);
-                                            objOS.writeObject(serviceMessage);
+                                            objOS.writeObject(serviceMessage.toObjectArray());
                                             break;
                                         case CLOSE_CON:
                                             run = false;

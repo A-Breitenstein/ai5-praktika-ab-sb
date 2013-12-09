@@ -1,6 +1,7 @@
 package mware_lib.stub;
 
-import name_service.NameServiceMessage;
+
+import mware_lib.NameServiceMessage;
 
 /**
  * Created with IntelliJ IDEA.

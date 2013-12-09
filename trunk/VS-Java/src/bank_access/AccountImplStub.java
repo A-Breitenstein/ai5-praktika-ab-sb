@@ -1,10 +1,10 @@
 package bank_access;
 
 import mware_lib.Config;
+import mware_lib.NameServiceMessage;
 import mware_lib.object_server.ObjectServerMessage;
 import mware_lib.stub.Stub;
 import mware_lib.stub.StubFactory;
-import name_service.NameServiceMessage;
 
 /**
  * Created with IntelliJ IDEA.

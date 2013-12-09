@@ -1,6 +1,5 @@
 package mware_lib.name_server_client;
 
-import name_service.NameServiceMessage;
 import mware_lib.object_server.ObjectServer;
 import test_servant.AccountImplServant;
 import bank_access.AccountImplStub;
@@ -35,10 +34,10 @@ public class NameServiceImpl extends NameService {
         try {
             ObjectServer.getInstance().rebind(servant, name);
             objOS.writeObject(
-                    new NameServiceMessage(NameServiceMessage.Operations.REBIND,
+                    (new NameServiceMessage(NameServiceMessage.Operations.REBIND,
                                            InetAddress.getLocalHost(),
                                             ObjectServer.getInstance().getPort(),
-                                            name)
+                                            name)).toObjectArray()
             );
         } catch (IOException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -50,8 +49,8 @@ public class NameServiceImpl extends NameService {
         NameServiceMessage nameServiceMessage = null;
         try {
 
-            objOS.writeObject(new NameServiceMessage(NameServiceMessage.Operations.RESOLVE,null,0,name));
-            nameServiceMessage = (NameServiceMessage) objIS.readObject();
+            objOS.writeObject((new NameServiceMessage(NameServiceMessage.Operations.RESOLVE,null,0,name)).toObjectArray());
+            nameServiceMessage = NameServiceMessage.fromObjectArray((Object[])objIS.readObject()) ;
             if (nameServiceMessage == null) {
                 throw new UnknownError("NameService cant resolve: " + name);
             }

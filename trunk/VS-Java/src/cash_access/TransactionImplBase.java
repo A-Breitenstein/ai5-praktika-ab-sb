@@ -1,7 +1,7 @@
 package cash_access;
 
 import bank_access.OverdraftException;
-import name_service.NameServiceMessage;
+import mware_lib.NameServiceMessage;
 
 /**
  * Created with IntelliJ IDEA.
