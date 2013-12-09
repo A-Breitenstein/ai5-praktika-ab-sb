@@ -153,7 +153,9 @@ public class CG1Frame extends JFrame {
 //        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\pumpkin.obj");
 //        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\square.obj");
 //        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\teddy.obj");
-        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\cow.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\cow.obj");
+//        ITriangleMesh bunny = ObjLoader.load("C:\\Projekte\\IntelliJ\\AI5\\CG\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\explosion.obj");
+        ITriangleMesh bunny = ObjLoader.load("C:\\Projekte\\IntelliJ\\AI5\\CG\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\gebirge.obj");
         textureMapping.mappTextureCoordinates(bunny);
         Shape3D shape = MeshShapeFactory.createMeshShape(bunny);
 //        Shape3D shape = TessellationUtils.create(20,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
@@ -162,7 +164,7 @@ public class CG1Frame extends JFrame {
 //        shape2.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("IMGP1511.jpg"));
 //        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
 //        shape2.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","IMGP1511.jpg"));
-        scale.setScale(1);
+        scale.setScale(.01);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
 //        tg.addChild(shape2);
