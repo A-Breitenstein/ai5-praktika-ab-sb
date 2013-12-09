@@ -65,7 +65,6 @@ public class CG1Frame extends JFrame {
         universe = new SimpleUniverse(canvas3D);
         universe.getViewingPlatform().setNominalViewingTransform();
 
-
         // Setup lighting
         addLight(universe);
 
@@ -74,7 +73,6 @@ public class CG1Frame extends JFrame {
         ob.setSchedulingBounds(new BoundingSphere(new Point3d(0, 0, 0),
                 Double.MAX_VALUE));
         universe.getViewingPlatform().setViewPlatformBehavior(ob);
-
         // Set the background color
         Background background = new Background(new Color3f(0.9f, 0.9f, 0.9f));
         BoundingSphere sphere = new BoundingSphere(new Point3d(0, 0, 0), 100000);
