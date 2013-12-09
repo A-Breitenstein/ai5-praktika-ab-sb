@@ -6,6 +6,7 @@ import aufgabe4.*;
 import javax.vecmath.Point3d;
 import javax.vecmath.Point3f;
 import javax.vecmath.TexCoord3f;
+import javax.vecmath.Vector3f;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +21,14 @@ public class TriangleMesh implements ITriangleMesh {
     List<Triangle> triangleList;
     List<Point3d> point3dList;
     List<TexCoord3f> texCoord3fList;
+    List<Vector3f> vertexNormalsList;
 
 
     public TriangleMesh() {
         triangleList = new ArrayList<Triangle>();
         point3dList = new ArrayList<Point3d>();
         texCoord3fList = new ArrayList<TexCoord3f>();
+        vertexNormalsList = new ArrayList<Vector3f>();
     }
 
     public static TriangleMesh create() {
@@ -150,6 +153,21 @@ public class TriangleMesh implements ITriangleMesh {
         } else System.out.println("ist nicht drin");
 
         texCoord3fList = uniquePoints;
+    }
+
+    @Override
+    public void addVertexNormal(Vector3f vector3f) {
+        vertexNormalsList.add(vector3f);
+    }
+
+    @Override
+    public int getNumberOfVertexNormals() {
+        return vertexNormalsList.size();
+    }
+
+    @Override
+    public Vector3f getVertexNormal(int vertexnormalindece) {
+        return vertexNormalsList.get(vertexnormalindece);
     }
 
     private boolean containsTexCoord3f(List<TexCoord3f> uniqueTexPoints, TexCoord3f currentTexPoint) {
