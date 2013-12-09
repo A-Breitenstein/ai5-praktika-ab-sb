@@ -5,6 +5,8 @@ import utils.CGkursUtils;
 import java.util.ArrayList;
 import java.util.List;
 
+import static utils.CGkursUtils.isEqual;
+
 /**
  * Created with IntelliJ IDEA.
  * User: abg667
@@ -16,7 +18,7 @@ public class HalfEdgeDatastructureOperations implements IHalfEdgeDatastructureOp
     IHalfEdgeDatastructure hed;
 
     private HalfEdgeDatastructureOperations(IHalfEdgeDatastructure hed) {
-        this.hed = hed;
+            this.hed = hed;
 
     }
 
@@ -29,7 +31,7 @@ public class HalfEdgeDatastructureOperations implements IHalfEdgeDatastructureOp
         List<HalfEdgeVertex> result = new ArrayList<HalfEdgeVertex>();
 
         for (HalfEdge edge : getIncidetEdges(vertex)) {
-            if ( ! CGkursUtils.isEqual(edge.getVertex().getPosition(), vertex.getPosition())) {
+            if ( ! isEqual(edge.getVertex().getPosition(), vertex.getPosition())) {
                 result.add(edge.getVertex());
             }
         }
@@ -49,37 +51,37 @@ public class HalfEdgeDatastructureOperations implements IHalfEdgeDatastructureOp
     public List<HalfEdge> getIncidetEdges(HalfEdgeVertex vertex) {
         HalfEdge edge;
         List<HalfEdge> result = new ArrayList<HalfEdge>();
-        for (int i = 0; i < hed.getNumberOfHalfEdges(); i++) {
-            edge = hed.getHalfEdge(i);
-            if (CGkursUtils.isEqual(edge.getVertex().getPosition(), vertex.getPosition())) {
-                result.add(edge);
-                result.add(edge.getOpposite());
+
+        HalfEdge startEdge = vertex.getHalfEdge();
+        result.add(startEdge);
+
+        HalfEdge tempEdge = startEdge.getOpposite();
+
+        boolean imKreisgelaufen = false;
+
+        while (!imKreisgelaufen) {
+            result.add(tempEdge);
+            tempEdge = tempEdge.getNext();
+
+
+            if (startEdge.equals(tempEdge)) {
+                imKreisgelaufen = true;
+            } else {
+                result.add(tempEdge);
             }
 
+            tempEdge = tempEdge.getOpposite();
         }
         return result;
     }
+
+
+
     private List<HalfEdge> getIncidentOutgoingEdges(HalfEdgeVertex vertex) {
-        HalfEdge edge;
         List<HalfEdge> result = new ArrayList<HalfEdge>();
-        for (int i = 0; i < hed.getNumberOfHalfEdges(); i++) {
-            edge = hed.getHalfEdge(i);
-            if (CGkursUtils.isEqual(edge.getVertex().getPosition(), vertex.getPosition())) {
+        for (HalfEdge edge : getIncidetEdges(vertex)) {
+            if(edge.getVertex().equals(vertex))
                 result.add(edge);
-            }
-
-        }
-        return result;
-    }
-    private List<HalfEdge> getIncidentIngoingEdges(HalfEdgeVertex vertex) {
-        HalfEdge edge;
-        List<HalfEdge> result = new ArrayList<HalfEdge>();
-        for (int i = 0; i < hed.getNumberOfHalfEdges(); i++) {
-            edge = hed.getHalfEdge(i);
-            if (CGkursUtils.isEqual(edge.getVertex().getPosition(), vertex.getPosition())) {
-                result.add(edge.getOpposite());
-            }
-
         }
         return result;
     }

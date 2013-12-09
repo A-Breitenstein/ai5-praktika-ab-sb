@@ -15,6 +15,11 @@ import javax.vecmath.Vector3f;
 public class Triangle {
     public int a, b, c;
     public Vector3f normal;
+
+    public int normala;
+    public int normalb;
+    public int normalc;
+
     public int texCoordA, texCoordB, texCoordC;
 
     public Triangle(int a, int b, int c) {
@@ -57,5 +62,11 @@ public class Triangle {
         Vector3f V = new Vector3f(p3);
         normal.cross(U, V);
         normal.normalize();
+    }
+
+    public void setNormals(int normala, int normalb, int normalc) {
+        this.normala = normala;
+        this.normalb = normalb;
+        this.normalc = normalc;
     }
 }

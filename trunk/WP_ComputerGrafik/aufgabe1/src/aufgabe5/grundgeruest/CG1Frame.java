@@ -6,11 +6,13 @@
 package aufgabe5.grundgeruest;
 
 import aufgabe2.MeshShapeFactory;
+import aufgabe2.triangle.ITriangleMesh;
 import aufgabe3.TessellationUtils;
 import aufgabe3.Torus;
 import aufgabe4.Tetraeder;
 import aufgabe5.Plane;
 import aufgabe5.mappings.KugelTextureMapping;
+import aufgabe7.ObjLoader;
 import com.sun.j3d.utils.behaviors.vp.OrbitBehavior;
 import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Cylinder;
@@ -145,7 +147,16 @@ public class CG1Frame extends JFrame {
 
         Transform3D scale = new Transform3D();
 
-        Shape3D shape = TessellationUtils.create(20,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
+
+        KugelTextureMapping textureMapping = KugelTextureMapping.create();
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\bunny.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\pumpkin.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\square.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\teddy.obj");
+        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\cow.obj");
+        textureMapping.mappTextureCoordinates(bunny);
+        Shape3D shape = MeshShapeFactory.createMeshShape(bunny);
+//        Shape3D shape = TessellationUtils.create(20,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
 
         shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
 //        shape2.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("IMGP1511.jpg"));

@@ -251,7 +251,7 @@ public class CG1Frame extends JFrame {
     public void changeTangentVector(double position) {
         final double val = position;
 
-        if(val == 0.0 || val == 0.5|| val == 1.0) System.out.println(curve.eval(val));
+        if(val == 0.0 || val == 0.5|| val == 1.0) System.out.println("Position: "+val +", " +curve.eval(val));
 
         tangentVector = createTangentVector(curve.eval(val), curve.derivative(val));
 

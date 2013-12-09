@@ -9,6 +9,7 @@ import aufgabe4.HalfEdgeDatastructure;
 
 import javax.vecmath.Point3d;
 import javax.vecmath.TexCoord3f;
+import javax.vecmath.Vector3f;
 import java.util.List;
 
 /**
@@ -92,4 +93,10 @@ public interface ITriangleMesh {
     public TexCoord3f getTexCoord(int index);
 
     void removeDuplicatedTexturePointsAndFixTriangles();
+
+    public void addVertexNormal(Vector3f vector3f);
+
+    public int getNumberOfVertexNormals();
+
+    Vector3f getVertexNormal(int vertexnormalindece);
 }
