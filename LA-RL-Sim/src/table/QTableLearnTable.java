@@ -1,20 +1,24 @@
 package table;
 
+import org.encog.neural.rbf.RBFNetwork;
+import org.neuroph.core.NeuralNetwork;
 import org.neuroph.core.data.DataSet;
 import org.neuroph.nnet.MultiLayerPerceptron;
+import org.neuroph.nnet.RbfNetwork;
 import org.neuroph.util.TransferFunctionType;
 
-import java.util.*;
+import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Sven
- * Date: 08.12.13
- * Time: 13:32
+ * User: abg667
+ * Date: 09.12.13
+ * Time: 10:43
+ * To change this template use File | Settings | File Templates.
  */
-public class QTableNeurophImpl implements QTable {
-    MultiLayerPerceptron network;
+public class QTableLearnTable implements QTable {
+    RbfNetwork network;
     private static final int InputNeuronSize =QValueEntry.actionsBits + QValueEntry.positionBits*2;
     private static final int OutputNeuronSize = QValueEntry.qValueBits;
     Queue<QValueEntry> history = new ArrayBlockingQueue<QValueEntry>(12);
@@ -27,24 +31,6 @@ public class QTableNeurophImpl implements QTable {
 
     private int width,height, numberOfActions;
 
-    private void trainNet(Object[] history) {
-        //TODO default training hier anpassen
-        final int ITERATIONMAX = 2;
-        final double MAXERROR = 0.15;
-        trainNet(history,MAXERROR,ITERATIONMAX);
-
-
-    }
-    private void trainNet(Object[] history,double maxerror,int maxiteration) {
-        DataSet trainingSet = trainingPat.createTrainingPatterns(history);
-        System.out.println("trainingSet Size: "+trainingSet.size());
-        network.getLearningRule().setMaxIterations(maxiteration);
-//        network.getLearningRule().setMaxError(maxerror);
-        network.getLearningRule().setLearningRate(0.0005);
-        System.out.println("trainingSet isIterationLimited: "+network.getLearningRule().isIterationsLimited());
-        network.learn(trainingSet);
-    }
-
     @Override
     public void initialize(int width, int height, int numberOfActions) {
         this.width = width;
@@ -52,23 +38,15 @@ public class QTableNeurophImpl implements QTable {
         this.numberOfActions = numberOfActions;
 
         table = new double[width][height][numberOfActions];
-        network = new MultiLayerPerceptron(TransferFunctionType.SGN,InputNeuronSize,48,24,OutputNeuronSize);
+        network = (RbfNetwork)NeuralNetwork.load("NewNeuralNetwork2.nnet");
+
 //        initNetwork();
 
     }
 
     @Override
     public void updateQValue(int xPos, int yPos, int currentAction, double qValue) {
-        QValueEntry qValueEntry = new QValueEntry(xPos,yPos,currentAction,qValue);
-        qValueEntry.normalize(new NormalizerX1());
-//        history.clear();
-        if (history.offer(qValueEntry)) {
 
-        }else {
-            history.poll();
-            history.offer(qValueEntry);
-        }
-        trainNet( history.toArray());
     }
 
     private double[] getQValues(int xPos,int yPos) {
@@ -249,17 +227,4 @@ public class QTableNeurophImpl implements QTable {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(Integer.toBinaryString(9));
-
-        QValueEntry qValueEntry = new QValueEntry(33,12,3,45);
-        qValueEntry.normalize(new NormalizerX1());
-        System.out.println("qwe");
-        double value = 0;
-        for (int i = qValueEntry.binary_updateQVaule.length-1; 0 < i; i--) {
-            value += (int)(qValueEntry.binary_updateQVaule[i]+0.5)*Math.pow(2, qValueEntry.binary_updateQVaule.length-1-i);
-        }
-        System.out.println(value);
-
-    }
 }
