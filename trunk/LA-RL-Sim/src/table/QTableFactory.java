@@ -8,10 +8,10 @@ package table;
  */
 public class QTableFactory {
     public static QTable createQTable() {
-        return new QTableImpl();
+//        return new QTableImpl();
 //        return new QTableNeuralImpl();
 //        return new QTableNeuroph3inputs1outputImpl();
-//        return new QTableNeurophImpl();
+        return new QTableNeurophImpl();
 //        return new QTableLearnTable();
     }
 }
