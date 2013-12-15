@@ -52,7 +52,7 @@ public class QTableNeurophImpl implements QTable {
         this.numberOfActions = numberOfActions;
 
         table = new double[width][height][numberOfActions];
-        network = new MultiLayerPerceptron(TransferFunctionType.SGN,InputNeuronSize,48,24,OutputNeuronSize);
+        network = new MultiLayerPerceptron(TransferFunctionType.LINEAR,InputNeuronSize,48,24,OutputNeuronSize);
 //        initNetwork();
 
     }
