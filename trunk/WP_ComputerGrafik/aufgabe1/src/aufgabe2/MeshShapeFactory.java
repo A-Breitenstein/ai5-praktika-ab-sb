@@ -35,9 +35,16 @@ public class MeshShapeFactory {
             vertexCoords[coordinateIndex+2] =  mesh.getVertex(triangle.c);
 
             if (mesh.getNumberOfVertexNormals() == 0) {
+                //TODO: vertexnormalen mitteln richtig implementieren...
+                triangle.computeNormal(vertexCoords[coordinateIndex],vertexCoords[coordinateIndex+1],vertexCoords[coordinateIndex+2]);
                 normals[coordinateIndex] = triangle.normal;
                 normals[coordinateIndex+1] = triangle.normal;
                 normals[coordinateIndex+2] = triangle.normal;
+//                normals[coordinateIndex] = n(mesh.getVertex(triangle.a));
+//                normals[coordinateIndex+1] = n(mesh.getVertex(triangle.b));
+//                normals[coordinateIndex+2] = n(mesh.getVertex(triangle.c));
+
+
             }else {
                 normals[coordinateIndex] = mesh.getVertexNormal(triangle.normala);
                 normals[coordinateIndex+1] = mesh.getVertexNormal(triangle.normalb);
@@ -57,8 +64,7 @@ public class MeshShapeFactory {
         }
 
         triangleArray.setCoordinates(0, vertexCoords);
-
-
+        triangleArray.setNormals(0, normals);
         if(mesh.getNumberOfTexCoord() > 0)
             triangleArray.setTextureCoordinates(0,0,texCoords);
 
