@@ -11,7 +11,8 @@ public class QTableFactory {
 //        return new QTableImpl();
 //        return new QTableNeuralImpl();
 //        return new QTableNeuroph3inputs1outputImpl();
-        return new QTableNeurophImpl();
+//        return new QTableNeurophImpl();
 //        return new QTableLearnTable();
+        return new QTableNeuroph2Input4Output();
     }
 }
