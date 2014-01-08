@@ -6,6 +6,7 @@
 package aufgabe4;
 
 import javax.vecmath.Point3f;
+import javax.vecmath.TexCoord3f;
 
 /**
  * Representation of a vertex in the half edge date structure.
@@ -25,6 +26,16 @@ public class HalfEdgeVertex {
      */
     private final Point3f position;
 
+    private  TexCoord3f texCoord;
+
+    public TexCoord3f getTexCoord() {
+        return texCoord;
+    }
+
+    public void setTexCoord(TexCoord3f texCoord) {
+        this.texCoord = texCoord;
+    }
+
     /**
      * Reference to an adjacent half edge
      */
@@ -32,12 +43,17 @@ public class HalfEdgeVertex {
 
     /**
      * Constructor
-     * 
+     *
      * @param position
      *            Position of the vertex.
+     * @param texCoord
      */
     public HalfEdgeVertex(Point3f position) {
         this.position = position;
+    }
+    public HalfEdgeVertex(Point3f position, TexCoord3f texCoord) {
+        this.position = position;
+        this.texCoord = texCoord;
     }
 
     /**

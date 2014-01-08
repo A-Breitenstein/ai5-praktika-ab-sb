@@ -106,11 +106,13 @@ public class ObjLoader {
                         break;
                 }
                 break;
+            default:
+                break;
         }
     }
 
     enum KeyWords{
-        v,vt,vn,g,f;
+        v,vt,vn,g,f,mtllib,usemtl,s;
     }
 
     public static void main(String[] args) {
