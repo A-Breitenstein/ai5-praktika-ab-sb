@@ -114,15 +114,13 @@ public class TriangleMesh implements ITriangleMesh {
         }
         System.out.println("p3L:" + point3dList.size() + ", uniqu:" + uniquePoints.size());
 
-        if (containsPoint3d(uniquePoints, point3dList.get(4003))) {
-            System.out.println("ist drin");
-        } else System.out.println("ist nicht drin");
-
         point3dList = uniquePoints;
     }
 
     @Override
     public void removeDuplicatedTexturePointsAndFixTriangles() {
+        if(texCoord3fList.size() == 0)return;
+
         int size = texCoord3fList.size();
         TexCoord3f currentPoint;
         ArrayList<TexCoord3f> uniquePoints = new ArrayList<TexCoord3f>();
@@ -147,10 +145,6 @@ public class TriangleMesh implements ITriangleMesh {
             }
         }
         System.out.println("t3L:" + texCoord3fList.size() + ", uniqu:" + uniquePoints.size());
-
-        if (containsTexCoord3f(uniquePoints, texCoord3fList.get(4003))) {
-            System.out.println("ist drin");
-        } else System.out.println("ist nicht drin");
 
         texCoord3fList = uniquePoints;
     }
@@ -216,14 +210,15 @@ public class TriangleMesh implements ITriangleMesh {
             addTriangleToHalfEdgeDatasturcture(triangle, hed);
         }
         HalfEdge current, temp;
-        HalfEdgeVertex current_source, current_target;
+        Point3f current_source, current_target;
         for (int i = 0; i < hed.getNumberOfHalfEdges(); i++) {
             current = hed.getHalfEdge(i);
-            current_source = current.getVertex();
-            current_target = current.getNext().getVertex();
+            current_source = current.getVertex().getPosition();
+            current_target = current.getNext().getVertex().getPosition();
             for (int j = 1; j < hed.getNumberOfHalfEdges(); j++) {
                 temp = hed.getHalfEdge(j);
-                if (current_target.equals(temp.getVertex()) && current_source.equals(temp.getNext().getVertex())) {
+                if(isEqual(current_target,temp.getVertex().getPosition()) && isEqual(current_source,temp.getNext().getVertex().getPosition())){
+//                if (current_target.equals(temp.getVertex()) && current_source.equals(temp.getNext().getVertex())) {
                     current.setOpposite(temp);
                     temp.setOpposite(current);
                 }
@@ -263,6 +258,15 @@ public class TriangleMesh implements ITriangleMesh {
         Point3f pC = new Point3f(point3dList.get(triangle.c));
         Point3f temp;
 
+        TexCoord3f texCoordA = null;
+        TexCoord3f texCoordB = null;
+        TexCoord3f texCoordC = null;
+        if (texCoord3fList.size() != 0) {
+            texCoordA = texCoord3fList.get(triangle.texCoordA);
+            texCoordB = texCoord3fList.get(triangle.texCoordB);
+            texCoordC = texCoord3fList.get(triangle.texCoordC);
+        }
+
         boolean newPoint_A = true, newPoint_B = true, newPoint_C = true;
 //        if(hed.getNumberOfVertices() == 0){
 //            newPoint_A = newPoint_B = newPoint_C = true;
@@ -284,9 +288,9 @@ public class TriangleMesh implements ITriangleMesh {
 
         }
 
-        hev_a = new HalfEdgeVertex(pA);
-        hev_b = new HalfEdgeVertex(pB);
-        hev_c = new HalfEdgeVertex(pC);
+        hev_a = new HalfEdgeVertex(pA, texCoordA);
+        hev_b = new HalfEdgeVertex(pB, texCoordB);
+        hev_c = new HalfEdgeVertex(pC, texCoordC);
 
         he1 = new HalfEdge();
         he2 = new HalfEdge();
@@ -296,20 +300,20 @@ public class TriangleMesh implements ITriangleMesh {
 
         if (newPoint_A) {
             hed.addVertex(hev_a);
-            hev_a.setHalfEdge(he1);
         }
+        hev_a.setHalfEdge(he1);
         he1.setVertex(hev_a);
 
         if (newPoint_B) {
             hed.addVertex(hev_b);
-            hev_b.setHalfEdge(he2);
         }
+        hev_b.setHalfEdge(he2);
         he2.setVertex(hev_b);
 
         if (newPoint_C) {
             hed.addVertex(hev_c);
-            hev_c.setHalfEdge(he3);
         }
+        hev_c.setHalfEdge(he3);
         he3.setVertex(hev_c);
 
 

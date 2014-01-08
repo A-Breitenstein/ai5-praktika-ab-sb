@@ -149,23 +149,29 @@ public class CG1Frame extends JFrame {
 
 
         KugelTextureMapping textureMapping = KugelTextureMapping.create();
-//        ITriangleMesh bunny = ObjLoader.load("C:\\Users\\Sven\\IdeaProjects\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\bunny.obj");
-//        ITriangleMesh bunny = ObjLoader.load("C:\\Users\\Sven\\IdeaProjects\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\pumpkin.obj");
-//        ITriangleMesh bunny = ObjLoader.load("C:\\Users\\Sven\\IdeaProjects\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\square.obj");
-        ITriangleMesh bunny = ObjLoader.load("C:\\Users\\Sven\\IdeaProjects\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\teddy.obj");
-//        ITriangleMesh bunny = ObjLoader.load("C:\\Users\\Sven\\IdeaProjects\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\cow.obj");
-//        ITriangleMesh bunny = ObjLoader.load("C:\\Users\\Sven\\IdeaProjects\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\explosion.obj");
-//        ITriangleMesh bunny = ObjLoader.load("C:\\Users\\Sven\\IdeaProjects\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\gebirge.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\bunny.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\teapot.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\sphere.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\pumpkin.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\square.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\teddy.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\cow.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\explosion.obj");
+//        ITriangleMesh bunny = ObjLoader.load("Z:\\AI5\\computergrafikwp\\WP_ComputerGrafik\\aufgabe1\\src\\aufgabe7\\aufgabenblatt7_meshes\\gebirge.obj");
 //        textureMapping.mappTextureCoordinates(bunny);
-        Shape3D shape = MeshShapeFactory.createMeshShape(bunny);
-//        Shape3D shape = TessellationUtils.create(100,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
+//        Shape3D shape = TessellationUtils.create(20,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
+//        Shape3D shape = MeshShapeFactory.createMeshShape(bunny);
+        Shape3D shape = TessellationUtils.create(50,-3,3,new aufgabe3.Sphere(1.9),KugelTextureMapping.create());
 
 //        shape.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("ab_10.jpg"));
 //        shape2.setAppearance(aufgabe5.AppearanceHelper.createTextureAppearance("IMGP1511.jpg"));
-//        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("a7_vertex_shader.glsl","a7_fragment_shader.glsl","ab_10.jpg"));
+//        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","ab_10.jpg"));
 //        shape2.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("vertex_shader_texture.glsl","fragment_shader_texture.glsl","IMGP1511.jpg"));
-        shape.setAppearance(aufgabe5.AppearanceHelper.createShaderAppearance("a7_vertex_shader.glsl","a7_fragment_shader.glsl","neue-galerie-panorama1.jpg"));
-        scale.setScale(1);
+        Appearance appearance = aufgabe5.AppearanceHelper.createShaderAppearance("a7_vertex_shader.glsl", "a7_fragment_shader.glsl", "neue-galerie-panorama1.jpg");
+//        PolygonAttributes polyAttribs = new PolygonAttributes( PolygonAttributes.POLYGON_LINE, PolygonAttributes.CULL_NONE, 0 );
+//        appearance.setPolygonAttributes(polyAttribs);
+        shape.setAppearance(appearance);
+//        scale.setScale(0.01);
         TransformGroup tg = new TransformGroup(scale);
         tg.addChild(shape);
 //        tg.addChild(shape2);

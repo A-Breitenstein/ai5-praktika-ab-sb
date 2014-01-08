@@ -187,12 +187,12 @@ public class CG1Frame extends JFrame {
 //        curve = monocurve;
 //        curve = monocurve2;
         curve = monocurve3;
-        Curve curve2 = MonomialCurve.interpolate(t4, t5);
-//        curve = MonomialCurve.create(v1, v2, v3, v4);
+//        Curve curve2 = MonomialCurve.interpolate(t4, t5);
+        curve = MonomialCurve.create(v1, v2, v3, v4);
 //        curve = HermiteCurve.create(v1, v2, v3, v4);
 
         scene.addChild(Plotter.plottFunction(curve,1000));
-        scene.addChild(Plotter.plottFunction(curve2,1000));
+//        scene.addChild(Plotter.plottFunction(curve2,1000));
 
         BoundingSphere behaveBounds = new BoundingSphere();
         PickTranslateBehavior pickTranslate = new PickTranslateBehavior(scene,
@@ -250,8 +250,10 @@ public class CG1Frame extends JFrame {
         final double val = position;
 
         if(val == 0.0 || val == 0.5|| val == 1.0) System.out.println("Position: "+val +", " +curve.eval(val));
+        Vector3d tmp = new Vector3d(curve.eval(val));
+        tmp.add(curve.derivative(val));
 
-        tangentVector = createTangentVector(curve.eval(val), curve.derivative(val));
+        tangentVector = createTangentVector(curve.eval(val), tmp);
 
         branchGroup.detach();
         branchGroup = new BranchGroup();

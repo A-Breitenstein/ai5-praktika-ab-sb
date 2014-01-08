@@ -9,10 +9,8 @@ import static org.junit.Assert.*;
 
 import javax.vecmath.Point3f;
 
-import aufgabe2.triangle.ITriangleMesh;
 import aufgabe4.*;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  * Testing functionality for the half edge data structure
