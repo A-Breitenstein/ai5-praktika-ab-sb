@@ -1,0 +1,1 @@
+License:Educational Community License (GNU GPL v3)
